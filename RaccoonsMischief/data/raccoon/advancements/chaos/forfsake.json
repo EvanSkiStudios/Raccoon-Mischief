@@ -3,15 +3,16 @@
         "icon": {
             "item": "minecraft:dirt"
         },
-        "title": {"translate":"RNGJesus Be damned"},
-        "description": {"translate":"Obtain 1 Million Dirt"}
+        "title": {"translate":"§rFor §kfunks§r Sake"},
+        "description": {"translate":"Have an inventory full of dirt"},
+        "hidden": false
     },
     "parent": "raccoon:chaos/root",
     "rewards": {
         "experience": 1000
     },		
     "criteria": {
-        "name_tag": {
+        "dirt": {
             "trigger": "minecraft:inventory_changed",
             "conditions": {
                 "items": [
@@ -20,7 +21,12 @@
 							"minecraft:dirt"
 						]
                     }
-                ]
+                ],
+                "slots": {
+                    "full": {
+                        "min": 36
+                    }
+                }
             }
         }
     }

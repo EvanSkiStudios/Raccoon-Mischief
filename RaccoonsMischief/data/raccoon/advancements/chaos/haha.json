@@ -1,0 +1,25 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:anvil"
+        },
+        "title": {"translate":"HA-HA!"},
+        "description": {"translate":"Make sure not to stand still for too long"},
+        "hidden": false
+    },
+    "parent": "raccoon:chaos/root",
+    "rewards": {
+        "experience": 1000
+    },		
+    "criteria": {
+        "squish": {
+            "trigger": "minecraft:entity_killed_player",
+            "conditions": {
+                "entity": {
+                    "type": "minecraft:falling_block",
+                    "nbt": "{BlockState: {Properties:{Name:\"minecraft:anvil\"}}}"
+                }
+            }
+        }
+    }
+}
