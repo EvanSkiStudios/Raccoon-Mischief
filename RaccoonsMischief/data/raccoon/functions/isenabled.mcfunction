@@ -1,1 +1,0 @@
-tellraw @a {"text": "RaccoonMischief V 1.0 is loaded", "color": "#00FF44"}

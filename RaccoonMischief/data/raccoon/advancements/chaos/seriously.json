@@ -1,0 +1,22 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:anvil"
+        },
+        "title": {"translate":"Seriously?"},
+        "description": {"translate":"Get stuck in an anvil"},
+        "hidden": false
+    },
+    "parent": "raccoon:chaos/root",
+    "rewards": {
+        "experience": 1000
+    },		
+    "criteria": {
+        "squish": {
+            "trigger": "minecraft:enter_block",
+            "conditions": {
+                "block": "minecraft:anvil"
+            }
+        }
+    }
+}

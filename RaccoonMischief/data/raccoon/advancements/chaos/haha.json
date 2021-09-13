@@ -16,8 +16,7 @@
             "trigger": "minecraft:entity_killed_player",
             "conditions": {
                 "entity": {
-                    "type": "minecraft:falling_block",
-                    "nbt": "{BlockState: {Properties:{Name:\"minecraft:anvil\"}}}"
+                    "type": "minecraft:falling_block"
                 }
             }
         }
