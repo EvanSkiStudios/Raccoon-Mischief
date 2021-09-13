@@ -1,0 +1,27 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:dirt"
+        },
+        "title": {"translate":"RNGJesus Be damned"},
+        "description": {"translate":"Obtain 1 Million Dirt"}
+    },
+    "parent": "raccoon:chaos/root",
+    "rewards": {
+        "experience": 1000
+    },		
+    "criteria": {
+        "name_tag": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+						"items": [
+							"minecraft:dirt"
+						]
+                    }
+                ]
+            }
+        }
+    }
+}
