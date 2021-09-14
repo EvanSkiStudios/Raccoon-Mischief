@@ -1,0 +1,37 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:iron_pickaxe",
+            "nbt": "{Damage:0}"
+        },
+        "title": {"translate":"Don't Lose it!"},
+        "description": {"translate":"Get an iron pickaxe"},
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "parent": "raccoon:chaos/pickaxe/no_stone_tools",
+    "rewards": {
+        "xp": "100"
+    },		
+    "criteria": {
+        "ironpick": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+						"items": [
+							"minecraft:iron_pickaxe"
+						]
+                    }
+                ],
+                "requirements": [
+                    [
+                      "iron_pickaxe"
+                    ]
+                  ]
+            }
+        }
+    }
+}

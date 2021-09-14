@@ -1,0 +1,1 @@
+give @s minecraft:wooden_sword

@@ -1,25 +1,25 @@
 {
     "display": {
         "icon": {
-            "item": "minecraft:anvil"
+            "item": "minecraft:phantom_membrane"
         },
-        "title": {"translate":"HA-HA!"},
-        "description": {"translate":"Make sure not to stand still for too long"},
+        "title": {"translate":"GET VECTORED"},
+        "description": {"translate":"With both Direction and Magnitude! OH YEAH!!"},
         "frame": "task",
         "show_toast": true,
         "announce_to_chat": true,
         "hidden": false
     },
-    "parent": "raccoon:chaos/seriously",
+    "parent": "raccoon:chaos/root",
     "rewards": {
-        "function": "raccoon:debug/rewd_debug"
+        "function": "raccoon:rewards/chaos/mobs/rewd_vector"
     },		
     "criteria": {
-        "squish": {
+        "vector": {
             "trigger": "minecraft:entity_killed_player",
             "conditions": {
                 "entity": {
-                    "type": "minecraft:falling_block"
+                    "type": "minecraft:phantom"
                 }
             }
         }

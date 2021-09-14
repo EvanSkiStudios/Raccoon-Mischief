@@ -1,10 +1,11 @@
 {
     "display": {
         "icon": {
-            "item": "minecraft:dirt"
+            "item": "minecraft:wooden_pickaxe",
+            "nbt": "{Damage:0}"
         },
-        "title": {"translate":"§rFor §kfunks§r Sake"},
-        "description": {"translate":"Have an inventory full of dirt"},
+        "title": {"translate":"Well There is no stone tools"},
+        "description": {"translate":"Get an wooden pickaxe"},
         "frame": "task",
         "show_toast": true,
         "announce_to_chat": true,
@@ -12,24 +13,24 @@
     },
     "parent": "raccoon:chaos/root",
     "rewards": {
-        "function": "raccoon:rewards/chaos/rewd_for_f_sake"
+        "xp": "100"
     },		
     "criteria": {
-        "dirt": {
+        "woodpick": {
             "trigger": "minecraft:inventory_changed",
             "conditions": {
                 "items": [
                     {
 						"items": [
-							"minecraft:dirt"
+							"minecraft:wooden_pickaxe"
 						]
                     }
                 ],
-                "slots": {
-                    "full": {
-                        "min": 36
-                    }
-                }
+                "requirements": [
+                    [
+                      "wooden_pickaxe"
+                    ]
+                  ]
             }
         }
     }

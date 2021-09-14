@@ -4,15 +4,15 @@
             "item": "minecraft:netherrack"
         },
         "title": "A whole new Hell",
-        "description": "Make it to the Neather",
+        "description": "Make it to the Nether",
+        "background": "minecraft:textures/block/cracked_deepslate_tiles.png",
         "frame": "challenge",
         "show_toast": true,
         "announce_to_chat": true,
         "hidden": false
     },
-    "parent": "raccoon:chaos/root",
     "rewards": {
-      "function": "raccoon:debug/rewd_debug"
+      "function": "raccoon:rewards/chaos_nether/rewd_root"
     },
     "criteria": {
       "makeit_nether": {
