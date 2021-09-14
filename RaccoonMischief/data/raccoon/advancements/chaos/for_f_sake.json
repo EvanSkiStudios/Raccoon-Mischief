@@ -5,6 +5,9 @@
         },
         "title": {"translate":"§rFor §kfunks§r Sake"},
         "description": {"translate":"Have an inventory full of dirt"},
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": true,
         "hidden": false
     },
     "parent": "raccoon:chaos/root",

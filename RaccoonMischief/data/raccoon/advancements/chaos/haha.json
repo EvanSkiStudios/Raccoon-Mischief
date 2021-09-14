@@ -5,9 +5,12 @@
         },
         "title": {"translate":"HA-HA!"},
         "description": {"translate":"Make sure not to stand still for too long"},
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": true,
         "hidden": false
     },
-    "parent": "raccoon:chaos/root",
+    "parent": "raccoon:chaos/seriously",
     "rewards": {
         "experience": 1000
     },		

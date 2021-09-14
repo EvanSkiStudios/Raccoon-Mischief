@@ -1,0 +1,25 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:netherrack"
+        },
+        "title": "A whole new Hell",
+        "description": "Make it to the Neather",
+        "frame": "challenge",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "parent": "raccoon:chaos/root",
+    "rewards": {
+        "experience": 0
+    },
+    "criteria": {
+      "makeit_nether": {
+        "trigger": "minecraft:changed_dimension",
+        "conditions": {
+          "to": "minecraft:the_nether"
+        }
+      }
+    }
+  }
