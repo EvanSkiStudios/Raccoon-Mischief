@@ -1,0 +1,32 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:obsidian"
+        },
+        "title": {"translate":"The Myth is true"},
+        "description": {"translate":"Make an Aether portal"},
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "parent": "raccoon:chaos/story/firehelp",
+    "rewards": {
+        "xp": "100"
+    },
+    "criteria": {
+      "example": {
+        "trigger": "minecraft:item_used_on_block",
+        "conditions": {
+          "location": {
+            "block": {
+              "blocks": ["minecraft:obsidian"]
+            }
+          },
+          "item": {
+            "items": ["minecraft:flint_and_steel"]
+          }
+        }
+      }
+    }
+}

@@ -10,7 +10,7 @@
         "announce_to_chat": true,
         "hidden": false
     },
-    "parent": "raccoon:chaos/root",
+    "parent": "raccoon:chaos/trolls/seriously",
     "rewards": {
         "function": "raccoon:rewards/chaos/mobs/rewd_vector"
     },		

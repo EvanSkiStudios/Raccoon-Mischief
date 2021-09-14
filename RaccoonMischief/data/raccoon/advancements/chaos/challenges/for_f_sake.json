@@ -1,0 +1,36 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:dirt"
+        },
+        "title": {"translate":"§rFor §kfunks§r Sake"},
+        "description": {"translate":"Have an inventory full of dirt"},
+        "frame": "challenge",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "parent": "raccoon:chaos/root",
+    "rewards": {
+        "function": "raccoon:rewards/chaos/challenges/rewd_for_f_sake"
+    },		
+    "criteria": {
+        "dirt": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+						"items": [
+							"minecraft:dirt"
+						]
+                    }
+                ],
+                "slots": {
+                    "full": {
+                        "min": 36
+                    }
+                }
+            }
+        }
+    }
+}

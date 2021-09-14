@@ -1,0 +1,36 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:oak_planks"
+        },
+        "title": {"translate":"Woodn't it be nice"},
+        "description": {"translate":"Gather wood"},
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "parent": "raccoon:chaos/root",
+    "rewards": {
+        "xp": "100"
+    },		
+    "criteria": {
+        "wood": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+						"items": [
+							"minecraft:oak_planks"
+						]
+                    }
+                ],
+                "requirements": [
+                    [
+                      "oak_planks"
+                    ]
+                  ]
+            }
+        }
+    }
+}

@@ -1,33 +1,33 @@
 {
     "display": {
         "icon": {
-            "item": "minecraft:dirt"
+            "item": "minecraft:iron_block"
         },
-        "title": {"translate":"§rFor §kfunks§r Sake"},
-        "description": {"translate":"Have an inventory full of dirt"},
-        "frame": "task",
+        "title": {"translate":"Iron-ic"},
+        "description": {"translate":"Get a stack of Iron Ingots"},
+        "frame": "challenge",
         "show_toast": true,
         "announce_to_chat": true,
         "hidden": false
     },
-    "parent": "raccoon:chaos/root",
+    "parent": "raccoon:chaos/challenges/for_f_sake",
     "rewards": {
-        "function": "raccoon:rewards/chaos/rewd_for_f_sake"
+        "function": "raccoon:rewards/chaos/challenges/rewd_ironic"
     },		
     "criteria": {
-        "dirt": {
+        "iron": {
             "trigger": "minecraft:inventory_changed",
             "conditions": {
                 "items": [
                     {
 						"items": [
-							"minecraft:dirt"
+							"minecraft:iron_ingot"
 						]
                     }
                 ],
                 "slots": {
                     "full": {
-                        "min": 36
+                        "min": 1
                     }
                 }
             }

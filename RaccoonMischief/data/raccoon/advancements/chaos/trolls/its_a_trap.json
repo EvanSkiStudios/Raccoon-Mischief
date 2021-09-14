@@ -21,11 +21,11 @@
                 "damage": {
                     "type": {
                         "source_entity": {
-                            "type": "minecraft:skeleton"
+                            "type": "minecraft:zombie"
                         },
                         "taken": {
-                            "min": 9000.0,
-                            "max": 9999.0
+                            "min": "9000",
+                            "max": "9999"
                         }
                     }
                 }
