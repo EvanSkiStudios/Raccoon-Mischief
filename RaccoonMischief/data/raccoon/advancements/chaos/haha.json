@@ -12,7 +12,7 @@
     },
     "parent": "raccoon:chaos/seriously",
     "rewards": {
-        "experience": 1000
+        "function": "raccoon:debug/rewd_debug"
     },		
     "criteria": {
         "squish": {

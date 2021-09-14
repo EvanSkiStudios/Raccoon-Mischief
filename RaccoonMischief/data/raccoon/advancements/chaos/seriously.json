@@ -12,7 +12,7 @@
     },
     "parent": "raccoon:chaos/root",
     "rewards": {
-        "function": "raccoon:rewards/rew_seriously"
+        "function": "raccoon:rewards/rewd_seriously"
     },		
     "criteria": {
         "squish": {
