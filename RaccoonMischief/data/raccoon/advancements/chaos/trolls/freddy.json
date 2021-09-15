@@ -1,0 +1,27 @@
+{
+    "parent": "raccoon:chaos/trolls/vector",
+    "display": {
+        "icon": {
+            "item": "minecraft:saddle"
+        },
+        "title": {"translate":"Freddy"},
+        "description": {"translate":"Oh yeah that's Fred"},
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "rewards": {
+        "function": "raccoon:rewards/chaos/trolls/rewd_freddy"
+    },		
+    "criteria": {
+        "fred": {
+            "trigger": "minecraft:entity_hurt_player",
+            "conditions": {
+                "entity": {
+                    "type": "minecraft:ravager"
+                }
+            }
+        }
+    }
+}

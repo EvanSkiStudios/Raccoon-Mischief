@@ -1,34 +1,34 @@
 {
-    "parent": "raccoon:chaos/root",
+    "parent": "raccoon:chaos/pickaxe/oo_shiny",
     "display": {
         "icon": {
-            "item": "minecraft:wooden_pickaxe",
+            "item": "minecraft:netherite_pickaxe",
             "nbt": "{Damage:0}"
         },
-        "title": {"translate":"Well There is no stone tools"},
-        "description": {"translate":"Get an wooden pickaxe"},
-        "frame": "task",
+        "title": {"translate":"Uber Pickaxe!"},
+        "description": {"translate":"Get an Netherite Pickaxe"},
+        "frame": "challenge",
         "show_toast": true,
         "announce_to_chat": true,
         "hidden": false
     },
     "rewards": {
-        "xp": "100"
+        "function": "raccoon:rewards/chaos/challenges/rewd_uber_pickaxe"
     },		
     "criteria": {
-        "woodpick": {
+        "ironpick": {
             "trigger": "minecraft:inventory_changed",
             "conditions": {
                 "items": [
                     {
 						"items": [
-							"minecraft:wooden_pickaxe"
+							"minecraft:netherite_pickaxe"
 						]
                     }
                 ],
                 "requirements": [
                     [
-                      "wooden_pickaxe"
+                      "netherite_pickaxe"
                     ]
                   ]
             }

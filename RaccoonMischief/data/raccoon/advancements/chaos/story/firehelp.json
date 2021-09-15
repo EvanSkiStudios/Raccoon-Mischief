@@ -1,4 +1,5 @@
 {
+    "parent": "raccoon:chaos/story/get_the_point",
     "display": {
         "icon": {
             "item": "minecraft:iron_ingot"
@@ -10,7 +11,6 @@
         "announce_to_chat": true,
         "hidden": false
     },
-    "parent": "raccoon:chaos/story/get_the_point",
     "rewards": {
         "xp": "100"
     },		

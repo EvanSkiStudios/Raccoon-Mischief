@@ -1,4 +1,5 @@
 {
+    "parent": "raccoon:chaos/trolls/seriously",
     "display": {
         "icon": {
             "item": "minecraft:phantom_membrane"
@@ -10,9 +11,8 @@
         "announce_to_chat": true,
         "hidden": false
     },
-    "parent": "raccoon:chaos/trolls/seriously",
     "rewards": {
-        "function": "raccoon:rewards/chaos/mobs/rewd_vector"
+        "function": "raccoon:rewards/chaos/trolls/rewd_vector"
     },		
     "criteria": {
         "vector": {
