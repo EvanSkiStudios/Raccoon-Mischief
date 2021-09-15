@@ -7,7 +7,7 @@
         "description": "Make it to the Nether",
         "background": "minecraft:textures/block/cracked_deepslate_tiles.png",
         "frame": "challenge",
-        "show_toast": true,
+        "show_toast": false,
         "announce_to_chat": true,
         "hidden": false
     },

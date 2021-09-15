@@ -1,5 +1,5 @@
 {
-    "parent": "raccoon:chaos/pickaxe/oo_shiny",
+    "parent": "raccoon:chaos/pickaxe/you_dig_it",
     "display": {
         "icon": {
             "item": "minecraft:netherite_pickaxe",

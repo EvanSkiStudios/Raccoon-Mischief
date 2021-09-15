@@ -18,10 +18,14 @@
         "fred": {
             "trigger": "minecraft:entity_hurt_player",
             "conditions": {
-                "entity": {
-                    "type": "minecraft:ravager"
+                "damage": {
+                    "type": {
+                        "source_entity": {
+                            "type": "minecraft:ravager"
+                        }
+                    }
                 }
             }
         }
-    }
+    }   
 }
