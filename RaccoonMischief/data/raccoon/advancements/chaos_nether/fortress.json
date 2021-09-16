@@ -1,0 +1,36 @@
+{
+    "parent": "raccoon:chaos_nether/root",
+    "display": {
+      "icon": {
+        "item": "minecraft:red_nether_bricks"
+      },
+      "title": {
+        "translate": "Here be Blazes"
+      },
+      "description": {
+        "translate": "Step foot on a Fortress"
+      },
+      "frame": "task",
+      "show_toast": true,
+      "announce_to_chat": true,
+      "hidden": false
+    },
+    "rewards": {
+        "function": "raccoon:rewards/chaos_nether/story/rewd_fortress"
+    },
+    "criteria": {
+      "fortress": {
+        "trigger": "minecraft:location",
+        "conditions": {
+          "location": {
+            "feature": "fortress"
+          }
+        }
+      }
+    },
+    "requirements": [
+      [
+        "fortress"
+      ]
+    ]
+  }

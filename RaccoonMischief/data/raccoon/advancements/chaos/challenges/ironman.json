@@ -1,0 +1,55 @@
+{
+    "parent": "raccoon:chaos/challenges/ironic",
+    "display": {
+      "icon": {
+        "item": "minecraft:minecart"
+      },
+      "title": {
+        "translate": "Iron Man"
+      },
+      "description": {
+        "translate": "Get a full Iron Suit"
+      },
+      "frame": "challenge",
+      "show_toast": true,
+      "announce_to_chat": true,
+      "hidden": false
+    },
+    "rewards": {
+      "experience": 100
+    },
+    "criteria": {
+      "iron_armor": {
+        "trigger": "minecraft:inventory_changed",
+        "conditions": {
+          "items": [
+            {
+              "items": [
+                "minecraft:iron_helmet"
+              ]
+            },
+            {
+              "items": [
+                "minecraft:iron_chestplate"
+              ]
+            },
+            {
+              "items": [
+                "minecraft:iron_leggings"
+              ]
+            },
+            {
+              "items": [
+                "minecraft:iron_boots"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "requirements": [
+      [
+        "iron_armor"
+      ]
+    ]
+  }
