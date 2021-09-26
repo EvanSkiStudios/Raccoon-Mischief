@@ -1,0 +1,27 @@
+{
+    "parent": "raccoon:chaos_nether/root",
+    "display": {
+        "icon": {
+            "item": "minecraft:stone_sword"
+        },
+        "title": {"translate":"Mercy-er"},
+        "description": {"translate":"No not the Mercers! Not the Mercers!"},
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "rewards": {
+        "function": "raccoon:rewards/chaos_nether/trolls/rewd_vexing"
+    },		
+    "criteria": {
+        "vector": {
+            "trigger": "minecraft:entity_killed_player",
+            "conditions": {
+                "entity": {
+                    "type": "minecraft:vex"
+                }
+            }
+        }
+    }
+}
