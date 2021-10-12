@@ -8,5 +8,5 @@ This is a Minecraft datapack, for my friends custom Minecraft plugin
 [Minecraft Guide on Datapack Advancements](https://minecraft.fandom.com/wiki/Advancement/JSON_format)
 
 ## Changelog
-# Version 1.0
+# Version 1.1
 * Adding Advancements
