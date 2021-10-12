@@ -21,5 +21,10 @@
           "to": "minecraft:the_nether"
         }
       }
-    }
+  },
+  "requirements": [
+    [
+      "makeit_nether"
+    ]
+  ]
 }

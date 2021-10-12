@@ -21,5 +21,10 @@
                 "block": "minecraft:anvil"
             }
         }
-    }
+    },
+    "requirements": [
+      [
+        "squish"
+      ]
+    ]
 }

@@ -28,7 +28,7 @@
                 ],
                 "requirements": [
                     [
-                      "iron_pickaxe"
+                      "ironpick"
                     ]
                   ]
             }

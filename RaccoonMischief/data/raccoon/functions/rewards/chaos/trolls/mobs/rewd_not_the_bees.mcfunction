@@ -1,0 +1,1 @@
+summon item ~ ~ ~ {Item:{id:"minecraft:oak_planks",Count:4}}

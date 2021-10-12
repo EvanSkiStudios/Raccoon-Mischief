@@ -16,7 +16,7 @@
         "xp": "100"
     },		
     "criteria": {
-        "ironpick": {
+        "diamond_pick": {
             "trigger": "minecraft:inventory_changed",
             "conditions": {
                 "items": [
@@ -28,7 +28,7 @@
                 ],
                 "requirements": [
                     [
-                      "diamond_pickaxe"
+                      "diamond_pick"
                     ]
                   ]
             }

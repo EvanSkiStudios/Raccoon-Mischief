@@ -15,11 +15,16 @@
         "function": "raccoon:rewards/chaos/trolls/rewd_its_electric"
     },		
     "criteria": {
-        "squish": {
+        "boogiewoogie": {
             "trigger": "minecraft:enter_block",
             "conditions": {
                 "block": "minecraft:water"
             }
         }
-    }
+    },
+    "requirements": [
+      [
+        "boogiewoogie"
+      ]
+    ]
 }

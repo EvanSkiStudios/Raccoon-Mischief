@@ -1,5 +1,5 @@
 {
-    "parent": "raccoon:chaos/trolls/vector",
+    "parent": "raccoon:chaos/trolls/mobs/vector",
     "display": {
         "icon": {
             "item": "minecraft:saddle"
@@ -12,7 +12,7 @@
         "hidden": false
     },
     "rewards": {
-        "function": "raccoon:rewards/chaos/trolls/rewd_freddy"
+        "function": "raccoon:rewards/chaos/trolls/mobs/rewd_freddy"
     },		
     "criteria": {
         "fred": {
@@ -27,5 +27,10 @@
                 }
             }
         }
-    }   
+    },
+    "requirements": [
+      [
+        "fred"
+      ]
+    ]   
 }

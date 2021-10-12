@@ -5,7 +5,7 @@
             "item": "minecraft:chest"
         },
         "title": {"translate":"It's a Trap!"},
-        "description": {"translate":"Open a random chest"},
+        "description": {"translate":"You'll unlock this randomly"},
         "frame": "task",
         "show_toast": true,
         "announce_to_chat": true,
@@ -31,5 +31,10 @@
                 }
             }
         }
-    }
+    },
+    "requirements": [
+      [
+        "mimic"
+      ]
+    ]
 }

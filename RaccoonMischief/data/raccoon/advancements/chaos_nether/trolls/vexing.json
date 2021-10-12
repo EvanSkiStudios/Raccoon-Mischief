@@ -15,7 +15,7 @@
         "function": "raccoon:rewards/chaos_nether/trolls/rewd_vexing"
     },		
     "criteria": {
-        "vector": {
+        "mercer": {
             "trigger": "minecraft:entity_killed_player",
             "conditions": {
                 "entity": {
@@ -23,5 +23,10 @@
                 }
             }
         }
-    }
+    },
+    "requirements":[
+        [
+          "mercer"
+        ]
+      ]
 }

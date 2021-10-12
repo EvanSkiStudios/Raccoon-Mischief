@@ -16,7 +16,7 @@
         "function": "raccoon:rewards/chaos/challenges/rewd_uber_pickaxe"
     },		
     "criteria": {
-        "ironpick": {
+        "netherite_pick": {
             "trigger": "minecraft:inventory_changed",
             "conditions": {
                 "items": [
@@ -28,7 +28,7 @@
                 ],
                 "requirements": [
                     [
-                      "netherite_pickaxe"
+                      "netherite_pick"
                     ]
                   ]
             }

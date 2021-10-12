@@ -12,7 +12,7 @@
         "hidden": false
     },
     "rewards": {
-        "function": "raccoon:rewards/chaos/trolls/rewd_vector"
+        "function": "raccoon:rewards/chaos/trolls/mobs/rewd_vector"
     },		
     "criteria": {
         "vector": {
@@ -23,5 +23,10 @@
                 }
             }
         }
-    }
+    },
+    "requirements": [
+      [
+        "vector"
+      ]
+    ]
 }
