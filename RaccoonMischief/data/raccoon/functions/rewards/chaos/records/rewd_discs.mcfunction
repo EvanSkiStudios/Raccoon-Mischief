@@ -1,0 +1,1 @@
+function raccoon:rewards/challange_passed

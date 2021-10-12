@@ -1,0 +1,37 @@
+{
+    "parent": "raccoon:chaos/records/02_get_cat",
+      "display": {
+          "icon": {
+              "item": "minecraft:music_disc_blocks"
+          },
+          "title": {"translate":"Brick by Brick"},
+          "description": {"translate":"You just gotta do it~"},
+          "frame": "challenge",
+          "show_toast": false,
+          "announce_to_chat": true,
+          "hidden": false
+      },
+      "rewards": {
+        "xp":"100"
+      },
+      "criteria": {
+        "nomatterhowthick": {
+          "trigger": "minecraft:item_used_on_block",
+          "conditions": {
+            "location": {
+              "block": {
+                "blocks": ["minecraft:jukebox"]
+              }
+            },
+            "item": {
+              "items": ["minecraft:music_disc_blocks"]
+            }
+          }
+        }
+      },
+      "requirements": [
+        [
+          "nomatterhowthick"
+        ]
+      ]
+    }
