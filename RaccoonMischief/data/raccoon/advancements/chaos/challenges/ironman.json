@@ -1,5 +1,5 @@
 {
-    "parent": "raccoon:chaos/challenges/ironic",
+    "parent": "raccoon:chaos/challenges/dir_and_mag",
     "display": {
       "icon": {
         "item": "minecraft:minecart"
@@ -16,10 +16,10 @@
       "hidden": false
     },
     "rewards": {
-      "experience": 100
+      "function": "raccoon:rewards/chaos/challenges/rewd_ironman"
     },
     "criteria": {
-      "iron_armor": {
+      "ironman": {
         "trigger": "minecraft:inventory_changed",
         "conditions": {
           "items": [
@@ -49,7 +49,7 @@
     },
     "requirements": [
       [
-        "iron_armor"
+        "ironman"
       ]
     ]
   }

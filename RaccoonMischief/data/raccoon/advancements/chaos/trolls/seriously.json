@@ -20,11 +20,25 @@
             "conditions": {
                 "block": "minecraft:anvil"
             }
+        },
+        "squish_er": {
+            "trigger": "minecraft:enter_block",
+            "conditions": {
+                "block": "minecraft:chipped_anvil"
+            }
+        },
+        "squish_est": {
+            "trigger": "minecraft:enter_block",
+            "conditions": {
+                "block": "minecraft:damaged_anvil"
+            }
         }
     },
     "requirements": [
       [
-        "squish"
+        "squish",
+        "squish_er",
+        "squish_est"
       ]
     ]
 }
