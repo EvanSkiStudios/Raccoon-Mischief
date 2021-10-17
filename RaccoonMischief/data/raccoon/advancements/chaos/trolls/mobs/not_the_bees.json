@@ -1,5 +1,5 @@
 {
-    "parent": "raccoon:chaos/trolls/mobs/freddy",
+    "parent": "raccoon:chaos/trolls/mobs/vector",
     "display": {
         "icon": {
             "item": "minecraft:honey_block"

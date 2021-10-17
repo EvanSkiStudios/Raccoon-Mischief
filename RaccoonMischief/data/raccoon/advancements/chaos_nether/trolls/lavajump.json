@@ -1,30 +1,30 @@
 {
-    "parent": "raccoon:chaos/trolls/seriously",
+    "parent": "raccoon:chaos_nether/root",
     "display": {
         "icon": {
-            "item": "minecraft:water_bucket"
+            "item": "minecraft:lava_bucket"
         },
-        "title": {"translate":"It's Electric"},
-        "description": {"translate":"Go for a swim"},
+        "title": {"translate":"Lethal Lava Land"},
+        "description": {"translate":"It's kind of bouncy!"},
         "frame": "task",
         "show_toast": true,
         "announce_to_chat": true,
         "hidden": false
     },
     "rewards": {
-        "function": "raccoon:rewards/chaos/trolls/rewd_its_electric"
+        "function": "raccoon:rewards/chaos_nether/trolls/rewd_lavajump"
     },		
     "criteria": {
-        "boogiewoogie": {
+        "hotstuff": {
             "trigger": "minecraft:enter_block",
             "conditions": {
-                "block": "minecraft:water"
+                "block": "minecraft:lava"
             }
         }
     },
     "requirements": [
       [
-        "boogiewoogie"
+        "hotstuff"
       ]
     ]
 }

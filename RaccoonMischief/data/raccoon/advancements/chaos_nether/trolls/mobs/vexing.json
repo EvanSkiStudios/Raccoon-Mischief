@@ -12,7 +12,7 @@
         "hidden": false
     },
     "rewards": {
-        "function": "raccoon:rewards/chaos_nether/trolls/rewd_vexing"
+        "function": "raccoon:rewards/chaos_nether/trolls/mobs/rewd_vexing"
     },		
     "criteria": {
         "mercer": {

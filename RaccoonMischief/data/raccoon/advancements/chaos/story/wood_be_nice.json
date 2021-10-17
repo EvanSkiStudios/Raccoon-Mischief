@@ -4,7 +4,7 @@
         "icon": {
             "item": "minecraft:oak_planks"
         },
-        "title": {"translate":"Woodn't it be nice"},
+        "title": {"translate":"Wood'nt it be nice"},
         "description": {"translate":"Gather wood"},
         "frame": "task",
         "show_toast": true,
