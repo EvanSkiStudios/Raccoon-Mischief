@@ -12,25 +12,25 @@ This is a Minecraft datapack, for my friends custom Minecraft plugin
 # Changelog
 ### Advancement List
 ### Chaos:
-#### Challenges
+#### *Challenges
 * for f sake
 * With Direction and Magnitude
 * Iron Man
-#### Pickaxes
+#### *Pickaxes
 * Well There is no stone tools
 * Don't Lose it!
 * You Dig it?
 * Uber Pickaxe
-#### Records
+#### *Records
 * Record Keeper
 *(Record get advancements)
 * mustic player
-#### Story
+#### *Story
 * Wood'nt it be nice?
 * Get the Point?
 * Fire Help
 * The Myth is True
-#### Trolls
+#### *Trolls
 * GET VECTORED
 * No! Not the bees!
 * Get a bucket
@@ -42,7 +42,7 @@ This is a Minecraft datapack, for my friends custom Minecraft plugin
 #### Story
 * Here be Blazes
 * Hot Rod
-#### Trolls
+#### *Trolls
 * Freddy
 * Mercy-er
 * Lethal Lava Land
