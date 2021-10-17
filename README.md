@@ -39,7 +39,7 @@ This is a Minecraft datapack, for my friends custom Minecraft plugin
 * Seriously?
 
 ### Chaos Nether:
-#### Story
+#### *Story
 * Here be Blazes
 * Hot Rod
 #### *Trolls
