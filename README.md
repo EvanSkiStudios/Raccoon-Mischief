@@ -11,7 +11,7 @@ This is a Minecraft datapack, for my friends custom Minecraft plugin
 
 # Changelog
 ### Advancement List
-### Chaos
+### Chaos:
 #### Challenges
 * for f sake
 * With Direction and Magnitude
@@ -38,7 +38,7 @@ This is a Minecraft datapack, for my friends custom Minecraft plugin
 * Happy Birthday!
 * Seriously?
 
-### Chaos Nether
+### Chaos Nether:
 #### Story
 * Here be Blazes
 * Hot Rod
