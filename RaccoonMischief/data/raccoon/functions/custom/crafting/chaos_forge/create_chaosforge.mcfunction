@@ -1,0 +1,2 @@
+execute align xz positioned ~0.5 ~ ~0.5 run summon armor_stand ~ ~ ~ {NoGravity:1b,Silent:1b,Invulnerable:1b,Invisible:1b,NoBasePlate:0b,Tags:["chaosforge"],ArmorItems:[{},{},{},{}]}
+setblock ~ ~ ~ dropper{CustomName:'{"text":"Chaos Forge","color":"aqua","bold":true}'}

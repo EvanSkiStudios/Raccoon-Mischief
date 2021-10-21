@@ -16,4 +16,4 @@ scoreboard players add @a deathDetect 0
 scoreboard players add @a eatCake 0
 
 #custom food
-function raccoon:custom_food/custom_food_load
+function raccoon:custom/food/custom_food_load

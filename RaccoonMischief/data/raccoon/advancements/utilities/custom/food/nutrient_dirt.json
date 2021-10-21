@@ -3,12 +3,12 @@
         "unlocked":{
             "trigger": "minecraft:recipe_unlocked",
             "conditions": {
-                "recipe": "raccoon:crafting/custom_food/rcip_nutriant_dirt"
+                "recipe": "raccoon:crafting/custom/food/rcip_cf_nutrientdirt"
             }
         }
     },
     "rewards":{
-        "function":"raccoon:custom_food/give_custom_food/cf_nutruant_dirt"
+        "function":"raccoon:custom/food/give/cf_nutrientdirt"
     },
     "requirements": [
         [

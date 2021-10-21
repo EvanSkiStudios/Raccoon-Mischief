@@ -9,4 +9,10 @@ tag @a[scores={eatCake=2}] remove caked
 
 
 #custom food
-function raccoon:custom_food/custom_food_tick
+function raccoon:custom/food/custom_food_tick
+
+#custom crafting
+execute as @e[tag=chaosforge] at @s run function raccoon:custom/crafting/chaos_forge/chaosforge_crafting_tick
+
+#custom blocks
+function raccoon:custom/blocks/cb_main
