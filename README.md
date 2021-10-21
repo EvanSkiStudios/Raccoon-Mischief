@@ -10,7 +10,7 @@ basiclly this is here to save me a bookmark
 [Minecraft Guide on Datapack Advancements](https://minecraft.fandom.com/wiki/Advancement/JSON_format)
 
 # Uses Resources from
-[Custom Food Template Made by Timber Forge] (https://youtu.be/TtdHB984DDc)
+[Custom Food Template Made by Timber Forge](https://youtu.be/TtdHB984DDc)
 
 # Changelog
 [Advancement List](Advancement_List.md)
