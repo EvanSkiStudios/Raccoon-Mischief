@@ -1,4 +1,4 @@
-tellraw @a {"text": "RaccoonMischief V.1.1 is loaded", "color": "#00FF44"}
+tellraw @a {"text": "RaccoonMischief V.1.2 is loaded", "color": "#00FF44"}
 advancement grant @a only raccoon:chaos/root
 
 #cleanup/restart
@@ -14,3 +14,6 @@ scoreboard objectives add eatCake minecraft.custom:minecraft.eat_cake_slice
 #add players to scoreboards
 scoreboard players add @a deathDetect 0
 scoreboard players add @a eatCake 0
+
+#custom food
+function raccoon:custom_food/custom_food_load

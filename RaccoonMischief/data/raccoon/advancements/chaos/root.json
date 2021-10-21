@@ -4,7 +4,7 @@
             "item": "minecraft:moss_block"
         },
         "title": {"translate":"The Start of Chaos"},
-        "description": {"translate":"The Masochist journey begins! V1.1"},
+        "description": {"translate":"The Masochist journey begins! V1.2"},
         "background": "minecraft:textures/block/bedrock.png",
         "frame": "challenge",
         "show_toast": false,
