@@ -9,5 +9,10 @@
     },
     "rewards":{
         "function":"raccoon:custom_food/give_custom_food/cf_nutruant_dirt"
-    }
+    },
+    "requirements": [
+        [
+          "unlocked"
+        ]
+    ]
 }

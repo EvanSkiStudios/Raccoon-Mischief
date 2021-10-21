@@ -5,7 +5,7 @@ recipe take @s raccoon:crafting/custom_food/rcip_nutriant_dirt
 advancement revoke @s only raccoon:utilities/custom_food/nutriant_dirt
 
 #actually gives the item from crafting
-give @a baked_potato{eatable_dirt:1b,CustomModelData:1,display:{Name:'{"text":"Nutriant Block","italic":false}'}}
+give @a baked_potato{ndirt_eat:1b,CustomModelData:1,display:{Name:'{"text":"Nutriant Block","italic":false}'}}
 
 #gets rid of the useless book
 clear @s minecraft:knowledge_book

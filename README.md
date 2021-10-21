@@ -9,11 +9,12 @@ This is a Minecraft datapack, for my friends custom Minecraft plugin
 basiclly this is here to save me a bookmark
 [Minecraft Guide on Datapack Advancements](https://minecraft.fandom.com/wiki/Advancement/JSON_format)
 
-#Uses Resources from
+# Uses Resources from
 [Custom Food Template Made by Timber Forge] (https://youtu.be/TtdHB984DDc)
 
 # Changelog
 [Advancement List](Advancement_List.md)
+[Custom Food List](Custom_Food.md)
 
 ## Version 1.2
 * Added support for Custom food items

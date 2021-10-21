@@ -4,7 +4,6 @@
 ######## Example Food 
 scoreboard players set @a[nbt={SelectedItem:{id:"minecraft:baked_potato",tag:{nutriant_dirt:1b}}}] ndirt_delay 2
 
-
 #### Run command for effect or any other command or function file if player eats custon item
 #### (If the player has recently held the custom item and also just ate the base item)
 #execute as @a[scores={spinach_delay=1..,berry_eat=1}] at @s run say IM STRONG TO THE FINICH 'CAUSE I EATS ME SPINACH
