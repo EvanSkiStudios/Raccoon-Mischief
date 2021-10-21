@@ -10,6 +10,8 @@ This is a Minecraft datapack, for my friends custom Minecraft plugin
 [Minecraft Guide on Datapack Advancements](https://minecraft.fandom.com/wiki/Advancement/JSON_format)
 
 # Changelog
+[Advancement List](Advancement_List.md)
+
 ## Version 1.1
 * Advancement tree for base Chaos
 * sub trees for story, trolls, records, pickaxes, challanges
