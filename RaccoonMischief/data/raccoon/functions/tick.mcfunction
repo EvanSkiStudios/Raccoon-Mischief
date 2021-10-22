@@ -14,5 +14,8 @@ function raccoon:custom/food/custom_food_tick
 #custom crafting
 execute as @e[tag=chaosforge] at @s run function raccoon:custom/crafting/chaos_forge/chaosforge_crafting_tick
 
+#custom Floor crafting
+function raccoon:custom/crafting/floor/chaos_forge/fc_ritual_chaosforge
+
 #custom blocks
 function raccoon:custom/blocks/cb_main

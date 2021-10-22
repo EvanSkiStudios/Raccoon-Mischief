@@ -1,5 +1,11 @@
+#play sounds
+function raccoon:custom/blocks/chaos_forge/effects/cb_chaos_forge_effect_remove
+
 #CREATE BLOCK DROP
-summon item ~ ~0.5 ~ {Item:{id:"minecraft:glow_item_frame",Count:1b,tag:{CustomModelData:7777,EntityTag:{Silent:1b,Tags:["chaosforge"],Item:{id:"minecraft:glow_item_frame",Count:1b,tag:{CustomModelData:7777}},Invulnerable:1b,Invisible:1b,Fixed:1b}}}}
+function raccoon:custom/blocks/give/cb_give_chaos_forge
+
+#KILL ARMOR STAND
+kill @e[type=minecraft:armor_stand,tag=chaosforge,distance=0..2,sort=nearest,limit=1]
 
 #KILL BASE BLOCK
 kill @e[type=item,nbt={Item:{id:"minecraft:dropper"}},distance=0..2,sort=nearest,limit=1]
