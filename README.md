@@ -13,8 +13,8 @@ basiclly this is here to save me a bookmark
 [Custom Food Template Made by Timber Forge](https://youtu.be/TtdHB984DDc)
 
 # Changelog
-[Advancement List](Advancement_List.md)
-[Custom Food List](Custom_Food.md)
+[Advancement List](Lists/Advancement_List.md)
+[Custom Food List](Lists/Custom_Food.md)
 
 ## Version 1.2
 * Added support for Custom food items
