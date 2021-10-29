@@ -1,9 +1,0 @@
-{
-    "type": "smelting",
-    "ingredient": {
-      "item": "minecraft:anvil"
-    },
-    "result": "minecraft:iron_nugget",
-    "experience": 0.35,
-    "cookingtime": 2000
-}

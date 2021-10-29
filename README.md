@@ -13,11 +13,14 @@ basiclly this is here to save me a bookmark
 [Custom Food Template Made by Timber Forge](https://youtu.be/TtdHB984DDc)
 
 # Changelog
-[Advancement List](https://github.com/EvanSkiStudios/Raccoon-Mischief/tree/master/lists/Advancement_List.md)
-[Custom Food List](https://github.com/EvanSkiStudios/Raccoon-Mischief/tree/master/lists/Custom_Food.md)
+[Advancement List](https://github.com/EvanSkiStudios/Raccoon-Mischief/tree/master/lists/Advancement_List.md),
+[Custom Food List](https://github.com/EvanSkiStudios/Raccoon-Mischief/tree/master/lists/Custom_Food.md),
+[Custom Item List](https://github.com/EvanSkiStudios/Raccoon-Mischief/tree/master/lists/Custom_Items.md),
+[Custom Block List](https://github.com/EvanSkiStudios/Raccoon-Mischief/tree/master/lists/Custom_Blocks.md),
 
 ## Version 1.2
-* Added support for Custom food items
+* Added support for Custom Blocks, Items, Food
+* Added Chaos Forge
 
 ## Version 1.1
 * Advancement tree for base Chaos

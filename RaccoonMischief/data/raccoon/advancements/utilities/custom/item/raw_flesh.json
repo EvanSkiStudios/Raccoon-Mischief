@@ -1,0 +1,18 @@
+{
+    "criteria":{
+        "unlocked":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "raccoon:cooking/custom/item/rcip_ci_raw_flesh"
+            }
+        }
+    },
+    "rewards":{
+        "function":"raccoon:custom/items/give/ci_raw_flesh"
+    },
+    "requirements": [
+        [
+          "unlocked"
+        ]
+    ]
+}

@@ -1,0 +1,1 @@
+give @a beetroot_seeds{CustomModelData:827200,display:{Name:'{"text":"Raw Hide","italic":false}'}}
