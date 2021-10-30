@@ -1,2 +1,0 @@
-data merge block ~ ~ ~ {Items:[{Slot:4b,id:"minecraft:baked_potato",Count:1b,tag:{display:{Name:'{"text":"Nutrient Block","italic":false}'},CustomModelData:1}}]}
-function raccoon:custom/crafting/chaos_forge/effects/cf_craft_effects
