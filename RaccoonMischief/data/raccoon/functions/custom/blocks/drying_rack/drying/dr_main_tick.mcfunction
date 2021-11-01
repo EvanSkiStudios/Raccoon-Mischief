@@ -7,3 +7,6 @@ execute as @e[type=minecraft:armor_stand,tag=dryingrack,tag=!drying_rawhide,nbt=
 #if raw hide gets taken
 execute as @e[type=minecraft:armor_stand,tag=dryingrack,tag=drying_rawhide,nbt=!{HandItems:[{id:"minecraft:beetroot_seeds",Count:1b,tag:{CustomModelData:827200,display:{Name:'{"text":"Raw Hide","italic":false}'}}},{}]}] at @s run function raccoon:custom/blocks/drying_rack/drying/dr_dry_take_rawhide
 
+
+#if leather gets taken
+execute as @e[type=minecraft:armor_stand,tag=dryingrack,tag=holding_leather,nbt=!{HandItems:[{id:"minecraft:leather",Count:1b},{}]}] at @s run function raccoon:custom/blocks/drying_rack/drying/dr_dry_take_leather
