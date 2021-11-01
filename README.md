@@ -21,6 +21,7 @@ basiclly this is here to save me a bookmark
 ## Version 1.2
 * Added support for Custom Blocks, Items, Food
 * Added Chaos Forge
+* Added Drying Rack
 
 ## Version 1.1
 * Advancement tree for base Chaos
