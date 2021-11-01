@@ -1,0 +1,18 @@
+{
+    "criteria":{
+        "unlocked":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "minecraft:leather"
+            }
+        }
+    },
+    "rewards":{
+        "function":"raccoon:custom/items/give/ci_raw_hide"
+    },
+    "requirements": [
+        [
+          "unlocked"
+        ]
+    ]
+}

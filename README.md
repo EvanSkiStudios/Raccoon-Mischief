@@ -19,9 +19,11 @@ basiclly this is here to save me a bookmark
 [Custom Block List](https://github.com/EvanSkiStudios/Raccoon-Mischief/tree/master/Lists/Custom_Blocks.md),
 
 ## Version 1.2
-* Added support for Custom Blocks, Items, Food
+* Added support for Custom Blocks, Items, Food, Loot Tables
 * Added Chaos Forge
 * Added Drying Rack
+* Cows now drop Raw Hide, unless killed with fire or fire enchanted weapon
+* Rabbit leather recipe now gives raw hide
 
 ## Version 1.1
 * Advancement tree for base Chaos
