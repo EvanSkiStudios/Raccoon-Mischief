@@ -14,14 +14,16 @@ basiclly this is here to save me a bookmark
 
 # Changelog
 [Advancement List](https://github.com/EvanSkiStudios/Raccoon-Mischief/tree/master/Lists/Advancement_List.md),
+[Custom Block List](https://github.com/EvanSkiStudios/Raccoon-Mischief/tree/master/Lists/Custom_Blocks.md),
+[Custom Crafting List](https://github.com/EvanSkiStudios/Raccoon-Mischief/tree/master/Lists/Custom_Crafting.md),
 [Custom Food List](https://github.com/EvanSkiStudios/Raccoon-Mischief/tree/master/Lists/Custom_Food.md),
 [Custom Item List](https://github.com/EvanSkiStudios/Raccoon-Mischief/tree/master/Lists/Custom_Items.md),
-[Custom Block List](https://github.com/EvanSkiStudios/Raccoon-Mischief/tree/master/Lists/Custom_Blocks.md),
 
 ## Version 1.2
 * Added support for Custom Blocks, Items, Food, Loot Tables
 * Added Chaos Forge
 * Added Drying Rack
+* Added Magnets
 * Cows now drop Raw Hide, unless killed with fire or fire enchanted weapon
 * Rabbit leather recipe now gives raw hide
 

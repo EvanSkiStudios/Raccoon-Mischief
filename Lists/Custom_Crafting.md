@@ -13,3 +13,5 @@ crafting types are as fallows,
 |Nutrient Block| Crafting Bench| 1 Dirt, 1 Seed, shapeless
 |Raw Flesh | Furnace| Rotten Flesh
 |Raw Hide| Chaos Forge| 9 Raw Flesh, as you would make a block
+|Magnet | Chaos Forge | ![2 Copper ingots, 2 iron nuggets, 1 compass](https://i.imgur.com/ciMp9h5.png)
+|Super Magnet |Chaos Forge |![4 Copper ingots, 1 netherite ingot](https://i.imgur.com/zSwToul.png)
