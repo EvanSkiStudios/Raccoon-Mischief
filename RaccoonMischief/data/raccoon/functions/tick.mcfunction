@@ -22,3 +22,6 @@ function raccoon:custom/blocks/cb_main
 
 #custom block function
 function raccoon:custom/blocks/drying_rack/drying/dr_main_tick
+
+#custom Item Functions
+function raccoon:custom/items/ability/snowball_brick/ci_sbb_breakglass

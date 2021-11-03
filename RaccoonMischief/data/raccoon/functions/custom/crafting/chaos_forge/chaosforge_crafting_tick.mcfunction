@@ -1,2 +1,3 @@
 function raccoon:custom/crafting/chaos_forge/recipes/reci_cf_rflesh_to_rhide
 function raccoon:custom/crafting/chaos_forge/recipes/reci_cf_dryingrack
+function raccoon:custom/crafting/chaos_forge/recipes/reci_cf_glass_cup_lava
