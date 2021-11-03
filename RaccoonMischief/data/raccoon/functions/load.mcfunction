@@ -21,3 +21,6 @@ scoreboard players add @a eatCake 0
 
 #custom food
 function raccoon:custom/food/custom_food_load
+
+#custom item
+function raccoon:custom/items/custom_item_load

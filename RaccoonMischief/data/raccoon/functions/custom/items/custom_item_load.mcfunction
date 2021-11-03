@@ -1,0 +1,1 @@
+scoreboard objectives add holding_magnet dummy
