@@ -17,3 +17,4 @@ crafting types are as fallows,
 |Super Magnet |Chaos Forge |![4 Copper ingots, 1 netherite ingot](https://i.imgur.com/zSwToul.png)
 |Glass Cup|Crafting Bench|![4 Glass in the shape of a boat](https://i.imgur.com/79fzep5.png)
 |Glass of Lava|Chaos Forge|![glass cup above lava](https://i.imgur.com/vT8qPjc.png)
+|Fruit Salad|Chaos Forge|![1 melon slice, 1 apple, 1 chrous fruit, 1 bowl](https://i.imgur.com/s2laEfS.png)

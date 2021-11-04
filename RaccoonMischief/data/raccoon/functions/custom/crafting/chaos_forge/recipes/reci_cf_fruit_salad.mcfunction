@@ -1,0 +1,1 @@
+execute if block ~ ~ ~ dropper{Items:[{Slot:3b,id:"minecraft:melon_slice",Count:1b},{Slot:4b,id:"minecraft:chorus_fruit",Count:1b},{Slot:5b,id:"minecraft:apple",Count:1b},{Slot:7b,id:"minecraft:bowl",Count:1b}]} run function raccoon:custom/crafting/chaos_forge/results/cf_fruit_salad

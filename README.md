@@ -24,6 +24,8 @@ basiclly this is here to save me a bookmark
 * Added Chaos Forge
 * Added Drying Rack
 * Added Magnets
+* Added Glass Cups
+* Added Glass of Lava
 * Cows now drop Raw Hide, unless killed with fire or fire enchanted weapon
 * Rabbit leather recipe now gives raw hide
 

@@ -3,3 +3,4 @@ function raccoon:custom/crafting/chaos_forge/recipes/reci_cf_dryingrack
 function raccoon:custom/crafting/chaos_forge/recipes/reci_cf_glass_cup_lava
 function raccoon:custom/crafting/chaos_forge/recipes/reci_cf_magnet
 function raccoon:custom/crafting/chaos_forge/recipes/reci_cf_s_magnet
+function raccoon:custom/crafting/chaos_forge/recipes/reci_cf_fruit_salad

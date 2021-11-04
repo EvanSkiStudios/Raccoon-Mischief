@@ -2,5 +2,6 @@
 
 | Item | Restores | Saturation | Special Effect
 |--|--|--|--|
-|Nutrient Block| 1(half drumbstick) | 1.2 | None
-|Glass of Lava| 6(3 drumbstick)| 1.2| removes poison, sets player on fire
+|Nutrient Block| 0.5 drumbstick | 1.2 | None
+|Glass of Lava| 3 drumbsticks| 1.2| removes poison, sets player on fire
+|Fruit Salad|5 drumbsticks| 12 |None|
