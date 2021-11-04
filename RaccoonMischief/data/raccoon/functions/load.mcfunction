@@ -10,6 +10,8 @@ scoreboard objectives remove eatCake
 #recipes
 recipe take @a leather
 recipe take @a raccoon:crafting/custom/food/rcip_cf_nutrientdirt
+recipe take @a raccoon:crafting/custom/item/rcip_ci_glass_cup
+recipe take @a raccoon:cooking/custom/item/rcip_ci_raw_flesh
 
 #set up scoreboards
 scoreboard objectives add deathDetect deathCount

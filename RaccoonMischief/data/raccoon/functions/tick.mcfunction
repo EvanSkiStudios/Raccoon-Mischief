@@ -1,5 +1,5 @@
 #play sound at dead player
-function raccoon:effects/death_detect
+function raccoon:effects/death_sfx/death_detect
 
 #mmm cake
 tag @a[scores={eatCake=1}] add caked

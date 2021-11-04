@@ -15,3 +15,5 @@ crafting types are as fallows,
 |Raw Hide| Chaos Forge| 9 Raw Flesh, as you would make a block
 |Magnet | Chaos Forge | ![2 Copper ingots, 2 iron nuggets, 1 compass](https://i.imgur.com/ciMp9h5.png)
 |Super Magnet |Chaos Forge |![4 Copper ingots, 1 netherite ingot](https://i.imgur.com/zSwToul.png)
+|Glass Cup|Crafting Bench|![4 Glass in the shape of a boat](https://i.imgur.com/79fzep5.png)
+|Glass of Lava|Chaos Forge|![glass cup above lava](https://i.imgur.com/vT8qPjc.png)
