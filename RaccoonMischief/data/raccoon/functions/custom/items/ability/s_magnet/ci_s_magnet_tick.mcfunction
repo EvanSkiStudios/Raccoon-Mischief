@@ -1,5 +1,6 @@
 #if player is holding a magnet
 scoreboard players set @a[nbt={SelectedItem:{id:"minecraft:iron_nugget",tag:{super_magnet:1b}}}] holding_s_magnet 2
+scoreboard players set @a[nbt={Inventory:[{Slot: -106b, id:"minecraft:iron_nugget",tag:{super_magnet:1b} }]}] holding_s_magnet 2
 
 #run item function when holding
 execute as @a[scores={holding_s_magnet=2..}] at @s run function raccoon:custom/items/ability/s_magnet/ci_s_magnet_ability
