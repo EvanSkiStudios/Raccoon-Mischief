@@ -12,6 +12,12 @@ basiclly this is here to save me a bookmark
 # Uses Resources from
 [Custom Food Template Made by Timber Forge](https://youtu.be/TtdHB984DDc)
 
+# How to install
+Open your minecraft world save (%appdata%/roaming/.minecraft/saves/(world name))
+drop the main "RaccoonMischief" folder (next to lists folder) into the folder named "datapacks" in your world save folder
+open the world in MC, and do /reload
+everything should work, enjoy 
+
 # Changelog
 [Advancement List](https://github.com/EvanSkiStudios/Raccoon-Mischief/tree/master/Lists/Advancement_List.md),
 [Custom Block List](https://github.com/EvanSkiStudios/Raccoon-Mischief/tree/master/Lists/Custom_Blocks.md),
@@ -26,6 +32,7 @@ basiclly this is here to save me a bookmark
 * Added Magnets
 * Added Glass Cups
 * Added Glass of Lava
+* Added Fruit Salad
 * Cows now drop Raw Hide, unless killed with fire or fire enchanted weapon
 * Rabbit leather recipe now gives raw hide
 
