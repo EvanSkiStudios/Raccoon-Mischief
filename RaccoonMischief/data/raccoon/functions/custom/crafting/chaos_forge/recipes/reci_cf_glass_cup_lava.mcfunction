@@ -1,1 +1,1 @@
-execute if block ~ ~ ~ dropper{Items:[{Slot:1b,id:"minecraft:glass_bottle",Count:1b,tag:{display:{Name:'{"text":"Glass Cup","italic":false}'},CustomModelData:7167}},{Slot:4b,id:"minecraft:lava_bucket",Count:1b}]} run function raccoon:custom/crafting/chaos_forge/results/cf_glass_cup_lava
+execute if block ~ ~ ~ dropper{Items:[{Slot:4b,id:"minecraft:glass_bottle",Count:1b,tag:{display:{Name:'{"text":"Glass Cup","italic":false}'},CustomModelData:7167}},{Slot:7b,id:"minecraft:lava_bucket",Count:1b}]} run function raccoon:custom/crafting/chaos_forge/results/cf_glass_cup_lava
