@@ -1,5 +1,5 @@
 #takes the recipe so you can craft item again
-recipe take @s raccoon:cooking/custom/item/rcip_ci_raw_flesh
+recipe take @s raccoon:smelting/custom/item/rcip_ci_raw_flesh
 
 #removes advancment so this function runs again
 advancement revoke @s only raccoon:utilities/custom/item/raw_flesh

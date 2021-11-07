@@ -3,7 +3,7 @@
         "unlocked":{
             "trigger": "minecraft:recipe_unlocked",
             "conditions": {
-                "recipe": "raccoon:cooking/custom/item/rcip_ci_raw_flesh"
+                "recipe": "raccoon:smelting/custom/item/rcip_ci_raw_flesh"
             }
         }
     },
