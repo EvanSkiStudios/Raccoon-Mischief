@@ -1,7 +1,0 @@
-{
-    "powermode.enabled": true,
-    "powermode.comboThreshold": 5,
-    "powermode.enableShake": false,
-    "powermode.maxExplosions": 10,
-    "powermode.presets": "fireworks"
-}
