@@ -8,8 +8,7 @@ scoreboard players set @a[nbt={SelectedItem:{id:"minecraft:honey_bottle",tag:{cu
 
 #### Run command for effect or any other command or function file if player eats custon item
 #### (If the player has recently held the custom item and also just ate the base item)
-execute as @a[scores={lava_cup_delay=2..,lava_cup_eat=2}] at @s run function raccoon:custom/food/effects/cf_glass_of_lava_effect
-
+execute as @a[scores={lava_cup_delay=2..,lava_cup_eat=2}] at @s run function raccoon:custom/food/effects/cf_bottle_of_lava_effect
 
 
 #### Reset eat scoreboard

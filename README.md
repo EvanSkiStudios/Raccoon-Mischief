@@ -25,6 +25,16 @@ everything should work, enjoy
 [Custom Food List](https://github.com/EvanSkiStudios/Raccoon-Mischief/tree/master/Lists/Custom_Food.md),
 [Custom Item List](https://github.com/EvanSkiStudios/Raccoon-Mischief/tree/master/Lists/Custom_Items.md),
 
+## Version 2.0
+Changing the style of the datapack to match the plugin better, Ideas have not been lost they are saved for future projects
+However I wish the datapack to match the plugin's feel and flow.
+
+* Removed Drying Rack
+* Removed Cow Loot table change
+* Removed leather recipe change
+* Removed Glass Cups
+* Replaced Glass of lava to Bottle of lava
+
 ## Version 1.2
 * Added support for Custom Blocks, Items, Food, Loot Tables
 * Added Chaos Forge
