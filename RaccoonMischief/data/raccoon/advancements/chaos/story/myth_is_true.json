@@ -6,7 +6,7 @@
         },
         "title": {"translate":"The Myth is true"},
         "description": {"translate":"Make an Aether portal"},
-        "frame": "task",
+        "frame": "goal",
         "show_toast": true,
         "announce_to_chat": true,
         "hidden": false

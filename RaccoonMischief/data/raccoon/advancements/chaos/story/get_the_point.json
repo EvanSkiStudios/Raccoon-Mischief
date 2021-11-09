@@ -7,7 +7,7 @@
         },
         "title": {"translate":"Get the point?"},
         "description": {"translate":"Get an Sharp Stick"},
-        "frame": "task",
+        "frame": "goal",
         "show_toast": true,
         "announce_to_chat": true,
         "hidden": false

@@ -11,3 +11,6 @@ give @a baked_potato{ndirt_eat:1b,CustomModelData:1,display:{Name:'{"text":"Nutr
 
 #gets rid of the useless book
 clear @s minecraft:knowledge_book
+
+#advancment
+advancement grant @s only raccoon:chaos/datapack/food/dp_nutriant_dirt

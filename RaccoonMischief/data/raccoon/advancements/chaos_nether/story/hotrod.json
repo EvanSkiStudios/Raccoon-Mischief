@@ -6,13 +6,13 @@
         },
         "title": {"translate":"Hot Rod"},
         "description": {"translate":"Manage to kill a Blaze"},
-        "frame": "task",
+        "frame": "goal",
         "show_toast": true,
         "announce_to_chat": true,
         "hidden": false
     },
     "rewards": {
-        "function": "raccoon:rewards/chaos_nether/mobs/rewd_hotrod"
+        "function": "raccoon:rewards/chaos_nether/story/rewd_hotrod"
     },		
     "criteria": {
         "hotie": {

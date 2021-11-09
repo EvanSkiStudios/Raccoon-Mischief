@@ -1,0 +1,28 @@
+{
+    "parent": "raccoon:chaos/root",
+    "display": {
+        "icon": {
+            "item": "minecraft:iron_nugget",
+            "nbt": "{CustomModelData:776571}"
+        },
+        "title": {"translate":"A certain attraction"},
+        "description": {"translate":"Craft a Magnet"},
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "rewards": {
+        "xp": 200
+    },		
+    "criteria": {
+        "magnet": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "requirements": [
+        [
+            "magnet"
+        ]
+    ]
+}

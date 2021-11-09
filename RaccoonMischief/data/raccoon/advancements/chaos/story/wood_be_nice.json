@@ -6,7 +6,7 @@
         },
         "title": {"translate":"Wood'nt it be nice"},
         "description": {"translate":"Gather wood"},
-        "frame": "task",
+        "frame": "goal",
         "show_toast": true,
         "announce_to_chat": true,
         "hidden": false
