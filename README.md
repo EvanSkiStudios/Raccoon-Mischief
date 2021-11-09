@@ -29,7 +29,7 @@ everything should work, enjoy
 Changing the style of the datapack to match the plugin better, Ideas have not been lost they are saved for future projects
 However I wish the datapack to match the plugin's feel and flow.
 
-* The sound effect of [Jeb screaming] (https://youtu.be/2BCFGjsrwyY?t=26) will play when a player dies
+* The sound effect of [Jeb screaming](https://youtu.be/2BCFGjsrwyY?t=26) will play when a player dies
 * Removed Drying Rack
 * Removed Cow Loot table change
 * Removed leather recipe change
