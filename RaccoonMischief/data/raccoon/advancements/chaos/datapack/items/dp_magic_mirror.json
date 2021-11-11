@@ -1,12 +1,12 @@
 {
-    "parent": "raccoon:chaos/dp_magic_mirror",
+    "parent": "raccoon:chaos/root",
     "display": {
         "icon": {
-            "item": "minecraft:iron_nugget",
-            "nbt": "{CustomModelData:776571}"
+            "item": "minecraft:shield",
+            "nbt": "{CustomModelData:7777}"
         },
-        "title": {"translate":"A certain attraction"},
-        "description": {"translate":"Craft a Magnet"},
+        "title": {"translate":"Vanity"},
+        "description": {"translate":"Craft a Magic Mirror"},
         "frame": "task",
         "show_toast": true,
         "announce_to_chat": true,
@@ -16,13 +16,13 @@
         "xp": 200
     },		
     "criteria": {
-        "magnet": {
+        "mirror": {
             "trigger": "minecraft:impossible"
         }
     },
     "requirements": [
         [
-            "magnet"
+            "mirror"
         ]
     ]
 }

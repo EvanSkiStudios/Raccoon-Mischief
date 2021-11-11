@@ -1,17 +1,12 @@
-tellraw @a {"text": "RaccoonMischief V.1.2 is loaded", "color": "#00FF44"}
+tellraw @a {"text": "RaccoonMischief V.2.0 is loaded", "color": "#00FF44"}
 advancement grant @a only raccoon:chaos/root
 
 #cleanup/restart
 #scoreboard
-scoreboard players set @a deathDetect 0
-scoreboard players set @a eatCake 0
 scoreboard objectives remove deathDetect
 scoreboard objectives remove eatCake
 #recipes
-recipe take @a leather
 recipe take @a raccoon:crafting/custom/food/rcip_cf_nutrientdirt
-recipe take @a raccoon:crafting/custom/item/rcip_ci_glass_cup
-recipe take @a raccoon:cooking/custom/item/rcip_ci_raw_flesh
 
 #set up scoreboards
 scoreboard objectives add deathDetect deathCount

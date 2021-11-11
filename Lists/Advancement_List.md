@@ -1,5 +1,15 @@
 # Advancement List
 ## Chaos:
+#### *Custom Items:
+|Name| Unlock | Reward
+|--|--|--|
+|Hot Sauce | Drink a bottle of lava| 200 xp|
+|Yummy Yummy | Craft some Fruit Salad| 200 xp |
+|Tatical Dirt |Craft some Nutriant Dirt | 200 xp|
+|Vanity | Craft a Magic Mirror | 200 xp|
+|A certain attraction | Craft a Magnet| 200 xp|
+|Get over here! | Craft a SUPER Magnet |200 xp |
+
 #### *Challenges
 |Name| Unlock | Reward
 |--|--|--|

@@ -1,4 +1,4 @@
-function raccoon:custom/crafting/chaos_forge/recipes/reci_cf_rflesh_to_rhide
+function raccoon:custom/crafting/chaos_forge/recipes/reci_cf_magic_mirror
 function raccoon:custom/crafting/chaos_forge/recipes/reci_cf_bottle_of_lava
 function raccoon:custom/crafting/chaos_forge/recipes/reci_cf_magnet
 function raccoon:custom/crafting/chaos_forge/recipes/reci_cf_s_magnet
