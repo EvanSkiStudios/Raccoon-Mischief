@@ -1,13 +1,11 @@
 # Evanski's RaccoonMischief Minecraft DataPack
 
-This is a Minecraft datapack, for my friends custom Minecraft plugin
+This is a Custom Minecraft datapack, that adds new features to vanilla minecraft
+This is a companion project to [Mercerenies' A-Turtles-Troll](https://github.com/Mercerenies/a-turtles-troll). 
+Neither directly depends on the other, but they are designed with each other in mind.
+
 (Probably won't understand without the resourcepack as well)
 *Might make the resourcepack public...maybe? Has a lot of "barrowed assets"
-
-[Mercerenies' a-turtles-troll](https://github.com/Mercerenies/a-turtles-troll)
-
-basiclly this is here to save me a bookmark
-[Minecraft Guide on Datapack Advancements](https://minecraft.fandom.com/wiki/Advancement/JSON_format)
 
 # Uses Resources from
 [Custom Food Template Made by Timber Forge](https://youtu.be/TtdHB984DDc)
