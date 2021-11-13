@@ -27,14 +27,26 @@ everything should work, enjoy
 Changing the style of the datapack to match the plugin better, Ideas have not been lost they are saved for future projects
 However I wish the datapack to match the plugin's feel and flow.
 
+#### Patches
+* Fixs for #9 #8 #6
+* Magnets will no longer attract the same type of magnet
+
+#### Additions
+* Added Upgrade Shards!
 * Added Magic Mirror
 * Added Advancment for crafting magic mirror, magnets, fruit salad, bottle O lava
 * The sound effect of [Jeb screaming](https://youtu.be/2BCFGjsrwyY?t=26) will play when a player dies
+
+#### Changes
+* Replaced Glass of lava to Bottle of lava
+* The basic Magnet will emit particles around Items it will attract
+
+#### Removals
+* Removed Advancement for "Ather" Portal
 * Removed Drying Rack
 * Removed Cow Loot table change
 * Removed leather recipe change
 * Removed Glass Cups
-* Replaced Glass of lava to Bottle of lava
 
 ## Version 1.2
 * Added support for Custom Blocks, Items, Food, Loot Tables

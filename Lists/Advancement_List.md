@@ -36,7 +36,7 @@
 |Wood'nt it be nice?|Gather Wood| 100 xp|
 |Get the Point?|Get an Sharp Stick| 100 xp |
 |Fire Help|Kill an Iron Golem|100 xp|
-|The Myth is True|Make an Aether Portal| 100 xp|
+|Nether Ever!|Make an Nether Portal| 100 xp|
 
 #### *Trolls
 |Name| Unlock | Reward

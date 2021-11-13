@@ -4,8 +4,8 @@
         "icon": {
             "item": "minecraft:obsidian"
         },
-        "title": {"translate":"The Myth is true"},
-        "description": {"translate":"Make an Aether portal"},
+        "title": {"translate":"Nether Ever!"},
+        "description": {"translate":"Make an Nether portal"},
         "frame": "goal",
         "show_toast": true,
         "announce_to_chat": true,

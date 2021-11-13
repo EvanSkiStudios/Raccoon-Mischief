@@ -1,5 +1,5 @@
 {
-    "parent": "raccoon:chaos/dp_magic_mirror",
+    "parent": "raccoon:chaos/datapack/items/dp_magic_mirror",
     "display": {
         "icon": {
             "item": "minecraft:iron_nugget",

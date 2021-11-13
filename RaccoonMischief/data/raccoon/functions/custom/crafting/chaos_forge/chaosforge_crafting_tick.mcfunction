@@ -3,3 +3,6 @@ function raccoon:custom/crafting/chaos_forge/recipes/reci_cf_bottle_of_lava
 function raccoon:custom/crafting/chaos_forge/recipes/reci_cf_magnet
 function raccoon:custom/crafting/chaos_forge/recipes/reci_cf_s_magnet
 function raccoon:custom/crafting/chaos_forge/recipes/reci_cf_fruit_salad
+
+#upgrades
+function raccoon:custom/crafting/chaos_forge/upgrades/recipes/reci_cf_ug_minershelmet
