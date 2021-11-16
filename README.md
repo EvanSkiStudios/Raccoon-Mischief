@@ -28,10 +28,12 @@ Changing the style of the datapack to match the plugin better, Ideas have not be
 However I wish the datapack to match the plugin's feel and flow.
 
 #### Patches
-* Fixs for #9 #8 #6
+* Fixs for Issues #9 #8 #6
 * Magnets will no longer attract the same type of magnet
 
 #### Additions
+* Added Upgrade mechanic (give items multiple special effects)
+* Added upgrade for carved pumpkin (spiked, head-lamp)
 * Added Upgrade Shards!
 * Added Magic Mirror
 * Added Advancment for crafting magic mirror, magnets, fruit salad, bottle O lava
@@ -40,6 +42,7 @@ However I wish the datapack to match the plugin's feel and flow.
 #### Changes
 * Replaced Glass of lava to Bottle of lava
 * The basic Magnet will emit particles around Items it will attract
+* Magnets now attract XP orbs
 
 #### Removals
 * Removed Advancement for "Ather" Portal

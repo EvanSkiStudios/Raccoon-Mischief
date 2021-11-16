@@ -21,7 +21,6 @@ function raccoon:custom/crafting/floor/chaos_forge/fc_ritual_chaosforge
 function raccoon:custom/blocks/cb_main
 
 #custom block function
-function raccoon:custom/blocks/drying_rack/drying/dr_main_tick
 
 #custom Item Functions
 function raccoon:custom/items/custom_item_tick

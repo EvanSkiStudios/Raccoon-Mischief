@@ -8,3 +8,6 @@ function raccoon:custom/items/ability/magic_mirror/ci_magic_mirror_tick
 
 #pocket dimension
 function raccoon:custom/items/ability/pocket_dim/ci_pocket_dim_tick
+
+#spike helmet
+function raccoon:custom/items/ability/spike_helmet/ci_spike_helmet_tick

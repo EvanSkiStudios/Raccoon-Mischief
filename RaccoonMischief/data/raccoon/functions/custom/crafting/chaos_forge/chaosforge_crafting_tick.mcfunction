@@ -6,3 +6,4 @@ function raccoon:custom/crafting/chaos_forge/recipes/reci_cf_fruit_salad
 
 #upgrades
 function raccoon:custom/crafting/chaos_forge/upgrades/recipes/reci_cf_ug_minershelmet
+function raccoon:custom/crafting/chaos_forge/upgrades/recipes/reci_cf_ug_spikehelmet
