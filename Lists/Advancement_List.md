@@ -13,9 +13,9 @@
 #### *Challenges
 |Name| Unlock | Reward
 |--|--|--|
-| for f sake | fill inventory with full stacks of dirt | 100 xp, 1 iron ingot|
+| for f sake | fill inventory with full stacks of dirt | 100 xp, 1 iron ingot, 1 Upgrade Shard|
 |With Direction and Magnitude |Shoot Vector with a Sniper Rifle | 100 xp, 1 Diamond  |
-|Iron Man |Get a full suit of Iron | 100 xp|
+|Iron Man |Get a full suit of Iron | 100 xp, 1 Upgrade Shard|
 #### *Pickaxes
 |Name| Unlock | Reward
 |--|--|--|
@@ -26,9 +26,9 @@
 #### *Records
 |Name| Unlock | Reward
 |--|--|--|
-|Mustic Player | Get an Jukebox| 100 xp|
+|Mustic Player | Get an Jukebox| 100 xp, 1 Upgrade Shard|
 |Record name| Get record| 100 xp |
-|Record Keeper| Collect all the Records| N/A|
+|Record Keeper| Collect all the Records| 3 Upgrade Shards|
 
 #### *Story
 |Name| Unlock | Reward

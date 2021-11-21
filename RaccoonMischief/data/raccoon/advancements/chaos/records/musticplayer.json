@@ -12,7 +12,7 @@
         "hidden": false
     },
     "rewards": {
-        "xp": "100"
+        "function": "raccoon:custom/items/give/ci_upgrade_shard"
     },		
     "criteria": {
         "mustic": {
