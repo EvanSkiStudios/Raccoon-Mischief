@@ -12,6 +12,9 @@ recipe take @a raccoon:crafting/custom/food/rcip_cf_nutrientdirt
 scoreboard objectives add deathDetect deathCount
 scoreboard objectives add eatCake minecraft.custom:minecraft.eat_cake_slice
 
+#triggers
+scoreboard objectives add RaccAdvan trigger
+
 #add players to scoreboards
 scoreboard players add @a deathDetect 0
 scoreboard players add @a eatCake 0

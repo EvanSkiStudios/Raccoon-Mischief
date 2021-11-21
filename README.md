@@ -32,6 +32,7 @@ However I wish the datapack to match the plugin's feel and flow.
 * Magnets will no longer attract the same type of magnet
 
 #### Additions
+* Added Trigger command to show Advancements
 * Added Upgrade mechanic (give items multiple special effects)
 * Added upgrade for carved pumpkin (spiked, head-lamp)
 * Added Upgrade Shards!
