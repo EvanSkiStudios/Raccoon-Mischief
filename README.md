@@ -32,6 +32,8 @@ However I wish the datapack to match the plugin's feel and flow.
 * Magnets will no longer attract the same type of magnet
 
 #### Additions
+* DinnerBone now yells when you are killed by a llama
+* Added Advancement for dying 100 times
 * Added Trigger command to show Advancements
 * Added Upgrade mechanic (give items multiple special effects)
 * Added upgrade for carved pumpkin (spiked, head-lamp)
