@@ -13,7 +13,7 @@
         "hidden": false
     },
     "rewards": {
-        "xp": 200
+        "function": "raccoon:custom/items/ability/magic_mirror/ci_magic_mirror_reset"
     },		
     "criteria": {
         "mirror": {
