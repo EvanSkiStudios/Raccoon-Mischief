@@ -1,4 +1,4 @@
-execute store result score @s RANDOM run loot spawn ~ 1000 ~ loot raccoon:random_gen
+execute store result score @s rm_RANDOM run loot spawn ~ ~-4 ~ loot raccoon:random_gen
 
-execute as @s[scores={RANDOM=0}] run playsound minecraft:custom.crafting.tacticaldirt_merc player @a ~ ~ ~ 100
-execute as @s[scores={RANDOM=1}] run playsound minecraft:custom.crafting.tacticaldirt_evan player @a ~ ~ ~ 100
+execute as @s[scores={rm_RANDOM=0}] run execute as @a run playsound minecraft:custom.crafting.tacticaldirt_merc player @a ~ ~ ~ 
+execute as @s[scores={rm_RANDOM=1}] run execute as @a run playsound minecraft:custom.crafting.tacticaldirt_evan player @a ~ ~ ~
