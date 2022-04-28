@@ -17,9 +17,7 @@ scoreboard players enable @a RMVer
 execute as @a[scores={RMVer=1..}] run tellraw @s {"text":"Raccoon Mischief Version 1.2.1","color":"green","italic":false}
 scoreboard players set @a RMVer 0
 
-execute as @a[tag=!levitate,nbt={ActiveEffects:[{Id:25b}]}] run function raccoon:triggers/levitating
-execute as @a[tag=levitate,nbt=!{ActiveEffects:[{Id:25b}]}] run function raccoon:triggers/levitating_reset
-
+function raccoon:triggers/levitation_controller
 
 #scoreboard
 execute as @a[scores={rm_deathcount=100..}] run advancement grant @s only raccoon:chaos/challenges/deaths

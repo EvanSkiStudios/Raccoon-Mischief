@@ -15,6 +15,8 @@ scoreboard objectives remove rm_lava_cup_eat
 scoreboard objectives remove rm_MagicMirrorDam
 scoreboard objectives remove rm_ndirt_delay
 scoreboard objectives remove rm_ndirt_eat
+scoreboard objectives remove rm_netherwarp_delay
+scoreboard objectives remove rm_netherwarp_eat
 scoreboard objectives remove rm_RANDOM
 
 #randomness
@@ -22,6 +24,7 @@ scoreboard objectives add rm_RANDOM dummy
 
 #recipes
 recipe take @a raccoon:crafting/custom/food/rcip_cf_nutrientdirt
+recipe take @a raccoon:crafting/custom/food/rcip_cf_netherwarp
 
 #set up scoreboards
 scoreboard objectives add rm_deathDetect deathCount
