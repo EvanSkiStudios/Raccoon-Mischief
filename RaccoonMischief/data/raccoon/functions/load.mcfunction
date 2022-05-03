@@ -32,9 +32,8 @@ scoreboard objectives add rm_llamaDetect minecraft.killed_by:llama
 scoreboard objectives add rm_eatCake minecraft.custom:minecraft.eat_cake_slice
 scoreboard objectives add rm_deathcount deathCount
 
-#triggerst
-scoreboard objectives add RMVer trigger
-scoreboard objectives add RMAdvan trigger
+#triggers
+scoreboard objectives add rm_ver trigger
 
 #add players to scoreboards
 scoreboard players add @a rm_deathDetect 0
