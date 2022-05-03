@@ -10,7 +10,7 @@ tag @a[scores={rm_eatCake=2}] remove caked
 
 #triggers
 scoreboard players enable @a rm_ver
-execute as @a[scores={rm_ver=1..}] run tellraw @s {"text":"RaccoonMischief V.4.24.22","color":"green","italic":false}
+execute as @a[scores={rm_ver=1..}] run tellraw @s {"text":"RaccoonMischief V.5.3.22","color":"green","italic":false}
 scoreboard players set @a rm_ver 0
 
 function raccoon:triggers/levitation_controller
