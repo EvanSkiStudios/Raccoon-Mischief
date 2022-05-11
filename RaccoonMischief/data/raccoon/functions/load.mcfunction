@@ -1,4 +1,4 @@
-tellraw @a {"text": "RaccoonMischief V.5.3.22 is loaded", "color": "#00FF44"}
+tellraw @a {"text": "RaccoonMischief V.5.11.22 is loaded", "color": "#00FF44"}
 advancement grant @a only raccoon:chaos/root
 
 #cleanup/restart
@@ -34,6 +34,12 @@ scoreboard objectives add rm_deathcount deathCount
 
 #triggers
 scoreboard objectives add rm_ver trigger
+scoreboard players enable @a rm_ver
+scoreboard players set @a rm_ver 0
+
+scoreboard objectives add rm_ui_therm trigger
+scoreboard players enable @a rm_ui_therm
+scoreboard players set @a rm_ui_therm 0
 
 #add players to scoreboards
 scoreboard players add @a rm_deathDetect 0
