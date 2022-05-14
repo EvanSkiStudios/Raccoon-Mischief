@@ -1,0 +1,19 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "iii",
+        "iLi"
+    ],
+    "key": {
+        "i": {
+            "item": "minecraft:gold_ingot"
+        },
+        "L": {
+            "item": "minecraft:iron_helmet"
+        }
+    },
+    "result": {
+        "item": "minecraft:golden_helmet",
+        "count": 1
+    }
+}

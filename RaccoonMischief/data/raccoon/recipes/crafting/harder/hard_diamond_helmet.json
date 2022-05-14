@@ -1,0 +1,19 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "iii",
+        "iLi"
+    ],
+    "key": {
+        "i": {
+            "item": "minecraft:diamond"
+        },
+        "L": {
+            "item": "minecraft:golden_helmet"
+        }
+    },
+    "result": {
+        "item": "minecraft:diamond_helmet",
+        "count": 1
+    }
+}

@@ -23,6 +23,23 @@ everything should work, enjoy
 [Custom Food List](https://github.com/EvanSkiStudios/Raccoon-Mischief/tree/master/Lists/Custom_Food.md),
 [Custom Item List](https://github.com/EvanSkiStudios/Raccoon-Mischief/tree/master/Lists/Custom_Items.md),
 
+## Version 5.13.22
+* Switched to Date version system
+* Added a bunch of new recipes
+* Made it harder to craft armor
+* Armor now requires the last teir of armor leather > iron > gold > diamond
+* Fix for a turtles troll making cookies not stack
+* You can get leather from cooking/smelthing rotten flesh
+* Added Netherwarp dirt that teleports you to the nether when ate
+* Added rng to the tactacle dirt so it now plays a sound with the resourcepack
+* Added a new UI bar to the game if you have the resourcepack on
+* Added a trigger to turn the ui bar on and off
+* Renamed all the scoreboards to have an RM_ prefix
+* Added an effect with the resourcepack so that it plays a sound when you get the leviation effect
+
+* and more that i forgot about
+
+
 ## Version 2.0
 Changing the style of the datapack to match the plugin better, Ideas have not been lost they are saved for future projects
 However I wish the datapack to match the plugin's feel and flow.

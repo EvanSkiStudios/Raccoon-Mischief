@@ -1,4 +1,4 @@
-tellraw @a {"text": "RaccoonMischief V.5.11.22 is loaded", "color": "#00FF44"}
+tellraw @a {"text": "RaccoonMischief V.5.13.22 is loaded", "color": "#00FF44"}
 advancement grant @a only raccoon:chaos/root
 
 #cleanup/restart
@@ -51,3 +51,7 @@ function raccoon:custom/food/custom_food_load
 
 #custom item
 function raccoon:custom/items/custom_item_load
+
+#reward recipes
+function raccoon:utility/take_recipes
+function raccoon:utility/give_recipes

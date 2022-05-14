@@ -9,7 +9,7 @@ scoreboard players set @a[scores={rm_eatCake=1}] rm_eatCake 2
 tag @a[scores={rm_eatCake=2}] remove caked
 
 #triggers
-execute as @a[scores={rm_ver=1..}] run tellraw @s {"text":"RaccoonMischief V.5.11.22","color":"green","italic":false}
+execute as @a[scores={rm_ver=1..}] run tellraw @s {"text":"RaccoonMischief V.5.13.22","color":"green","italic":false}
 execute as @a[scores={rm_ver=1..}] run scoreboard players set @s rm_ver 0
 scoreboard players enable @a rm_ver
 
