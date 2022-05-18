@@ -8,4 +8,28 @@ recipe give @a raccoon:crafting/extra/sand_to_redsand
 recipe give @a raccoon:crafting/extra/sticks_to_logs
 recipe give @a raccoon:crafting/extra/unmetadata_cookies
 
-recipe give @a raccoon:smelting/custom/coarse_dirt_to_sticks
+recipe give @a raccoon:crafting/harder/hard_diamond_boots
+recipe give @a raccoon:crafting/harder/hard_diamond_chestplate
+recipe give @a raccoon:crafting/harder/hard_diamond_helmet
+recipe give @a raccoon:crafting/harder/hard_diamond_leggings
+recipe give @a raccoon:crafting/harder/hard_gold_boots
+recipe give @a raccoon:crafting/harder/hard_gold_chestplate
+recipe give @a raccoon:crafting/harder/hard_gold_helmet
+recipe give @a raccoon:crafting/harder/hard_gold_leggings
+recipe give @a raccoon:crafting/harder/hard_iron_boots
+recipe give @a raccoon:crafting/harder/hard_iron_chestplate
+recipe give @a raccoon:crafting/harder/hard_iron_helmet
+recipe give @a raccoon:crafting/harder/hard_iron_leggings
+
+
+recipe give @a raccoon:smelting/coarse_dirt_to_sticks
+recipe give @a raccoon:smelting/rotten_flesh_to_leather
+
+recipe give @a raccoon:camp_fire/rotten_flesh_to_leather
+
+recipe give @a raccoon:upgrades/iron_to_gold_boots
+recipe give @a raccoon:upgrades/iron_to_gold_chest
+recipe give @a raccoon:upgrades/iron_to_gold_helm
+recipe give @a raccoon:upgrades/iron_to_gold_pants
+
+recipe give @a raccoon:smoking/rotten_flesh_to_leather
