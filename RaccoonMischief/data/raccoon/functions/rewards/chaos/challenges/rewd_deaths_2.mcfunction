@@ -1,3 +1,5 @@
+tag @s remove tobekilled
 kill @a[tag=tobekilled]
-say @a[tag=tobekilled] Died from being killed
+
+tellraw @a {"text":"","extra":[{"selector":"@a[tag=tobekilled]"},{"text":" Died from being killed"}]}
 tag @a[tag=tobekilled] remove tobekilled
