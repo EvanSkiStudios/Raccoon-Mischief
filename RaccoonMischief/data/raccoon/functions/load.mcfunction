@@ -2,6 +2,17 @@ tellraw @a {"text": "RaccoonMischief V.5.13.22 is loaded", "color": "#00FF44"}
 advancement grant @a only raccoon:chaos/root
 
 #cleanup/restart
+
+#sneak flag
+scoreboard objectives remove rm_player_is_sneaking
+scoreboard objectives add rm_player_is_sneaking minecraft.custom:minecraft.sneak_time
+scoreboard players add @a rm_player_is_sneaking 0
+
+scoreboard objectives remove rm_player_is_jumping
+scoreboard objectives add rm_player_is_jumping minecraft.custom:minecraft.jump
+scoreboard players add @a rm_player_is_jumping 0
+
+
 #scoreboard
 scoreboard objectives remove rm_deathDetect
 scoreboard objectives remove rm_llamaDetect
@@ -51,6 +62,9 @@ function raccoon:custom/food/custom_food_load
 
 #custom item
 function raccoon:custom/items/custom_item_load
+
+#custom effects
+function raccoon:effects/mob_effects/mob_effect_load
 
 #reward recipes
 function raccoon:utility/take_recipes

@@ -1,0 +1,18 @@
+{
+    "criteria":{
+        "unlocked":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "raccoon:crafting/custom/food/rcip_me_creeper_power"
+            }
+        }
+    },
+    "rewards":{
+        "function":"raccoon:custom/food/give/cf_me_creeper_power"
+    },
+    "requirements": [
+        [
+          "unlocked"
+        ]
+    ]
+}

@@ -2,6 +2,12 @@
 function raccoon:effects/death_sfx/death_detect
 function raccoon:effects/llama_death/llama_death_detect
 
+#update flags
+execute as @a[scores={rm_player_is_sneaking=2..}] run scoreboard players set @s rm_player_is_sneaking 0
+execute as @a[scores={rm_player_is_jumping=1..}] run scoreboard players set @s rm_player_is_sneaking 0
+
+execute as @a[scores={rm_player_is_jumping=1..}] run scoreboard players set @s rm_player_is_jumping 0
+
 #mmm cake
 tag @a[scores={rm_eatCake=1}] add caked
 advancement grant @a[tag=caked] only raccoon:chaos/trolls/cake
@@ -34,7 +40,8 @@ function raccoon:custom/crafting/floor/chaos_forge/fc_ritual_chaosforge
 #custom blocks
 function raccoon:custom/blocks/cb_main
 
-#custom block function
+#custom effects
+function raccoon:effects/mob_effects/mob_effect_tick
 
 #custom UI function
 execute as @a[gamemode=!spectator,scores={rm_ui_therm=..0}] run function raccoon:custom/ui/temp_bar
