@@ -1,4 +1,4 @@
-tellraw @a {"text": "RaccoonMischief V.5.13.22 is loaded", "color": "#00FF44"}
+tellraw @a {"text": "RaccoonMischief V.6.15.22 is loaded", "color": "#00FF44"}
 advancement grant @a only raccoon:chaos/root
 
 #cleanup/restart
