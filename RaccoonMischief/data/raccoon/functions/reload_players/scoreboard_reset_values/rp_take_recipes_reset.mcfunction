@@ -32,3 +32,7 @@ recipe take @s raccoon:upgrades/iron_to_gold_helm
 recipe take @s raccoon:upgrades/iron_to_gold_pants
 
 recipe take @s raccoon:smoking/rotten_flesh_to_leather
+
+recipe take @s raccoon:crafting/custom/food/rcip_cf_nutrientdirt
+recipe take @s raccoon:crafting/custom/food/rcip_cf_netherwarp
+recipe take @s raccoon:crafting/custom/item/rcip_milk_potion
