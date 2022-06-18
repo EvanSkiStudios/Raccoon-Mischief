@@ -1,0 +1,18 @@
+{
+    "criteria":{
+        "unlocked":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "raccoon:crafting/custom/item/rcip_milk_potion"
+            }
+        }
+    },
+    "rewards":{
+        "function":"raccoon:custom/potions/give_milk_potion"
+    },
+    "requirements": [
+        [
+          "unlocked"
+        ]
+    ]
+}
