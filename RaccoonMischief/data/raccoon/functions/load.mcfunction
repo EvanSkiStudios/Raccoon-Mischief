@@ -1,34 +1,31 @@
-tellraw @a {"text": "RaccoonMischief V.6.15.22 is loaded", "color": "#00FF44"}
+tellraw @a {"text": "RaccoonMischief V.6.18.22 is loaded", "color": "#00FF44"}
 advancement grant @a only raccoon:chaos/root
 
 #cleanup/restart
-
 #sneak flag
-scoreboard objectives remove rm_player_is_sneaking
 scoreboard objectives add rm_player_is_sneaking minecraft.custom:minecraft.sneak_time
 scoreboard players add @a rm_player_is_sneaking 0
 
-scoreboard objectives remove rm_player_is_jumping
 scoreboard objectives add rm_player_is_jumping minecraft.custom:minecraft.jump
 scoreboard players add @a rm_player_is_jumping 0
 
 
 #scoreboard
-scoreboard objectives remove rm_deathDetect
-scoreboard objectives remove rm_llamaDetect
-scoreboard objectives remove rm_eatCake
-scoreboard objectives remove rm_holding_magnet
-scoreboard objectives remove rm_holding_s_magnet
-scoreboard objectives remove rm_holding_mmirror
-scoreboard objectives remove rm_holding_p_dim
-scoreboard objectives remove rm_lava_cup_delay
-scoreboard objectives remove rm_lava_cup_eat
-scoreboard objectives remove rm_MagicMirrorDam
-scoreboard objectives remove rm_ndirt_delay
-scoreboard objectives remove rm_ndirt_eat
-scoreboard objectives remove rm_netherwarp_delay
-scoreboard objectives remove rm_netherwarp_eat
-scoreboard objectives remove rm_RANDOM
+#scoreboard objectives remove rm_deathDetect
+#scoreboard objectives remove rm_llamaDetect
+#scoreboard objectives remove rm_eatCake
+#scoreboard objectives remove rm_holding_magnet
+#scoreboard objectives remove rm_holding_s_magnet
+#scoreboard objectives remove rm_holding_mmirror
+#scoreboard objectives remove rm_holding_p_dim
+#scoreboard objectives remove rm_lava_cup_delay
+#scoreboard objectives remove rm_lava_cup_eat
+#scoreboard objectives remove rm_MagicMirrorDam
+#scoreboard objectives remove rm_ndirt_delay
+#scoreboard objectives remove rm_ndirt_eat
+#scoreboard objectives remove rm_netherwarp_delay
+#scoreboard objectives remove rm_netherwarp_eat
+#scoreboard objectives remove rm_RANDOM
 
 #randomness
 scoreboard objectives add rm_RANDOM dummy
@@ -69,3 +66,6 @@ function raccoon:effects/mob_effects/mob_effect_load
 #reward recipes
 function raccoon:utility/take_recipes
 function raccoon:utility/give_recipes
+
+#start reload palyers function
+function raccoon:reload_players/reload_players_start

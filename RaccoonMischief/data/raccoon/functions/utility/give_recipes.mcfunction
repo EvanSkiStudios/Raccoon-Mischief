@@ -6,7 +6,6 @@ recipe give @a raccoon:crafting/extra/iron_nugget_to_chunk
 recipe give @a raccoon:crafting/extra/notch_apple
 recipe give @a raccoon:crafting/extra/sand_to_redsand
 recipe give @a raccoon:crafting/extra/sticks_to_logs
-recipe give @a raccoon:crafting/extra/unmetadata_cookies
 
 recipe give @a raccoon:crafting/harder/hard_diamond_boots
 recipe give @a raccoon:crafting/harder/hard_diamond_chestplate

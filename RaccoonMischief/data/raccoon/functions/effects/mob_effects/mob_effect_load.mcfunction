@@ -1,8 +1,8 @@
 #remove flags
-scoreboard objectives remove rm_me_creeper_enabled
+#scoreboard objectives remove rm_me_creeper_enabled
 
 #remove effect timer 
-scoreboard objectives remove rm_me_creeper_timer
+#scoreboard objectives remove rm_me_creeper_timer
 
 
 #add flags
