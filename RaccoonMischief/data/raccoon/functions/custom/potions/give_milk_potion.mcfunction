@@ -1,0 +1,1 @@
+give @p splash_potion{milk_potion:1b,display:{Name:'{"text":"Splash Potion of Milk","italic":false,"color":"white"}',"Lore":['{"text":"Removes all potion effects","color":"blue","italic":false}']},CustomModelData:1,Enchantments:[{}],CustomPotionColor:16777215} 

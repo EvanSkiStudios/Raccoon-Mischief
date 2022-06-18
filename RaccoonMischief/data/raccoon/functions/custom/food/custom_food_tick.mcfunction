@@ -16,7 +16,7 @@ execute as @a[scores={rm_lava_cup_delay=2..,rm_lava_cup_eat=2}] at @s run functi
 
 execute as @a[scores={rm_netherwarp_delay=2..,rm_netherwarp_eat=1}] as @s run function raccoon:custom/food/effects/cf_netherwarp_effect
 
-execute as @a[scores={rm_me_creeper_power_delay=2..,rm_me_creeper_power_eat=1}] at @s as @s run function raccoon:effects/mob_effects/effects/me_creeper_power_enabled
+execute as @a[scores={rm_me_creeper_power_delay=2..,rm_me_creeper_power_eat=1}] at @s as @s run function raccoon:effects/mob_effects/effects/creeper/me_creeper_power_enabled
 
 #### Reset eat scoreboard
 scoreboard players reset @a[scores={rm_ndirt_eat=1..}] rm_ndirt_eat

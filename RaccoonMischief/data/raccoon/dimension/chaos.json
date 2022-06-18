@@ -1,49 +1,73 @@
 {
-  "type": "minecraft:overworld",
-  "generator": {
-      "biome_source": {
-          "biomes": [
-              {
-                  "parameters": {
-                      "erosion": 0.5,
-                      "depth": 0.0,
-                      "weirdness": 0.0,
-                      "offset": 0.0,
-                      "temperature": 0.0,
-                      "humidity": 0.0,
-                      "continentalness": 0.0
-                  },
-                  "biome": "minecraft:ice_spikes"
-              },
-              {
-                  "parameters": {
-                      "erosion": -1.0,
-                      "depth": 0.0,
-                      "weirdness": 0.0,
-                      "offset": 0.0,
-                      "temperature": 0.0,
-                      "humidity": 0.0,
-                      "continentalness": 0.0
-                  },
-                  "biome": "minecraft:plains"
-              },
-              {
-                  "parameters": {
-                      "erosion": -0.7,
-                      "depth": 0.0,
-                      "weirdness": 0.0,
-                      "offset": 0.5,
-                      "temperature": 0.0,
-                      "humidity": 0.0,
-                      "continentalness": 0.0
-                  },
-                  "biome": "minecraft:nether_wastes"
-              }
-          ],
-          "type": "minecraft:multi_noise"
-      },
-      "seed": 0,
-      "settings": "minecraft:overworld",
-      "type": "minecraft:noise"
-  }
+    "type": "minecraft:overworld",
+    "generator": {
+        "biome_source": {
+            "biomes": [
+                {
+                    "parameters": {
+                        "temperature": 0,
+                        "humidity": 0,
+                        "continentalness": 0,
+                        "erosion": 0,
+                        "weirdness": 0,
+                        "depth": 0,
+                        "offset": 0
+                    },
+                    "biome": "minecraft:the_void"
+                },
+                {
+                    "parameters": {
+                        "temperature": 0,
+                        "humidity": 0,
+                        "continentalness": 0.8,
+                        "erosion": 0,
+                        "weirdness": -1,
+                        "depth": 0,
+                        "offset": 0.8
+                    },
+                    "biome": "minecraft:mushroom_fields"
+                },
+                {
+                    "parameters": {
+                        "temperature": 0,
+                        "humidity": 0,
+                        "continentalness": 0,
+                        "erosion": 0,
+                        "weirdness": 0.3,
+                        "depth": 0,
+                        "offset": 0
+                    },
+                    "biome": "minecraft:beach"
+                },
+                {
+                    "parameters": {
+                        "temperature": 0,
+                        "humidity": 0,
+                        "continentalness": 0,
+                        "erosion": 0,
+                        "weirdness": 0.5,
+                        "depth": 0,
+                        "offset": 0
+                    },
+                    "biome": "minecraft:plains"
+                },
+                {
+                    "parameters": {
+                        "temperature": 0,
+                        "humidity": 0,
+                        "continentalness": 0,
+                        "erosion": 0,
+                        "weirdness": 0.8,
+                        "depth": 0,
+                        "offset": 0
+                    },
+                    "biome": "minecraft:forest"
+                }
+            ],
+            "type": "minecraft:multi_noise"
+        },
+        "seed": 0,
+        "settings": "minecraft:end",
+        "type": "minecraft:noise"
+    }
 }

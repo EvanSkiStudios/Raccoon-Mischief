@@ -21,6 +21,9 @@ function raccoon:effects/mob_effects/mob_effect_tick
 #custom Item Functions
 function raccoon:custom/items/custom_item_tick
 
+#custom potion
+function raccoon:custom/potions/milk_potion_effect_tick
+
 
 #update flags
 execute as @a[scores={rm_player_is_sneaking=2..}] run scoreboard players set @s rm_player_is_sneaking 0
