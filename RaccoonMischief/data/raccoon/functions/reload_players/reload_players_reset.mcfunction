@@ -2,6 +2,10 @@
 scoreboard players add @s rm_player_is_sneaking 0
 scoreboard players add @s rm_player_is_jumping 0
 
+scoreboard players add @s rm_barrel_hat 0
+scoreboard players add @s rm_barrel_hat_sneak 0
+scoreboard players add @s rm_barrel_hat_jump 0
+
 #triggers
 scoreboard players enable @s rm_ver
 scoreboard players set @s rm_ver 0

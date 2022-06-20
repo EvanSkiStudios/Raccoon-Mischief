@@ -40,6 +40,10 @@ scoreboard objectives add rm_llamaDetect minecraft.killed_by:llama
 scoreboard objectives add rm_eatCake minecraft.custom:minecraft.eat_cake_slice
 scoreboard objectives add rm_deathcount deathCount
 
+scoreboard objectives add rm_barrel_hat dummy
+scoreboard objectives add rm_barrel_hat_sneak minecraft.custom:minecraft.sneak_time
+scoreboard objectives add rm_barrel_hat_jump minecraft.custom:minecraft.jump
+
 #triggers
 scoreboard objectives add rm_ver trigger
 scoreboard players enable @a rm_ver

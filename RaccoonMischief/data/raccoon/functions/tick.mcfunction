@@ -45,6 +45,10 @@ scoreboard players enable @a rm_ver
 execute as @a[scores={rm_ui_therm=2..}] run scoreboard players set @s rm_ui_therm 0
 scoreboard players enable @a rm_ui_therm
 
+
+function raccoon:effects/barrel_hat/barrel_hat_hide_tick
+
+
 #scoreboard
 execute as @a[scores={rm_deathcount=100..}] run advancement grant @s only raccoon:chaos/challenges/deaths
 
