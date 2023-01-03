@@ -1,0 +1,30 @@
+{
+    "parent": "raccoon:chaos/root",
+    "display": {
+        "icon": {
+            "item": "minecraft:cookie"
+        },
+        "title": {"translate":"Clear your Cookies"},
+        "description": {"translate":"Craft Cookies to remove their nbt data"},
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "rewards": {
+        "function": "raccoon:rewards/chaos/trolls/rewd_cookies"
+    },		
+    "criteria":{
+        "unlocked":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "raccoon:crafting/extra/unmetadata_cookies"
+            }
+        }
+    },
+    "requirements": [
+        [
+          "unlocked"
+        ]
+    ]
+}

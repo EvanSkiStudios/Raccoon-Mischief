@@ -1,0 +1,37 @@
+{
+    "parent": "raccoon:chaos/pickaxe/dont_lose_it",
+    "display": {
+        "icon": {
+            "item": "minecraft:diamond_pickaxe",
+            "nbt": "{Damage:0}"
+        },
+        "title": {"translate":"You Dig it?"},
+        "description": {"translate":"Get an Ruby pickaxe"},
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "rewards": {
+        "xp": "100"
+    },		
+    "criteria": {
+        "diamond_pick": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+						"items": [
+							"minecraft:diamond_pickaxe"
+						]
+                    }
+                ],
+                "requirements": [
+                    [
+                      "diamond_pick"
+                    ]
+                  ]
+            }
+        }
+    }
+}

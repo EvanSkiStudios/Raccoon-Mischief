@@ -1,0 +1,22 @@
+{
+    "parent": "raccoon:chaos/challenges/ironman",
+    "display": {
+        "icon": {
+            "item": "minecraft:skeleton_skull"
+        },
+        "title": {"translate":"Death Loop"},
+        "description": {"translate":"Die 100 Times"},
+        "frame": "challenge",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "rewards": {
+        "function": "raccoon:rewards/chaos/challenges/rewd_deaths"
+    },		
+    "criteria": {
+        "load": {
+            "trigger": "minecraft:impossible"
+        }
+    }
+}

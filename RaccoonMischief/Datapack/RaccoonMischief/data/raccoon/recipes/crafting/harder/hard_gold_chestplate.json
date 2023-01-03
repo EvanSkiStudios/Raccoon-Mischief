@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "iLi",
+        "iii",
+        "iii"
+    ],
+    "key": {
+        "i": {
+            "item": "minecraft:gold_ingot"
+        },
+        "L": {
+            "item": "minecraft:iron_chestplate"
+        }
+    },
+    "result": {
+        "item": "minecraft:golden_chestplate",
+        "count": 1
+    }
+}

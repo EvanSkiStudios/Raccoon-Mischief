@@ -1,0 +1,36 @@
+{
+    "parent": "raccoon:chaos_nether/trolls/mobs/vexing",
+    "display": {
+        "icon": {
+            "item": "minecraft:saddle"
+        },
+        "title": {"translate":"Freddy"},
+        "description": {"translate":"Oh yeah, that's Fred"},
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "rewards": {
+        "function": "raccoon:rewards/chaos_nether/trolls/mobs/rewd_freddy"
+    },		
+    "criteria": {
+        "fred": {
+            "trigger": "minecraft:entity_hurt_player",
+            "conditions": {
+                "damage": {
+                    "type": {
+                        "source_entity": {
+                            "type": "minecraft:ravager"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "requirements": [
+      [
+        "fred"
+      ]
+    ]   
+}

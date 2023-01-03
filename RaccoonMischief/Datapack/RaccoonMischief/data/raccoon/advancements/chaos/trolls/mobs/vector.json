@@ -1,0 +1,32 @@
+{
+    "parent": "raccoon:chaos/trolls/seriously",
+    "display": {
+        "icon": {
+            "item": "minecraft:phantom_membrane"
+        },
+        "title": {"translate":"GET VECTORED"},
+        "description": {"translate":"With both Direction and Magnitude! OH YEAH!!"},
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "rewards": {
+        "function": "raccoon:rewards/chaos/trolls/mobs/rewd_vector"
+    },		
+    "criteria": {
+        "vector": {
+            "trigger": "minecraft:entity_killed_player",
+            "conditions": {
+                "entity": {
+                    "type": "minecraft:phantom"
+                }
+            }
+        }
+    },
+    "requirements": [
+      [
+        "vector"
+      ]
+    ]
+}

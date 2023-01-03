@@ -1,0 +1,19 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "i i",
+        "iLi"
+    ],
+    "key": {
+        "i": {
+            "item": "minecraft:gold_ingot"
+        },
+        "L": {
+            "item": "minecraft:iron_boots"
+        }
+    },
+    "result": {
+        "item": "minecraft:golden_boots",
+        "count": 1
+    }
+}

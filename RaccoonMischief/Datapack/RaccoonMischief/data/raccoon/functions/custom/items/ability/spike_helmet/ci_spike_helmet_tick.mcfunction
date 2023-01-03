@@ -1,0 +1,1 @@
+execute as @a[nbt={Inventory:[{Slot: 103b, id:"minecraft:carved_pumpkin", tag:{ug_spikehelm:1b}}]}] at @s run function raccoon:custom/items/ability/spike_helmet/ci_spike_helmet_ability

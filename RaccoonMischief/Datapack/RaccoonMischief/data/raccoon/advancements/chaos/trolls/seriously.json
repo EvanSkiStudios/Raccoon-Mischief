@@ -1,0 +1,44 @@
+{
+    "parent": "raccoon:chaos/root",
+    "display": {
+        "icon": {
+            "item": "minecraft:anvil"
+        },
+        "title": {"translate":"Seriously?"},
+        "description": {"translate":"Get stuck in an anvil"},
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "rewards": {
+        "function": "raccoon:rewards/chaos/trolls/rewd_seriously"
+    },		
+    "criteria": {
+        "squish": {
+            "trigger": "minecraft:enter_block",
+            "conditions": {
+                "block": "minecraft:anvil"
+            }
+        },
+        "squish_er": {
+            "trigger": "minecraft:enter_block",
+            "conditions": {
+                "block": "minecraft:chipped_anvil"
+            }
+        },
+        "squish_est": {
+            "trigger": "minecraft:enter_block",
+            "conditions": {
+                "block": "minecraft:damaged_anvil"
+            }
+        }
+    },
+    "requirements": [
+      [
+        "squish",
+        "squish_er",
+        "squish_est"
+      ]
+    ]
+}

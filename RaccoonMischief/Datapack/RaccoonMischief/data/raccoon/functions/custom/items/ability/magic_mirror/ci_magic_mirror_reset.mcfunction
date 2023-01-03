@@ -1,0 +1,1 @@
+scoreboard players set @s rm_MagicMirrorDam 0

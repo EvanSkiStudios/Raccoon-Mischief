@@ -1,3 +1,6 @@
+#ignore vs code
+.vscode/
+
 META-INF/
 *~
 

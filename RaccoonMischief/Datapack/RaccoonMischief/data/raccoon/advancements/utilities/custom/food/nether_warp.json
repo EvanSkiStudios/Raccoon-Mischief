@@ -1,0 +1,18 @@
+{
+    "criteria":{
+        "unlocked":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "raccoon:crafting/custom/food/rcip_cf_netherwarp"
+            }
+        }
+    },
+    "rewards":{
+        "function":"raccoon:custom/food/give/cf_netherwarp"
+    },
+    "requirements": [
+        [
+          "unlocked"
+        ]
+    ]
+}

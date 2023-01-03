@@ -1,0 +1,19 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:moss_block"
+        },
+        "title": {"translate":"The Start of Chaos"},
+        "description": {"translate":"The Masochist journey begins!"},
+        "background": "minecraft:textures/block/bedrock.png",
+        "frame": "challenge",
+        "show_toast": false,
+        "announce_to_chat": false,
+        "hidden": false
+    },
+    "criteria": {
+        "load": {
+            "trigger": "minecraft:impossible"
+        }
+    }
+}

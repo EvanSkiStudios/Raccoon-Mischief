@@ -1,0 +1,1 @@
+summon item ~ ~ ~ {Item:{id:"minecraft:pufferfish_bucket",Count:1}}

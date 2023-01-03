@@ -1,0 +1,27 @@
+{
+    "parent": "raccoon:chaos/trolls/its_electric",
+      "display": {
+          "icon": {
+              "item": "minecraft:cake"
+          },
+          "title": {"translate":"Happy Birthday"},
+          "description": {"translate":"Eat a wild cake!"},
+          "frame": "task",
+          "show_toast": true,
+          "announce_to_chat": true,
+          "hidden": false
+      },
+      "rewards": {
+        "function": "raccoon:rewards/chaos/trolls/rewd_cake"
+      },
+      "criteria": {
+            "cake": {
+            "trigger": "minecraft:impossible"
+            }
+        },
+      "requirements": [
+        [
+          "cake"
+        ]
+      ]
+    }

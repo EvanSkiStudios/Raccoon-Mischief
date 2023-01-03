@@ -1,0 +1,32 @@
+{
+    "parent": "raccoon:chaos/trolls/mobs/vector",
+    "display": {
+        "icon": {
+            "item": "minecraft:honey_block"
+        },
+        "title": {"translate":"No! Not the bees!"},
+        "description": {"translate":"You like jazz?"},
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "rewards": {
+        "function": "raccoon:rewards/chaos/trolls/mobs/rewd_not_the_bees"
+    },		
+    "criteria": {
+        "beez": {
+            "trigger": "minecraft:entity_killed_player",
+            "conditions": {
+                "entity": {
+                    "type": "minecraft:bee"
+                }
+            }
+        }
+    },
+    "requirements": [
+      [
+        "beez"
+      ]
+    ]
+  }

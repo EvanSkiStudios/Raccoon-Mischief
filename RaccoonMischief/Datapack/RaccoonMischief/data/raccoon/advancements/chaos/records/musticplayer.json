@@ -1,0 +1,36 @@
+{
+    "parent": "raccoon:chaos/root",
+    "display": {
+        "icon": {
+            "item": "minecraft:jukebox"
+        },
+        "title": {"translate":"Mustic Playerr"},
+        "description": {"translate":"Get an Jukebox"},
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "rewards": {
+        "function": "raccoon:custom/items/give/ci_upgrade_shard"
+    },		
+    "criteria": {
+        "mustic": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+						"items": [
+							"minecraft:jukebox"
+						]
+                    }
+                ],
+                "requirements": [
+                    [
+                      "mustic"
+                    ]
+                  ]
+            }
+        }
+    }
+}
