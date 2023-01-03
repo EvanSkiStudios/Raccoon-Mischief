@@ -14,12 +14,12 @@ import java.util.List;
 public class tactical_dirt {
         public static void TactDirt(Plugin namespace) {
             ItemStack TaticalDirt = new ItemStack(Material.BAKED_POTATO, 1);
-            ItemMeta SuperPotatoMeta = SuperPotato.getItemMeta();
-            SuperPotatoMeta.setDisplayName(ChatColor.GREEN + "" + ChatColor.BOLD + "Super Potato!");
-            SuperPotatoMeta.setLore(List.of("This potato will ", "give you superpowers."));
-            SuperPotato.setItemMeta(SuperPotatoMeta);
+            ItemMeta TaticalDirtMeta = TaticalDirt.getItemMeta();
+            TaticalDirtMeta.setDisplayName(ChatColor.GREEN + "" + ChatColor.BOLD + "Super Potato!");
+            TaticalDirtMeta.setLore(List.of("This potato will ", "give you superpowers."));
+            TaticalDirt.setItemMeta(TaticalDirtMeta);
 
-            ShapedRecipe SuperPotatoRecipe = new ShapedRecipe(new NamespacedKey(namespace, "potato"), SuperPotato);
+            ShapedRecipe SuperPotatoRecipe = new ShapedRecipe(new NamespacedKey(namespace, "potato"), TaticalDirt);
             SuperPotatoRecipe.shape(
                     " X ",
                     " X ",
