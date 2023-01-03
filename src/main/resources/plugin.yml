@@ -1,0 +1,6 @@
+name: RaccoonMischief
+version: '${version}'
+main: me.evanskistudios.rm.RaccoonMischief
+api-version: 1.19
+authors: [ EvanskiStudios ]
+description: Raccoons

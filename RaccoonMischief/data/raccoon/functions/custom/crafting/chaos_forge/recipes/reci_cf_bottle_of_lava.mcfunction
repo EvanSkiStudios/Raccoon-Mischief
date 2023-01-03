@@ -1,1 +1,0 @@
-execute if block ~ ~ ~ dropper{Items:[{Slot:7b,id:"minecraft:glass_bottle",Count:1b},{Slot:4b,id:"minecraft:lava_bucket",Count:1b}]} run function raccoon:custom/crafting/chaos_forge/results/cf_bottle_of_lava

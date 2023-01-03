@@ -1,1 +1,0 @@
-give @s carrot_on_a_stick{CustomModelData:8068,pocket_dim:1b,display:{Name:'{"text":"Dimensional Rift","italic":false}'}}

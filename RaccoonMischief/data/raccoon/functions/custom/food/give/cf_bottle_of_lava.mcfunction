@@ -1,1 +1,0 @@
-give @s honey_bottle{cup_of_lava:1b,CustomModelData:7167,display:{Name:'{"text":"Bottle of Lava","italic":false}'}}

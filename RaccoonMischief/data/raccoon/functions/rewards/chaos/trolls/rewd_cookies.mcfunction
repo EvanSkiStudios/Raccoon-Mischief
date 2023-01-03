@@ -1,2 +1,0 @@
-execute as @s at @s run tellraw @a [{"text":"<"},{"selector":"@s"},{"text":">"},{"text":" COOKIES!!! NOM NOM NOM!!"}]
-execute as @s at @s run playsound minecraft:custom.crafting.nom_nom_nom player @a ~ ~ ~ 

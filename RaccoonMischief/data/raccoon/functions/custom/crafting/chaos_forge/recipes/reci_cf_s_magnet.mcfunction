@@ -1,1 +1,0 @@
-execute if block ~ ~ ~ dropper{Items:[{Slot:1b,id:"minecraft:copper_ingot",Count:1b},{Slot:3b,id:"minecraft:copper_ingot",Count:1b},{Slot:4b,id:"minecraft:netherite_ingot",Count:1b},{Slot:5b,id:"minecraft:copper_ingot",Count:1b},{Slot:7b,id:"minecraft:copper_ingot",Count:1b}]} run function raccoon:custom/crafting/chaos_forge/results/cf_s_magnet

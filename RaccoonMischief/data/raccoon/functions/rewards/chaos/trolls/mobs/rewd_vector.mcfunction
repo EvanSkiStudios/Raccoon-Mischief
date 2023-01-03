@@ -1,1 +1,0 @@
-summon item ~ ~ ~ {Item:{id:"minecraft:wooden_sword",Count:1}}

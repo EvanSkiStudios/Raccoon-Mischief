@@ -1,1 +1,0 @@
-give @s amethyst_shard{CustomModelData:8583,Enchantments:[{}],display:{Name:'{"text":"Upgrade Shard","color":"light_purple"}',Lore:['{"text":"A shard of chaos with unknown effects"}']},ud_shard:1b} 1
