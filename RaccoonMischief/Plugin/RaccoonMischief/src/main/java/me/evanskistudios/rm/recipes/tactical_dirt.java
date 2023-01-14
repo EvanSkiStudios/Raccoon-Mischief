@@ -5,29 +5,27 @@ import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.NamespacedKey;
 import org.bukkit.inventory.ItemStack;
-import org.bukkit.inventory.ShapedRecipe;
+//import org.bukkit.inventory.ShapedRecipe;
+import org.bukkit.inventory.ShapelessRecipe;
 import org.bukkit.inventory.meta.ItemMeta;
+import org.bukkit.persistence.PersistentDataType;
 import org.bukkit.plugin.Plugin;
 
-import java.util.List;
+//import java.util.List;
 
 public class tactical_dirt {
         public static void TactDirt(Plugin namespace) {
             ItemStack TaticalDirt = new ItemStack(Material.BAKED_POTATO, 1);
             ItemMeta TaticalDirtMeta = TaticalDirt.getItemMeta();
-            TaticalDirtMeta.setDisplayName(ChatColor.GREEN + "" + ChatColor.BOLD + "Super Potato!");
-            TaticalDirtMeta.setLore(List.of("This potato will ", "give you superpowers."));
+            TaticalDirtMeta.setDisplayName(ChatColor.RESET + "Tactical Dirt");
+            TaticalDirtMeta.setCustomModelData(1);
+            NamespacedKey key = new NamespacedKey(namespace, "ndirt_eat");
+            TaticalDirtMeta.getPersistentDataContainer().set(key, PersistentDataType.DOUBLE, 1.0);
             TaticalDirt.setItemMeta(TaticalDirtMeta);
+            ShapelessRecipe TaticalDirtRecipe = new ShapelessRecipe(new NamespacedKey(namespace, "potato"), TaticalDirt);
+            TaticalDirtRecipe.addIngredient(1, Material.DIRT);
+            TaticalDirtRecipe.addIngredient(1, Material.WHEAT_SEEDS);
 
-            ShapedRecipe SuperPotatoRecipe = new ShapedRecipe(new NamespacedKey(namespace, "potato"), TaticalDirt);
-            SuperPotatoRecipe.shape(
-                    " X ",
-                    " X ",
-                    " X "
-            );
-            SuperPotatoRecipe.setIngredient('X', Material.POTATO);
-
-            Bukkit.addRecipe(SuperPotatoRecipe);
-
+            Bukkit.addRecipe(TaticalDirtRecipe);
         }
 }

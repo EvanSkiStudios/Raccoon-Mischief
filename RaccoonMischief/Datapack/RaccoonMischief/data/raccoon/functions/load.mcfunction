@@ -1,4 +1,4 @@
-tellraw @a {"text": "RaccoonMischief V.6.18.22 is loaded", "color": "#00FF44"}
+tellraw @a {"text": "RaccoonMischief V.2.0 is loaded", "color": "#00FF44"}
 advancement grant @a only raccoon:chaos/root
 
 #cleanup/restart
@@ -14,7 +14,6 @@ scoreboard objectives add rm_RANDOM dummy
 
 #recipes
 recipe take @a raccoon:crafting/custom/food/rcip_cf_nutrientdirt
-recipe take @a raccoon:crafting/custom/food/rcip_cf_netherwarp
 
 #set up scoreboards
 scoreboard objectives add rm_deathDetect deathCount
@@ -40,18 +39,4 @@ scoreboard players add @a rm_deathDetect 0
 scoreboard players add @a rm_llamaDetect 0
 scoreboard players add @a rm_eatCake 0
 
-#custom food
-function raccoon:custom/food/custom_food_load
-
-#custom item
-function raccoon:custom/items/custom_item_load
-
-#custom effects
-function raccoon:effects/mob_effects/mob_effect_load
-
-#reward recipes
-function raccoon:utility/take_recipes
-function raccoon:utility/give_recipes
-
-#start reload palyers function
-function raccoon:reload_players/reload_players_start
+schedule function raccoon:mcfunctions/blink 5s 

@@ -9,7 +9,7 @@ public final class RaccoonMischief extends JavaPlugin {
     public void onEnable() {
 
         // Plugin startup logic
-        getLogger().info("Raccoon Mischief is Loading!");
+        getLogger().info("RaccoonScriptExtender is Loading!");
 
         //Remove recipes I want to remove
         RemoveRecipes.Recipes();
@@ -17,12 +17,12 @@ public final class RaccoonMischief extends JavaPlugin {
         Plugin Namespace = this;
         AddRecipes.Recipes(Namespace);
 
-        getLogger().info("Raccoon Mischief is Loaded!");
+        getLogger().info("RaccoonScriptExtender is Loaded!");
     }
 
     @Override
     public void onDisable() {
         // Plugin shutdown logic
-        getLogger().info("Raccoon Mischief UNLOADED!");
+        getLogger().info("RaccoonScriptExtender UNLOADED!");
     }
 }
