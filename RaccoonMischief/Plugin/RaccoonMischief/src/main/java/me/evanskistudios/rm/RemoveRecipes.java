@@ -13,9 +13,26 @@ public class RemoveRecipes {
 
         while (it.hasNext()) {
             Recipe recipe = it.next();
-            if (recipe != null){
+            if (recipe != null) {
                 //check what it makes, not what it uses, then remove it
-                if (recipe.getResult().getType() == Material.BREAD) it.remove();
+                //Vanilla Armor
+                {
+                    if (recipe.getResult().getType() == Material.IRON_HELMET) it.remove();
+                    if (recipe.getResult().getType() == Material.IRON_CHESTPLATE) it.remove();
+                    if (recipe.getResult().getType() == Material.IRON_LEGGINGS) it.remove();
+                    if (recipe.getResult().getType() == Material.IRON_BOOTS) it.remove();
+
+                    if (recipe.getResult().getType() == Material.GOLDEN_HELMET) it.remove();
+                    if (recipe.getResult().getType() == Material.GOLDEN_CHESTPLATE) it.remove();
+                    if (recipe.getResult().getType() == Material.GOLDEN_LEGGINGS) it.remove();
+                    if (recipe.getResult().getType() == Material.GOLDEN_BOOTS) it.remove();
+
+                    if (recipe.getResult().getType() == Material.DIAMOND_HELMET) it.remove();
+                    if (recipe.getResult().getType() == Material.DIAMOND_CHESTPLATE) it.remove();
+                    if (recipe.getResult().getType() == Material.DIAMOND_LEGGINGS) it.remove();
+                    if (recipe.getResult().getType() == Material.DIAMOND_BOOTS) it.remove();
+                }
+
             }
         }
     }

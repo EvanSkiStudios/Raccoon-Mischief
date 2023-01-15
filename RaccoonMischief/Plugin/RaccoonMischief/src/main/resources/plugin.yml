@@ -1,5 +1,5 @@
-name: RaccoonMischief
-version: '${version}'
+name: RaccoonScriptExtender
+version: 2.0
 main: me.evanskistudios.rm.RaccoonMischief
 api-version: 1.19
 authors: [ EvanskiStudios ]

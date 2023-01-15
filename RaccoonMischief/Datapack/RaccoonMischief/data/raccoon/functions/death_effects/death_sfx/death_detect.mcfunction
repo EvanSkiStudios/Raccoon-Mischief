@@ -4,4 +4,4 @@ execute as @a[tag=died] at @a[tag=died] run playsound minecraft:custom.player.no
 #resetmagic mirror damage
 scoreboard players set @a[tag=died] rm_MagicMirrorDam 0
 
-function raccoon:effects/death_sfx/death_detect_reset
+function raccoon:death_effects/death_sfx/death_detect_reset

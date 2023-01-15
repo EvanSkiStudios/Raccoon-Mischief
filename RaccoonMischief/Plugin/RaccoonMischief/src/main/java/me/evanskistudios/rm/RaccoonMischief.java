@@ -7,17 +7,17 @@ public final class RaccoonMischief extends JavaPlugin {
 
     @Override
     public void onEnable() {
+        Plugin Namespace = this;
 
-        // Plugin startup logic
-        getLogger().info("RaccoonScriptExtender is Loading!");
+        Utilities.registerGlow(Namespace);
 
         //Remove recipes I want to remove
         RemoveRecipes.Recipes();
 
-        Plugin Namespace = this;
+        //Add my recipes
         AddRecipes.Recipes(Namespace);
 
-        getLogger().info("RaccoonScriptExtender is Loaded!");
+        getLogger().info("RaccoonScriptExtender 2.0 is Loaded!");
     }
 
     @Override
