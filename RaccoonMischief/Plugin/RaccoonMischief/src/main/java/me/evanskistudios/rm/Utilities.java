@@ -8,7 +8,7 @@ import org.bukkit.plugin.Plugin;
 import java.lang.reflect.Field;
 
 public class Utilities {
-    public static void registerGlow(Plugin namespace) {
+    public static void registerGlow() {
         try {
             Field f = Enchantment.class.getDeclaredField("acceptingNew");
             f.setAccessible(true);
@@ -17,6 +17,7 @@ public class Utilities {
             e.printStackTrace();
         }
         try {
+            Plugin namespace = RaccoonMischief.getPlugin();
             Glow glow = new Glow(new NamespacedKey(namespace, "glow"));
             Enchantment.registerEnchantment(glow);
         } catch (IllegalArgumentException e) {

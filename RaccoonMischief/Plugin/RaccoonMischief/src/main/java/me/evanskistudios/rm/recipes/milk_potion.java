@@ -42,7 +42,7 @@ public class milk_potion {
         MilkPotion.setItemMeta(MilkPotion_PotionMeta);
 
         //Crafting
-        NamespacedKey key = new NamespacedKey(namespace, "MilkPotion");
+        NamespacedKey key = new NamespacedKey(namespace, "ListenerMilkPotion");
 
         ShapelessRecipe MilkPotion_Recipe = new ShapelessRecipe(key, MilkPotion);
         MilkPotion_Recipe.addIngredient(1, Material.MILK_BUCKET);

@@ -1,6 +1,10 @@
-name: RaccoonScriptExtender
+name: RaccoonMischief
 version: 2.0
 main: me.evanskistudios.rm.RaccoonMischief
 api-version: 1.19
 authors: [ EvanskiStudios ]
 description: Raccoons
+commands:
+  RMVER:
+    description: Returns the version of RaccoonMischief
+    usage: /RMVER

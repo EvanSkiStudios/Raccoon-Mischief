@@ -1,28 +1,45 @@
 package me.evanskistudios.rm;
-import org.bukkit.plugin.Plugin;
+
+import me.evanskistudios.rm.Commands.getRMVer;
 
 import org.bukkit.plugin.java.JavaPlugin;
 
-public final class RaccoonMischief extends JavaPlugin {
+import java.util.Objects;
 
+public final class RaccoonMischief extends JavaPlugin {
+    public static double Version = 2.0;
+    private static RaccoonMischief plugin;
     @Override
     public void onEnable() {
-        Plugin Namespace = this;
+        plugin = this;
 
-        Utilities.registerGlow(Namespace);
+        //Register utilities
+        Utilities.registerGlow();
 
         //Remove recipes I want to remove
         RemoveRecipes.Recipes();
 
         //Add my recipes
-        AddRecipes.Recipes(Namespace);
+        AddRecipes.Recipes();
 
-        getLogger().info("RaccoonScriptExtender 2.0 is Loaded!");
+        //Register Events
+        EventManager.Events();
+
+        //Register Commands
+        {
+            Objects.requireNonNull(this.getCommand("RMVER")).setExecutor(new getRMVer());
+        }
+
+        getLogger().info("RaccoonMischief 2.0 is Loaded!");
     }
 
     @Override
     public void onDisable() {
         // Plugin shutdown logic
-        getLogger().info("RaccoonScriptExtender UNLOADED!");
+        getLogger().info("RaccoonMischief UNLOADED!");
+    }
+
+    public static RaccoonMischief getPlugin() {
+        return plugin;
     }
 }
