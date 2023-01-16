@@ -29,6 +29,7 @@ public final class RaccoonMischief extends JavaPlugin {
 
         //Register Commands
         {
+
             Objects.requireNonNull(this.getCommand("RMVER")).setExecutor(new getRMVer());
             Objects.requireNonNull(this.getCommand("RMtestDeath")).setExecutor(new RMtestKiller());
         }
