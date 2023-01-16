@@ -16,6 +16,8 @@ import org.bukkit.potion.PotionEffect;
 public class ListenerMilkPotion implements Listener{
     @EventHandler
     public void PotionSplash(PotionSplashEvent event){
+        if (event.isCancelled()) return;
+
         ThrownPotion potion = event.getPotion();
 
         ItemStack item = potion.getItem();

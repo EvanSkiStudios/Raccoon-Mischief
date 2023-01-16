@@ -15,7 +15,5 @@ public class AddRecipes {
         rottenflesh_to_leather.RotLeather(namespace);
         tactical_dirt.TactDirt(namespace);
         unmetadata_cookies.NoMDCookies(namespace);
-
     }
-
 }

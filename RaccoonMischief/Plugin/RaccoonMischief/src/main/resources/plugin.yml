@@ -8,3 +8,6 @@ commands:
   RMVER:
     description: Returns the version of RaccoonMischief
     usage: /RMVER
+  RMtestDeath:
+    description: Lowers player health to make it easier to test deaths
+    usage: /RMtestDeath
