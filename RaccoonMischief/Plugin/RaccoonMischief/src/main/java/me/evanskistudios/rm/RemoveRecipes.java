@@ -15,24 +15,17 @@ public class RemoveRecipes {
             Recipe recipe = it.next();
             if (recipe != null) {
                 //check what it makes, not what it uses, then remove it
-                //Vanilla Armor
-                {
-                    if (recipe.getResult().getType() == Material.IRON_HELMET) it.remove();
-                    if (recipe.getResult().getType() == Material.IRON_CHESTPLATE) it.remove();
-                    if (recipe.getResult().getType() == Material.IRON_LEGGINGS) it.remove();
-                    if (recipe.getResult().getType() == Material.IRON_BOOTS) it.remove();
+                Material RecipeResult = recipe.getResult().getType();
 
-                    if (recipe.getResult().getType() == Material.GOLDEN_HELMET) it.remove();
-                    if (recipe.getResult().getType() == Material.GOLDEN_CHESTPLATE) it.remove();
-                    if (recipe.getResult().getType() == Material.GOLDEN_LEGGINGS) it.remove();
-                    if (recipe.getResult().getType() == Material.GOLDEN_BOOTS) it.remove();
-
-                    if (recipe.getResult().getType() == Material.DIAMOND_HELMET) it.remove();
-                    if (recipe.getResult().getType() == Material.DIAMOND_CHESTPLATE) it.remove();
-                    if (recipe.getResult().getType() == Material.DIAMOND_LEGGINGS) it.remove();
-                    if (recipe.getResult().getType() == Material.DIAMOND_BOOTS) it.remove();
+                switch (RecipeResult) {
+                    default -> {/*Default don't do anything*/}
+                    case IRON_HELMET, IRON_CHESTPLATE, IRON_LEGGINGS, IRON_BOOTS,
+                    GOLDEN_HELMET, GOLDEN_CHESTPLATE, GOLDEN_LEGGINGS, GOLDEN_BOOTS,
+                    DIAMOND_HELMET, DIAMOND_CHESTPLATE, DIAMOND_LEGGINGS, DIAMOND_BOOTS
+                    -> {
+                        it.remove();
+                    }
                 }
-
             }
         }
     }

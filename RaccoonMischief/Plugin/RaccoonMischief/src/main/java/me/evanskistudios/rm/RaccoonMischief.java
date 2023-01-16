@@ -1,9 +1,10 @@
 package me.evanskistudios.rm;
 
-import me.evanskistudios.rm.Commands.RMtestKiller;
-import me.evanskistudios.rm.Commands.getRMVer;
+import me.evanskistudios.rm.commands.RMtestKiller;
+import me.evanskistudios.rm.commands.getRMVer;
 
 import org.bukkit.plugin.java.JavaPlugin;
+
 
 import java.util.Objects;
 
@@ -32,6 +33,9 @@ public final class RaccoonMischief extends JavaPlugin {
             Objects.requireNonNull(this.getCommand("RMVER")).setExecutor(new getRMVer());
             Objects.requireNonNull(this.getCommand("RMtestDeath")).setExecutor(new RMtestKiller());
         }
+
+        //Tasks
+        TaskManager.tasks();
 
         getLogger().info("RaccoonMischief " + Version + " is Loaded!");
     }
