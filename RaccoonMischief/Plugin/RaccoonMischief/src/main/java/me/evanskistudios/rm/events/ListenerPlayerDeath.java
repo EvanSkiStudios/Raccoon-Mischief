@@ -1,10 +1,15 @@
 package me.evanskistudios.rm.events;
 
+import me.evanskistudios.rm.RaccoonMischief;
 import org.bukkit.entity.*;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityDamageByEntityEvent;
 import org.bukkit.event.entity.PlayerDeathEvent;
+import org.bukkit.plugin.Plugin;
+
+import java.util.function.Supplier;
+import java.util.logging.Level;
 
 public class ListenerPlayerDeath implements Listener{
     public int DeathCause = 0;
@@ -18,7 +23,10 @@ public class ListenerPlayerDeath implements Listener{
 
             if (event.getFinalDamage() >= player.getHealth()){
                 Entity killer = event.getDamager();
-                System.out.println(""+killer);
+
+                // Plugin namespace = RaccoonMischief.getPlugin();
+                // namespace.getLogger().log(Level.INFO, ""+killer);
+
                 if (killer instanceof LlamaSpit) {
                     DeathCause = 1;
                     return;

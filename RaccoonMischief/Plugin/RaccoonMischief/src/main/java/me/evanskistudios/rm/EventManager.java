@@ -7,6 +7,10 @@ public class EventManager {
     public static void Events() {
         Plugin namespace = RaccoonMischief.getPlugin();
 
+        //PLayer Join
+        ListenerPlayerConnect PlayerConnectEvent = new ListenerPlayerConnect();
+        namespace.getServer().getPluginManager().registerEvents(PlayerConnectEvent, namespace);
+
         //Player Death Event
         ListenerPlayerDeath PlayerDeathEvent = new ListenerPlayerDeath();
         namespace.getServer().getPluginManager().registerEvents(PlayerDeathEvent, namespace);

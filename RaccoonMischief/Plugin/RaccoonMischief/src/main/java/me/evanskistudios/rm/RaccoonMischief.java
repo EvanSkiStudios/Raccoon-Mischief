@@ -29,12 +29,11 @@ public final class RaccoonMischief extends JavaPlugin {
 
         //Register Commands
         {
-
             Objects.requireNonNull(this.getCommand("RMVER")).setExecutor(new getRMVer());
             Objects.requireNonNull(this.getCommand("RMtestDeath")).setExecutor(new RMtestKiller());
         }
 
-        getLogger().info("RaccoonMischief 2.0 is Loaded!");
+        getLogger().info("RaccoonMischief " + Version + " is Loaded!");
     }
 
     @Override
