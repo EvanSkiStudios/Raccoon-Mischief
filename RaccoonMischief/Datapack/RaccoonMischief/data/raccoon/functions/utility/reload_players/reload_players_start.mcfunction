@@ -1,2 +1,0 @@
-scoreboard objectives remove rm_setup_players
-scoreboard objectives add rm_setup_players dummy
