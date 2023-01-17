@@ -18,5 +18,9 @@ public class EventManager {
         //Milk potion
         ListenerMilkPotion PotionSplashEvent = new ListenerMilkPotion();
         namespace.getServer().getPluginManager().registerEvents(PotionSplashEvent, namespace);
+
+        //Crafting
+        ListenerPlayerCraft PlayerCraftEvent = new ListenerPlayerCraft();
+        namespace.getServer().getPluginManager().registerEvents(PlayerCraftEvent, namespace);
     }
 }

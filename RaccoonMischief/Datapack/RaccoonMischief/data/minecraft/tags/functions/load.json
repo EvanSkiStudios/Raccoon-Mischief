@@ -1,7 +1,6 @@
 {
         "values": [
         "raccoon:load",
-        "raccoon:utility/custom_food/custom_food_load",
         "raccoon:utility/reload_players/reload_players_start"
     ]
 }

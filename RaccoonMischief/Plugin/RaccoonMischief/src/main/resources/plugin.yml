@@ -1,8 +1,8 @@
 name: RaccoonMischief
-version: 2.0
 main: me.evanskistudios.rm.RaccoonMischief
+version: 2.0
 api-version: 1.19
-authors: [ EvanskiStudios ]
+authors: [EvanskiStudios]
 description: Raccoons
 commands:
   RMVER:

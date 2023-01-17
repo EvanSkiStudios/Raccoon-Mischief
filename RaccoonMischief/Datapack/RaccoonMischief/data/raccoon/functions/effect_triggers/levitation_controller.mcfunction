@@ -1,2 +1,0 @@
-execute as @a[tag=!levitate,nbt={ActiveEffects:[{Id:25b}]}] run function raccoon:effect_triggers/levitating
-execute as @a[tag=levitate,nbt=!{ActiveEffects:[{Id:25b}]}] run function raccoon:effect_triggers/levitating_reset

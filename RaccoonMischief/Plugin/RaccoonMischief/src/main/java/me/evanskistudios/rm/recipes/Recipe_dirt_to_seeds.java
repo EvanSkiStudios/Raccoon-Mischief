@@ -6,7 +6,7 @@ import org.bukkit.NamespacedKey;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.ShapelessRecipe;
 import org.bukkit.plugin.Plugin;
-public class dirt_to_seeds {
+public class Recipe_dirt_to_seeds {
     public static void DirtSeeds(Plugin namespace) {
         ItemStack WheatSeeds = new ItemStack(Material.WHEAT_SEEDS, 1);
 

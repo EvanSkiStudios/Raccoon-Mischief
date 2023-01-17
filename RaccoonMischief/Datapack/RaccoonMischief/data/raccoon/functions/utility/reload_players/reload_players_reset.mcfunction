@@ -19,10 +19,6 @@ scoreboard players add @s rm_llamaDetect 0
 scoreboard players add @s rm_eatCake 0
 
 
-
-#custom effects
-execute as @a[tag=levitate] run execute as @s at @s run tag @s remove levitate
-
 tellraw @s [{"text": "RaccoonMischief V.2.0 has finished setup for ", "color": "#00FF44"},{"selector":"@s", "color": "#00FF44"}]
 advancement grant @s only raccoon:chaos/root
 

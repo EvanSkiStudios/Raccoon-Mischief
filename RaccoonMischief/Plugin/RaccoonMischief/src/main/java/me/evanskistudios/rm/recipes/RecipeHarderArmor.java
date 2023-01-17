@@ -7,8 +7,8 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.*;
 import org.bukkit.plugin.Plugin;
 
-public class Harder_Armor {
-    public static void HArmor(Plugin namespace) {
+public class RecipeHarderArmor {
+    public static void HardArmor(Plugin namespace) {
 
         //IRON
         {

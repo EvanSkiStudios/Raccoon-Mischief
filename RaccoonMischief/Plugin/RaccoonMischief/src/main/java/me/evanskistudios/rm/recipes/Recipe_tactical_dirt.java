@@ -1,6 +1,5 @@
 package me.evanskistudios.rm.recipes;
 
-import me.evanskistudios.rm.RaccoonMischief;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
@@ -14,8 +13,9 @@ import org.bukkit.plugin.Plugin;
 
 //import java.util.List;
 
-public class tactical_dirt {
-        public static void TactDirt(Plugin namespace) {
+public class Recipe_tactical_dirt {
+
+    public static void TactDirt(Plugin namespace) {
             ItemStack TaticalDirt = new ItemStack(Material.BAKED_POTATO, 1);
             ItemMeta TaticalDirtMeta = TaticalDirt.getItemMeta();
             TaticalDirtMeta.setDisplayName(ChatColor.RESET + "Tactical Dirt");
@@ -23,10 +23,10 @@ public class tactical_dirt {
             NamespacedKey key = new NamespacedKey(namespace, "ndirt_eat");
             TaticalDirtMeta.getPersistentDataContainer().set(key, PersistentDataType.DOUBLE, 1.0);
             TaticalDirt.setItemMeta(TaticalDirtMeta);
-            ShapelessRecipe TaticalDirtRecipe = new ShapelessRecipe(new NamespacedKey(namespace, "potato"), TaticalDirt);
+            ShapelessRecipe TaticalDirtRecipe = new ShapelessRecipe(new NamespacedKey(namespace, "TacticalDirt"), TaticalDirt);
             TaticalDirtRecipe.addIngredient(1, Material.DIRT);
             TaticalDirtRecipe.addIngredient(1, Material.WHEAT_SEEDS);
 
             Bukkit.addRecipe(TaticalDirtRecipe);
-        }
+    }
 }

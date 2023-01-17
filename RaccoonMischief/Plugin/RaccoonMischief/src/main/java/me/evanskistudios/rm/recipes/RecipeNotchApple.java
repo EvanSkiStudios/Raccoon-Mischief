@@ -7,7 +7,7 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.ShapedRecipe;
 import org.bukkit.plugin.Plugin;
 
-public class notch_apple {
+public class RecipeNotchApple {
     public static void NotchApple(Plugin namespace) {
         ItemStack EnchantedGoldenApple = new ItemStack(Material.ENCHANTED_GOLDEN_APPLE, 1);
 

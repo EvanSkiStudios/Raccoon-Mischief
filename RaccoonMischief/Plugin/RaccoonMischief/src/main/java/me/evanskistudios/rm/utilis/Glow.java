@@ -13,8 +13,8 @@ import org.jetbrains.annotations.NotNull;
 import java.util.Set;
 
 public class Glow extends Enchantment {
-    public @NotNull Glow(NamespacedKey key) {
-        super(key);
+    public Glow(NamespacedKey key) {
+         super(key);
     }
 
     @Override

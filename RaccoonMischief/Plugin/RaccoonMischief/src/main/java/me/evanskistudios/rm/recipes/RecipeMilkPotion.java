@@ -11,7 +11,7 @@ import org.bukkit.plugin.Plugin;
 
 import java.util.List;
 
-public class milk_potion {
+public class RecipeMilkPotion {
     public static void SplashPotionOMilk(Plugin namespace) {
         ItemStack MilkPotion = new ItemStack(Material.SPLASH_POTION, 1);
 
