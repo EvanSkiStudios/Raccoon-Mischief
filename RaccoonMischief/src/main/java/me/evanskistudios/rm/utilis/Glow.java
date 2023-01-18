@@ -12,13 +12,14 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.Set;
 
+@SuppressWarnings("All") //STFU about NULLS
 public class Glow extends Enchantment {
     public Glow(NamespacedKey key) {
          super(key);
     }
 
     @Override
-    public @NotNull String getName() {
+    public String getName() {
         return null;
     }
 

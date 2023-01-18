@@ -10,7 +10,7 @@ import org.jetbrains.annotations.NotNull;
 
 //import java.util.logging.Level;
 
-public class getRMVer implements CommandExecutor {
+public class ComGetRMVer implements CommandExecutor {
     @Override
     public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label,@NotNull String[] args) {
         Plugin namespace = RaccoonMischief.getPlugin();

@@ -1,0 +1,14 @@
+info: "
+This Config File is for enabling and Disabling features of the plugin
+(This key is for holding this info and is unused by the plugin)
+
+version is used to auto update config.yml when their is new config options
+DO NOT EDIT VERSION OR YOU WILL GET ERRORS
+
+The first letter explains what data type the option is
+(E) for Enabled (Enabled/Disabled) > ONLY ACCEPTS THESE WORDS otherwise will default to Enabled
+(I) for whole number, (D) for numbers with decimal places like (1.25), (F) for numbers ranging from (0.0 - 1.0)
+"
+version: 2.0
+
+E_TurtlesTrollFeatures: "Enabled"

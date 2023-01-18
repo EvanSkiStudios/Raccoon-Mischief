@@ -11,3 +11,9 @@ commands:
   RMtestDeath:
     description: Lowers player health to make it easier to test deaths
     usage: /RMtestDeath
+  RMGetCfg:
+    description: Returns value of Config key
+    usage: /RMGetCfg <Key>
+  RMReloadCFG:
+    description: Reloads the Config.yml file
+    usage: /RMReloadCFG

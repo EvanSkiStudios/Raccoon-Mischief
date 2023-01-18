@@ -22,9 +22,5 @@ public class EventManager {
         //Crafting
         ListenerPlayerCraft PlayerCraftEvent = new ListenerPlayerCraft();
         namespace.getServer().getPluginManager().registerEvents(PlayerCraftEvent, namespace);
-
-        //UnMercer
-        ListenerUnMercerEntities UnMercerEntities = new ListenerUnMercerEntities();
-        namespace.getServer().getPluginManager().registerEvents(UnMercerEntities, namespace);
     }
 }
