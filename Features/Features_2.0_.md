@@ -1,6 +1,5 @@
 # Features
 ## Version 2.0
-* Moved Datapack Functionality to Plugin
 
 ## Config.yml
 * Version > is used to check the plugin version for new Config keys, Do not edit otherwise will cause the pluin to behave unexpectedly 
