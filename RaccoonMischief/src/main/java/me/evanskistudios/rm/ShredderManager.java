@@ -40,22 +40,13 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.entity.CreatureSpawnEvent;
 import org.bukkit.plugin.Plugin;
 
+import java.util.logging.Level;
+
 import static org.bukkit.Bukkit.getServer;
 
 public class ShredderManager {
 
     public static void ShredderEnable() {
-        Plugin plugin = RaccoonMischief.getPlugin(RaccoonMischief.class);
-
-        //if plugin isnt installed just disable these things
-        if (getServer().getPluginManager().getPlugin("ATurtlesTroll") == null){
-            return;
-        }
-
-        String Enabled = "" + plugin.getConfig().get("E_TurtlesTrollFeatures");
-        if (Enabled.equalsIgnoreCase("Disabled")){
-            return;
-        }
         //Is enabled, continue
         ShredderManager.Events();
     }
@@ -64,6 +55,24 @@ public class ShredderManager {
     public static class ListenerUnMercerEntities implements Listener {
         @EventHandler
         public void onMobSpawn(CreatureSpawnEvent event) {
+            Plugin plugin = RaccoonMischief.getPlugin(RaccoonMischief.class);
+
+            String ignore = "" + plugin.getConfig().get("B_IgnorePluginGetInstalledFlag");
+            if (ignore.equalsIgnoreCase("False")) {
+                //if plugin isn't installed just disable these things, does not check if flag above is true
+                if (getServer().getPluginManager().getPlugin("ATurtlesTroll") == null) {
+                    //plugin.getLogger().log(Level.INFO, "ATurtlesTroll is not installed on server");
+                    return;
+                }
+            }
+
+            String Enabled = "" + plugin.getConfig().get("B_TurtlesTrollFeatures");
+            if (Enabled.equalsIgnoreCase("False")){
+                //plugin.getLogger().log(Level.INFO, "ATurtlesTroll Features are Disabled");
+                return;
+            }
+
+
             Entity SpawnedEntity = event.getEntity();
 
             if (SpawnedEntity instanceof Bat) event.setCancelled(true); //cuts down on lag
@@ -75,6 +84,7 @@ public class ShredderManager {
     //Enables Events above
     public static void Events() {
         Plugin namespace = RaccoonMischief.getPlugin();
+
         //UnMercer
         ListenerUnMercerEntities UnMercerEntities = new ListenerUnMercerEntities();
         namespace.getServer().getPluginManager().registerEvents(UnMercerEntities, namespace);

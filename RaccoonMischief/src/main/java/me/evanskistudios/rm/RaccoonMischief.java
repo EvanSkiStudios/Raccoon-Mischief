@@ -15,18 +15,21 @@ public final class RaccoonMischief extends JavaPlugin {
     public void onEnable() {
         plugin = this;
 
-        String current_ver = "" + Version;
-        Object cfg_ver = getConfig().get("version");
-        if (cfg_ver == null || !current_ver.equalsIgnoreCase(""+cfg_ver)){
-            getLogger().log(Level.WARNING,
-            "\n"+"######################### RACCOON MISCHIEF #########################" +"\n"+
-             "Config.yml version is out of date with RM."+current_ver+"\n"+
-             "It is recommended to delete the file for the plugin to regenerate it."+"\n"+
-             "####################################################################"
-            );
+        //Config
+        {
+            String current_ver = "" + Version;
+            Object cfg_ver = getConfig().get("version");
+            if (cfg_ver == null || !current_ver.equalsIgnoreCase("" + cfg_ver)) {
+                getLogger().log(Level.WARNING,
+                        "\n" + "######################### RACCOON MISCHIEF #########################" + "\n" +
+                                " Config.yml version is out of date with RM." + current_ver + "\n" +
+                                " It is recommended to delete the file for the plugin to regenerate it." + "\n" +
+                                "####################################################################"
+                );
+            }
+            getConfig().options().copyDefaults();
+            saveDefaultConfig();
         }
-        getConfig().options().copyDefaults();
-        saveDefaultConfig();
 
         //Register utilities
         Utilities.registerGlow();

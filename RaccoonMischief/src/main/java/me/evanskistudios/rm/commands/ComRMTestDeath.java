@@ -8,6 +8,13 @@ public class ComRMTestDeath implements CommandExecutor  {
     @Override
     public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label, @NotNull String[] args) {
         if (command.getName().equalsIgnoreCase("RMtestDeath")){
+            String no_permission = (ChatColor.RED+"You lack sufficient permission to execute this command");
+
+            if (!sender.hasPermission("RaccoonMischief.RMtestDeath")){
+                sender.sendMessage(no_permission);
+                return true;
+            }
+
             if (sender instanceof Player){
                Player p = (Player) sender;
                p.setFoodLevel(1);
