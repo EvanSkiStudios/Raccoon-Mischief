@@ -14,7 +14,7 @@ released as [All Rights Reserved](LICENSE).
 Place RaccoonMischief.jar into your plugin folder of your Paper-mc server.
 
 # Changelog
-See [Features](https://github.com/EvanSkiStudios/Raccoon-Mischief/blob/master/Features.md) for full list of features
+See [Latest Features](https://github.com/EvanSkiStudios/Raccoon-Mischief/blob/master/Features/Features_Latest_.md) for full list of features
 
 ## Version 2.0
 * Moved Datapack Functionality to Plugin
