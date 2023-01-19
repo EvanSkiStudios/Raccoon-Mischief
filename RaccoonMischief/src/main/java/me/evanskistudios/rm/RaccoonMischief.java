@@ -1,7 +1,6 @@
 package me.evanskistudios.rm;
 
 import me.evanskistudios.rm.commands.*;
-import org.bukkit.ChatColor;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.util.Objects;
