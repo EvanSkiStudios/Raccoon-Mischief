@@ -1,11 +1,15 @@
 package me.evanskistudios.rm.events;
 
 import me.evanskistudios.rm.RaccoonMischief;
+import org.bukkit.ChatColor;
+import org.bukkit.Material;
 import org.bukkit.entity.*;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityDamageByEntityEvent;
 import org.bukkit.event.entity.PlayerDeathEvent;
+import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.plugin.Plugin;
 
 import java.util.function.Supplier;
@@ -47,6 +51,16 @@ public class ListenerPlayerDeath implements Listener{
 
         Player player = event.getPlayer();
 
+        //players Drop Strange meat
+        ItemStack Strange_meat = new ItemStack(Material.BEEF);
+        ItemMeta Strange_meat_meta = Strange_meat.getItemMeta();
+        Strange_meat_meta.setDisplayName(ChatColor.RESET+"Strange Meat");
+        Strange_meat.setItemMeta(Strange_meat_meta);
+
+        player.getWorld().dropItem(player.getLocation().add(0,1,0), Strange_meat);
+
+
+        //Custom death sounds
         switch(DeathCause){
             default:{
                 //regular death
@@ -58,7 +72,6 @@ public class ListenerPlayerDeath implements Listener{
                 player.playSound(player.getLocation(), "custom.player.llama", 1.0f, 1.0f);
             }break;
         }
-
-        DeathCause = 0;
+        DeathCause = 0; //reset so we are not stuck with last one played
     }
 }

@@ -45,6 +45,7 @@ Things That change vanilla features
 * ReAdded the NotchApple recipe
 
 ## Effects
+* Players now drop Beef that is named "Strange Meat" on death
 * The sound effect of [Jeb screaming](https://youtu.be/2BCFGjsrwyY?t=26) will play when a player dies
 * The sound effect of [DinnerBone yelling](https://youtu.be/PpF8AaPyqhQ?t=120) will play when a player is killed by a llama
 * The line ["Im Levitating"](https://youtu.be/GOhLQ4fchSc?t=27) will play when a player is under the effect of Levitation
