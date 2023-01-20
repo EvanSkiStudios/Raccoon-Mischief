@@ -16,11 +16,9 @@ public class ComGetRMVer implements CommandExecutor {
         Plugin namespace = RaccoonMischief.getPlugin();
         String version_string = "RaccoonMischief V." + RaccoonMischief.Version;
 
-        if (command.getName().equalsIgnoreCase("RMVER")){
-            sender.sendMessage(ChatColor.GREEN + version_string);
+        sender.sendMessage(ChatColor.GREEN + version_string);
 
-            //namespace.getLogger().log(Level.INFO,version_string);
-        }
+        //namespace.getLogger().log(Level.INFO,version_string);
         return true;
     }
 }

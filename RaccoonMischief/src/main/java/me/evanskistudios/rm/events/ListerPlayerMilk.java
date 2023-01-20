@@ -19,8 +19,8 @@ public class ListerPlayerMilk implements Listener {
 
         boolean Milk_entity = false;
         //Check entity
-        if (RightClickedEntity instanceof Llama) Milk_entity = true;
-        if (RightClickedEntity instanceof Player) Milk_entity = true;
+        if (RightClickedEntity instanceof Llama){ Milk_entity = true;}
+        if (RightClickedEntity instanceof Player){ Milk_entity = true;}
 
         //if milk-able entity
         if (Milk_entity) {
@@ -34,7 +34,7 @@ public class ListerPlayerMilk implements Listener {
                 int HeldItemAmount = HeldItem.getAmount();
                 if (HeldItemAmount != 1) {
                     player.getInventory().addItem(MilkBucket);
-                    player.getInventory().setItemInMainHand(new ItemStack(HeldItemType, HeldItemAmount - 1));
+                    player.getInventory().setItemInMainHand(new ItemStack(Material.BUCKET, HeldItemAmount - 1));
                 }else{
                     //replaces the bucket if its just 1
                     player.getInventory().setItemInMainHand(MilkBucket);

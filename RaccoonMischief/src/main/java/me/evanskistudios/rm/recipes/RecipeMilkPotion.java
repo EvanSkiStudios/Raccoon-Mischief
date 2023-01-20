@@ -12,6 +12,8 @@ import org.bukkit.plugin.Plugin;
 import java.util.List;
 
 public class RecipeMilkPotion {
+
+    public static ItemStack Item;
     public static void SplashPotionOMilk(Plugin namespace) {
         ItemStack MilkPotion = new ItemStack(Material.SPLASH_POTION, 1);
 
@@ -49,5 +51,10 @@ public class RecipeMilkPotion {
         MilkPotion_Recipe.addIngredient(1, Material.GUNPOWDER);
 
         Bukkit.addRecipe(MilkPotion_Recipe);
+
+        Item = MilkPotion;
+    }
+    public static ItemStack getItem() {
+        return Item;
     }
 }

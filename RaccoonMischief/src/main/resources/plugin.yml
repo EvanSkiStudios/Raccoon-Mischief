@@ -17,3 +17,6 @@ commands:
   RMReloadCFG:
     description: Reloads the Config.yml file
     usage: /RMReloadCFG
+  RMGive:
+    description: Gives custom RM items
+    usage: "/RMGive <item> <(Optional) Int: Amount>"

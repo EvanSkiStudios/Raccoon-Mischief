@@ -11,5 +11,5 @@ The first letter explains what data type the option is
 "
 version: 2.0
 
-B_IgnorePluginGetInstalledFlag: "True"
+B_IgnorePluginGetInstalledFlag: "False"
 B_TurtlesTrollFeatures: "True"

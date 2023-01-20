@@ -2,6 +2,7 @@
 ## Version 2.0
 
 ## Config.yml
+* Info > provides a string with info about the config file, is unused by pluin so this key can be deleted/changed/ect
 * Version > is used to check the plugin version for new Config keys, Do not edit otherwise will cause the pluin to behave unexpectedly 
 * B_IgnorePluginGetInstalledFlag > Sets a flag for checking features of other plugins, Setting this to true will ignore checking if the referenced plugin is installed
 * B_TurtlesTrollFeatures > Toggles whether if Features for [Mercerenies' A-Turtles-Troll](https://github.com/Mercerenies/a-turtles-troll) should run or not
@@ -11,6 +12,7 @@
 * RMTestDeath > (OP only) A testing command that sets the players health to 1 to test Death effects
 * RMGetCFG > Gets the value of a specified key in the config.yml
 * RMReloadCFG > (OP only) Reloads the config.yml file
+* RMGive > (OP only) Gives an selected RM item, much like the vanilla give command but for RM items only
 
 ## Vanilla Changes
 Things That change vanilla features
@@ -27,6 +29,7 @@ Things That change vanilla features
 * ReAdded the NotchApple recipe
 
 ## Effects
+* You can now milk player entities 
 * Players now drop Beef that is named "Strange Meat" on death
 * The sound effect of [Jeb screaming](https://youtu.be/2BCFGjsrwyY?t=26) will play when a player dies
 * The sound effect of [DinnerBone yelling](https://youtu.be/PpF8AaPyqhQ?t=120) will play when a player is killed by a llama

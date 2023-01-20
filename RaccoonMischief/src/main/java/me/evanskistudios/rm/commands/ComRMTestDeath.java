@@ -7,27 +7,25 @@ import org.jetbrains.annotations.NotNull;
 public class ComRMTestDeath implements CommandExecutor  {
     @Override
     public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label, @NotNull String[] args) {
-        if (command.getName().equalsIgnoreCase("RMtestDeath")){
-            String no_permission = (ChatColor.RED+"You lack sufficient permission to execute this command");
+        String no_permission = (ChatColor.RED+"You lack sufficient permission to execute this command");
 
-            if (!sender.hasPermission("RaccoonMischief.RMtestDeath")){
-                sender.sendMessage(no_permission);
-                return true;
-            }
+        if (!sender.hasPermission("RaccoonMischief.RMtestDeath")){
+            sender.sendMessage(no_permission);
+            return true;
+        }
 
-            if (sender instanceof Player){
-               Player p = (Player) sender;
-               p.setFoodLevel(1);
-               p.setSaturation(0);
-               p.setHealth(0.1);
-            }
-            if (sender instanceof ConsoleCommandSender){
-                sender.sendMessage(ChatColor.RED + "Server Console is not a player!");
-            }
+        if (sender instanceof Player){
+           Player p = (Player) sender;
+           p.setFoodLevel(1);
+           p.setSaturation(0);
+           p.setHealth(0.1);
+        }
+        if (sender instanceof ConsoleCommandSender){
+            sender.sendMessage(ChatColor.RED + "Server Console is not a player!");
+        }
 
-            if (sender instanceof BlockCommandSender){
-                sender.sendMessage(ChatColor.RED + "Command Block is not a player!");
-            }
+        if (sender instanceof BlockCommandSender){
+            sender.sendMessage(ChatColor.RED + "Command Block is not a player!");
         }
         return true;
     }
