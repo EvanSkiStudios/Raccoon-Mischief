@@ -24,6 +24,7 @@ See [Latest Features](https://github.com/EvanSkiStudios/Raccoon-Mischief/blob/ma
 * Version > is used to check the plugin version for new Config keys, Do not edit otherwise will cause the pluin to behave unexpectedly 
 * B_IgnorePluginGetInstalledFlag > Sets a flag for checking features of other plugins, Setting this to true will ignore checking if the referenced plugin is installed
 * B_TurtlesTrollFeatures > Toggles whether if Features for [Mercerenies' A-Turtles-Troll](https://github.com/Mercerenies/a-turtles-troll) should run or not
+* B_PlayersDropSkulls > Toggles if players will drop skulls on death
 
 ## Commands
 * RMVer > Returns the current Version of the installed plugin
@@ -47,6 +48,7 @@ Things That change vanilla features
 * ReAdded the NotchApple recipe
 
 ## Effects
+* Players will now drop skulls on death if config is true
 * You can now milk player entities 
 * Players now drop Beef that is named "Strange Meat" on death
 * The sound effect of [Jeb screaming](https://youtu.be/2BCFGjsrwyY?t=26) will play when a player dies
