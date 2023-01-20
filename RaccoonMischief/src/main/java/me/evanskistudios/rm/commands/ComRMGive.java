@@ -1,5 +1,6 @@
 package me.evanskistudios.rm.commands;
 
+import me.evanskistudios.rm.items.ItemUpgradeShard;
 import me.evanskistudios.rm.recipes.*;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
@@ -65,10 +66,6 @@ public class ComRMGive implements TabExecutor {
         boolean FoundItem = false;
         ItemStack RequestedItem = new ItemStack(Material.AIR,1);
 
-        if (Item_arg.equalsIgnoreCase("Tactical_Dirt")){
-            RequestedItem = Recipe_tactical_dirt.getItem();
-            FoundItem = true;
-        }
 
         if (Item_arg.equalsIgnoreCase("Milk_Potion")){
             RequestedItem = RecipeMilkPotion.getItem();
@@ -83,6 +80,16 @@ public class ComRMGive implements TabExecutor {
             Strange_meat.setItemMeta(Strange_meat_meta);
 
             RequestedItem = Strange_meat;
+            FoundItem = true;
+        }
+
+        if (Item_arg.equalsIgnoreCase("Tactical_Dirt")){
+            RequestedItem = Recipe_tactical_dirt.getItem();
+            FoundItem = true;
+        }
+
+        if (Item_arg.equalsIgnoreCase("Upgrade_Shard")){
+            RequestedItem = ItemUpgradeShard.UpgradeShard();
             FoundItem = true;
         }
 
@@ -102,9 +109,10 @@ public class ComRMGive implements TabExecutor {
 
         if (args.length == 1){
             List<String> ListOItems = Arrays.asList(
-                    "Tactical_Dirt",
                     "Milk_Potion",
-                    "Strange_Meat"
+                    "Strange_Meat",
+                    "Tactical_Dirt",
+                    "Upgrade_Shard"
             );
             return ListOItems;
         }

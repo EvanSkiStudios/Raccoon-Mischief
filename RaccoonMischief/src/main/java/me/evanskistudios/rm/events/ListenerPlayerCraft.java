@@ -1,6 +1,7 @@
 package me.evanskistudios.rm.events;
 
 import me.evanskistudios.rm.RaccoonMischief;
+import me.evanskistudios.rm.utilis.UtilityMethods;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.NamespacedKey;
@@ -9,14 +10,14 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.inventory.ClickType;
 import org.bukkit.event.inventory.CraftItemEvent;
-import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.persistence.PersistentDataContainer;
 import org.bukkit.persistence.PersistentDataType;
 import org.bukkit.plugin.Plugin;
 
-import java.util.Random;
+import java.util.ArrayList;
+import java.util.List;
 
 public class ListenerPlayerCraft  implements Listener {
 
@@ -79,10 +80,6 @@ public class ListenerPlayerCraft  implements Listener {
                         amount = event.getRecipe().getResult().getAmount();
                     }
 //GET AMOUNT OF ITEMS CRAFTED
-                    // create Random object
-                    Random random = new Random();
-                    // generate random number from 0 to (bound - 1)
-                    int number = random.nextInt(2);
 
                     for (Player all : Bukkit.getServer().getOnlinePlayers()) {
                         for (int i = 0; i < amount; ++i) {
@@ -90,12 +87,13 @@ public class ListenerPlayerCraft  implements Listener {
                             all.getInventory().addItem(CraftResult);
                         }
 
-                        //Sound
-                        if (number == 0) {
-                            all.playSound(player.getLocation(), "custom.crafting.tacticaldirt_evan", 1.0f, 1.0f);
-                        } else {
-                            all.playSound(player.getLocation(), "custom.crafting.tacticaldirt_merc", 1.0f, 1.0f);
-                        }
+                        List<Object> Sounds = new ArrayList<Object>();
+                        Sounds.add("custom.crafting.tacticaldirt_evan");
+                        Sounds.add("custom.crafting.tacticaldirt_merc");
+
+                        String sound = "" + UtilityMethods.Choose(Sounds);
+
+                        all.playSound(player.getLocation(),sound, 1.0f, 1.0f);
                     }
                 }
             }

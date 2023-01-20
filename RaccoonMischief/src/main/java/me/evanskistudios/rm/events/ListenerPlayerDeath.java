@@ -10,10 +10,11 @@ import org.bukkit.event.entity.EntityDamageByEntityEvent;
 import org.bukkit.event.entity.PlayerDeathEvent;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
+import org.bukkit.inventory.meta.SkullMeta;
 import org.bukkit.plugin.Plugin;
 
-import java.util.function.Supplier;
-import java.util.logging.Level;
+// import java.util.function.Supplier;
+// import java.util.logging.Level;
 
 public class ListenerPlayerDeath implements Listener{
     public int DeathCause = 0;
@@ -44,7 +45,7 @@ public class ListenerPlayerDeath implements Listener{
 
     @EventHandler
     public void onDeath(PlayerDeathEvent event) {
-        if (event.isCancelled()){
+        if (event.isCancelled()) {
             DeathCause = 0;
             return;
         }
@@ -58,6 +59,20 @@ public class ListenerPlayerDeath implements Listener{
         Strange_meat.setItemMeta(Strange_meat_meta);
 
         player.getWorld().dropItem(player.getLocation().add(0,1,0), Strange_meat);
+
+
+        Plugin plugin = RaccoonMischief.getPlugin(RaccoonMischief.class);
+        String DropSkulls = "" + plugin.getConfig().get("B_PlayersDropSkulls");
+        if (DropSkulls.equalsIgnoreCase("True")) {
+            //Player head
+            ItemStack PlayerHead = new ItemStack(Material.PLAYER_HEAD, 1);
+            SkullMeta PlayerHead_meta = (SkullMeta) PlayerHead.getItemMeta();
+            PlayerHead_meta.setOwner(player.getName());
+
+            PlayerHead.setItemMeta(PlayerHead_meta);
+
+            player.getWorld().dropItem(player.getLocation().add(0, 1, 0), PlayerHead);
+        }
 
 
         //Custom death sounds
