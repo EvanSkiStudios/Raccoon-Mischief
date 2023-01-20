@@ -21,7 +21,8 @@ public class RemoveRecipes {
                     default -> {/*Default don't do anything*/}
                     case IRON_HELMET, IRON_CHESTPLATE, IRON_LEGGINGS, IRON_BOOTS,
                     GOLDEN_HELMET, GOLDEN_CHESTPLATE, GOLDEN_LEGGINGS, GOLDEN_BOOTS,
-                    DIAMOND_HELMET, DIAMOND_CHESTPLATE, DIAMOND_LEGGINGS, DIAMOND_BOOTS
+                    DIAMOND_HELMET, DIAMOND_CHESTPLATE, DIAMOND_LEGGINGS, DIAMOND_BOOTS,
+                    LIGHT_WEIGHTED_PRESSURE_PLATE, CLOCK, POWERED_RAIL
                     -> {
                         it.remove();
                     }

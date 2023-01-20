@@ -14,13 +14,15 @@ public class AddRecipes {
 
         Recipe_tactical_dirt.TactDirt(P);
 
-        RecipeHarderArmor.HardArmor(P);
-
         Recipe_unmetadata_cookies.NoMDCookies(P);
+
+        RecipeHarderArmor.HardArmor(P);
 
         RecipeMilkPotion.SplashPotionOMilk(P);
 
-        RecipeNotchApple.NotchApple(P);
+        RecipeNewCopperRedstone.NewCopperRedstoneItems(P);
+
+        RecipeJTEApple.JTEApple(P);
 
     }
 }

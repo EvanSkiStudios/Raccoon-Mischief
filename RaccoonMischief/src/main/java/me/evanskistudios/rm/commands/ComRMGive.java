@@ -67,6 +67,11 @@ public class ComRMGive implements TabExecutor {
         ItemStack RequestedItem = new ItemStack(Material.AIR,1);
 
 
+        if (Item_arg.equalsIgnoreCase("JTE_Apple")){
+            RequestedItem = RecipeJTEApple.getItem();
+            FoundItem = true;
+        }
+
         if (Item_arg.equalsIgnoreCase("Milk_Potion")){
             RequestedItem = RecipeMilkPotion.getItem();
             FoundItem = true;
@@ -109,6 +114,7 @@ public class ComRMGive implements TabExecutor {
 
         if (args.length == 1){
             List<String> ListOItems = Arrays.asList(
+                    "JTE_Apple",
                     "Milk_Potion",
                     "Strange_Meat",
                     "Tactical_Dirt",
