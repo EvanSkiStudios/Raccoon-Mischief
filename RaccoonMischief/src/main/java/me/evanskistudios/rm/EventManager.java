@@ -26,5 +26,9 @@ public class EventManager {
         //Crafting
         ListenerPlayerCraft PlayerCraftEvent = new ListenerPlayerCraft();
         namespace.getServer().getPluginManager().registerEvents(PlayerCraftEvent, namespace);
+
+        //Xp Crystal
+        ListenerXPCrystal PlayerTeleportEvent = new ListenerXPCrystal();
+        namespace.getServer().getPluginManager().registerEvents(PlayerTeleportEvent, namespace);
     }
 }

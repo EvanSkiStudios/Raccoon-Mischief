@@ -16,6 +16,8 @@ public class AddRecipes {
 
         Recipe_unmetadata_cookies.NoMDCookies(P);
 
+        RecipeExpCrystal.ExpCrystal(P);
+
         RecipeHarderArmor.HardArmor(P);
 
         RecipeMilkPotion.SplashPotionOMilk(P);

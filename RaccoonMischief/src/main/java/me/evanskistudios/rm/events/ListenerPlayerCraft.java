@@ -2,13 +2,14 @@ package me.evanskistudios.rm.events;
 
 import me.evanskistudios.rm.RaccoonMischief;
 import me.evanskistudios.rm.utilis.UtilityMethods;
+import net.md_5.bungee.api.ChatMessageType;
 import org.bukkit.Bukkit;
+import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.NamespacedKey;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
-import org.bukkit.event.inventory.ClickType;
 import org.bukkit.event.inventory.CraftItemEvent;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
@@ -20,6 +21,57 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ListenerPlayerCraft  implements Listener {
+    public int AmountCrafted(CraftItemEvent event, Player player){
+        int amount;
+        //GET AMOUNT OF ITEMS CRAFTED
+        if (event.isShiftClick()) {
+            int itemsChecked = 0;
+            int possibleCreations = 1;
+
+            int amountCanBeMade = 0;
+
+            for (ItemStack item : event.getInventory().getMatrix()) {
+                if (item != null && item.getType() != Material.AIR) {
+                    if (itemsChecked == 0) {
+                        possibleCreations = item.getAmount();
+                        itemsChecked++;
+                    } else {
+                        possibleCreations = Math.min(possibleCreations, item.getAmount());
+                    }
+                }
+            }
+
+            int amountOfItems = event.getRecipe().getResult().getAmount() * possibleCreations;
+
+            ItemStack i = event.getRecipe().getResult();
+
+            for (int s = 0; s <= player.getInventory().getSize(); s++) {
+                ItemStack test = player.getInventory().getItem(s);
+                if (test == null || test.getType() == Material.AIR) {
+                    amountCanBeMade += i.getMaxStackSize();
+                    continue;
+                }
+                if (test.isSimilar(i)) {
+                    amountCanBeMade += i.getMaxStackSize() - test.getAmount();
+                }
+            }
+            amount = amountOfItems > amountCanBeMade ? amountCanBeMade : amountOfItems;
+        } else {
+            amount = event.getRecipe().getResult().getAmount();
+        }
+
+        return amount;
+//GET AMOUNT OF ITEMS CRAFTED
+    }
+
+    public boolean GetItemTag(ItemStack item, String namespace_key){
+        ItemMeta ResultMeta = item.getItemMeta();
+        PersistentDataContainer Data = ResultMeta.getPersistentDataContainer();
+
+        Plugin namespace = RaccoonMischief.getPlugin();
+        NamespacedKey NameSpaceKey = new NamespacedKey(namespace, namespace_key);
+        return (Data.has(NameSpaceKey, PersistentDataType.DOUBLE));
+    }
 
     @EventHandler
     public void onCraft(CraftItemEvent event) {
@@ -30,8 +82,8 @@ public class ListenerPlayerCraft  implements Listener {
         if (event.getWhoClicked() instanceof Player) {
             Player player = (Player) event.getWhoClicked();
 
-
             ItemStack CraftResult = event.getRecipe().getResult();
+
             if (CraftResult.getType() == Material.BAKED_POTATO) {
                 //Get meta of potato to see if its tactical dirt
                 ItemMeta ResultMeta = CraftResult.getItemMeta();
@@ -40,46 +92,8 @@ public class ListenerPlayerCraft  implements Listener {
                 Plugin namespace = RaccoonMischief.getPlugin();
                 NamespacedKey NameSpaceKey = new NamespacedKey(namespace, "ndirt_eat");
                 if (Data.has(NameSpaceKey, PersistentDataType.DOUBLE)) {
-                    ClickType clickType = event.getClick();
 
-                    int amount = event.getRecipe().getResult().getAmount();
-//GET AMOUNT OF ITEMS CRAFTED
-                    if (event.isShiftClick()) {
-                        int itemsChecked = 0;
-                        int possibleCreations = 1;
-
-                        int amountCanBeMade = 0;
-
-                        for (ItemStack item : event.getInventory().getMatrix()) {
-                            if (item != null && item.getType() != Material.AIR) {
-                                if (itemsChecked == 0) {
-                                    possibleCreations = item.getAmount();
-                                    itemsChecked++;
-                                } else {
-                                    possibleCreations = Math.min(possibleCreations, item.getAmount());
-                                }
-                            }
-                        }
-
-                        int amountOfItems = event.getRecipe().getResult().getAmount() * possibleCreations;
-
-                        ItemStack i = event.getRecipe().getResult();
-
-                        for (int s = 0; s <= player.getInventory().getSize(); s++) {
-                            ItemStack test = player.getInventory().getItem(s);
-                            if (test == null || test.getType() == Material.AIR) {
-                                amountCanBeMade += i.getMaxStackSize();
-                                continue;
-                            }
-                            if (test.isSimilar(i)) {
-                                amountCanBeMade += i.getMaxStackSize() - test.getAmount();
-                            }
-                        }
-                        amount = amountOfItems > amountCanBeMade ? amountCanBeMade : amountOfItems;
-                    } else {
-                        amount = event.getRecipe().getResult().getAmount();
-                    }
-//GET AMOUNT OF ITEMS CRAFTED
+                    int amount = AmountCrafted(event, player);
 
                     for (Player all : Bukkit.getServer().getOnlinePlayers()) {
                         for (int i = 0; i < amount; ++i) {
@@ -97,6 +111,30 @@ public class ListenerPlayerCraft  implements Listener {
                     }
                 }
             }
+
+            if (CraftResult.getType() == Material.CHORUS_FRUIT) {
+                if (GetItemTag(CraftResult, "exp_crystal")){
+                    int amount = AmountCrafted(event, player);
+
+                    float xp = player.getExp();
+                    float xp_level = player.getLevel();
+
+                    //set player level progress to 0
+                    player.setExp(0.0f);
+                    if (xp_level >= amount) {
+                        for (int i = 0; i < amount; ++i) {
+                            player.giveExpLevels(-1);
+                            xp_level = player.getLevel();
+                        }
+                    }else{
+                        event.setCancelled(true);
+                        player.sendMessage(ChatColor.RED+"Not enough experience levels to craft!");
+                    }
+                    //reset player level progress
+                    player.setExp(xp);
+                }
+            }
+
         }
     }
 }

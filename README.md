@@ -41,6 +41,7 @@ Things That change vanilla features
 * Iron armor can be upgraded into Golden at smithing table
 
 ## Recipes
+* XP Orb > 1 UpgradeShard, 1 Glass bottle, 1 Xp Level, makes an xp orb that is worth 1 level
 * [JTE Apple](https://www.minecraftforum.net/forums/minecraft-java-edition/discussion/2109197-the-secret-history-of-minecraft-with-proof#c1) > 8 Gold blocks around an apple
 * Tactical Dirt > Dirt and Seeds make an new food item with the same stats as a baked potato
 * Dirt to Seeds > 4 Dirt makes Seeds
