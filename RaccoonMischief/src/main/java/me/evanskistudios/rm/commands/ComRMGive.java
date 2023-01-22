@@ -98,6 +98,12 @@ public class ComRMGive implements TabExecutor {
             FoundItem = true;
         }
 
+        if (Item_arg.equalsIgnoreCase("Xp_Orb")){
+            RequestedItem = RecipeExpCrystal.getItem();
+            FoundItem = true;
+        }
+
+
         if (FoundItem){
             for(int i=0; i < ItemRequestedAmount; ++i) {
                 player.getInventory().addItem(RequestedItem);
@@ -118,7 +124,8 @@ public class ComRMGive implements TabExecutor {
                     "Milk_Potion",
                     "Strange_Meat",
                     "Tactical_Dirt",
-                    "Upgrade_Shard"
+                    "Upgrade_Shard",
+                    "XP_Orb"
             );
             return ListOItems;
         }

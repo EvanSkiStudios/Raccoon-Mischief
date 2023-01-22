@@ -7,6 +7,10 @@ public class EventManager {
     public static void Events() {
         Plugin namespace = RaccoonMischief.getPlugin();
 
+        //Lightning
+        ListenerLightning LightningEvent = new ListenerLightning();
+        namespace.getServer().getPluginManager().registerEvents(LightningEvent, namespace);
+
         //PLayer Join
         ListenerPlayerConnect PlayerConnectEvent = new ListenerPlayerConnect();
         namespace.getServer().getPluginManager().registerEvents(PlayerConnectEvent, namespace);

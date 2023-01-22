@@ -20,11 +20,11 @@ public class AddRecipes {
 
         RecipeHarderArmor.HardArmor(P);
 
+        RecipeJTEApple.JTEApple(P);
+
         RecipeMilkPotion.SplashPotionOMilk(P);
 
         RecipeNewCopperRedstone.NewCopperRedstoneItems(P);
-
-        RecipeJTEApple.JTEApple(P);
 
     }
 }

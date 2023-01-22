@@ -1,6 +1,8 @@
 package me.evanskistudios.rm.events;
 
 import me.evanskistudios.rm.RaccoonMischief;
+import me.evanskistudios.rm.tasks.TaskPlayerLevitation;
+import me.evanskistudios.rm.tasks.TaskRemoveCoolDown;
 import me.evanskistudios.rm.utilis.UtilityMethods;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
@@ -15,6 +17,7 @@ import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.persistence.PersistentDataContainer;
 import org.bukkit.persistence.PersistentDataType;
 import org.bukkit.plugin.Plugin;
+import org.bukkit.scheduler.BukkitTask;
 
 import java.util.*;
 
@@ -58,12 +61,17 @@ public class ListenerXPCrystal implements Listener {
 
             player.setExp(xp);
 
+            player.playSound(player.getLocation(),"minecraft:entity.player.levelup", 1.0f, 1.0f);
+
             //set exp is in progress not amount - give xp is for amount, xp crystal will always give 1 level
 
             Object adjective = UtilityMethods.Choose(List.of(adjectives));
             String string = "Tastes "+adjective;
 
             player.sendMessage(ChatColor.ITALIC+""+ChatColor.BLUE+""+string);
+
+            RaccoonMischief namespace = RaccoonMischief.getPlugin();
+            BukkitTask TaskRemoveCoolDown = (BukkitTask) new TaskRemoveCoolDown(namespace, player, Material.CHORUS_FRUIT).runTask(namespace);
         }
 
     }

@@ -2,7 +2,6 @@ package me.evanskistudios.rm.events;
 
 import me.evanskistudios.rm.RaccoonMischief;
 import me.evanskistudios.rm.utilis.UtilityMethods;
-import net.md_5.bungee.api.ChatMessageType;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
@@ -80,10 +79,13 @@ public class ListenerPlayerCraft  implements Listener {
         }
 
         if (event.getWhoClicked() instanceof Player) {
+
             Player player = (Player) event.getWhoClicked();
 
             ItemStack CraftResult = event.getRecipe().getResult();
 
+
+            //Tactical dirt
             if (CraftResult.getType() == Material.BAKED_POTATO) {
                 //Get meta of potato to see if its tactical dirt
                 ItemMeta ResultMeta = CraftResult.getItemMeta();
@@ -112,6 +114,7 @@ public class ListenerPlayerCraft  implements Listener {
                 }
             }
 
+            //XP Orb
             if (CraftResult.getType() == Material.CHORUS_FRUIT) {
                 if (GetItemTag(CraftResult, "exp_crystal")){
                     int amount = AmountCrafted(event, player);
@@ -126,6 +129,7 @@ public class ListenerPlayerCraft  implements Listener {
                             player.giveExpLevels(-1);
                             xp_level = player.getLevel();
                         }
+                        player.playSound(player.getLocation(),"minecraft:entity.player.levelup", 1.0f, 1.0f);
                     }else{
                         event.setCancelled(true);
                         player.sendMessage(ChatColor.RED+"Not enough experience levels to craft!");

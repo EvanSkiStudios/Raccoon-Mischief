@@ -25,6 +25,8 @@ See [Latest Features](https://github.com/EvanSkiStudios/Raccoon-Mischief/blob/ma
 * B_IgnorePluginGetInstalledFlag > Sets a flag for checking features of other plugins, Setting this to true will ignore checking if the referenced plugin is installed
 * B_TurtlesTrollFeatures > Toggles whether if Features for [Mercerenies' A-Turtles-Troll](https://github.com/Mercerenies/a-turtles-troll) should run or not
 * B_PlayersDropSkulls > Toggles if players will drop skulls on death
+* B_PufferfishConversion > Toggles if Pufferfish struck by lightning convert to Guardians
+* B_CustomPlayerJoinLeaveMessages > Toggles if the server should give the Custom join and leave messages
 
 ## Commands
 * RMVer > Returns the current Version of the installed plugin
@@ -41,15 +43,16 @@ Things That change vanilla features
 * Iron armor can be upgraded into Golden at smithing table
 
 ## Recipes
-* XP Orb > 1 UpgradeShard, 1 Glass bottle, 1 Xp Level, makes an xp orb that is worth 1 level
+* XP Orb > 1 UpgradeShard, 1 Glass bottle, 1 Xp Level, makes an xp orb that is worth 1 level  
 * [JTE Apple](https://www.minecraftforum.net/forums/minecraft-java-edition/discussion/2109197-the-secret-history-of-minecraft-with-proof#c1) > 8 Gold blocks around an apple
-* Tactical Dirt > Dirt and Seeds make an new food item with the same stats as a baked potato
+* Tactical Dirt > Dirt and Seeds make an new food item with the same stats as a baked potato 
 * Dirt to Seeds > 4 Dirt makes Seeds
 * Rotten Flesh to Leather > can be cooked on furnace, smoker or campfire
 * Milk Potion > bucket of milk and gunpowder makes a potion that removes potion effects
-* ReAdded the NotchApple recipe
+* UnMetaDataCookies > Removes Meta Data from cookies (A-Turtles-Troll adds meta to the cookies to prevent stacking)
 
 ## Effects
+* If a Pufferfish is struck by lightning it converts to a Guardian
 * Players will now drop skulls on death if config is true
 * You can now milk player entities 
 * Players now drop Beef that is named "Strange Meat" on death
