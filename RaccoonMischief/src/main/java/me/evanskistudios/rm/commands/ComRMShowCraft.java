@@ -59,7 +59,7 @@ public class ComRMShowCraft implements TabExecutor, Listener {
         //Default values to redefine
         String crafting_recipe = args[0];
         boolean found_recipe = false;
-        Inventory CraftRecipe = null;
+        Inventory CraftRecipe;
         ItemStack[] CraftingMatrix = new ItemStack[10];
         Arrays.fill(CraftingMatrix, new ItemStack(Material.AIR));
         String Inventory_title = "ERROR";
@@ -67,7 +67,7 @@ public class ComRMShowCraft implements TabExecutor, Listener {
         ItemStack N = new ItemStack(Material.AIR, 1);
         ItemStack Coal = new ItemStack(Material.COAL, 1);
 
-        if (crafting_recipe.equalsIgnoreCase("Dirt_to_Seeds")) {
+        if (!found_recipe && crafting_recipe.equalsIgnoreCase("Dirt_to_Seeds")) {
 
             found_recipe = true;
             Inventory_title = "Dirt to Seeds";
@@ -85,7 +85,7 @@ public class ComRMShowCraft implements TabExecutor, Listener {
             System.arraycopy(Matrix, 0, CraftingMatrix, 0, Matrix.length);
         }
 
-        if (crafting_recipe.equalsIgnoreCase("Harder_Armor")) {
+        if (!found_recipe && crafting_recipe.equalsIgnoreCase("Harder_Armor")) {
 
             found_recipe = true;
             Inventory_title = "Harder Armor";
@@ -114,7 +114,7 @@ public class ComRMShowCraft implements TabExecutor, Listener {
             System.arraycopy(Matrix, 0, CraftingMatrix, 0, Matrix.length);
         }
 
-        if (crafting_recipe.equalsIgnoreCase("JTE_Apple")) {
+        if (!found_recipe && crafting_recipe.equalsIgnoreCase("JTE_Apple")) {
 
             found_recipe = true;
             Inventory_title = "JTE Apple";
@@ -133,7 +133,7 @@ public class ComRMShowCraft implements TabExecutor, Listener {
             System.arraycopy(Matrix, 0, CraftingMatrix, 0, Matrix.length);
         }
 
-        if (crafting_recipe.equalsIgnoreCase("Milk_Potion")) {
+        if (!found_recipe && crafting_recipe.equalsIgnoreCase("Milk_Potion")) {
 
             found_recipe = true;
             Inventory_title = "Milk Potion";
@@ -150,7 +150,7 @@ public class ComRMShowCraft implements TabExecutor, Listener {
             System.arraycopy(Matrix, 0, CraftingMatrix, 0, Matrix.length);
         }
 
-        if (crafting_recipe.equalsIgnoreCase("RottenFlesh_to_Leather")) {
+        if (!found_recipe && crafting_recipe.equalsIgnoreCase("RottenFlesh_to_Leather")) {
 
             found_recipe = true;
             Inventory_title = "RottenFlesh to Leather";
@@ -168,7 +168,7 @@ public class ComRMShowCraft implements TabExecutor, Listener {
             System.arraycopy(Matrix, 0, CraftingMatrix, 0, Matrix.length);
         }
 
-        if (crafting_recipe.equalsIgnoreCase("Redstone_Items")) {
+        if (!found_recipe && crafting_recipe.equalsIgnoreCase("Redstone_Items")) {
 
             found_recipe = true;
             Inventory_title = "Redstone Items";
@@ -198,7 +198,7 @@ public class ComRMShowCraft implements TabExecutor, Listener {
             System.arraycopy(Matrix, 0, CraftingMatrix, 0, Matrix.length);
         }
 
-        if (crafting_recipe.equalsIgnoreCase("Tactical_Dirt")) {
+        if (!found_recipe && crafting_recipe.equalsIgnoreCase("Tactical_Dirt")) {
 
             found_recipe = true;
             Inventory_title = "Tactical Dirt";
@@ -215,7 +215,7 @@ public class ComRMShowCraft implements TabExecutor, Listener {
             System.arraycopy(Matrix, 0, CraftingMatrix, 0, Matrix.length);
         }
 
-        if (crafting_recipe.equalsIgnoreCase("UnMetaData_Cookies")) {
+        if (!found_recipe && crafting_recipe.equalsIgnoreCase("UnMetaData_Cookies")) {
 
             found_recipe = true;
             Inventory_title = "Un-MetaData Cookies";
@@ -241,7 +241,7 @@ public class ComRMShowCraft implements TabExecutor, Listener {
             System.arraycopy(Matrix, 0, CraftingMatrix, 0, Matrix.length);
         }
 
-        if (crafting_recipe.equalsIgnoreCase("XP_Orb")) {
+        if (!found_recipe && crafting_recipe.equalsIgnoreCase("XP_Orb")) {
 
             found_recipe = true;
             Inventory_title = "XP Orb";
@@ -275,16 +275,18 @@ public class ComRMShowCraft implements TabExecutor, Listener {
 
             CraftRecipe = Bukkit.createInventory(new GUIHolder(), Inventory_type, Inventory_title);
 
+            //Workbench
             if (Inventory_type == InventoryType.WORKBENCH) {
-
                 for (int i = 0; i < CraftingMatrix.length; ++i) {
                     CraftRecipe.setItem(i, CraftingMatrix[i]);
                 }
+            //Furnace
             }else  if (Inventory_type == InventoryType.FURNACE){
                 for (int i = 0; i < 3; ++i) {
                     CraftRecipe.setItem(i, CraftingMatrix[i]);
                 }
             }else{
+                //DIDN'T FIND ONE ERROR
                 player.sendMessage(ChatColor.RED+"You should never see this, if you do please report this!");
                 player.sendMessage("Example: /RMShowCraft <RM Recipe>");
                 return true;
@@ -293,6 +295,7 @@ public class ComRMShowCraft implements TabExecutor, Listener {
             player.openInventory(CraftRecipe);
 
         }else{
+            //Did not find recipe
             player.sendMessage(ChatColor.RED+""+crafting_recipe + " was not found or is not an RM Recipe!");
             player.sendMessage("Example: /RMShowCraft <RM Recipe>");
         }

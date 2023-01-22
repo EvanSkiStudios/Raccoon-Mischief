@@ -7,7 +7,6 @@ import java.util.Objects;
 import java.util.logging.Level;
 
 public final class RaccoonMischief extends JavaPlugin {
-
     public static double Version = 2.0;
     private static RaccoonMischief plugin;
     @Override
