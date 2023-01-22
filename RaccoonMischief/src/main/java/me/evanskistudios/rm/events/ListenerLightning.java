@@ -11,25 +11,24 @@ import org.bukkit.event.entity.EntityDamageEvent;
 import org.bukkit.plugin.Plugin;
 
 public class ListenerLightning implements Listener {
-
     @EventHandler
-    public void onLightning(EntityDamageEvent event){
+    public void onDamage(EntityDamageEvent event){
+        if (event.isCancelled()) return;
 
-        if (event.getCause() == EntityDamageEvent.DamageCause.LIGHTNING) {
+        Entity DamagedEntity = event.getEntity();
 
-            Entity DamagedEntity = event.getEntity();
+        Plugin plugin = RaccoonMischief.getPlugin(RaccoonMischief.class);
+        String PufferfishConvert = "" + plugin.getConfig().get("B_PufferfishConversion");
 
-            if (DamagedEntity instanceof PufferFish) {
-                Plugin plugin = RaccoonMischief.getPlugin(RaccoonMischief.class);
-                String PufferfishConvert = "" + plugin.getConfig().get("B_PufferfishConversion");
-                if (PufferfishConvert.equalsIgnoreCase("True")) {
+        if ( (DamagedEntity instanceof PufferFish) && (PufferfishConvert.equalsIgnoreCase("True")) ){
 
-                    event.setCancelled(true);
+            if (event.getCause() == EntityDamageEvent.DamageCause.LIGHTNING) {
 
-                    Location EntityLocation = DamagedEntity.getLocation();
-                    DamagedEntity.getWorld().spawnEntity(EntityLocation, EntityType.GUARDIAN);
-                    DamagedEntity.remove();
-                }
+                event.setCancelled(true);
+
+                Location EntityLocation = DamagedEntity.getLocation();
+                DamagedEntity.getWorld().spawnEntity(EntityLocation, EntityType.GUARDIAN);
+                DamagedEntity.remove();
             }
         }
     }

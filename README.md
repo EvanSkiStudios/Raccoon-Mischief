@@ -27,6 +27,7 @@ See [Latest Features](https://github.com/EvanSkiStudios/Raccoon-Mischief/blob/ma
 * B_PlayersDropSkulls > Toggles if players will drop skulls on death
 * B_PufferfishConversion > Toggles if Pufferfish struck by lightning convert to Guardians
 * B_CustomPlayerJoinLeaveMessages > Toggles if the server should give the Custom join and leave messages
+* B_ForgivingVoid > Toggles if players that fall into the void should teleport to the overworld
 
 ## Commands
 * RMVer > Returns the current Version of the installed plugin
@@ -52,6 +53,7 @@ Things That change vanilla features
 * UnMetaDataCookies > Removes Meta Data from cookies (A-Turtles-Troll adds meta to the cookies to prevent stacking)
 
 ## Effects
+* If a player falls into the void they will be teleported to the same coords at the top of the overworld
 * If a Pufferfish is struck by lightning it converts to a Guardian
 * Players will now drop skulls on death if config is true
 * You can now milk player entities 

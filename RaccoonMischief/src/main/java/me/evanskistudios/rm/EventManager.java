@@ -34,5 +34,9 @@ public class EventManager {
         //Xp Crystal
         ListenerXPCrystal PlayerTeleportEvent = new ListenerXPCrystal();
         namespace.getServer().getPluginManager().registerEvents(PlayerTeleportEvent, namespace);
+
+        //teleport void
+        ListenerPlayerEnterVoid PlayerVoidEvent = new ListenerPlayerEnterVoid();
+        namespace.getServer().getPluginManager().registerEvents(PlayerVoidEvent, namespace);
     }
 }
