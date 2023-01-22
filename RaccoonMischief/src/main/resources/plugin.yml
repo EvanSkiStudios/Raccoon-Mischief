@@ -20,3 +20,6 @@ commands:
   RMGive:
     description: Gives custom RM items
     usage: "/RMGive <item> <(Optional) Int: Amount>"
+  RMShowCraft:
+    description: Shows the recipe of an RM Item
+    usage: "/RMShowCraft <RM Recipe>"

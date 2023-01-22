@@ -49,6 +49,7 @@ public final class RaccoonMischief extends JavaPlugin {
             Objects.requireNonNull(this.getCommand("RMGetCfg")).setExecutor(new ComRMGetConfig());
             Objects.requireNonNull(this.getCommand("RMReloadCfg")).setExecutor(new ComRMReloadConfig());
             Objects.requireNonNull(this.getCommand("RMGive")).setExecutor(new ComRMGive());
+            Objects.requireNonNull(this.getCommand("RMShowCraft")).setExecutor(new ComRMShowCraft());
         }
 
         //Tasks

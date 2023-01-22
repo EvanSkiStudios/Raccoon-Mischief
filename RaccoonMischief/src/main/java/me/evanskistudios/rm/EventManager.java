@@ -1,4 +1,5 @@
 package me.evanskistudios.rm;
+import me.evanskistudios.rm.commands.ComRMShowCraft;
 import me.evanskistudios.rm.events.*;
 
 import org.bukkit.plugin.Plugin;
@@ -6,6 +7,10 @@ import org.bukkit.plugin.Plugin;
 public class EventManager {
     public static void Events() {
         Plugin namespace = RaccoonMischief.getPlugin();
+        
+        //CraftingRecipeInventoryListener
+        ComRMShowCraft InventoryListener = new ComRMShowCraft();
+        namespace.getServer().getPluginManager().registerEvents(InventoryListener, namespace);
 
         //Lightning
         ListenerLightning LightningEvent = new ListenerLightning();
@@ -38,5 +43,9 @@ public class EventManager {
         //teleport void
         ListenerPlayerEnterVoid PlayerVoidEvent = new ListenerPlayerEnterVoid();
         namespace.getServer().getPluginManager().registerEvents(PlayerVoidEvent, namespace);
+
+        //Entity fire
+        ListenerEntityFire EntityFireEvent = new ListenerEntityFire();
+        namespace.getServer().getPluginManager().registerEvents(EntityFireEvent, namespace);
     }
 }
