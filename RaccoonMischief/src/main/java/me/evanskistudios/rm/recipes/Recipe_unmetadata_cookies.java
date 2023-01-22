@@ -8,6 +8,7 @@ import org.bukkit.inventory.ShapelessRecipe;
 import org.bukkit.plugin.Plugin;
 
 public class Recipe_unmetadata_cookies {
+    public static ItemStack Item;
     public static void NoMDCookies(Plugin namespace) {
         ItemStack Cookie = new ItemStack(Material.COOKIE, 1);
 
@@ -17,5 +18,11 @@ public class Recipe_unmetadata_cookies {
         NMD_Cookie_Recipe.addIngredient(1, Material.COOKIE);
 
         Bukkit.addRecipe(NMD_Cookie_Recipe);
+
+        Item = Cookie;
+    }
+
+    public static ItemStack getItem() {
+        return Item;
     }
 }
