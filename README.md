@@ -1,7 +1,7 @@
 # Evanski's RaccoonMischief Minecraft Plugin
 
-This is an Minecraft plugin, that adds new features to vanilla minecraft
-This is a companion project to [Mercerenies' A-Turtles-Troll](https://github.com/Mercerenies/a-turtles-troll). 
+This is an Minecraft plugin, that adds new features to vanilla minecraft  
+This is a companion project to [Mercerenies' A-Turtles-Troll](https://github.com/Mercerenies/a-turtles-troll).   
 Neither directly depends on the other, but they are designed with each other in mind.
 
 (Probably won't understand without the resourcepack, You can get a public copy here [Textile](https://github.com/EvanSkiStudios/Textile))
