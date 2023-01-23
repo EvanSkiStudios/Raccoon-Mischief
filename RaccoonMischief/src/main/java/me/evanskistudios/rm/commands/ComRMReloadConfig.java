@@ -6,14 +6,13 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.plugin.Plugin;
-import org.jetbrains.annotations.NotNull;
 
 import java.util.logging.Level;
 
 public class ComRMReloadConfig implements CommandExecutor {
     Plugin plugin = RaccoonMischief.getPlugin(RaccoonMischief.class);
     @Override
-    public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label, @NotNull String[] args) {
+    public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         String no_permission = (ChatColor.RED+"You lack sufficient permission to execute this command");
 
         if (!sender.hasPermission("RaccoonMischief.RMReloadCfg")){

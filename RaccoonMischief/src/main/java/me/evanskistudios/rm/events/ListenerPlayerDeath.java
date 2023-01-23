@@ -45,12 +45,12 @@ public class ListenerPlayerDeath implements Listener{
 
     @EventHandler
     public void onDeath(PlayerDeathEvent event) {
-        if (event.isCancelled()) {
-            DeathCause = 0;
+        Entity entity = event.getEntity();
+
+        if (!(entity instanceof Player)) {
             return;
         }
-
-        Player player = event.getPlayer();
+        Player player = (Player) entity;
 
         //players Drop Strange meat
         ItemStack Strange_meat = new ItemStack(Material.BEEF);

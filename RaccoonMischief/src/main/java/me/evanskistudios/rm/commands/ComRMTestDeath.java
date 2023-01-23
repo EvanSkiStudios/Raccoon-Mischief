@@ -3,10 +3,10 @@ package me.evanskistudios.rm.commands;
 import org.bukkit.ChatColor;
 import org.bukkit.command.*;
 import org.bukkit.entity.Player;
-import org.jetbrains.annotations.NotNull;
+
 public class ComRMTestDeath implements CommandExecutor  {
     @Override
-    public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label, @NotNull String[] args) {
+    public boolean onCommand(CommandSender sender,Command command, String label, String[] args) {
         String no_permission = (ChatColor.RED+"You lack sufficient permission to execute this command");
 
         if (!sender.hasPermission("RaccoonMischief.RMtestDeath")){

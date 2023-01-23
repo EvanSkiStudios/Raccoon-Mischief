@@ -26,7 +26,13 @@ public class ListenerPlayerEnterVoid implements Listener {
 
             Player player = (Player) event.getEntity();
 
+            //check if player is in the end
+            if (! (player.getWorld().getEnvironment() == World.Environment.THE_END) ) {
+                return;
+            }
+
             if (event.getCause() == EntityDamageEvent.DamageCause.VOID) {
+
                 event.setCancelled(true);
 
                 World OverWorld = Bukkit.getServer().getWorlds().get(0);
@@ -41,7 +47,7 @@ public class ListenerPlayerEnterVoid implements Listener {
 
                 Block Load_area = Teleport_Loc.getBlock(); //preloads the area
 
-                player.teleport(Teleport_Loc, PlayerTeleportEvent.TeleportCause.PLUGIN, false);
+                player.teleport(Teleport_Loc);
 
                 player.playSound(player.getLocation(), "minecraft:block.portal.travel", 1.0f, 1.0f);
             }

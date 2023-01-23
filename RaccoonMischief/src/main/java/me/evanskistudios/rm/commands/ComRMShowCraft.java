@@ -20,8 +20,6 @@ import org.bukkit.event.inventory.InventoryType;
 import org.bukkit.inventory.*;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.plugin.Plugin;
-import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
 
 import java.util.Arrays;
 import java.util.List;
@@ -41,7 +39,7 @@ public class ComRMShowCraft implements TabExecutor, Listener {
 
 
     @Override
-    public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label, @NotNull String[] args) {
+    public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         Plugin namespace = RaccoonMischief.getPlugin();
 
         if (!(sender instanceof Player)){
@@ -304,7 +302,7 @@ public class ComRMShowCraft implements TabExecutor, Listener {
     }
 
     @Override
-    public @Nullable List<String> onTabComplete(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label, @NotNull String[] args) {
+    public List<String> onTabComplete(CommandSender sender, Command command, String label, String[] args) {
         if (args.length == 1){
             List<String> ListOItems = Arrays.asList(
                     "Dirt_to_Seeds",

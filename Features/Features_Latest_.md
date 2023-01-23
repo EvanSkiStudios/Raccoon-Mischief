@@ -1,7 +1,7 @@
 # Features
 
-## Version 2.0
-* Moved Datapack Functionality to Plugin
+## Version 2.0.1
+* Converted Project from Gradle to Maven
 
 ## Config.yml
 * Info > provides a string with info about the config file, is unused by pluin so this key can be deleted/changed/ect
