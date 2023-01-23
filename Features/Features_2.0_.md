@@ -1,6 +1,6 @@
 # Features
 
-## [Version 2.0](https://github.com/EvanSkiStudios/Raccoon-Mischief/commit/8debdeed906a3adf5d3e2d647193b808e4f43433)
+## [Version 2.0](https://github.com/EvanSkiStudios/Raccoon-Mischief/releases/tag/Release_2_0)
 * Moved Datapack Functionality to Plugin
 
 ## Config.yml
