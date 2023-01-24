@@ -1,5 +1,7 @@
 package me.evanskistudios.rm;
 
+import me.evanskistudios.rm.NMS.NMSManager;
+import me.evanskistudios.rm.NMS.commands.NMSComRMCreateNPC;
 import me.evanskistudios.rm.commands.*;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -56,6 +58,10 @@ public final class RaccoonMischief extends JavaPlugin {
 
         //Shredder UnMercer
         ShredderManager.ShredderEnable();
+
+
+        NMSManager.NMS();
+        //Objects.requireNonNull(this.getCommand("RMCreateNPC")).setExecutor(new NMSComRMCreateNPC());
 
         getLogger().info("RaccoonMischief " + Version + " is Loaded!");
     }

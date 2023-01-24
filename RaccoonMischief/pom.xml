@@ -12,73 +12,110 @@
 
     <description>Raccoons</description>
     <properties>
-        <java.version>16</java.version>
+        <java.version>17</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
     <build>
-        <finalName>RaccoonMischief-${project.version}</finalName>
-        <plugins>
-            <plugin>
+          <plugins>
+              <plugin>
+                  <groupId>org.apache.maven.plugins</groupId>
+                  <artifactId>maven-compiler-plugin</artifactId>
+                  <version>3.8.1</version>
+                  <configuration>
+                      <source>${java.version}</source>
+                      <target>${java.version}</target>
+                  </configuration>
+              </plugin>
+              <plugin>
+                  <groupId>org.apache.maven.plugins</groupId>
+                  <artifactId>maven-shade-plugin</artifactId>
+                  <version>3.2.4</version>
+                  <executions>
+                      <execution>
+                          <phase>package</phase>
+                          <goals>
+                              <goal>shade</goal>
+                          </goals>
+                          <configuration>
+                              <createDependencyReducedPom>false</createDependencyReducedPom>
+                          </configuration>
+                      </execution>
+                  </executions>
+              </plugin>
+              <plugin>
+                  <!-- .m2\repository\org\apache\maven\plugins\maven-jar-plugin -->
                 <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.8.1</version>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>3.2.2</version>
                 <configuration>
-                    <source>${java.version}</source>
-                    <target>${java.version}</target>
+                    <!-- <finalName>RaccoonMischief-${project.version}</finalName> -->
+                    <!--  <outputDirectory>D:\Minecraft\_Paper_server\plugins</outputDirectory> -->
                 </configuration>
             </plugin>
             <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-shade-plugin</artifactId>
-                <version>3.2.4</version>
+                <groupId>net.md-5</groupId>
+                <artifactId>specialsource-maven-plugin</artifactId>
+                <version>1.2.4</version>
                 <executions>
                     <execution>
                         <phase>package</phase>
                         <goals>
-                            <goal>shade</goal>
+                            <goal>remap</goal>
                         </goals>
+                        <id>remap-obf</id>
                         <configuration>
-                            <createDependencyReducedPom>false</createDependencyReducedPom>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-jar-plugin</artifactId>
-                <version>3.2.2</version>
-                <!-- .m2\repository\org\apache\maven\plugins\maven-jar-plugin -->
-                <configuration>
-                    <outputDirectory>D:\Minecraft\_Paper_server\plugins</outputDirectory>
-                </configuration>
-            </plugin>
-        </plugins>
-        <resources>
-            <resource>
-                <directory>src/main/resources</directory>
-                <filtering>true</filtering>
-            </resource>
-        </resources>
-    </build>
+                            <srgIn>org.spigotmc:minecraft-server:1.19.3-R0.1-SNAPSHOT:txt:maps-mojang</srgIn>
+                            <reverse>true</reverse>
+                            <remappedDependencies>org.spigotmc:spigot:1.19.3-R0.1-SNAPSHOT:jar:remapped-mojang</remappedDependencies>
+                            <remappedArtifactAttached>true</remappedArtifactAttached>
+                            <remappedClassifierName>remapped-obf</remappedClassifierName>
+                            <!-- remapped-obf -->
+                         </configuration>
+                     </execution>
+                     <execution>
+                         <phase>package</phase>
+                         <goals>
+                             <goal>remap</goal>
+                         </goals>
+                         <id>remap-spigot</id>
+                         <configuration>
+                             <inputFile>${project.build.directory}/${project.artifactId}-${project.version}-remapped-obf.jar</inputFile>
+                             <srgIn>org.spigotmc:minecraft-server:1.19.3-R0.1-SNAPSHOT:csrg:maps-spigot</srgIn>
+                             <remappedDependencies>org.spigotmc:spigot:1.19.3-R0.1-SNAPSHOT:jar:remapped-obf</remappedDependencies>
+                             <outputDirectory>D:\Minecraft\_Paper_server\plugins</outputDirectory>
+                             <finalName>RaccoonMischief-${project.version}</finalName>
+                         </configuration>
+                     </execution>
+                 </executions>
+             </plugin>
+          </plugins>
+          <resources>
+              <resource>
+                  <directory>src/main/resources</directory>
+                  <filtering>true</filtering>
+              </resource>
+          </resources>
+      </build>
 
-    <repositories>
-        <repository>
-            <id>spigotmc-repo</id>
-            <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
-        </repository>
-        <repository>
-            <id>sonatype</id>
-            <url>https://oss.sonatype.org/content/groups/public/</url>
-        </repository>
-    </repositories>
+      <repositories>
+          <repository>
+              <id>spigotmc-repo</id>
+              <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
+          </repository>
+          <repository>
+              <id>sonatype</id>
+              <url>https://oss.sonatype.org/content/groups/public/</url>
+          </repository>
+      </repositories>
 
-    <dependencies>
-        <dependency>
-            <groupId>org.spigotmc</groupId>
-            <artifactId>spigot-api</artifactId>
-            <version>1.19.3-R0.1-SNAPSHOT</version>
-            <scope>provided</scope>
-        </dependency>
-    </dependencies>
-</project>
+      <dependencies>
+          <dependency>
+              <groupId>org.spigotmc</groupId>
+              <artifactId>spigot</artifactId>
+              <version>1.19.3-R0.1-SNAPSHOT</version>
+              <classifier>remapped-mojang</classifier>
+              <scope>provided</scope>
+          </dependency>
+      </dependencies>
+  </project>

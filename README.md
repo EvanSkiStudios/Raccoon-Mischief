@@ -1,6 +1,6 @@
 # Evanski's RaccoonMischief Minecraft Plugin
 
-This is an Minecraft plugin, that adds new features to vanilla minecraft  
+This is an Minecraft plugin for Spigot, that adds new features to vanilla minecraft  
 This is a companion project to [Mercerenies' A-Turtles-Troll](https://github.com/Mercerenies/a-turtles-troll).   
 Neither directly depends on the other, but they are designed with each other in mind.
 
@@ -9,6 +9,11 @@ Neither directly depends on the other, but they are designed with each other in 
 ## Acknowledgments
 Raccoon Mischief is written and maintained by Evanski. It is
 released as [All Rights Reserved](LICENSE).
+
+The use of the mojang mappings is for development purposes only,  
+and are remapped prior to distribution in compliance with the following EULAs  
+[Mappings ELUA](https://gist.github.com/Dinnerbone/07b20a9f02e50a569217df6449cc1185/#file-gistfile1-txt)
+[Minecraft ELUA](https://www.minecraft.net/en-us/eula)
 
 # How to install
 Place RaccoonMischief.jar into your plugin folder of your Paper-mc server.

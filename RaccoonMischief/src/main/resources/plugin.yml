@@ -23,3 +23,6 @@ commands:
   RMShowCraft:
     description: Shows the recipe of an RM Item
     usage: "/RMShowCraft <RM Recipe>"
+  RMCreateNPC:
+    description: Creates an NPC
+    usage: "/RMCreateNPC"
