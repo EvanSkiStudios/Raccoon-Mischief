@@ -32,7 +32,7 @@ See [Latest Features](https://github.com/EvanSkiStudios/Raccoon-Mischief/blob/ma
 
 ## Vanilla Changes
 Things That change vanilla features
-* Nothing Changed since last version
+* You can now put any item on your head
 
 ## Recipes
 * Nothing Changed since last version

@@ -47,5 +47,10 @@ public class EventManager {
         //Entity fire
         ListenerEntityFire EntityFireEvent = new ListenerEntityFire();
         namespace.getServer().getPluginManager().registerEvents(EntityFireEvent, namespace);
+
+        //Player Inventory
+        ListenerPlayerInventory PlayerInventoryEvent = new ListenerPlayerInventory();
+        namespace.getServer().getPluginManager().registerEvents(PlayerInventoryEvent, namespace);
+
     }
 }

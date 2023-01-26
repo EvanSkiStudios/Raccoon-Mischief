@@ -44,14 +44,7 @@ public final class RaccoonMischief extends JavaPlugin {
         EventManager.Events();
 
         //Register Commands
-        {
-            Objects.requireNonNull(this.getCommand("RMVER")).setExecutor(new ComGetRMVer());
-            Objects.requireNonNull(this.getCommand("RMtestDeath")).setExecutor(new ComRMTestDeath());
-            Objects.requireNonNull(this.getCommand("RMGetCfg")).setExecutor(new ComRMGetConfig());
-            Objects.requireNonNull(this.getCommand("RMReloadCfg")).setExecutor(new ComRMReloadConfig());
-            Objects.requireNonNull(this.getCommand("RMGive")).setExecutor(new ComRMGive());
-            Objects.requireNonNull(this.getCommand("RMShowCraft")).setExecutor(new ComRMShowCraft());
-        }
+        ComManager.commands();
 
         //Tasks
         TaskManager.tasks();
@@ -59,9 +52,8 @@ public final class RaccoonMischief extends JavaPlugin {
         //Shredder UnMercer
         ShredderManager.ShredderEnable();
 
-
+        //NMS
         NMSManager.NMS();
-        //Objects.requireNonNull(this.getCommand("RMCreateNPC")).setExecutor(new NMSComRMCreateNPC());
 
         getLogger().info("RaccoonMischief " + Version + " is Loaded!");
     }
