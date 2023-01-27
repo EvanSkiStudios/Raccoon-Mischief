@@ -8,6 +8,8 @@ public class AddRecipes {
         Plugin P = RaccoonMischief.getPlugin();
         //ClassFileName.MethodName(namespace);
 
+        RecipeThrowableBrick.ThrowableBrick(P);
+
         Recipe_dirt_to_seeds.DirtSeeds(P);
 
         Recipe_RottenFlesh_to_leather.RotLeather(P);
@@ -23,6 +25,8 @@ public class AddRecipes {
         RecipeJTEApple.JTEApple(P);
 
         RecipeMilkPotion.SplashPotionOMilk(P);
+
+        RecipeNewCake.Cake(P);
 
         RecipeNewCopperRedstone.NewCopperRedstoneItems(P);
 

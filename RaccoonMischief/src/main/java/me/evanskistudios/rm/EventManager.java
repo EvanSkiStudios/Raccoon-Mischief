@@ -52,5 +52,8 @@ public class EventManager {
         ListenerPlayerInventory PlayerInventoryEvent = new ListenerPlayerInventory();
         namespace.getServer().getPluginManager().registerEvents(PlayerInventoryEvent, namespace);
 
+        //Projectile Land
+        ListenerProjectileLand ProjectileLandEvent = new ListenerProjectileLand();
+        namespace.getServer().getPluginManager().registerEvents(ProjectileLandEvent, namespace);
     }
 }

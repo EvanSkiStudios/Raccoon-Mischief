@@ -65,6 +65,29 @@ public class ComRMShowCraft implements TabExecutor, Listener {
         ItemStack N = new ItemStack(Material.AIR, 1);
         ItemStack Coal = new ItemStack(Material.COAL, 1);
 
+        if (!found_recipe && crafting_recipe.equalsIgnoreCase("Cake")) {
+
+            found_recipe = true;
+            Inventory_title = "Cake";
+
+            ItemStack Cake = new ItemStack(Material.CAKE, 1);
+            ItemStack Wheat = new ItemStack(Material.WHEAT, 1);
+            ItemStack Egg = new ItemStack(Material.EGG, 1);
+            ItemStack Sugar = new ItemStack(Material.SUGAR, 1);
+            ItemStack SweetBerries = new ItemStack(Material.SWEET_BERRIES, 1);
+            ItemStack MilkBucket = new ItemStack(Material.MILK_BUCKET, 1);
+
+            ItemStack[] Matrix = {
+                Cake,
+                MilkBucket, SweetBerries, MilkBucket,
+                Sugar, Egg, Sugar,
+                Wheat, Wheat, Wheat
+            };
+
+            System.arraycopy(Matrix, 0, CraftingMatrix, 0, Matrix.length);
+        }
+
+
         if (!found_recipe && crafting_recipe.equalsIgnoreCase("Dirt_to_Seeds")) {
 
             found_recipe = true;
@@ -213,6 +236,23 @@ public class ComRMShowCraft implements TabExecutor, Listener {
             System.arraycopy(Matrix, 0, CraftingMatrix, 0, Matrix.length);
         }
 
+        if (!found_recipe && crafting_recipe.equalsIgnoreCase("Throwable_Brick")) {
+
+            found_recipe = true;
+            Inventory_title = "Throwable Brick";
+
+            ItemStack B = new ItemStack(Material.BRICK, 1);
+            ItemStack Brick = RecipeThrowableBrick.getItem();
+
+            ItemStack[] Matrix = {
+                    Brick,
+                    N,N,N,
+                    N,B,
+            };
+
+            System.arraycopy(Matrix, 0, CraftingMatrix, 0, Matrix.length);
+        }
+
         if (!found_recipe && crafting_recipe.equalsIgnoreCase("UnMetaData_Cookies")) {
 
             found_recipe = true;
@@ -305,6 +345,7 @@ public class ComRMShowCraft implements TabExecutor, Listener {
     public List<String> onTabComplete(CommandSender sender, Command command, String label, String[] args) {
         if (args.length == 1){
             List<String> ListOItems = Arrays.asList(
+                    "Cake",
                     "Dirt_to_Seeds",
                     "Harder_Armor",
                     "JTE_Apple",
@@ -312,6 +353,7 @@ public class ComRMShowCraft implements TabExecutor, Listener {
                     "Redstone_Items",
                     "RottenFlesh_to_Leather",
                     "Tactical_Dirt",
+                    "Throwable_Brick",
                     "UnMetaData_Cookies",
                     "XP_Orb"
             );

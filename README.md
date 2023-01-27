@@ -35,7 +35,8 @@ Things That change vanilla features
 * You can now put any item on your head
 
 ## Recipes
-* Nothing Changed since last version
+* Throwable Brick, A brick you can throw and break glass with
+* Cake recipe is now changed to require a sweet berry
 
 ## Effects
 * Nothing Changed since last version

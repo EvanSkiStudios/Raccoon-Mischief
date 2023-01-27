@@ -64,6 +64,10 @@ public class ComRMGive implements TabExecutor {
         boolean FoundItem = false;
         ItemStack RequestedItem = new ItemStack(Material.AIR,1);
 
+        if (Item_arg.equalsIgnoreCase("Throwable_Brick")){
+            RequestedItem = RecipeThrowableBrick.getItem();
+            FoundItem = true;
+        }
 
         if (Item_arg.equalsIgnoreCase("JTE_Apple")){
             RequestedItem = RecipeJTEApple.getItem();
@@ -122,6 +126,7 @@ public class ComRMGive implements TabExecutor {
                     "Milk_Potion",
                     "Strange_Meat",
                     "Tactical_Dirt",
+                    "Throwable_Brick",
                     "Upgrade_Shard",
                     "XP_Orb"
             );
