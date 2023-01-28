@@ -28,9 +28,9 @@ public class EventManager {
         ListenerMilkPotion PotionSplashEvent = new ListenerMilkPotion();
         namespace.getServer().getPluginManager().registerEvents(PotionSplashEvent, namespace);
 
-        //Milk player
-        ListerPlayerMilk PlayerMilkEvent = new ListerPlayerMilk();
-        namespace.getServer().getPluginManager().registerEvents(PlayerMilkEvent, namespace);
+        //Player Right click
+        ListenerPlayerRightClick PlayerRightClickEvent = new ListenerPlayerRightClick();
+        namespace.getServer().getPluginManager().registerEvents(PlayerRightClickEvent, namespace);
 
         //Crafting
         ListenerPlayerCraft PlayerCraftEvent = new ListenerPlayerCraft();

@@ -1,9 +1,7 @@
 package me.evanskistudios.rm.events;
 
 import me.evanskistudios.rm.RaccoonMischief;
-import me.evanskistudios.rm.tasks.TaskPlayerLevitation;
 import me.evanskistudios.rm.tasks.TaskRemoveCoolDown;
-import me.evanskistudios.rm.utilis.UtilityMethods;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.NamespacedKey;
@@ -19,7 +17,7 @@ import org.bukkit.persistence.PersistentDataType;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.scheduler.BukkitTask;
 
-import java.util.*;
+import static me.evanskistudios.rm.utilis.UtilityMethods.Choose;
 
 
 public class ListenerXPCrystal implements Listener {
@@ -65,7 +63,7 @@ public class ListenerXPCrystal implements Listener {
 
             //set exp is in progress not amount - give xp is for amount, xp crystal will always give 1 level
 
-            Object adjective = UtilityMethods.Choose(List.of(adjectives));
+            Object adjective = Choose(adjectives);
             String string = "Tastes "+adjective;
 
             player.sendMessage(ChatColor.ITALIC+""+ChatColor.BLUE+""+string);

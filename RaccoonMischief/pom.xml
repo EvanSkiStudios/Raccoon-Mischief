@@ -48,10 +48,6 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
                 <version>3.2.2</version>
-                <configuration>
-                    <!-- <finalName>RaccoonMischief-${project.version}</finalName> -->
-                    <!--  <outputDirectory>D:\Minecraft\_Paper_server\plugins</outputDirectory> -->
-                </configuration>
             </plugin>
             <plugin>
                 <groupId>net.md-5</groupId>
@@ -70,7 +66,7 @@
                             <remappedDependencies>org.spigotmc:spigot:1.19.3-R0.1-SNAPSHOT:jar:remapped-mojang</remappedDependencies>
                             <remappedArtifactAttached>true</remappedArtifactAttached>
                             <remappedClassifierName>remapped-obf</remappedClassifierName>
-                            <!-- remapped-obf -->
+                            <outputDirectory>${project.build.directory}</outputDirectory>
                          </configuration>
                      </execution>
                      <execution>
@@ -83,8 +79,11 @@
                              <inputFile>${project.build.directory}/${project.artifactId}-${project.version}-remapped-obf.jar</inputFile>
                              <srgIn>org.spigotmc:minecraft-server:1.19.3-R0.1-SNAPSHOT:csrg:maps-spigot</srgIn>
                              <remappedDependencies>org.spigotmc:spigot:1.19.3-R0.1-SNAPSHOT:jar:remapped-obf</remappedDependencies>
+
                              <outputDirectory>D:\Minecraft\_Paper_server\plugins</outputDirectory>
+
                              <finalName>RaccoonMischief-${project.version}</finalName>
+
                          </configuration>
                      </execution>
                  </executions>

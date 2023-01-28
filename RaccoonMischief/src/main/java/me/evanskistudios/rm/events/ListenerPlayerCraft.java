@@ -1,7 +1,6 @@
 package me.evanskistudios.rm.events;
 
 import me.evanskistudios.rm.RaccoonMischief;
-import me.evanskistudios.rm.utilis.UtilityMethods;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
@@ -16,8 +15,7 @@ import org.bukkit.persistence.PersistentDataContainer;
 import org.bukkit.persistence.PersistentDataType;
 import org.bukkit.plugin.Plugin;
 
-import java.util.ArrayList;
-import java.util.List;
+import static me.evanskistudios.rm.utilis.UtilityMethods.Choose;
 
 public class ListenerPlayerCraft  implements Listener {
     public int AmountCrafted(CraftItemEvent event, Player player){
@@ -103,11 +101,12 @@ public class ListenerPlayerCraft  implements Listener {
                             all.getInventory().addItem(CraftResult);
                         }
 
-                        List<Object> Sounds = new ArrayList<Object>();
-                        Sounds.add("custom.crafting.tacticaldirt_evan");
-                        Sounds.add("custom.crafting.tacticaldirt_merc");
+                        String[] Sounds = {
+                            "custom.crafting.tacticaldirt_evan",
+                            "custom.crafting.tacticaldirt_merc"
+                        };
 
-                        String sound = "" + UtilityMethods.Choose(Sounds);
+                        String sound = "" + Choose(Sounds);
 
                         all.playSound(player.getLocation(),sound, 1.0f, 1.0f);
                     }
