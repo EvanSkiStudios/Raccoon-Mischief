@@ -1,5 +1,6 @@
 package me.evanskistudios.rm.commands;
 
+import me.evanskistudios.rm.EnchantmentManager;
 import me.evanskistudios.rm.items.ItemUpgradeShard;
 import me.evanskistudios.rm.recipes.*;
 import org.bukkit.ChatColor;
@@ -11,6 +12,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -63,6 +65,26 @@ public class ComRMGive implements TabExecutor {
 
         boolean FoundItem = false;
         ItemStack RequestedItem = new ItemStack(Material.AIR,1);
+
+        if (Item_arg.equalsIgnoreCase("TEST")){
+            ItemStack Pickaxe = new ItemStack(Material.DIAMOND_PICKAXE);
+            Pickaxe.addUnsafeEnchantment(EnchantmentManager.SOULBOUND, 1);
+
+            ItemMeta Pickaxe_meta = Pickaxe.getItemMeta();
+
+            List<String> Lore = new ArrayList<String>();
+            Lore.add(ChatColor.GRAY +"SoulBound I");
+
+            if (Pickaxe_meta.hasLore()){
+                Lore.addAll(Pickaxe_meta.getLore());
+            }
+
+            Pickaxe_meta.setLore(Lore);
+            Pickaxe.setItemMeta(Pickaxe_meta);
+
+            RequestedItem = Pickaxe;
+            FoundItem = true;
+        }
 
         if (Item_arg.equalsIgnoreCase("Throwable_Brick")){
             RequestedItem = RecipeThrowableBrick.getItem();

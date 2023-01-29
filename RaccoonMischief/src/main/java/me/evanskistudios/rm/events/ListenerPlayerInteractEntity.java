@@ -1,6 +1,5 @@
 package me.evanskistudios.rm.events;
 
-import com.mojang.datafixers.types.templates.Check;
 import org.bukkit.Material;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.EntityType;
@@ -21,7 +20,7 @@ enum RC_EVENT{
     Snow
 }
 
-public class ListenerPlayerRightClick implements Listener {
+public class ListenerPlayerInteractEntity implements Listener {
 
     public static EntityType[] MilkableEntity = {PLAYER, LLAMA};
 

@@ -1,12 +1,35 @@
 package me.evanskistudios.rm.utilis;
 
+import me.evanskistudios.rm.RaccoonMischief;
 import org.bukkit.NamespacedKey;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.enchantments.EnchantmentTarget;
 import org.bukkit.inventory.ItemStack;
+import org.bukkit.plugin.Plugin;
+
+import java.lang.reflect.Field;
 
 @SuppressWarnings("All") //STFU about NULLS
 public class Glow extends Enchantment {
+
+    public static void registerGlow() {
+        try {
+            Field f = Enchantment.class.getDeclaredField("acceptingNew");
+            f.setAccessible(true);
+            f.set(null, true);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        try {
+            Plugin namespace = RaccoonMischief.getPlugin();
+            Glow glow = new Glow(new NamespacedKey(namespace, "glow"));
+            Enchantment.registerEnchantment(glow);
+        } catch (IllegalArgumentException e) {
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
     public Glow(NamespacedKey key) {
         super(key);
     }

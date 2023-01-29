@@ -1,6 +1,7 @@
 package me.evanskistudios.rm.recipes;
 
 import me.evanskistudios.rm.utilis.Glow;
+import org.apache.commons.lang.ObjectUtils;
 import org.bukkit.*;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.ShapelessRecipe;
@@ -26,6 +27,7 @@ public class RecipeMilkPotion {
 
         //Text
         MilkPotion_Meta.setDisplayName(ChatColor.RESET + "Splash potion of Milk");
+        MilkPotion_Meta.setLore(null);
         MilkPotion_Meta.setLore(List.of(ChatColor.BLUE +"Removes all potion effects"));
 
         //Enchant glint

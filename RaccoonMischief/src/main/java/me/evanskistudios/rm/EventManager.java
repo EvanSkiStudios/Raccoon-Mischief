@@ -1,5 +1,6 @@
 package me.evanskistudios.rm;
 import me.evanskistudios.rm.commands.ComRMShowCraft;
+import me.evanskistudios.rm.enchantevents.EnchantListenerTest;
 import me.evanskistudios.rm.events.*;
 
 import org.bukkit.plugin.Plugin;
@@ -29,7 +30,7 @@ public class EventManager {
         namespace.getServer().getPluginManager().registerEvents(PotionSplashEvent, namespace);
 
         //Player Right click
-        ListenerPlayerRightClick PlayerRightClickEvent = new ListenerPlayerRightClick();
+        ListenerPlayerInteractEntity PlayerRightClickEvent = new ListenerPlayerInteractEntity();
         namespace.getServer().getPluginManager().registerEvents(PlayerRightClickEvent, namespace);
 
         //Crafting
@@ -55,5 +56,9 @@ public class EventManager {
         //Projectile Land
         ListenerProjectileLand ProjectileLandEvent = new ListenerProjectileLand();
         namespace.getServer().getPluginManager().registerEvents(ProjectileLandEvent, namespace);
+
+        //SoulBound Enchant
+        EnchantListenerTest SoulBoundEvent = new EnchantListenerTest();
+        namespace.getServer().getPluginManager().registerEvents(SoulBoundEvent, namespace);
     }
 }

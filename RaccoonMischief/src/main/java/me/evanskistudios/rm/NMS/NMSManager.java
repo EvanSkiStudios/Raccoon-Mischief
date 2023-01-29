@@ -7,7 +7,7 @@ import java.util.Objects;
 
 public class NMSManager {
     public static void NMS(){
-        Objects.requireNonNull(RaccoonMischief.getPlugin().getCommand("RMCreateNPC")).setExecutor(new NMSComRMCreateNPC());
+        //Objects.requireNonNull(RaccoonMischief.getPlugin().getCommand("RMCreateNPC")).setExecutor(new NMSComRMCreateNPC());
     }
 
 }

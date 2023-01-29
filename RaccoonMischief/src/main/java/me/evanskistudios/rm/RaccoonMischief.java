@@ -1,16 +1,20 @@
 package me.evanskistudios.rm;
 
 import me.evanskistudios.rm.NMS.NMSManager;
-import me.evanskistudios.rm.NMS.commands.NMSComRMCreateNPC;
-import me.evanskistudios.rm.commands.*;
+import me.evanskistudios.rm.utilis.Glow;
 import org.bukkit.plugin.java.JavaPlugin;
 
-import java.util.Objects;
+
 import java.util.logging.Level;
 
-public final class RaccoonMischief extends JavaPlugin {
+public final class RaccoonMischief extends JavaPlugin{
     public static String Version = "2.0.1";
     private static RaccoonMischief plugin;
+    //Getter for plugin instance
+    public static RaccoonMischief getPlugin() {
+        return plugin;
+    }
+
     @Override
     public void onEnable() {
         plugin = this;
@@ -32,7 +36,7 @@ public final class RaccoonMischief extends JavaPlugin {
         }
 
         //Register utilities
-        Utilities.registerGlow();
+        Glow.registerGlow();
 
         //Remove recipes I want to remove
         RemoveRecipes.Recipes();
@@ -55,17 +59,17 @@ public final class RaccoonMischief extends JavaPlugin {
         //NMS
         NMSManager.NMS();
 
+        //Custom Enchants
+        EnchantmentManager.Register();
+
+        //FINISH
         getLogger().info("RaccoonMischief " + Version + " is Loaded!");
     }
+
 
     @Override
     public void onDisable() {
         // Plugin shutdown logic
-        getLogger().info("RaccoonMischief UNLOADED!");
-    }
-
-    //Getter for plugin instance
-    public static RaccoonMischief getPlugin() {
-        return plugin;
+        //getLogger().info("RaccoonMischief UNLOADED!");
     }
 }
