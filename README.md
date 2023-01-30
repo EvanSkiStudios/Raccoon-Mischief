@@ -31,7 +31,7 @@ See [Latest Features](https://github.com/EvanSkiStudios/Raccoon-Mischief/blob/ma
 * Nothing Changed since last version
 
 ## Commands
-* Nothing Changed since last version
+* RMEnchant > Enchants an item in the players hand with an custom enchantment
 
 ## Vanilla Changes
 Things That change vanilla features
@@ -45,3 +45,7 @@ Things That change vanilla features
 
 ## Effects
 * Nothing Changed since last version
+
+## Enchantments
+* Telekinesis > When you mine a block, the block will instantly be added to your inventroy
+* HeavyStep > Prevents the effects of Levitation 

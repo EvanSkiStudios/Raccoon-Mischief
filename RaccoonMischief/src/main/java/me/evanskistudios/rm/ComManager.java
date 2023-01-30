@@ -16,6 +16,7 @@ public class ComManager {
         Objects.requireNonNull(RM.getCommand("RMReloadCfg")).setExecutor(new ComRMReloadConfig());
         Objects.requireNonNull(RM.getCommand("RMGive")).setExecutor(new ComRMGive());
         Objects.requireNonNull(RM.getCommand("RMShowCraft")).setExecutor(new ComRMShowCraft());
+        Objects.requireNonNull(RM.getCommand("RMEnchant")).setExecutor(new ComRMEnchant());
     }
 
 }

@@ -3,8 +3,10 @@ package me.evanskistudios.rm.enchantevents;
 import me.evanskistudios.rm.EnchantmentManager;
 import org.bukkit.GameMode;
 import org.bukkit.Material;
+import org.bukkit.Particle;
 import org.bukkit.block.Block;
 import org.bukkit.block.Container;
+import org.bukkit.block.data.BlockData;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -14,7 +16,7 @@ import org.bukkit.inventory.meta.ItemMeta;
 
 import java.util.Collection;
 
-public class EnchantListenerTest implements Listener {
+public class EnchantListenerTelekinesis implements Listener {
     @EventHandler
     public static void onBlockBreak(BlockBreakEvent event){
         Player player = event.getPlayer();
@@ -34,7 +36,7 @@ public class EnchantListenerTest implements Listener {
         ItemMeta MainHandItemMeta = MainHandItem.getItemMeta();
         if (MainHandItemMeta == null) return;
         //Player item not have enchantment
-        if (!MainHandItemMeta.hasEnchant(EnchantmentManager.SOULBOUND)) return;
+        if (!MainHandItemMeta.hasEnchant(EnchantmentManager.TELEKINESIS)) return;
         //PLayer has no free inventory space
         if (player.getInventory().firstEmpty() == -1) return;
 
@@ -48,5 +50,12 @@ public class EnchantListenerTest implements Listener {
         if (Drops.isEmpty()) return;
 
         player.getInventory().addItem(Drops.iterator().next());
+
+        Particle particle = Particle.REVERSE_PORTAL;
+        double coord_x = BrokenBlock.getLocation().getX() + 0.50;
+        double coord_y = BrokenBlock.getLocation().getY() + 0.50;
+        double coord_z = BrokenBlock.getLocation().getZ() + 0.50;
+
+        player.spawnParticle(particle, coord_x, coord_y, coord_z, 10);
     }
 }

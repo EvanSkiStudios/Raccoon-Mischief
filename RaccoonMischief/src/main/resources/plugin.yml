@@ -23,3 +23,6 @@ commands:
   RMShowCraft:
     description: Shows the recipe of an RM Item
     usage: "/RMShowCraft <RM Recipe>"
+  RMEnchant:
+    description: Enchants held item with RM Enchant
+    usage: "/RMEnchant <RM Enchant> <(Optional) Int: Level>"

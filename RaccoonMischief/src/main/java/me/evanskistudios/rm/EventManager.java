@@ -1,6 +1,6 @@
 package me.evanskistudios.rm;
 import me.evanskistudios.rm.commands.ComRMShowCraft;
-import me.evanskistudios.rm.enchantevents.EnchantListenerTest;
+import me.evanskistudios.rm.enchantevents.*;
 import me.evanskistudios.rm.events.*;
 
 import org.bukkit.plugin.Plugin;
@@ -57,8 +57,8 @@ public class EventManager {
         ListenerProjectileLand ProjectileLandEvent = new ListenerProjectileLand();
         namespace.getServer().getPluginManager().registerEvents(ProjectileLandEvent, namespace);
 
-        //SoulBound Enchant
-        EnchantListenerTest SoulBoundEvent = new EnchantListenerTest();
-        namespace.getServer().getPluginManager().registerEvents(SoulBoundEvent, namespace);
+        //Telekinesis Enchant
+        EnchantListenerTelekinesis EnchantTelekinesisEvent = new EnchantListenerTelekinesis();
+        namespace.getServer().getPluginManager().registerEvents(EnchantTelekinesisEvent, namespace);
     }
 }
