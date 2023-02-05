@@ -49,10 +49,18 @@ public class ComRMShowCraft implements TabExecutor, Listener {
 
         Player player = (Player) sender;
 
+        if (args == null){
+            player.sendMessage(ChatColor.RED+"Incorrect amount of arguments!");
+            player.sendMessage("Example: /RMShowCraft <RM Recipe>");
+            return true;
+        }
+
         if (args.length != 1){
            player.sendMessage(ChatColor.RED+"Incorrect amount of arguments!");
            player.sendMessage("Example: /RMShowCraft <RM Recipe>");
+            return true;
         }
+
 
         //Default values to redefine
         String crafting_recipe = args[0];

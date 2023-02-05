@@ -13,11 +13,15 @@ import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.inventory.meta.SkullMeta;
 import org.bukkit.plugin.Plugin;
 
-// import java.util.function.Supplier;
-// import java.util.logging.Level;
+enum DeathType {
+    Normal,
+    Llama,
+    Creeper,
+    Phantom
+}
 
 public class ListenerPlayerDeath implements Listener{
-    public int DeathCause = 0;
+    public DeathType DeathCause = DeathType.Normal;
     @EventHandler
     public void onDamage(EntityDamageByEntityEvent event) {
         if (event.isCancelled()) return;
@@ -32,13 +36,24 @@ public class ListenerPlayerDeath implements Listener{
                 // Plugin namespace = RaccoonMischief.getPlugin();
                 // namespace.getLogger().log(Level.INFO, ""+killer);
 
+                DeathCause = DeathType.Normal;
+
                 if (killer instanceof LlamaSpit) {
-                    DeathCause = 1;
-                    return;
-                }else{
-                    DeathCause = 0;
+                    DeathCause = DeathType.Llama;
                     return;
                 }
+
+                if (killer instanceof Creeper) {
+                    DeathCause = DeathType.Creeper;
+                    return;
+                }
+
+
+                if (killer instanceof Phantom) {
+                    DeathCause = DeathType.Phantom;
+                    return;
+                }
+
             }
         }
     }
@@ -46,10 +61,6 @@ public class ListenerPlayerDeath implements Listener{
     @EventHandler
     public void onDeath(PlayerDeathEvent event) {
         Entity entity = event.getEntity();
-
-        if (!(entity instanceof Player)) {
-            return;
-        }
         Player player = (Player) entity;
 
         //players Drop Strange meat
@@ -76,17 +87,33 @@ public class ListenerPlayerDeath implements Listener{
 
 
         //Custom death sounds
-        switch(DeathCause){
-            default:{
+        switch (DeathCause) {
+            default -> {
                 //regular death
                 player.playSound(player.getLocation(), "custom.player.no", 1.0f, 1.0f);
-            }break;
-
-            case 1:{
+            }
+            case Llama -> {
                 //death by llama
                 player.playSound(player.getLocation(), "custom.player.llama", 1.0f, 1.0f);
-            }break;
+            }
+            case Creeper -> {
+                //death by creeper
+                String orgDeathMessage = event.getDeathMessage();
+                if (orgDeathMessage == null) return;
+
+                orgDeathMessage = orgDeathMessage.replace("up ","");
+
+                event.setDeathMessage(orgDeathMessage);
+                //play normal no sound
+                player.playSound(player.getLocation(), "custom.player.no", 1.0f, 1.0f);
+            }
+            case Phantom -> {
+                //death by Phantom
+                event.setDeathMessage(player.getName() + " got Vectored!");
+                //play normal no sound
+                player.playSound(player.getLocation(), "custom.hostile.vector.kill", 1.0f, 1.0f);
+            }
         }
-        DeathCause = 0; //reset so we are not stuck with last one played
+        DeathCause = DeathType.Normal; //reset so we are not stuck with last one played
     }
 }

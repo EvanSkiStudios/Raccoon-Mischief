@@ -30,6 +30,10 @@ public class ListenerPlayerEnterVoid implements Listener {
             if (! (player.getWorld().getEnvironment() == World.Environment.THE_END) ) {
                 return;
             }
+            //check if player fell into the void
+            if (! (player.getLocation().getY() < -60) ) {
+                return;
+            }
 
             if (event.getCause() == EntityDamageEvent.DamageCause.VOID) {
 

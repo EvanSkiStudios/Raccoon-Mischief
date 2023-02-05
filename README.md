@@ -26,6 +26,7 @@ See [Latest Features](https://github.com/EvanSkiStudios/Raccoon-Mischief/blob/ma
 
 ## Bug Fixes
 * Fixed an bug with Milking player's and Llamas
+* Forgiving Void now checks if the player is in the void before teleporting
 
 ## Config.yml
 * Nothing Changed since last version
@@ -38,6 +39,7 @@ Things That change vanilla features
 * You can now put any item on your head
 * Snowballs thrown by non-player entities do 1 hearts of damage
 * Using a bucket on a Snow Golem filsl the bucket with powered snow
+* Removed the word "up" from {PlayerName} was blown up by a Creeper
 
 ## Recipes
 * Throwable Brick, A brick you can throw and break glass with, they do 1.5 hearts of damage
