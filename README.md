@@ -21,33 +21,27 @@ Place RaccoonMischief.jar into your plugin folder of your Paper-mc server.
 # Changelog
 See [Latest Features](https://github.com/EvanSkiStudios/Raccoon-Mischief/blob/master/Features/Features_Latest_.md) for full list of features
 
-## Version 2.0.1
-* Converted Project from Gradle to Maven
+## Version 2.1.1
+
 
 ## Bug Fixes
-* Fixed an bug with Milking player's and Llamas
-* Forgiving Void now checks if the player is in the void before teleporting
+* None Known of
 
 ## Config.yml
 * Nothing Changed since last version
 
 ## Commands
-* RMEnchant > Enchants an item in the players hand with an custom enchantment
+* Nothing Changed since last version
 
 ## Vanilla Changes
 Things That change vanilla features
-* You can now put any item on your head
-* Snowballs thrown by non-player entities do 1 hearts of damage
-* Using a bucket on a Snow Golem filsl the bucket with powered snow
-* Removed the word "up" from {PlayerName} was blown up by a Creeper
+* Nothing Changed since last version
 
 ## Recipes
-* Throwable Brick, A brick you can throw and break glass with, they do 1.5 hearts of damage
-* Cake recipe is now changed to require a sweet berry
+* Nothing Changed since last version
 
 ## Effects
 * Nothing Changed since last version
 
 ## Enchantments
-* Telekinesis > When you mine a block, the block will instantly be added to your inventroy
-* HeavyStep > Prevents the effects of Levitation 
+* Nothing Changed since last version

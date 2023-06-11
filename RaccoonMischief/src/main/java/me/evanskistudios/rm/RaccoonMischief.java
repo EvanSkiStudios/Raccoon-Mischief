@@ -8,7 +8,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 import java.util.logging.Level;
 
 public final class RaccoonMischief extends JavaPlugin{
-    public static String Version = "2.0.1";
+    public static String Version = "2.1.1";
     private static RaccoonMischief plugin;
     //Getter for plugin instance
     public static RaccoonMischief getPlugin() {

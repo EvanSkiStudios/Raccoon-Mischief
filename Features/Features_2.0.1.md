@@ -1,6 +1,11 @@
 # Features
 
-## Version 2.1.1
+## [Version 2.0.1](https://github.com/EvanSkiStudios/Raccoon-Mischief/releases/tag/Release_2_0)
+* Converted Project from Gradle to Maven
+
+## Bug Fixes for 2.0
+* Fixed an bug with Milking player's and Llamas
+* Forgiving Void now checks if the player is in the void before teleporting
 
 ## Config.yml
 * Info > provides a string with info about the config file, is unused by pluin so this key can be deleted/changed/ect

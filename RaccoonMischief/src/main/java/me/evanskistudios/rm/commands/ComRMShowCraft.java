@@ -321,23 +321,24 @@ public class ComRMShowCraft implements TabExecutor, Listener {
 
             CraftRecipe = Bukkit.createInventory(new GUIHolder(), Inventory_type, Inventory_title);
 
-            //Workbench
-            if (Inventory_type == InventoryType.WORKBENCH) {
-                for (int i = 0; i < CraftingMatrix.length; ++i) {
-                    CraftRecipe.setItem(i, CraftingMatrix[i]);
+            switch (Inventory_type) {
+                case WORKBENCH -> {
+                    for (int i = 0; i < CraftingMatrix.length; ++i) {
+                        CraftRecipe.setItem(i, CraftingMatrix[i]);
+                    }
                 }
-            //Furnace
-            }else  if (Inventory_type == InventoryType.FURNACE){
-                for (int i = 0; i < 3; ++i) {
-                    CraftRecipe.setItem(i, CraftingMatrix[i]);
+                case FURNACE -> {
+                    for (int i = 0; i < 3; ++i) {
+                        CraftRecipe.setItem(i, CraftingMatrix[i]);
+                    }
                 }
-            }else{
-                //DIDN'T FIND ONE ERROR
-                player.sendMessage(ChatColor.RED+"You should never see this, if you do please report this!");
-                player.sendMessage("Example: /RMShowCraft <RM Recipe>");
-                return true;
+                default -> {
+                    // DIDN'T FIND ONE ERROR
+                    player.sendMessage(ChatColor.RED + "You should never see this, if you do please report this!");
+                    player.sendMessage("Example: /RMShowCraft <RM Recipe>");
+                    return true;
+                }
             }
-
             player.openInventory(CraftRecipe);
 
         }else{

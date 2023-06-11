@@ -60,5 +60,9 @@ public class EventManager {
         //Telekinesis Enchant
         EnchantListenerTelekinesis EnchantTelekinesisEvent = new EnchantListenerTelekinesis();
         namespace.getServer().getPluginManager().registerEvents(EnchantTelekinesisEvent, namespace);
+
+        //GoatHorn
+        ListenerGoatHorn PlayerGoatHornEvent = new ListenerGoatHorn();
+        namespace.getServer().getPluginManager().registerEvents(PlayerGoatHornEvent, namespace);
     }
 }
