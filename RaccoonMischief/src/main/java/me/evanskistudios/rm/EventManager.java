@@ -3,6 +3,7 @@ import me.evanskistudios.rm.commands.ComRMShowCraft;
 import me.evanskistudios.rm.enchantevents.*;
 import me.evanskistudios.rm.events.*;
 
+import me.evanskistudios.rm.tasks.TaskRekkoRoomCode;
 import org.bukkit.plugin.Plugin;
 
 public class EventManager {
@@ -64,5 +65,9 @@ public class EventManager {
         //GoatHorn
         ListenerGoatHorn PlayerGoatHornEvent = new ListenerGoatHorn();
         namespace.getServer().getPluginManager().registerEvents(PlayerGoatHornEvent, namespace);
+
+        //Rekko
+        TaskRekkoRoomCode ListenerRekkoJoin = new TaskRekkoRoomCode(RaccoonMischief.getPlugin());
+        namespace.getServer().getPluginManager().registerEvents(ListenerRekkoJoin, namespace);
     }
 }

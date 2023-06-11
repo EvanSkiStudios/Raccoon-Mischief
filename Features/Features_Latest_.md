@@ -53,6 +53,7 @@ Things That change vanilla features
 * The sound effect of [Jeb screaming](https://youtu.be/2BCFGjsrwyY?t=26) will play when a player dies
 * The sound effect of [DinnerBone yelling](https://youtu.be/PpF8AaPyqhQ?t=120) will play when a player is killed by a llama
 * The line ["Im Levitating"](https://youtu.be/GOhLQ4fchSc?t=27) will play when a player is under the effect of Levitation
+* The server will make an random player ask RekNepZ_HBK what the room code is, at random times
 
 ## Enchantments
 * Telekinesis > When you mine a block, the block will instantly be added to your inventroy

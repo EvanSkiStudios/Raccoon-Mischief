@@ -11,7 +11,8 @@ public class TaskManager {
 
         BukkitTask taskPlayerLevitation = (BukkitTask) new TaskPlayerLevitation(namespace).runTaskTimer(namespace,20L,20L);
 
-        //BukkitTask taskFanfic = (BukkitTask) new TaskFanfic(namespace).runTaskTimer(namespace,0L,0L);
+        BukkitTask TaskRekkoRoomCode = (BukkitTask) new TaskRekkoRoomCode(namespace).runTask(namespace);
+
     }
 
 }

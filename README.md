@@ -35,13 +35,13 @@ See [Latest Features](https://github.com/EvanSkiStudios/Raccoon-Mischief/blob/ma
 
 ## Vanilla Changes
 Things That change vanilla features
-* Nothing Changed since last version
+* Goat Horns now have no cooldown
 
 ## Recipes
 * Nothing Changed since last version
 
 ## Effects
-* Nothing Changed since last version
+* The server will make an random player ask RekNepZ_HBK what the room code is, at random times
 
 ## Enchantments
 * Nothing Changed since last version
