@@ -116,8 +116,17 @@ public class ComRMEnchant implements TabExecutor {
                 Lore.add(ChatColor.GRAY + "" + EnchantName + " " + level);
             }
 
+            if (MainHandItem_meta == null){
+                //I doubt this will ever trigger but on the edge case that it does
+                player.sendMessage(ChatColor.RED + "Error: Item Meta is Null???");
+                return true;
+            }
+
             if (MainHandItem_meta.hasLore()) {
-                Lore.addAll(MainHandItem_meta.getLore());
+                List<String> itemLore = MainHandItem_meta.getLore();
+                if (itemLore != null) {
+                    Lore.addAll(itemLore);
+                }
             }
 
             MainHandItem_meta.setLore(Lore);
@@ -136,7 +145,8 @@ public class ComRMEnchant implements TabExecutor {
         if (args.length == 1){
             List<String> ListOEnchants = Arrays.asList(
                     "TELEKINESIS",
-                    "HEAVYSTEP"
+                    "HEAVYSTEP",
+                    "SOULBOUND"
             );
             EnchantList = ListOEnchants;
 

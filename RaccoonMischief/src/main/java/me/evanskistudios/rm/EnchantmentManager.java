@@ -24,10 +24,11 @@ public class EnchantmentManager {
     }
 
     public static final Enchantment TELEKINESIS = new EnchantmentWrapper("enchanttelekinesis", "Telekinesis", 1);
-    public static final Enchantment HEAVYSTEP = new EnchantmentWrapper("enchantheavystep", "HeavyStep", 1);
+    public static final Enchantment HEAVYSTEP = new EnchantmentWrapper("enchantheavystep", "Heavy Step", 1);
+    public static final Enchantment SOULBOUND = new EnchantmentWrapper("enchantsoulbound", "Soul Bound", 1);
 
     public static void Register(){
-        Enchantment[] Enchantments = {TELEKINESIS, HEAVYSTEP};
+        Enchantment[] Enchantments = {TELEKINESIS, HEAVYSTEP, SOULBOUND};
         EnchantTypes = Enchantments;
 
         for (Enchantment Enchant : Enchantments) {

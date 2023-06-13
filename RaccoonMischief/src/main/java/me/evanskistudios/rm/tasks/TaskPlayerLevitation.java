@@ -37,8 +37,11 @@ public class TaskPlayerLevitation extends BukkitRunnable {
                 ItemStack PlayerArmorBoots = player.getInventory().getItem(InvSlot.ArmorBoots.ordinal());
                 if (PlayerArmorBoots != null) {
 
+                    boolean BootsHasHeavyStep = false;
                     ItemMeta PlayerArmorBoots_Meta = PlayerArmorBoots.getItemMeta();
-                    boolean BootsHasHeavyStep = PlayerArmorBoots_Meta.hasEnchant(EnchantmentManager.HEAVYSTEP);
+                    if (PlayerArmorBoots_Meta != null) {
+                        BootsHasHeavyStep = PlayerArmorBoots_Meta.hasEnchant(EnchantmentManager.HEAVYSTEP);
+                    }
 
                     if (BootsHasHeavyStep){
                         player.removePotionEffect(PotionEffectType.LEVITATION);

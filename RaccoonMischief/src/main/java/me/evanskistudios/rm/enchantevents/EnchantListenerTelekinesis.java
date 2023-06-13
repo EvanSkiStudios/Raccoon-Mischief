@@ -30,7 +30,7 @@ public class EnchantListenerTelekinesis implements Listener {
 
         //Player is holding nothing
         if (MainHandItemType == Material.AIR) return;
-        //PLayer item has no meta
+        //Player item has no meta
         if (!MainHandItem.hasItemMeta()) return;
 
         ItemMeta MainHandItemMeta = MainHandItem.getItemMeta();

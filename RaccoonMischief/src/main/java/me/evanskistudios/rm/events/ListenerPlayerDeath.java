@@ -13,6 +13,8 @@ import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.inventory.meta.SkullMeta;
 import org.bukkit.plugin.Plugin;
 
+import java.util.ArrayList;
+
 enum DeathType {
     Normal,
     Llama,
@@ -48,20 +50,17 @@ public class ListenerPlayerDeath implements Listener{
                     return;
                 }
 
-
                 if (killer instanceof Phantom) {
                     DeathCause = DeathType.Phantom;
                     return;
                 }
-
             }
         }
     }
 
     @EventHandler
     public void onDeath(PlayerDeathEvent event) {
-        Entity entity = event.getEntity();
-        Player player = (Player) entity;
+        Player player = (Player) event.getEntity();
 
         //players Drop Strange meat
         ItemStack Strange_meat = new ItemStack(Material.BEEF);
@@ -85,7 +84,6 @@ public class ListenerPlayerDeath implements Listener{
             player.getWorld().dropItem(player.getLocation().add(0, 1, 0), PlayerHead);
         }
 
-
         //Custom death sounds
         switch (DeathCause) {
             default -> {
@@ -100,9 +98,7 @@ public class ListenerPlayerDeath implements Listener{
                 //death by creeper
                 String orgDeathMessage = event.getDeathMessage();
                 if (orgDeathMessage == null) return;
-
                 orgDeathMessage = orgDeathMessage.replace("up ","");
-
                 event.setDeathMessage(orgDeathMessage);
                 //play normal no sound
                 player.playSound(player.getLocation(), "custom.player.no", 1.0f, 1.0f);

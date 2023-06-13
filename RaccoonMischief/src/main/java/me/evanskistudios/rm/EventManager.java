@@ -73,5 +73,9 @@ public class EventManager {
         //Right click block
         ListenerPlayerInteractBlock PlayerUseBlockEvent = new ListenerPlayerInteractBlock();
         namespace.getServer().getPluginManager().registerEvents(PlayerUseBlockEvent, namespace);
+
+        //Item despawn
+        ListenerItemDespawn ItemDespawnEvent = new ListenerItemDespawn();
+        namespace.getServer().getPluginManager().registerEvents(ItemDespawnEvent, namespace);
     }
 }
