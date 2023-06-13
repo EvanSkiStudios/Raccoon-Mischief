@@ -18,6 +18,7 @@ import org.bukkit.plugin.Plugin;
 import static me.evanskistudios.rm.utilis.UtilityMethods.Choose;
 
 public class ListenerPlayerCraft  implements Listener {
+    RaccoonMischief plugin;
     public int AmountCrafted(CraftItemEvent event, Player player){
         int amount;
         //GET AMOUNT OF ITEMS CRAFTED
@@ -94,11 +95,13 @@ public class ListenerPlayerCraft  implements Listener {
                 if (Data.has(NameSpaceKey, PersistentDataType.DOUBLE)) {
 
                     int amount = AmountCrafted(event, player);
+                    for (int i = 0; i < amount; ++i) {
+                        player.getInventory().removeItem(CraftResult); //remove players copy, they are going to get it again below
+                    }
 
-                    for (Player all : Bukkit.getServer().getOnlinePlayers()) {
+                    for (Player p : plugin.getServer().getOnlinePlayers()) {
                         for (int i = 0; i < amount; ++i) {
-                            player.getInventory().removeItem(CraftResult); //remove players copy, they are going to get it again below
-                            all.getInventory().addItem(CraftResult);
+                            p.getInventory().addItem(CraftResult);
                         }
 
                         String[] Sounds = {
@@ -108,7 +111,7 @@ public class ListenerPlayerCraft  implements Listener {
 
                         String sound = "" + Choose(Sounds);
 
-                        all.playSound(player.getLocation(),sound, 1.0f, 1.0f);
+                        p.playSound(player.getLocation(),sound, 1.0f, 1.0f);
                     }
                 }
             }

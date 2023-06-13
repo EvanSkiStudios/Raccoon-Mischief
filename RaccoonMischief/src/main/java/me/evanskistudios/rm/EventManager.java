@@ -69,5 +69,9 @@ public class EventManager {
         //Rekko
         TaskRekkoRoomCode ListenerRekkoJoin = new TaskRekkoRoomCode(RaccoonMischief.getPlugin());
         namespace.getServer().getPluginManager().registerEvents(ListenerRekkoJoin, namespace);
+
+        //Right click block
+        ListenerPlayerInteractBlock PlayerUseBlockEvent = new ListenerPlayerInteractBlock();
+        namespace.getServer().getPluginManager().registerEvents(PlayerUseBlockEvent, namespace);
     }
 }

@@ -36,6 +36,7 @@ See [Latest Features](https://github.com/EvanSkiStudios/Raccoon-Mischief/blob/ma
 ## Vanilla Changes
 Things That change vanilla features
 * Goat Horns now have no cooldown
+* Added the modpack feature of right clicking crops to auto harvest and replace them
 
 ## Recipes
 * Nothing Changed since last version
