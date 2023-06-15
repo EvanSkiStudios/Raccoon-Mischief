@@ -10,6 +10,8 @@ Neither directly depends on the other, but they are designed with each other in 
 Raccoon Mischief is written and maintained by Evanski. It is
 released as [All Rights Reserved](LICENSE).
 
+API Version: Spigot 1.20.1
+
 The use of the mojang mappings is for development purposes only,  
 and are remapped prior to distribution in compliance with the following EULAs  
 [Mappings ELUA](https://gist.github.com/Dinnerbone/07b20a9f02e50a569217df6449cc1185/#file-gistfile1-txt)
@@ -25,7 +27,7 @@ See [Latest Features](https://github.com/EvanSkiStudios/Raccoon-Mischief/blob/ma
 
 
 ## Bug Fixes
-* None Known of
+* No bugs or No Fixes to be listed
 
 ## Config.yml
 * Nothing Changed since last version

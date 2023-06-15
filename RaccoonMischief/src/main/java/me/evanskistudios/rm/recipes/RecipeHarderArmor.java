@@ -132,6 +132,7 @@ public class RecipeHarderArmor {
 
         //Smiting
         {
+                //All broken until they update to the new trim system thing
                 NamespacedKey G_H_S_key = new NamespacedKey(namespace, "S_G_Helmet");
                 NamespacedKey G_C_S_key = new NamespacedKey(namespace, "S_G_ChestPlate");
                 NamespacedKey G_L_S_key = new NamespacedKey(namespace, "S_G_Leggings");
