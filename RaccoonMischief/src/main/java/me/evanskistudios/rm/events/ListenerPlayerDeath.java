@@ -13,8 +13,6 @@ import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.inventory.meta.SkullMeta;
 import org.bukkit.plugin.Plugin;
 
-import java.util.ArrayList;
-
 enum DeathType {
     Normal,
     Llama,
@@ -23,14 +21,15 @@ enum DeathType {
 }
 
 public class ListenerPlayerDeath implements Listener{
+    RaccoonMischief plugin;
+    public ListenerPlayerDeath(RaccoonMischief plugin) {this.plugin = plugin;}
     public DeathType DeathCause = DeathType.Normal;
     @EventHandler
     public void onDamage(EntityDamageByEntityEvent event) {
         if (event.isCancelled()) return;
 
         Entity entity = event.getEntity();
-        if (entity instanceof Player) {
-            Player player = (Player) entity;
+        if (entity instanceof Player player) {
 
             if (event.getFinalDamage() >= player.getHealth()){
                 Entity killer = event.getDamager();
@@ -60,7 +59,7 @@ public class ListenerPlayerDeath implements Listener{
 
     @EventHandler
     public void onDeath(PlayerDeathEvent event) {
-        Player player = (Player) event.getEntity();
+        Player player = event.getEntity();
 
         //players Drop Strange meat
         ItemStack Strange_meat = new ItemStack(Material.BEEF);

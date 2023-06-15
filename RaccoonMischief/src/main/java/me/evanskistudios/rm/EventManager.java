@@ -23,7 +23,7 @@ public class EventManager {
         namespace.getServer().getPluginManager().registerEvents(PlayerConnectEvent, namespace);
 
         //Player Death Event
-        ListenerPlayerDeath PlayerDeathEvent = new ListenerPlayerDeath();
+        ListenerPlayerDeath PlayerDeathEvent = new ListenerPlayerDeath(RaccoonMischief.getPlugin());
         namespace.getServer().getPluginManager().registerEvents(PlayerDeathEvent, namespace);
 
         //Milk potion
