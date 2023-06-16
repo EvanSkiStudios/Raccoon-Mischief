@@ -5,9 +5,7 @@ import org.bukkit.entity.Entity;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.CreatureSpawnEvent;
-import org.bukkit.event.entity.EntityDamageByEntityEvent;
 import org.bukkit.event.entity.EntityDamageEvent;
-import org.bukkit.event.entity.EntityDeathEvent;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
 
@@ -36,9 +34,16 @@ public class ListenerMobSpawn implements Listener {
         Entity DamagedEntity = event.getEntity();
 
         if (DamagedEntity instanceof Creeper Crep){
-            Crep.setMaxFuseTicks(1);
-            Crep.setFuseTicks(1);
-            Crep.ignite();
+            EntityDamageEvent.DamageCause DamageCause = event.getCause();
+
+            event.setCancelled(true);
+            if ( (DamageCause != EntityDamageEvent.DamageCause.LIGHTNING) &&
+                 (DamageCause != EntityDamageEvent.DamageCause.FIRE)
+            ){
+                Crep.setMaxFuseTicks(1);
+                Crep.setFuseTicks(1);
+                Crep.ignite();
+            }
         }
     }
 }
