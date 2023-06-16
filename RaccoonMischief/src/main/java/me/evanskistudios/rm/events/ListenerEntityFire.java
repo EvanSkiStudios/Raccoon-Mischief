@@ -13,7 +13,7 @@ public class ListenerEntityFire implements Listener {
 
         Entity BurningEntity = event.getEntity();
 
-        if (BurningEntity instanceof Phantom){
+        if ( (BurningEntity instanceof Phantom) || (BurningEntity instanceof Creeper) ){
             event.setCancelled(true);
             BurningEntity.setFireTicks(0);
         }
