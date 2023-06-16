@@ -26,3 +26,6 @@ commands:
   RMEnchant:
     description: Enchants held item with RM Enchant
     usage: "/RMEnchant <RM Enchant> <(Optional) Int: Level>"
+  RMQuickTest:
+    description: Quick RM Test
+    usage: "/RMQuickTest"

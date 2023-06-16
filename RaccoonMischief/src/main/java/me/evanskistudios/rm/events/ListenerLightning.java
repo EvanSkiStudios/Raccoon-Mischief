@@ -2,6 +2,9 @@ package me.evanskistudios.rm.events;
 
 import me.evanskistudios.rm.RaccoonMischief;
 import org.bukkit.Location;
+import org.bukkit.Material;
+import org.bukkit.block.Block;
+import org.bukkit.entity.Creeper;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.EntityType;
 import org.bukkit.entity.PufferFish;
@@ -20,16 +23,20 @@ public class ListenerLightning implements Listener {
         Plugin plugin = RaccoonMischief.getPlugin(RaccoonMischief.class);
         String PufferfishConvert = "" + plugin.getConfig().get("B_PufferfishConversion");
 
-        if ( (DamagedEntity instanceof PufferFish) && (PufferfishConvert.equalsIgnoreCase("True")) ){
+        if (event.getCause() == EntityDamageEvent.DamageCause.LIGHTNING) {
+            event.setCancelled(true);
 
-            if (event.getCause() == EntityDamageEvent.DamageCause.LIGHTNING) {
-
-                event.setCancelled(true);
-
-                Location EntityLocation = DamagedEntity.getLocation();
-                DamagedEntity.getWorld().spawnEntity(EntityLocation, EntityType.GUARDIAN);
-                DamagedEntity.remove();
+            if ( (DamagedEntity instanceof PufferFish) && (PufferfishConvert.equalsIgnoreCase("True")) ){
+                    Location EntityLocation = DamagedEntity.getLocation();
+                    DamagedEntity.getWorld().spawnEntity(EntityLocation, EntityType.GUARDIAN);
+                    DamagedEntity.remove();
             }
+
+            if (DamagedEntity instanceof Creeper){
+                Block blockAtFeet = DamagedEntity .getWorld().getBlockAt(DamagedEntity .getLocation());
+                blockAtFeet.setType(Material.AIR);
+            }
+
         }
     }
 }

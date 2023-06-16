@@ -77,5 +77,9 @@ public class EventManager {
         //Item despawn
         ListenerItemDespawn ItemDespawnEvent = new ListenerItemDespawn();
         namespace.getServer().getPluginManager().registerEvents(ItemDespawnEvent, namespace);
+
+        //Mob Spawning
+        ListenerMobSpawn MobSpawnEvent = new ListenerMobSpawn();
+        namespace.getServer().getPluginManager().registerEvents(MobSpawnEvent, namespace);
     }
 }
