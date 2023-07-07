@@ -77,12 +77,9 @@ public class ListenerPlayerCraft  implements Listener {
             return;
         }
 
-        if (event.getWhoClicked() instanceof Player) {
-
-            Player player = (Player) event.getWhoClicked();
+        if (event.getWhoClicked() instanceof Player player) {
 
             ItemStack CraftResult = event.getRecipe().getResult();
-
 
             //Tactical dirt
             if (CraftResult.getType() == Material.BAKED_POTATO) {
@@ -99,7 +96,7 @@ public class ListenerPlayerCraft  implements Listener {
                         player.getInventory().removeItem(CraftResult); //remove players copy, they are going to get it again below
                     }
 
-                    for (Player p : plugin.getServer().getOnlinePlayers()) {
+                    for (Player p : RaccoonMischief.getPlugin().getServer().getOnlinePlayers()) {
                         for (int i = 0; i < amount; ++i) {
                             p.getInventory().addItem(CraftResult);
                         }

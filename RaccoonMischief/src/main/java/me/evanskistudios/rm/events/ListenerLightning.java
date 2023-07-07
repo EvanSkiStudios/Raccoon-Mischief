@@ -24,15 +24,16 @@ public class ListenerLightning implements Listener {
         String PufferfishConvert = "" + plugin.getConfig().get("B_PufferfishConversion");
 
         if (event.getCause() == EntityDamageEvent.DamageCause.LIGHTNING) {
-            event.setCancelled(true);
 
             if ( (DamagedEntity instanceof PufferFish) && (PufferfishConvert.equalsIgnoreCase("True")) ){
-                    Location EntityLocation = DamagedEntity.getLocation();
-                    DamagedEntity.getWorld().spawnEntity(EntityLocation, EntityType.GUARDIAN);
-                    DamagedEntity.remove();
+                event.setCancelled(true);
+                Location EntityLocation = DamagedEntity.getLocation();
+                DamagedEntity.getWorld().spawnEntity(EntityLocation, EntityType.GUARDIAN);
+                DamagedEntity.remove();
             }
 
             if (DamagedEntity instanceof Creeper){
+                event.setCancelled(true);
                 Block blockAtFeet = DamagedEntity .getWorld().getBlockAt(DamagedEntity .getLocation());
                 blockAtFeet.setType(Material.AIR);
             }

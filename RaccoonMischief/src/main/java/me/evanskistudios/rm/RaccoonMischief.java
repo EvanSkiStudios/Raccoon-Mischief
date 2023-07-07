@@ -8,7 +8,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 import java.util.logging.Level;
 
 public final class RaccoonMischief extends JavaPlugin{
-    public static String Version = "2.1.1";
+    public static String Version = "2.2.0";
     private static RaccoonMischief plugin;
     //Getter for plugin instance
     public static RaccoonMischief getPlugin() {
@@ -61,6 +61,10 @@ public final class RaccoonMischief extends JavaPlugin{
 
         //Custom Enchants
         EnchantmentManager.Register();
+
+        //Scoreboard Manager
+        ScoreboardsManager.Events();
+        ScoreboardsManager.Scoreboards();
 
         //FINISH
         getLogger().info("RaccoonMischief " + Version + " is Loaded!");

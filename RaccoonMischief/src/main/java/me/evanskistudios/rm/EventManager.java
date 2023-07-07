@@ -79,7 +79,7 @@ public class EventManager {
         namespace.getServer().getPluginManager().registerEvents(ItemDespawnEvent, namespace);
 
         //Mob Spawning
-        ListenerMobSpawn MobSpawnEvent = new ListenerMobSpawn();
+        ListenerMobSpawn MobSpawnEvent = new ListenerMobSpawn(RaccoonMischief.getPlugin());
         namespace.getServer().getPluginManager().registerEvents(MobSpawnEvent, namespace);
     }
 }
