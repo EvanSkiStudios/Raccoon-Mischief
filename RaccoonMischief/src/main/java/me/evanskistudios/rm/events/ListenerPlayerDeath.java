@@ -101,9 +101,7 @@ public class ListenerPlayerDeath implements Listener{
                 //DeathCause = DeathType.Normal;
 
                 switch(killer){
-                    case FIRE, FIRE_TICK ->{
-                        DeathCause = DeathType.Fire;
-                    }
+                    case FIRE, FIRE_TICK -> DeathCause = DeathType.Fire;
                 }
 
             }
@@ -142,14 +140,11 @@ public class ListenerPlayerDeath implements Listener{
 
         //Custom death sounds/effects
         switch (DeathCause) {
-            default -> {
-                //regular death
-                player.playSound(player.getLocation(), "custom.player.no", 1.0f, 1.0f);
-            }
-            case Llama -> {
-                //death by llama
-                player.playSound(player.getLocation(), "custom.player.llama", 1.0f, 1.0f);
-            }
+            default -> //regular death
+                    player.playSound(player.getLocation(), "custom.player.no", 1.0f, 1.0f);
+            case Llama -> //death by llama
+                    player.playSound(player.getLocation(), "custom.player.llama", 1.0f, 1.0f);
+
             case Creeper -> {
                 //death by creeper
                 String orgDeathMessage = event.getDeathMessage();
@@ -159,6 +154,7 @@ public class ListenerPlayerDeath implements Listener{
                 //play normal no sound
                 player.playSound(player.getLocation(), "custom.player.no", 1.0f, 1.0f);
             }
+
             case Phantom -> {
                 //death by Phantom
                 event.setDeathMessage(player.getName() + " got Vectored!");
@@ -181,16 +177,23 @@ public class ListenerPlayerDeath implements Listener{
                 for (ItemStack item : InventoryContents){
                     if (item != null){
                         int amount = item.getAmount();
+                        ItemMeta meta = item.getItemMeta();
 
                         switch (item.getType()) {
-                            case BEEF -> {
-                                ItemMeta meta = item.getItemMeta();
-                                item = new ItemStack(Material.COOKED_BEEF, amount);
-                                item.setItemMeta(meta);
-                                //Overwrites item slot with new item
-                            }
+                            case BEEF ->           item = new ItemStack( Material.COOKED_BEEF,         amount);
+                            case CHICKEN ->        item = new ItemStack( Material.COOKED_CHICKEN,      amount);
+                            case PORKCHOP ->       item = new ItemStack( Material.COOKED_PORKCHOP,     amount);
+                            case MUTTON ->         item = new ItemStack( Material.COOKED_MUTTON,       amount);
+                            case RABBIT ->         item = new ItemStack( Material.COOKED_RABBIT,       amount);
+                            case COD ->            item = new ItemStack( Material.COOKED_COD,          amount);
+                            case SALMON ->         item = new ItemStack( Material.COOKED_SALMON,       amount);
+                            case POTATO ->         item = new ItemStack( Material.BAKED_POTATO,        amount);
+                            case KELP ->           item = new ItemStack( Material.DRIED_KELP,          amount);
+                            case CHORUS_FRUIT ->   item = new ItemStack( Material.POPPED_CHORUS_FRUIT, amount);
                         }
+                        item.setItemMeta(meta);
                         NewItems.add(item);
+                        //Overwrites item slot with new item
                     }else{
                         NewItems.add(null);
                     }
@@ -200,7 +203,7 @@ public class ListenerPlayerDeath implements Listener{
                     ItemStack[] ArmorContents = player.getInventory().getArmorContents();
                     event.getDrops().clear();
 
-                    //TO-DO find a way to just remove null from collections then we can just add it all into the drops rather then looping twice
+                    //TO-DO find a way to just remove null from collections then we can just add it all into the drops rather than looping twice
                     for (ItemStack item : NewItems) {
                         if (item != null) {
                             event.getDrops().add(item);

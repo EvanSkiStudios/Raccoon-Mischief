@@ -30,5 +30,9 @@ public class AddRecipes {
 
         RecipeNewCopperRedstone.NewCopperRedstoneItems(P);
 
+        RecipeCakeSlices.CakeSlice(P);
+
+        RecipeCakeFromSlices.CakeFromSlice(P);
+
     }
 }

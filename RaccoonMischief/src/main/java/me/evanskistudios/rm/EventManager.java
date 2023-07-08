@@ -81,5 +81,9 @@ public class EventManager {
         //Mob Spawning
         ListenerMobSpawn MobSpawnEvent = new ListenerMobSpawn(RaccoonMischief.getPlugin());
         namespace.getServer().getPluginManager().registerEvents(MobSpawnEvent, namespace);
+
+        //Placing
+        ListenerPlayerPlaceItem PlaceItemEvent = new ListenerPlayerPlaceItem();
+        namespace.getServer().getPluginManager().registerEvents(PlaceItemEvent, namespace);
     }
 }

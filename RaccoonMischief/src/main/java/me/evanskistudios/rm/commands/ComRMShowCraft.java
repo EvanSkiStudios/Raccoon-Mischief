@@ -37,7 +37,6 @@ public class ComRMShowCraft implements TabExecutor, Listener {
         }
     }
 
-
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         Plugin namespace = RaccoonMischief.getPlugin();
@@ -90,6 +89,45 @@ public class ComRMShowCraft implements TabExecutor, Listener {
                 MilkBucket, SweetBerries, MilkBucket,
                 Sugar, Egg, Sugar,
                 Wheat, Wheat, Wheat
+            };
+
+            System.arraycopy(Matrix, 0, CraftingMatrix, 0, Matrix.length);
+        }
+
+        if (!found_recipe && crafting_recipe.equalsIgnoreCase("Cake_From_Slices")) {
+
+            found_recipe = true;
+            Inventory_title = "Cake From Slices";
+
+            ItemStack Cake = new ItemStack(Material.CAKE, 1);
+            ItemStack CakeSlice = new ItemStack(Material.SWEET_BERRIES, 7);
+            ItemMeta CakeSliceMeta = CakeSlice.getItemMeta();
+            CakeSliceMeta.setDisplayName(ChatColor.RESET + "Cake Slice");
+            CakeSliceMeta.setCustomModelData(1);
+            CakeSlice.setItemMeta(CakeSliceMeta);
+
+            ItemStack[] Matrix = {
+                    Cake,
+                    CakeSlice,CakeSlice,N,
+                    CakeSlice,CakeSlice,CakeSlice,
+                    N,CakeSlice,CakeSlice
+            };
+
+            System.arraycopy(Matrix, 0, CraftingMatrix, 0, Matrix.length);
+        }
+
+        if (!found_recipe && crafting_recipe.equalsIgnoreCase("Cake_Slice")) {
+
+            found_recipe = true;
+            Inventory_title = "Cake Slice";
+
+            ItemStack Cake = new ItemStack(Material.CAKE, 1);
+            ItemStack CakeSlice = RecipeCakeSlices.getItem();
+
+            ItemStack[] Matrix = {
+                    CakeSlice,
+                    N,N,N,
+                    N,Cake,
             };
 
             System.arraycopy(Matrix, 0, CraftingMatrix, 0, Matrix.length);
@@ -355,6 +393,8 @@ public class ComRMShowCraft implements TabExecutor, Listener {
         if (args.length == 1){
             List<String> ListOItems = Arrays.asList(
                     "Cake",
+                    "Cake_From_Slices",
+                    "Cake_Slice",
                     "Dirt_to_Seeds",
                     "Harder_Armor",
                     "JTE_Apple",
