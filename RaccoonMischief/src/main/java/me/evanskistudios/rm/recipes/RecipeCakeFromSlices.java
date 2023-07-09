@@ -1,22 +1,17 @@
 package me.evanskistudios.rm.recipes;
 
 import org.bukkit.Bukkit;
-import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.NamespacedKey;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.RecipeChoice;
 import org.bukkit.inventory.ShapelessRecipe;
-import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.plugin.Plugin;
 
 public class RecipeCakeFromSlices {
     public static void CakeFromSlice(Plugin namespace) {
-        ItemStack CakeSlice = new ItemStack(Material.SWEET_BERRIES, 7);
-        ItemMeta CakeSliceMeta = CakeSlice.getItemMeta();
-        CakeSliceMeta.setDisplayName(ChatColor.RESET + "Cake Slice");
-        CakeSliceMeta.setCustomModelData(1);
-        CakeSlice.setItemMeta(CakeSliceMeta);
+        ItemStack CakeSlice = RecipeCakeSlices.getItem();
+        CakeSlice.setAmount(1);
         RecipeChoice RCCakeSlice = new RecipeChoice.MaterialChoice.ExactChoice(CakeSlice);
 
         NamespacedKey key = new NamespacedKey(namespace, "CakeFromSlice");

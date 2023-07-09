@@ -23,11 +23,12 @@ Place RaccoonMischief.jar into your plugin folder of your Paper-mc server.
 # Changelog
 See [Latest Features](https://github.com/EvanSkiStudios/Raccoon-Mischief/blob/master/Features/Features_Latest_.md) for full list of features
 
-## Version 2.1.1
+## Version 2.2.0
 
 
 ## Bug Fixes
-* No bugs or No Fixes to be listed
+* Fixed the RekNepZ_HBK message
+* Fixed an issue with lightning not damaging things
 
 ## Config.yml
 * Nothing Changed since last version
@@ -37,11 +38,14 @@ See [Latest Features](https://github.com/EvanSkiStudios/Raccoon-Mischief/blob/ma
 
 ## Vanilla Changes
 Things That change vanilla features
-* Goat Horns now have no cooldown
 * Added the modpack feature of right clicking crops to auto harvest and replace them
+* Cake can be broken or crafted into slices, and the slices can be crafted back into cake
+* Creepers now spawn charged and with random potion effects
+* If a player dies by fire all the food in their inventory becomes cooked
 
 ## Recipes
-* Nothing Changed since last version
+* Cake from Slices > 7 Cake Slices
+* Cake To Slices > 1 Cake
 
 ## Effects
 * The server will make an random player ask RekNepZ_HBK what the room code is, at random times

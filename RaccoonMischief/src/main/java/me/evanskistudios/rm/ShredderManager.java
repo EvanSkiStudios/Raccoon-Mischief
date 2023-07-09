@@ -40,6 +40,7 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.entity.CreatureSpawnEvent;
 import org.bukkit.plugin.Plugin;
 
+import java.util.Arrays;
 import java.util.logging.Level;
 
 import static org.bukkit.Bukkit.getServer;
@@ -57,10 +58,15 @@ public class ShredderManager {
         public void onMobSpawn(CreatureSpawnEvent event) {
             Plugin plugin = RaccoonMischief.getPlugin(RaccoonMischief.class);
 
+            Plugin[] LoadedPlugins = getServer().getPluginManager().getPlugins();
+            System.out.println(Arrays.toString(LoadedPlugins));
+
             String ignore = "" + plugin.getConfig().get("B_IgnorePluginGetInstalledFlag");
             if (ignore.equalsIgnoreCase("False")) {
                 //if plugin isn't installed just disable these things, does not check if flag above is true
-                if (getServer().getPluginManager().getPlugin("ATurtlesTroll") == null) {
+
+
+                if (("ATurtlesTroll") == null) {
                     //plugin.getLogger().log(Level.INFO, "ATurtlesTroll is not installed on server");
                     return;
                 }

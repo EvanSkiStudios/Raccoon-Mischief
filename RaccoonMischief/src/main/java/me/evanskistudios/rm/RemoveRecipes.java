@@ -23,9 +23,8 @@ public class RemoveRecipes {
                     GOLDEN_HELMET, GOLDEN_CHESTPLATE, GOLDEN_LEGGINGS, GOLDEN_BOOTS,
                     DIAMOND_HELMET, DIAMOND_CHESTPLATE, DIAMOND_LEGGINGS, DIAMOND_BOOTS,
                     LIGHT_WEIGHTED_PRESSURE_PLATE, CLOCK, POWERED_RAIL, CAKE
-                    -> {
-                        it.remove();
-                    }
+                    -> it.remove();
+
                 }
             }
         }

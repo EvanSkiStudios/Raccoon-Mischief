@@ -7,6 +7,7 @@ import org.bukkit.NamespacedKey;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.ShapelessRecipe;
 import org.bukkit.inventory.meta.ItemMeta;
+import org.bukkit.persistence.PersistentDataType;
 import org.bukkit.plugin.Plugin;
 
 public class RecipeCakeSlices {
@@ -16,6 +17,9 @@ public class RecipeCakeSlices {
         ItemMeta CakeSliceMeta = CakeSlice.getItemMeta();
         CakeSliceMeta.setDisplayName(ChatColor.RESET + "Cake Slice");
         CakeSliceMeta.setCustomModelData(1);
+        NamespacedKey ItemKey = new NamespacedKey(namespace, "is_CakeSlice");
+        CakeSliceMeta.getPersistentDataContainer().set(ItemKey, PersistentDataType.DOUBLE, 1.0);
+
         CakeSlice.setItemMeta(CakeSliceMeta);
 
         NamespacedKey key = new NamespacedKey(namespace, "CakeSlice");

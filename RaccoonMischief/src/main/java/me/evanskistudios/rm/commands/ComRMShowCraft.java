@@ -100,11 +100,8 @@ public class ComRMShowCraft implements TabExecutor, Listener {
             Inventory_title = "Cake From Slices";
 
             ItemStack Cake = new ItemStack(Material.CAKE, 1);
-            ItemStack CakeSlice = new ItemStack(Material.SWEET_BERRIES, 7);
-            ItemMeta CakeSliceMeta = CakeSlice.getItemMeta();
-            CakeSliceMeta.setDisplayName(ChatColor.RESET + "Cake Slice");
-            CakeSliceMeta.setCustomModelData(1);
-            CakeSlice.setItemMeta(CakeSliceMeta);
+            ItemStack CakeSlice = RecipeCakeSlices.getItem();
+            CakeSlice.setAmount(1);
 
             ItemStack[] Matrix = {
                     Cake,

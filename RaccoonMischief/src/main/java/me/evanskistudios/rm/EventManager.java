@@ -85,5 +85,9 @@ public class EventManager {
         //Placing
         ListenerPlayerPlaceItem PlaceItemEvent = new ListenerPlayerPlaceItem();
         namespace.getServer().getPluginManager().registerEvents(PlaceItemEvent, namespace);
+
+        //Cake
+        ListenerPlayerBreakBlock BreakBlockEvent = new ListenerPlayerBreakBlock();
+        namespace.getServer().getPluginManager().registerEvents(BreakBlockEvent, namespace);
     }
 }

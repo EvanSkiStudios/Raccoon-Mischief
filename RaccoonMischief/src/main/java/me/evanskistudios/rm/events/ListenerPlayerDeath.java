@@ -34,6 +34,7 @@ public class ListenerPlayerDeath implements Listener{
     public DeathType DeathCause = DeathType.Normal;
     @EventHandler
     public void onDamage(EntityDamageByEntityEvent event) {
+        //zombie, creeper, skeleton
         if (event.isCancelled()) return;
 
         //Entity killerOutput = event.getDamager();
@@ -68,6 +69,7 @@ public class ListenerPlayerDeath implements Listener{
     }
     @EventHandler
     public void onDamageBlock(EntityDamageByBlockEvent event) {
+        //Sweet berry, magma
         if (event.isCancelled()) return;
 
         //Block killerOutput = event.getDamager();
@@ -87,6 +89,7 @@ public class ListenerPlayerDeath implements Listener{
 
     @EventHandler
     public void onHurt(EntityDamageEvent event) {
+        //Fire Drowning Freezing
         if (event.isCancelled()) return;
 
         Entity entity = event.getEntity();
@@ -112,8 +115,8 @@ public class ListenerPlayerDeath implements Listener{
     public void onDeath(PlayerDeathEvent event) {
         Player player = event.getEntity();
 
-        Plugin namespace = RaccoonMischief.getPlugin();
-        namespace.getLogger().log(Level.INFO, "" + DeathCause);
+        // Plugin namespace = RaccoonMischief.getPlugin();
+        // namespace.getLogger().log(Level.INFO, "" + DeathCause);
 
         //players Drop Strange meat
         ItemStack Strange_meat = new ItemStack(Material.BEEF);
