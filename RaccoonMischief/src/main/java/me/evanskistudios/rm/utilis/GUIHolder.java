@@ -1,4 +1,4 @@
-package me.evanskistudios.rm.utilis;
+package me.evanskistudios.rm.Utilis;
 
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.InventoryHolder;

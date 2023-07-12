@@ -1,6 +1,6 @@
-package me.evanskistudios.rm.events;
+package me.evanskistudios.rm.Listeners;
 
-import me.evanskistudios.rm.enums.InvSlot;
+import me.evanskistudios.rm.Enums.InvSlot;
 import org.bukkit.entity.HumanEntity;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;

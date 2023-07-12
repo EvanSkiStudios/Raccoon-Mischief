@@ -1,4 +1,4 @@
-package me.evanskistudios.rm.utilis;
+package me.evanskistudios.rm.Utilis;
 
 import java.util.Random;
 

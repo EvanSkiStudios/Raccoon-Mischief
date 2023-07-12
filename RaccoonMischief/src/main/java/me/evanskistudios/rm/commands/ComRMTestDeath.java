@@ -1,4 +1,4 @@
-package me.evanskistudios.rm.commands;
+package me.evanskistudios.rm.Commands;
 
 import org.bukkit.ChatColor;
 import org.bukkit.command.*;

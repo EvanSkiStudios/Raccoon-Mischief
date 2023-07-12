@@ -1,7 +1,7 @@
-package me.evanskistudios.rm.commands;
+package me.evanskistudios.rm.Commands;
 
-import me.evanskistudios.rm.items.ItemUpgradeShard;
-import me.evanskistudios.rm.recipes.*;
+import me.evanskistudios.rm.Items.ItemUpgradeShard;
+import me.evanskistudios.rm.Recipes.*;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.command.Command;

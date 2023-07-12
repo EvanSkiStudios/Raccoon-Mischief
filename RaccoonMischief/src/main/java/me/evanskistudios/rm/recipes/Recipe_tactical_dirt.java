@@ -1,6 +1,5 @@
-package me.evanskistudios.rm.recipes;
+package me.evanskistudios.rm.Recipes;
 
-import me.evanskistudios.rm.RaccoonMischief;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;

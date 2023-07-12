@@ -1,4 +1,4 @@
-package me.evanskistudios.rm.enums;
+package me.evanskistudios.rm.Enums;
 
 public enum InvSlot {
     Hotbar0, Hotbar1, Hotbar2, Hotbar3, Hotbar4, Hotbar5, Hotbar6, Hotbar7, Hotbar8,

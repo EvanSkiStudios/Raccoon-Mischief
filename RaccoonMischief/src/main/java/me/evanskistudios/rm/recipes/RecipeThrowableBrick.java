@@ -1,15 +1,11 @@
-package me.evanskistudios.rm.recipes;
+package me.evanskistudios.rm.Recipes;
 
 import org.bukkit.*;
-import org.bukkit.attribute.Attribute;
-import org.bukkit.attribute.AttributeModifier;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.ShapelessRecipe;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.persistence.PersistentDataType;
 import org.bukkit.plugin.Plugin;
-
-import java.util.List;
 
 public class RecipeThrowableBrick {
 

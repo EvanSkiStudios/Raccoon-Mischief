@@ -1,4 +1,4 @@
-package me.evanskistudios.rm.utilis;
+package me.evanskistudios.rm.Utilis;
 
 import me.evanskistudios.rm.RaccoonMischief;
 import org.bukkit.Material;

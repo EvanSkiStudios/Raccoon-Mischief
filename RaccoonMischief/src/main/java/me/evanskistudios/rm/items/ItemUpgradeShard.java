@@ -1,7 +1,7 @@
-package me.evanskistudios.rm.items;
+package me.evanskistudios.rm.Items;
 
 import me.evanskistudios.rm.RaccoonMischief;
-import me.evanskistudios.rm.utilis.Glow;
+import me.evanskistudios.rm.Utilis.Glow;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.NamespacedKey;

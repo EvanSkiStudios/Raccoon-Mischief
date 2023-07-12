@@ -1,4 +1,4 @@
-package me.evanskistudios.rm.events;
+package me.evanskistudios.rm.Listeners;
 
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;

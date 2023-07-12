@@ -1,6 +1,6 @@
-package me.evanskistudios.rm.events;
+package me.evanskistudios.rm.Listeners;
 
-import me.evanskistudios.rm.EnchantmentManager;
+import me.evanskistudios.rm.EnchantManager;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.ItemDespawnEvent;
@@ -15,7 +15,7 @@ public class ListenerItemDespawn implements Listener{
         ItemMeta ItemMeta = Item.getItemMeta();
         if (ItemMeta != null) {
             //if soulbound item is somehow lying around, prevent it from despawning
-            if (ItemMeta.hasEnchant(EnchantmentManager.SOULBOUND)) {
+            if (ItemMeta.hasEnchant(EnchantManager.SOULBOUND)) {
                 event.setCancelled(true);
             }
         }

@@ -1,4 +1,4 @@
-package me.evanskistudios.rm.tasks;
+package me.evanskistudios.rm.Tasks;
 
 import me.evanskistudios.rm.RaccoonMischief;
 import org.bukkit.ChatColor;

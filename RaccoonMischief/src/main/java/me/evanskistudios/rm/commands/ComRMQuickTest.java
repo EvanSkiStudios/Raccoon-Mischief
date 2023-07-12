@@ -1,15 +1,9 @@
-package me.evanskistudios.rm.commands;
+package me.evanskistudios.rm.Commands;
 
 import org.bukkit.ChatColor;
 
 import org.bukkit.command.*;
 import org.bukkit.entity.Player;
-
-import org.bukkit.plugin.Plugin;
-
-import java.util.Arrays;
-
-import static org.bukkit.Bukkit.getServer;
 
 public class ComRMQuickTest implements CommandExecutor {
         @Override

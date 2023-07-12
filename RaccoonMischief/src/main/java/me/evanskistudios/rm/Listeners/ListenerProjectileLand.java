@@ -1,4 +1,4 @@
-package me.evanskistudios.rm.events;
+package me.evanskistudios.rm.Listeners;
 
 import me.evanskistudios.rm.RaccoonMischief;
 import org.bukkit.Material;
@@ -17,7 +17,7 @@ import org.bukkit.persistence.PersistentDataType;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.projectiles.ProjectileSource;
 
-import static me.evanskistudios.rm.utilis.UtilityMethods.MCHearts;
+import static me.evanskistudios.rm.Utilis.UtilityMethods.MCHearts;
 
 
 public class ListenerProjectileLand implements Listener {

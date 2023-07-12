@@ -1,7 +1,7 @@
-package me.evanskistudios.rm.events;
+package me.evanskistudios.rm.Listeners;
 
 import me.evanskistudios.rm.RaccoonMischief;
-import me.evanskistudios.rm.tasks.TaskRemoveCoolDown;
+import me.evanskistudios.rm.Tasks.TaskRemoveCoolDown;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;

@@ -1,10 +1,10 @@
-package me.evanskistudios.rm.commands;
+package me.evanskistudios.rm.Commands;
 
 import me.evanskistudios.rm.RaccoonMischief;
-import me.evanskistudios.rm.items.ItemUpgradeShard;
-import me.evanskistudios.rm.recipes.*;
-import me.evanskistudios.rm.utilis.GUIHolder;
-import me.evanskistudios.rm.utilis.Glow;
+import me.evanskistudios.rm.Items.ItemUpgradeShard;
+import me.evanskistudios.rm.Recipes.*;
+import me.evanskistudios.rm.Utilis.GUIHolder;
+import me.evanskistudios.rm.Utilis.Glow;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;

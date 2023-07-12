@@ -1,4 +1,4 @@
-package me.evanskistudios.rm.events;
+package me.evanskistudios.rm.Listeners;
 
 import me.evanskistudios.rm.RaccoonMischief;
 import org.bukkit.NamespacedKey;

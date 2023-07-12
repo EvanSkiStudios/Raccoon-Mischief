@@ -1,7 +1,6 @@
 package me.evanskistudios.rm;
 
-import me.evanskistudios.rm.commands.*;
-import org.bukkit.plugin.Plugin;
+import me.evanskistudios.rm.Commands.*;
 
 import java.util.Objects;
 

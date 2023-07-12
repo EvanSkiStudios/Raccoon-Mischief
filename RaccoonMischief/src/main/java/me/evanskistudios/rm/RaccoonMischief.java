@@ -1,7 +1,7 @@
 package me.evanskistudios.rm;
 
 import me.evanskistudios.rm.NMS.NMSManager;
-import me.evanskistudios.rm.utilis.Glow;
+import me.evanskistudios.rm.Utilis.Glow;
 import org.bukkit.plugin.java.JavaPlugin;
 
 
@@ -45,7 +45,7 @@ public final class RaccoonMischief extends JavaPlugin{
         AddRecipes.Recipes();
 
         //Register Events
-        EventManager.Events();
+        ListenerManager.Events();
 
         //Register Commands
         ComManager.commands();
@@ -60,7 +60,7 @@ public final class RaccoonMischief extends JavaPlugin{
         NMSManager.NMS();
 
         //Custom Enchants
-        EnchantmentManager.Register();
+        EnchantManager.Register();
 
         //Scoreboard Manager
         ScoreboardsManager.Events();

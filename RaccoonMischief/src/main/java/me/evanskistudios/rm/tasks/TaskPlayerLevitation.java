@@ -1,8 +1,8 @@
-package me.evanskistudios.rm.tasks;
+package me.evanskistudios.rm.Tasks;
 
-import me.evanskistudios.rm.EnchantmentManager;
+import me.evanskistudios.rm.EnchantManager;
 import me.evanskistudios.rm.RaccoonMischief;
-import me.evanskistudios.rm.enums.InvSlot;
+import me.evanskistudios.rm.Enums.InvSlot;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
@@ -10,9 +10,7 @@ import org.bukkit.potion.PotionEffectType;
 import org.bukkit.scheduler.BukkitRunnable;
 
 import java.util.HashMap;
-import java.util.LinkedList;
 import java.util.Random;
-import java.util.UUID;
 
 public class TaskPlayerLevitation extends BukkitRunnable {
     RaccoonMischief plugin;
@@ -40,7 +38,7 @@ public class TaskPlayerLevitation extends BukkitRunnable {
                     boolean BootsHasHeavyStep = false;
                     ItemMeta PlayerArmorBoots_Meta = PlayerArmorBoots.getItemMeta();
                     if (PlayerArmorBoots_Meta != null) {
-                        BootsHasHeavyStep = PlayerArmorBoots_Meta.hasEnchant(EnchantmentManager.HEAVYSTEP);
+                        BootsHasHeavyStep = PlayerArmorBoots_Meta.hasEnchant(EnchantManager.HEAVYSTEP);
                     }
 
                     if (BootsHasHeavyStep){

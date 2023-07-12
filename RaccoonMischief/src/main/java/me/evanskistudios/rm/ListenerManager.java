@@ -1,12 +1,12 @@
 package me.evanskistudios.rm;
-import me.evanskistudios.rm.commands.ComRMShowCraft;
-import me.evanskistudios.rm.enchantevents.*;
-import me.evanskistudios.rm.events.*;
+import me.evanskistudios.rm.Commands.ComRMShowCraft;
+import me.evanskistudios.rm.EnchantListeners.*;
+import me.evanskistudios.rm.Listeners.*;
 
-import me.evanskistudios.rm.tasks.TaskRekkoRoomCode;
+import me.evanskistudios.rm.Tasks.TaskRekkoRoomCode;
 import org.bukkit.plugin.Plugin;
 
-public class EventManager {
+public class ListenerManager {
     public static void Events() {
         Plugin namespace = RaccoonMischief.getPlugin();
         
@@ -89,5 +89,9 @@ public class EventManager {
         //Cake
         ListenerPlayerBreakBlock BreakBlockEvent = new ListenerPlayerBreakBlock();
         namespace.getServer().getPluginManager().registerEvents(BreakBlockEvent, namespace);
+
+        //PlayerRespawnPotionEffects
+        ListenerPlayerRespawn PlayerRespawnEvent = new ListenerPlayerRespawn();
+        namespace.getServer().getPluginManager().registerEvents(PlayerRespawnEvent, namespace);
     }
 }

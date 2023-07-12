@@ -59,7 +59,7 @@ public class ShredderManager {
             Plugin plugin = RaccoonMischief.getPlugin(RaccoonMischief.class);
 
             Plugin[] LoadedPlugins = getServer().getPluginManager().getPlugins();
-            System.out.println(Arrays.toString(LoadedPlugins));
+            //System.out.println(Arrays.toString(LoadedPlugins));
 
             String ignore = "" + plugin.getConfig().get("B_IgnorePluginGetInstalledFlag");
             if (ignore.equalsIgnoreCase("False")) {

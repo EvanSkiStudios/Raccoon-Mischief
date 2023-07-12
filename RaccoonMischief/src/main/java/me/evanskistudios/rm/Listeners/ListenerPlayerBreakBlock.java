@@ -1,6 +1,6 @@
-package me.evanskistudios.rm.events;
+package me.evanskistudios.rm.Listeners;
 
-import me.evanskistudios.rm.recipes.RecipeCakeSlices;
+import me.evanskistudios.rm.Recipes.RecipeCakeSlices;
 import org.bukkit.GameMode;
 import org.bukkit.Material;
 import org.bukkit.block.Block;

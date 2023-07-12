@@ -1,7 +1,6 @@
-package me.evanskistudios.rm.recipes;
+package me.evanskistudios.rm.Recipes;
 
-import me.evanskistudios.rm.utilis.Glow;
-import org.apache.commons.lang.ObjectUtils;
+import me.evanskistudios.rm.Utilis.Glow;
 import org.bukkit.*;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.ShapelessRecipe;

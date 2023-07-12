@@ -1,4 +1,4 @@
-package me.evanskistudios.rm.events;
+package me.evanskistudios.rm.Listeners;
 
 import me.evanskistudios.rm.RaccoonMischief;
 import org.bukkit.entity.Creeper;
@@ -10,7 +10,7 @@ import org.bukkit.event.entity.EntityDamageEvent;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
 
-import static me.evanskistudios.rm.utilis.UtilityMethods.Choose;
+import static me.evanskistudios.rm.Utilis.UtilityMethods.Choose;
 
 public class ListenerMobSpawn implements Listener {
     RaccoonMischief plugin;

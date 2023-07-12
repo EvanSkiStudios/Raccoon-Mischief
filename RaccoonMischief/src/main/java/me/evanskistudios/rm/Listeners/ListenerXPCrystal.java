@@ -1,7 +1,7 @@
-package me.evanskistudios.rm.events;
+package me.evanskistudios.rm.Listeners;
 
 import me.evanskistudios.rm.RaccoonMischief;
-import me.evanskistudios.rm.tasks.TaskRemoveCoolDown;
+import me.evanskistudios.rm.Tasks.TaskRemoveCoolDown;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.NamespacedKey;
@@ -17,7 +17,7 @@ import org.bukkit.persistence.PersistentDataType;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.scheduler.BukkitTask;
 
-import static me.evanskistudios.rm.utilis.UtilityMethods.Choose;
+import static me.evanskistudios.rm.Utilis.UtilityMethods.Choose;
 
 
 public class ListenerXPCrystal implements Listener {

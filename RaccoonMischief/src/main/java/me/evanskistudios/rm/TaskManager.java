@@ -1,6 +1,6 @@
 package me.evanskistudios.rm;
 
-import me.evanskistudios.rm.tasks.*;
+import me.evanskistudios.rm.Tasks.*;
 import org.bukkit.scheduler.BukkitTask;
 
 public class TaskManager {

@@ -1,5 +1,5 @@
 package me.evanskistudios.rm;
-import me.evanskistudios.rm.recipes.*;
+import me.evanskistudios.rm.Recipes.*;
 
 import org.bukkit.plugin.Plugin;
 

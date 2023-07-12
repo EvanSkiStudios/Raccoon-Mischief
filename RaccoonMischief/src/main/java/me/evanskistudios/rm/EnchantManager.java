@@ -1,13 +1,13 @@
 package me.evanskistudios.rm;
 
-import me.evanskistudios.rm.utilis.EnchantmentWrapper;
+import me.evanskistudios.rm.Utilis.EnchantmentWrapper;
 import org.bukkit.enchantments.Enchantment;
 
 import java.lang.reflect.Field;
 import java.util.Arrays;
 import java.util.stream.Collectors;
 
-public class EnchantmentManager {
+public class EnchantManager {
     public static Enchantment[] EnchantTypes;
     public static Enchantment[] getEnchants() {
         return EnchantTypes;

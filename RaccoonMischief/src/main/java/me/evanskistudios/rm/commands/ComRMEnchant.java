@@ -1,13 +1,12 @@
-package me.evanskistudios.rm.commands;
+package me.evanskistudios.rm.Commands;
 
-import me.evanskistudios.rm.EnchantmentManager;
+import me.evanskistudios.rm.EnchantManager;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.command.TabExecutor;
 import org.bukkit.enchantments.Enchantment;
-import org.bukkit.enchantments.EnchantmentWrapper;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
@@ -55,7 +54,7 @@ public class ComRMEnchant implements TabExecutor {
         String Enchantment = args[0];
 
         List<String> ListOfEnchant = EnchantList;
-        Enchantment[] Enchants = EnchantmentManager.getEnchants();
+        Enchantment[] Enchants = EnchantManager.getEnchants();
 
         Enchantment Enchant = null;
 
@@ -81,7 +80,7 @@ public class ComRMEnchant implements TabExecutor {
             return true;
         }
 
-        String EnchantName = EnchantmentManager.getEnchantName(Enchantment);
+        String EnchantName = EnchantManager.getEnchantName(Enchantment);
 
         boolean IsEnchant = Arrays.stream(org.bukkit.enchantments.Enchantment.values()).collect(Collectors.toList()).contains(Enchant);
         if (IsEnchant) {

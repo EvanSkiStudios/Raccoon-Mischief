@@ -1,4 +1,4 @@
-package me.evanskistudios.rm.recipes;
+package me.evanskistudios.rm.Recipes;
 
 
 import org.bukkit.Bukkit;
