@@ -4,7 +4,8 @@ This is an Minecraft plugin for Spigot, that adds new features to vanilla minecr
 This is a companion project to [Mercerenies' A-Turtles-Troll](https://github.com/Mercerenies/a-turtles-troll).   
 Neither directly depends on the other, but they are designed with each other in mind.
 
-(Probably won't understand without the resourcepack, You can get a public copy here [Textile](https://github.com/EvanSkiStudios/Textile))
+(Probably won't understand without the resourcepack,   
+You can get a public copy here (Archived) [Textile](https://github.com/EvanSkiStudios/Textile))
 
 ## Acknowledgments
 Raccoon Mischief is written and maintained by Evanski. It is
@@ -25,10 +26,10 @@ See [Latest Features](https://github.com/EvanSkiStudios/Raccoon-Mischief/blob/ma
 
 ## Version 2.2.0
 
-
 ## Bug Fixes
 * Fixed the RekNepZ_HBK message
 * Fixed an issue with lightning not damaging things
+* Fixed an issue with creepers not taking damage
 
 ## Config.yml
 * Nothing Changed since last version
@@ -41,6 +42,7 @@ Things That change vanilla features
 * Added the modpack feature of right clicking crops to auto harvest and replace them
 * Cake can be broken or crafted into slices, and the slices can be crafted back into cake
 * Creepers now spawn charged and with random potion effects
+* Creepers will now explode if they take any damage at all
 * If a player dies by fire all the food in their inventory becomes cooked
 
 ## Recipes
@@ -49,6 +51,11 @@ Things That change vanilla features
 
 ## Effects
 * The server will make an random player ask RekNepZ_HBK what the room code is, at random times
+* When you respawn you have an 1/5 chance to trigger a random effect
+* Respawn effect, plugin will show you the demo screen
+* Respawn effect, plugin will kick you from the game
+* Respawn effect, plugin will place a chicken on your head
+* Respawn effect, plguin will teleport you to another player
 
 ## Enchantments
 * Nothing Changed since last version

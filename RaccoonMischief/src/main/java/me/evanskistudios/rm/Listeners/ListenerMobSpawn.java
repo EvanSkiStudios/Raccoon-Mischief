@@ -40,14 +40,17 @@ public class ListenerMobSpawn implements Listener {
         if (DamagedEntity instanceof Creeper Crep){
             EntityDamageEvent.DamageCause DamageCause = event.getCause();
 
-            if ( (DamageCause != EntityDamageEvent.DamageCause.LIGHTNING) && (DamageCause != EntityDamageEvent.DamageCause.FIRE)){
+            // accidentally had this inverted, so it only let lightning and fire damage creepers
+            if ( (DamageCause == EntityDamageEvent.DamageCause.LIGHTNING) || (DamageCause == EntityDamageEvent.DamageCause.FIRE)){
                 event.setCancelled(true);
             }
-            if (DamageCause == EntityDamageEvent.DamageCause.ENTITY_EXPLOSION){
+            // Make creepers always explode
+            // if (DamageCause == EntityDamageEvent.DamageCause.ENTITY_EXPLOSION){
+                Crep.setExplosionRadius(12);
                 Crep.setMaxFuseTicks(1);
                 Crep.setFuseTicks(1);
                 Crep.ignite();
-            }
+            // }
         }
     }
 }
