@@ -40,6 +40,7 @@ public class ListenerManager {
         registerEvent( new ListenerPlayerBreakBlock() ); //Cake
         registerEvent( new ListenerPlayerRespawn() ); //PlayerRespawnPotionEffects
         registerEvent( new ListenerEntitySpawn() ); //Entity spawn
+        registerEvent( new ListenerPlayerSneak() ); //player sneak
     }
 }
 
