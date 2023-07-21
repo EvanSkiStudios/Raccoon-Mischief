@@ -7,7 +7,7 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.ShapelessRecipe;
 import org.bukkit.plugin.Plugin;
 
-public class Recipe_unmetadata_cookies {
+public class RecipeUnMetaDataCookies {
     public static ItemStack Item;
     public static void NoMDCookies(Plugin namespace) {
         ItemStack Cookie = new ItemStack(Material.COOKIE, 1);

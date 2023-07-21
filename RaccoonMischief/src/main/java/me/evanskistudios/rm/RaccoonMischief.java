@@ -1,6 +1,5 @@
 package me.evanskistudios.rm;
 
-import me.evanskistudios.rm.NMS.NMSManager;
 import me.evanskistudios.rm.Utilis.Glow;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -38,11 +37,8 @@ public final class RaccoonMischief extends JavaPlugin{
         //Register utilities
         Glow.registerGlow();
 
-        //Remove recipes I want to remove
-        RemoveRecipes.Recipes();
-
         //Add my recipes
-        AddRecipes.Recipes();
+        RecipeManager.Recipes();
 
         //Register Events
         ListenerManager.Events();
@@ -55,9 +51,6 @@ public final class RaccoonMischief extends JavaPlugin{
 
         //Shredder UnMercer
         ShredderManager.ShredderEnable();
-
-        //NMS
-        NMSManager.NMS();
 
         //Custom Enchants
         EnchantManager.Register();

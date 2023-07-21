@@ -13,7 +13,7 @@ import org.bukkit.plugin.Plugin;
 
 //import java.util.List;
 
-public class Recipe_tactical_dirt {
+public class RecipeTacticalDirt {
 
         public static ItemStack Item;
 

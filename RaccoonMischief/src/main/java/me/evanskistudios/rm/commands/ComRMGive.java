@@ -91,7 +91,7 @@ public class ComRMGive implements TabExecutor {
         }
 
         if (Item_arg.equalsIgnoreCase("Tactical_Dirt")){
-            RequestedItem = Recipe_tactical_dirt.getItem();
+            RequestedItem = RecipeTacticalDirt.getItem();
             FoundItem = true;
         }
 

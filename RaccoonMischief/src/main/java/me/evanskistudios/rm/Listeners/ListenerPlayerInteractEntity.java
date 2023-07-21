@@ -17,16 +17,20 @@ import static org.bukkit.entity.EntityType.*;
 enum RC_EVENT{
     NORMAL,
     MILK,
-    SNOW,
+    SADDLE,
+    SNOW
 }
 
 public class ListenerPlayerInteractEntity implements Listener {
 
-    public static final List<EntityType> MilkableEntity = Arrays.asList(PLAYER, LLAMA);
+    private static final List<EntityType> MilkableEntity = Arrays.asList(PLAYER, LLAMA, SQUID);
+    private static final List<EntityType> RideableEntity = Arrays.asList(PIG, STRIDER);
 
     @EventHandler
     public void onUseEntity(PlayerInteractEntityEvent event) {
         if (event.isCancelled()) return;
+
+        EntityType interactedEntity = null;
 
         //Event fires for both hands
         if (! (event.getHand().equals(EquipmentSlot.HAND)) ) return;
@@ -43,6 +47,33 @@ public class ListenerPlayerInteractEntity implements Listener {
 
         if (MilkableEntity.contains(RightClickedEntityType)){
             ENTITY_EVENT = RC_EVENT.MILK;
+        }
+
+//SNEAKING
+        Pig interactedEntityPig = null;
+        Strider interactedEntityStrider = null;
+        if (player.isSneaking()) {
+            if (RideableEntity.contains(RightClickedEntityType)) {
+                if (RightClickedEntity instanceof Pig RightClickedEntityCast) {
+                    if (RightClickedEntityCast.hasSaddle()) {
+                        interactedEntityPig = RightClickedEntityCast;
+                        ENTITY_EVENT = RC_EVENT.SADDLE;
+                    }
+                }
+
+                if (RightClickedEntity instanceof Strider RightClickedEntityCast) {
+                    if (RightClickedEntityCast.hasSaddle()) {
+                        interactedEntityStrider = RightClickedEntityCast;
+                        ENTITY_EVENT = RC_EVENT.SADDLE;
+                    }
+                }
+            }
+
+        }
+//END
+        if (ENTITY_EVENT == RC_EVENT.NORMAL) {
+            //basically at this point we arent doing anything so just exit and let MC deal with it
+            return;
         }
 
         event.setCancelled(true); //stop normal event and do our own thing
@@ -71,6 +102,24 @@ public class ListenerPlayerInteractEntity implements Listener {
                 }
             }
 
+            case SADDLE -> {
+                ItemStack HeldItem = player.getInventory().getItemInMainHand();
+                Material HeldItemType = HeldItem.getType();
+
+                if (HeldItemType == Material.AIR) {
+                    if (interactedEntityPig != null){
+                        interactedEntityPig.setSaddle(false);
+                        player.playSound(player.getLocation(), "minecraft:entity.pig.saddle", 1.0f, 1.0f);
+                    }
+                    if (interactedEntityStrider != null){
+                        interactedEntityStrider.setSaddle(false);
+                        player.playSound(player.getLocation(), "minecraft:entity.strider.saddle", 1.0f, 1.0f);
+                    }
+                }
+                ItemStack Saddle = new ItemStack(Material.SADDLE, 1);
+                player.getInventory().setItemInMainHand(Saddle);
+            }
+
             case SNOW -> {
                 //if Snow
                 ItemStack HeldItem = player.getInventory().getItemInMainHand();
@@ -92,6 +141,5 @@ public class ListenerPlayerInteractEntity implements Listener {
             }
 
         }
-
     }
 }

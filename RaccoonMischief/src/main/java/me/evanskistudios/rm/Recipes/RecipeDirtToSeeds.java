@@ -6,7 +6,7 @@ import org.bukkit.NamespacedKey;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.ShapelessRecipe;
 import org.bukkit.plugin.Plugin;
-public class Recipe_dirt_to_seeds {
+public class RecipeDirtToSeeds {
     public static NamespacedKey Item_Key;
 
     public static void DirtSeeds(Plugin namespace) {

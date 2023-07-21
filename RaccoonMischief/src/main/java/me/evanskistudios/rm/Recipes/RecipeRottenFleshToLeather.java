@@ -6,7 +6,7 @@ import org.bukkit.NamespacedKey;
 import org.bukkit.inventory.*;
 import org.bukkit.plugin.Plugin;
 
-public class Recipe_RottenFlesh_to_leather {
+public class RecipeRottenFleshToLeather {
     public static void RotLeather(Plugin namespace) {
         ItemStack RottenLeather = new ItemStack(Material.LEATHER, 1);
         Material Mat_RottenFlesh = Material.ROTTEN_FLESH;

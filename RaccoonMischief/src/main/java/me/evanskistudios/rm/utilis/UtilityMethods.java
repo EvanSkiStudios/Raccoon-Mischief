@@ -1,5 +1,7 @@
 package me.evanskistudios.rm.Utilis;
 
+import me.evanskistudios.rm.RaccoonMischief;
+
 import java.util.Random;
 
 public class UtilityMethods {
@@ -15,6 +17,12 @@ public class UtilityMethods {
     public static double MCHearts(double Hearts){
         return (Hearts / 0.5);
         //Returns the amount of hearts (20.0 is 10 hearts)
+    }
+
+    public static Object RandomPlayer(){
+        Object[] PlayersOnline = RaccoonMischief.getPlugin().getServer().getOnlinePlayers().toArray();
+
+        return ( Choose(PlayersOnline) ) ;
     }
 
 }

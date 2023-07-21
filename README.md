@@ -30,6 +30,8 @@ See [Latest Features](https://github.com/EvanSkiStudios/Raccoon-Mischief/blob/ma
 * Fixed the RekNepZ_HBK message
 * Fixed an issue with lightning not damaging things
 * Fixed an issue with creepers not taking damage
+* Fixed an issue with interacting with certian entites
+* - Removed version 2.1.0
 
 ## Config.yml
 * Nothing Changed since last version
@@ -44,6 +46,9 @@ Things That change vanilla features
 * Creepers now spawn charged and with random potion effects
 * Creepers will now explode if they take any damage at all
 * If a player dies by fire all the food in their inventory becomes cooked
+* [Squids can be milked again like in beta 1.2](https://youtu.be/6MsVOvMp-E8)
+* If you sneak right click a saddled Pif or Strider, it will un-saddle them
+* You can cook Red mushrooms in a furnace to make Red Dye
 
 ## Recipes
 * Cake from Slices > 7 Cake Slices

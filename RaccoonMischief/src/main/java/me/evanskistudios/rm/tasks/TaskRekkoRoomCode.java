@@ -7,9 +7,9 @@ import org.bukkit.event.Listener;
 import org.bukkit.scheduler.BukkitRunnable;
 import org.bukkit.scheduler.BukkitTask;
 
-import java.util.ArrayList;
 import java.util.Collection;
-import java.util.Random;
+
+import static me.evanskistudios.rm.Utilis.UtilityMethods.RandomPlayer;
 
 public class TaskRekkoRoomCode extends BukkitRunnable implements Listener {
 
@@ -32,8 +32,6 @@ public class TaskRekkoRoomCode extends BukkitRunnable implements Listener {
         String Fake_Player;
         Player randomPlayer;
 
-        ArrayList<Player> playersArray = new ArrayList<>();
-
         Collection<? extends Player> PlayersOnline = RaccoonMischief.getPlugin().getServer().getOnlinePlayers();
 
         if (PlayersOnline.isEmpty()){
@@ -45,15 +43,10 @@ public class TaskRekkoRoomCode extends BukkitRunnable implements Listener {
             //get rekko
             if (p.getDisplayName().equals(RekkoName)){
                 RekkoPlayerRef = p;
-            }else{
-                playersArray.add(p);
             }
         }
 
-        Random random = new Random();
-        int max= (playersArray.size() - 1), min=0;
-        int index = random.nextInt(max - min + 1) + min;
-        randomPlayer = playersArray.get(index);
+        randomPlayer = (Player) RandomPlayer();
         Fake_Player = randomPlayer.getDisplayName();
 
         if (RekkoPlayerRef == null){

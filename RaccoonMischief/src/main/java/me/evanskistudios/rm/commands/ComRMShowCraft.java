@@ -269,7 +269,7 @@ public class ComRMShowCraft implements TabExecutor, Listener {
 
             ItemStack D = new ItemStack(Material.DIRT, 1);
             ItemStack S = new ItemStack(Material.WHEAT_SEEDS, 1);
-            ItemStack Tact_Dirt = Recipe_tactical_dirt.getItem();
+            ItemStack Tact_Dirt = RecipeTacticalDirt.getItem();
 
             ItemStack[] Matrix = {
                     Tact_Dirt,
@@ -302,7 +302,7 @@ public class ComRMShowCraft implements TabExecutor, Listener {
             Inventory_title = "Un-MetaData Cookies";
 
             ItemStack C = new ItemStack(Material.COOKIE, 1);
-            ItemStack Cookie = Recipe_unmetadata_cookies.getItem();
+            ItemStack Cookie = RecipeUnMetaDataCookies.getItem();
             ItemMeta Cookie_Meta = Cookie.getItemMeta();
             Cookie_Meta.setDisplayName(ChatColor.RESET+""+ChatColor.GREEN+"Removes Meta given to cookies from A-Turtles-Troll");
 

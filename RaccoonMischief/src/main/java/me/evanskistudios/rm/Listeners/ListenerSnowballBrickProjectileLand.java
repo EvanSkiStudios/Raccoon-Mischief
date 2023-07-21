@@ -20,7 +20,7 @@ import org.bukkit.projectiles.ProjectileSource;
 import static me.evanskistudios.rm.Utilis.UtilityMethods.MCHearts;
 
 
-public class ListenerProjectileLand implements Listener {
+public class ListenerSnowballBrickProjectileLand implements Listener {
     @EventHandler
     public void onLand(ProjectileHitEvent event) {
         if (event.isCancelled()) return;
