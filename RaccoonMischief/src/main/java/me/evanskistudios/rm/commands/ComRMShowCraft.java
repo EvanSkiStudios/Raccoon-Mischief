@@ -1,10 +1,10 @@
 package me.evanskistudios.rm.Commands;
 
-import me.evanskistudios.rm.RaccoonMischief;
 import me.evanskistudios.rm.Items.ItemUpgradeShard;
 import me.evanskistudios.rm.Recipes.*;
-import me.evanskistudios.rm.Utilis.GUIHolder;
 import me.evanskistudios.rm.Utilis.Glow;
+import me.evanskistudios.rm.RaccoonMischief;
+import me.evanskistudios.rm.Utilis.GUIHolder;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
@@ -25,57 +25,21 @@ import java.util.Arrays;
 import java.util.List;
 
 public class ComRMShowCraft implements TabExecutor, Listener {
+    public static class InventoryGUIs {
+        private static Plugin namespace = RaccoonMischief.getPlugin();
+        // Default Variables
+        private static final ItemStack[] CraftingMatrix = new ItemStack[10];
+        private static final ItemStack N = new ItemStack(Material.AIR, 1);
+        private static final ItemStack Coal = new ItemStack(Material.COAL, 1);
 
-    @EventHandler
-    public void onMenu(InventoryClickEvent event){
-        if (event.isCancelled()) return;
-
-        Inventory Active_Inventory = event.getClickedInventory();
-
-        if (Active_Inventory != null && Active_Inventory.getHolder() != null && Active_Inventory.getHolder() instanceof GUIHolder){
-            event.setCancelled(true);
-        }
-    }
-
-    @Override
-    public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-        Plugin namespace = RaccoonMischief.getPlugin();
-
-        if (!(sender instanceof Player)){
-            sender.sendMessage(ChatColor.RED+"Command only works for players!");
-            return true;
+        // Initialize the default values in a static initialization block
+        static {
+            Arrays.fill(CraftingMatrix, new ItemStack(Material.AIR));
         }
 
-        Player player = (Player) sender;
-
-        if (args == null){
-            player.sendMessage(ChatColor.RED+"Incorrect amount of arguments!");
-            player.sendMessage("Example: /RMShowCraft <RM Recipe>");
-            return true;
-        }
-
-        if (args.length != 1){
-           player.sendMessage(ChatColor.RED+"Incorrect amount of arguments!");
-           player.sendMessage("Example: /RMShowCraft <RM Recipe>");
-            return true;
-        }
-
-
-        //Default values to redefine
-        String crafting_recipe = args[0];
-        boolean found_recipe = false;
-        Inventory CraftRecipe;
-        ItemStack[] CraftingMatrix = new ItemStack[10];
-        Arrays.fill(CraftingMatrix, new ItemStack(Material.AIR));
-        String Inventory_title = "ERROR";
-        InventoryType Inventory_type = InventoryType.WORKBENCH;
-        ItemStack N = new ItemStack(Material.AIR, 1);
-        ItemStack Coal = new ItemStack(Material.COAL, 1);
-
-        if (!found_recipe && crafting_recipe.equalsIgnoreCase("Cake")) {
-
-            found_recipe = true;
-            Inventory_title = "Cake";
+        public static Inventory InventoryCake(){
+            String InventoryTitle = "Cake";
+            InventoryType InventoryGUIType = InventoryType.WORKBENCH;
 
             ItemStack Cake = new ItemStack(Material.CAKE, 1);
             ItemStack Wheat = new ItemStack(Material.WHEAT, 1);
@@ -85,19 +49,24 @@ public class ComRMShowCraft implements TabExecutor, Listener {
             ItemStack MilkBucket = new ItemStack(Material.MILK_BUCKET, 1);
 
             ItemStack[] Matrix = {
-                Cake,
-                MilkBucket, SweetBerries, MilkBucket,
-                Sugar, Egg, Sugar,
-                Wheat, Wheat, Wheat
+                    Cake,
+                    MilkBucket, SweetBerries, MilkBucket,
+                    Sugar, Egg, Sugar,
+                    Wheat, Wheat, Wheat
             };
 
-            System.arraycopy(Matrix, 0, CraftingMatrix, 0, Matrix.length);
+            ItemStack[] RecipeMatrix = CraftingMatrix.clone();
+            System.arraycopy(Matrix, 0, RecipeMatrix, 0, Matrix.length);
+            Inventory RecipeInventory = Bukkit.createInventory(new GUIHolder(), InventoryGUIType, InventoryTitle);
+            for (int i = 0; i < RecipeMatrix.length; ++i) {
+                RecipeInventory.setItem(i, RecipeMatrix[i]);
+            }
+            return RecipeInventory;
         }
 
-        if (!found_recipe && crafting_recipe.equalsIgnoreCase("Cake_From_Slices")) {
-
-            found_recipe = true;
-            Inventory_title = "Cake From Slices";
+        public static Inventory InventoryCakeFromSlices(){
+            String InventoryTitle = "Cake From Slices";
+            InventoryType InventoryGUIType = InventoryType.WORKBENCH;
 
             ItemStack Cake = new ItemStack(Material.CAKE, 1);
             ItemStack CakeSlice = RecipeCakeSlices.getItem();
@@ -110,13 +79,18 @@ public class ComRMShowCraft implements TabExecutor, Listener {
                     N,CakeSlice,CakeSlice
             };
 
-            System.arraycopy(Matrix, 0, CraftingMatrix, 0, Matrix.length);
+            ItemStack[] RecipeMatrix = CraftingMatrix.clone();
+            System.arraycopy(Matrix, 0, RecipeMatrix, 0, Matrix.length);
+            Inventory RecipeInventory = Bukkit.createInventory(new GUIHolder(), InventoryGUIType, InventoryTitle);
+            for (int i = 0; i < RecipeMatrix.length; ++i) {
+                RecipeInventory.setItem(i, RecipeMatrix[i]);
+            }
+            return RecipeInventory;
         }
 
-        if (!found_recipe && crafting_recipe.equalsIgnoreCase("Cake_Slice")) {
-
-            found_recipe = true;
-            Inventory_title = "Cake Slice";
+        public static Inventory InventoryCakeSlices(){
+            String InventoryTitle = "Cake Slice";
+            InventoryType InventoryGUIType = InventoryType.WORKBENCH;
 
             ItemStack Cake = new ItemStack(Material.CAKE, 1);
             ItemStack CakeSlice = RecipeCakeSlices.getItem();
@@ -127,32 +101,41 @@ public class ComRMShowCraft implements TabExecutor, Listener {
                     N,Cake,
             };
 
-            System.arraycopy(Matrix, 0, CraftingMatrix, 0, Matrix.length);
+            ItemStack[] RecipeMatrix = CraftingMatrix.clone();
+            System.arraycopy(Matrix, 0, RecipeMatrix, 0, Matrix.length);
+            Inventory RecipeInventory = Bukkit.createInventory(new GUIHolder(), InventoryGUIType, InventoryTitle);
+            for (int i = 0; i < RecipeMatrix.length; ++i) {
+                RecipeInventory.setItem(i, RecipeMatrix[i]);
+            }
+            return RecipeInventory;
         }
 
-
-        if (!found_recipe && crafting_recipe.equalsIgnoreCase("Dirt_to_Seeds")) {
-
-            found_recipe = true;
-            Inventory_title = "Dirt to Seeds";
+        public static Inventory InventoryDirtToSeeds(){
+            String InventoryTitle = "Dirt to Seeds";
+            InventoryType InventoryGUIType = InventoryType.WORKBENCH;
 
             ItemStack Dirt = new ItemStack(Material.DIRT, 1);
             ItemStack WheatSeeds = new ItemStack(Material.WHEAT_SEEDS, 1);
 
             ItemStack[] Matrix = {
-                   WheatSeeds,
-                   Dirt, Dirt, N,
-                   Dirt, Dirt, N,
-                   N, N, N
+                    WheatSeeds,
+                    Dirt, Dirt, N,
+                    Dirt, Dirt, N,
+                    N, N, N
             };
 
-            System.arraycopy(Matrix, 0, CraftingMatrix, 0, Matrix.length);
+            ItemStack[] RecipeMatrix = CraftingMatrix.clone();
+            System.arraycopy(Matrix, 0, RecipeMatrix, 0, Matrix.length);
+            Inventory RecipeInventory = Bukkit.createInventory(new GUIHolder(), InventoryGUIType, InventoryTitle);
+            for (int i = 0; i < RecipeMatrix.length; ++i) {
+                RecipeInventory.setItem(i, RecipeMatrix[i]);
+            }
+            return RecipeInventory;
         }
 
-        if (!found_recipe && crafting_recipe.equalsIgnoreCase("Harder_Armor")) {
-
-            found_recipe = true;
-            Inventory_title = "Harder Armor";
+        public static Inventory InventoryHarderArmor(){
+            String InventoryTitle = "Harder Armor";
+            InventoryType InventoryGUIType = InventoryType.WORKBENCH;
 
             ItemStack IronIngot = new ItemStack(Material.IRON_INGOT, 1);
             ItemStack IronChestplate = new ItemStack(Material.IRON_CHESTPLATE, 1);
@@ -175,13 +158,18 @@ public class ComRMShowCraft implements TabExecutor, Listener {
                     IronIngot, IronIngot, IronIngot
             };
 
-            System.arraycopy(Matrix, 0, CraftingMatrix, 0, Matrix.length);
+            ItemStack[] RecipeMatrix = CraftingMatrix.clone();
+            System.arraycopy(Matrix, 0, RecipeMatrix, 0, Matrix.length);
+            Inventory RecipeInventory = Bukkit.createInventory(new GUIHolder(), InventoryGUIType, InventoryTitle);
+            for (int i = 0; i < RecipeMatrix.length; ++i) {
+                RecipeInventory.setItem(i, RecipeMatrix[i]);
+            }
+            return RecipeInventory;
         }
 
-        if (!found_recipe && crafting_recipe.equalsIgnoreCase("JTE_Apple")) {
-
-            found_recipe = true;
-            Inventory_title = "JTE Apple";
+        public static Inventory InventoryJTEApple(){
+            String InventoryTitle = "JTE Apple";
+            InventoryType InventoryGUIType = InventoryType.WORKBENCH;
 
             ItemStack G = new ItemStack(Material.GOLD_BLOCK, 1);
             ItemStack A = new ItemStack(Material.APPLE, 1);
@@ -194,13 +182,18 @@ public class ComRMShowCraft implements TabExecutor, Listener {
                     G, G, G
             };
 
-            System.arraycopy(Matrix, 0, CraftingMatrix, 0, Matrix.length);
+            ItemStack[] RecipeMatrix = CraftingMatrix.clone();
+            System.arraycopy(Matrix, 0, RecipeMatrix, 0, Matrix.length);
+            Inventory RecipeInventory = Bukkit.createInventory(new GUIHolder(), InventoryGUIType, InventoryTitle);
+            for (int i = 0; i < RecipeMatrix.length; ++i) {
+                RecipeInventory.setItem(i, RecipeMatrix[i]);
+            }
+            return RecipeInventory;
         }
 
-        if (!found_recipe && crafting_recipe.equalsIgnoreCase("Milk_Potion")) {
-
-            found_recipe = true;
-            Inventory_title = "Milk Potion";
+        public static Inventory InventoryMilkPotion(){
+            String InventoryTitle = "Milk Potion";
+            InventoryType InventoryGUIType = InventoryType.WORKBENCH;
 
             ItemStack M = new ItemStack(Material.MILK_BUCKET, 1);
             ItemStack G = new ItemStack(Material.GUNPOWDER, 1);
@@ -211,14 +204,18 @@ public class ComRMShowCraft implements TabExecutor, Listener {
                     M, G,
             };
 
-            System.arraycopy(Matrix, 0, CraftingMatrix, 0, Matrix.length);
+            ItemStack[] RecipeMatrix = CraftingMatrix.clone();
+            System.arraycopy(Matrix, 0, RecipeMatrix, 0, Matrix.length);
+            Inventory RecipeInventory = Bukkit.createInventory(new GUIHolder(), InventoryGUIType, InventoryTitle);
+            for (int i = 0; i < RecipeMatrix.length; ++i) {
+                RecipeInventory.setItem(i, RecipeMatrix[i]);
+            }
+            return RecipeInventory;
         }
 
-        if (!found_recipe && crafting_recipe.equalsIgnoreCase("RottenFlesh_to_Leather")) {
-
-            found_recipe = true;
-            Inventory_title = "RottenFlesh to Leather";
-            Inventory_type = InventoryType.FURNACE;
+        public static Inventory InventoryRottenFleshToLeather(){
+            String InventoryTitle = "RottenFlesh to Leather";
+            InventoryType InventoryGUIType = InventoryType.FURNACE;
 
             ItemStack R = new ItemStack(Material.ROTTEN_FLESH, 1);
             ItemStack Leather = new ItemStack(Material.LEATHER, 1);
@@ -229,13 +226,18 @@ public class ComRMShowCraft implements TabExecutor, Listener {
                     Leather
             };
 
-            System.arraycopy(Matrix, 0, CraftingMatrix, 0, Matrix.length);
+            ItemStack[] RecipeMatrix = CraftingMatrix.clone();
+            System.arraycopy(Matrix, 0, RecipeMatrix, 0, Matrix.length);
+            Inventory RecipeInventory = Bukkit.createInventory(new GUIHolder(), InventoryGUIType, InventoryTitle);
+            for (int i = 0; i < 3; ++i) {
+                RecipeInventory.setItem(i, RecipeMatrix[i]);
+            }
+            return RecipeInventory;
         }
 
-        if (!found_recipe && crafting_recipe.equalsIgnoreCase("Redstone_Items")) {
-
-            found_recipe = true;
-            Inventory_title = "Redstone Items";
+        public static Inventory InventoryRedstoneItems(){
+            String InventoryTitle = "Redstone Items";
+            InventoryType InventoryGUIType = InventoryType.WORKBENCH;
 
             ItemStack C = new ItemStack(Material.COPPER_INGOT, 1);
             ItemStack S = new ItemStack(Material.STICK, 1);
@@ -259,13 +261,18 @@ public class ComRMShowCraft implements TabExecutor, Listener {
                     C, R, C
             };
 
-            System.arraycopy(Matrix, 0, CraftingMatrix, 0, Matrix.length);
+            ItemStack[] RecipeMatrix = CraftingMatrix.clone();
+            System.arraycopy(Matrix, 0, RecipeMatrix, 0, Matrix.length);
+            Inventory RecipeInventory = Bukkit.createInventory(new GUIHolder(), InventoryGUIType, InventoryTitle);
+            for (int i = 0; i < RecipeMatrix.length; ++i) {
+                RecipeInventory.setItem(i, RecipeMatrix[i]);
+            }
+            return RecipeInventory;
         }
 
-        if (!found_recipe && crafting_recipe.equalsIgnoreCase("Tactical_Dirt")) {
-
-            found_recipe = true;
-            Inventory_title = "Tactical Dirt";
+        public static Inventory InventoryTacticalDirt() {
+            String InventoryTitle = "Tactical Dirt";
+            InventoryType InventoryGUIType = InventoryType.WORKBENCH;
 
             ItemStack D = new ItemStack(Material.DIRT, 1);
             ItemStack S = new ItemStack(Material.WHEAT_SEEDS, 1);
@@ -276,13 +283,20 @@ public class ComRMShowCraft implements TabExecutor, Listener {
                     D, S
             };
 
-            System.arraycopy(Matrix, 0, CraftingMatrix, 0, Matrix.length);
+            ItemStack[] RecipeMatrix = CraftingMatrix.clone();
+            System.arraycopy(Matrix, 0, RecipeMatrix, 0, Matrix.length);
+
+            Inventory TacticalDirtInventory = Bukkit.createInventory(new GUIHolder(), InventoryGUIType, InventoryTitle);
+            for (int i = 0; i < RecipeMatrix.length; ++i) {
+                TacticalDirtInventory.setItem(i, RecipeMatrix[i]);
+            }
+
+            return TacticalDirtInventory;
         }
 
-        if (!found_recipe && crafting_recipe.equalsIgnoreCase("Throwable_Brick")) {
-
-            found_recipe = true;
-            Inventory_title = "Throwable Brick";
+        public static Inventory InventoryThrowableBrick(){
+            String InventoryTitle = "Throwable Brick";
+            InventoryType InventoryGUIType = InventoryType.WORKBENCH;
 
             ItemStack B = new ItemStack(Material.BRICK, 1);
             ItemStack Brick = RecipeThrowableBrick.getItem();
@@ -293,13 +307,19 @@ public class ComRMShowCraft implements TabExecutor, Listener {
                     N,B,
             };
 
-            System.arraycopy(Matrix, 0, CraftingMatrix, 0, Matrix.length);
+            ItemStack[] RecipeMatrix = CraftingMatrix.clone();
+            System.arraycopy(Matrix, 0, RecipeMatrix, 0, Matrix.length);
+            Inventory RecipeInventory = Bukkit.createInventory(new GUIHolder(), InventoryGUIType, InventoryTitle);
+            for (int i = 0; i < RecipeMatrix.length; ++i) {
+                RecipeInventory.setItem(i, RecipeMatrix[i]);
+            }
+            return RecipeInventory;
         }
 
-        if (!found_recipe && crafting_recipe.equalsIgnoreCase("UnMetaData_Cookies")) {
+        public static Inventory InventoryUnMetaDataCookies(){
+            String InventoryTitle = "Un-MetaData Cookies";
+            InventoryType InventoryGUIType = InventoryType.WORKBENCH;
 
-            found_recipe = true;
-            Inventory_title = "Un-MetaData Cookies";
 
             ItemStack C = new ItemStack(Material.COOKIE, 1);
             ItemStack Cookie = RecipeUnMetaDataCookies.getItem();
@@ -319,13 +339,18 @@ public class ComRMShowCraft implements TabExecutor, Listener {
                     N, C, N
             };
 
-            System.arraycopy(Matrix, 0, CraftingMatrix, 0, Matrix.length);
+            ItemStack[] RecipeMatrix = CraftingMatrix.clone();
+            System.arraycopy(Matrix, 0, RecipeMatrix, 0, Matrix.length);
+            Inventory RecipeInventory = Bukkit.createInventory(new GUIHolder(), InventoryGUIType, InventoryTitle);
+            for (int i = 0; i < RecipeMatrix.length; ++i) {
+                RecipeInventory.setItem(i, RecipeMatrix[i]);
+            }
+            return RecipeInventory;
         }
 
-        if (!found_recipe && crafting_recipe.equalsIgnoreCase("XP_Orb")) {
-
-            found_recipe = true;
-            Inventory_title = "XP Orb";
+        public static Inventory InventoryXpOrb(){
+            String InventoryTitle = "XP Orb";
+            InventoryType InventoryGUIType = InventoryType.WORKBENCH;
 
             ItemStack XPOrb = RecipeExpCrystal.getItem();
 
@@ -349,45 +374,130 @@ public class ComRMShowCraft implements TabExecutor, Listener {
                     N,EB
             };
 
-            System.arraycopy(Matrix, 0, CraftingMatrix, 0, Matrix.length);
-        }
-
-        if (found_recipe) {
-
-            CraftRecipe = Bukkit.createInventory(new GUIHolder(), Inventory_type, Inventory_title);
-
-            switch (Inventory_type) {
-                case WORKBENCH -> {
-                    for (int i = 0; i < CraftingMatrix.length; ++i) {
-                        CraftRecipe.setItem(i, CraftingMatrix[i]);
-                    }
-                }
-                case FURNACE -> {
-                    for (int i = 0; i < 3; ++i) {
-                        CraftRecipe.setItem(i, CraftingMatrix[i]);
-                    }
-                }
-                default -> {
-                    // DIDN'T FIND ONE ERROR
-                    player.sendMessage(ChatColor.RED + "You should never see this, if you do please report this!");
-                    player.sendMessage("Example: /RMShowCraft <RM Recipe>");
-                    return true;
-                }
+            ItemStack[] RecipeMatrix = CraftingMatrix.clone();
+            System.arraycopy(Matrix, 0, RecipeMatrix, 0, Matrix.length);
+            Inventory RecipeInventory = Bukkit.createInventory(new GUIHolder(), InventoryGUIType, InventoryTitle);
+            for (int i = 0; i < RecipeMatrix.length; ++i) {
+                RecipeInventory.setItem(i, RecipeMatrix[i]);
             }
-            player.openInventory(CraftRecipe);
-
-        }else{
-            //Did not find recipe
-            player.sendMessage(ChatColor.RED+""+crafting_recipe + " was not found or is not an RM Recipe!");
-            player.sendMessage("Example: /RMShowCraft <RM Recipe>");
+            return RecipeInventory;
         }
+    }
+
+    @EventHandler
+    public void onMenu(InventoryClickEvent event) {
+        if (event.isCancelled()) return;
+
+        Inventory Active_Inventory = event.getClickedInventory();
+
+        if ((Active_Inventory == null) || (Active_Inventory.getHolder() == null) || !(Active_Inventory.getHolder() instanceof GUIHolder)) {
+            return;
+        }
+
+        event.setCancelled(true);
+    }
+
+    @Override
+    public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
+        Plugin namespace = RaccoonMischief.getPlugin();
+
+        if (!(sender instanceof Player)) {
+            sender.sendMessage(ChatColor.RED + "Command only works for players!");
+            return true;
+        }
+
+        Player player = (Player) sender;
+
+        if (args == null) {
+            player.sendMessage(ChatColor.RED + "Incorrect amount of arguments!");
+            player.sendMessage("Example: /RMShowCraft <RM Recipe>");
+            return true;
+        }
+
+        if (args.length != 1) {
+            player.sendMessage(ChatColor.RED + "Incorrect amount of arguments!");
+            player.sendMessage("Example: /RMShowCraft <RM Recipe>");
+            return true;
+        }
+
+        //Default values to redefine
+        String crafting_recipe = args[0];
+
+        if (crafting_recipe.equalsIgnoreCase("Cake")) {
+            player.openInventory(InventoryGUIs.InventoryCake());
+            return true;
+        }
+
+        if (crafting_recipe.equalsIgnoreCase("Cake_From_Slices")) {
+            player.openInventory(InventoryGUIs.InventoryCakeFromSlices());
+            return true;
+        }
+
+        if (crafting_recipe.equalsIgnoreCase("Cake_Slice")) {
+            player.openInventory(InventoryGUIs.InventoryCakeSlices());
+            return true;
+        }
+
+        if (crafting_recipe.equalsIgnoreCase("Dirt_to_Seeds")) {
+            player.openInventory(InventoryGUIs.InventoryDirtToSeeds());
+            return true;
+        }
+
+        if (crafting_recipe.equalsIgnoreCase("Harder_Armor")) {
+            player.openInventory(InventoryGUIs.InventoryHarderArmor());
+            return true;
+        }
+
+        if (crafting_recipe.equalsIgnoreCase("JTE_Apple")) {
+            player.openInventory(InventoryGUIs.InventoryJTEApple());
+            return true;
+        }
+
+        if (crafting_recipe.equalsIgnoreCase("Milk_Potion")) {
+            player.openInventory(InventoryGUIs.InventoryMilkPotion());
+            return true;
+        }
+
+        if (crafting_recipe.equalsIgnoreCase("RottenFlesh_to_Leather")) {
+            player.openInventory(InventoryGUIs.InventoryRottenFleshToLeather());
+            return true;
+        }
+
+        if (crafting_recipe.equalsIgnoreCase("Redstone_Items")) {
+            player.openInventory(InventoryGUIs.InventoryRedstoneItems());
+            return true;
+        }
+
+        if (crafting_recipe.equalsIgnoreCase("Tactical_Dirt")) {
+            player.openInventory(InventoryGUIs.InventoryTacticalDirt());
+            return true;
+        }
+
+        if (crafting_recipe.equalsIgnoreCase("Throwable_Brick")) {
+            player.openInventory(InventoryGUIs.InventoryThrowableBrick());
+            return true;
+        }
+
+        if (crafting_recipe.equalsIgnoreCase("UnMetaData_Cookies")) {
+            player.openInventory(InventoryGUIs.InventoryUnMetaDataCookies());
+            return true;
+        }
+
+        if (crafting_recipe.equalsIgnoreCase("XP_Orb")) {
+            player.openInventory(InventoryGUIs.InventoryXpOrb());
+            return true;
+        }
+
+        //Did not find recipe
+        player.sendMessage(ChatColor.RED + "" + crafting_recipe + " was not found or is not an RM Recipe!");
+        player.sendMessage("Example: /RMShowCraft <RM Recipe>");
 
         return true;
     }
 
     @Override
     public List<String> onTabComplete(CommandSender sender, Command command, String label, String[] args) {
-        if (args.length == 1){
+        if (args.length == 1) {
             List<String> ListOItems = Arrays.asList(
                     "Cake",
                     "Cake_From_Slices",
@@ -405,8 +515,7 @@ public class ComRMShowCraft implements TabExecutor, Listener {
             );
             return ListOItems;
         }
-
-            return null;
+        return null;
     }
 }
 

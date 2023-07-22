@@ -49,9 +49,6 @@ public final class RaccoonMischief extends JavaPlugin{
         //Tasks
         TaskManager.tasks();
 
-        //Shredder UnMercer
-        ShredderManager.ShredderEnable();
-
         //Custom Enchants
         EnchantManager.Register();
 

@@ -53,6 +53,8 @@ Things That change vanilla features
 ## Recipes
 * Cake from Slices > 7 Cake Slices
 * Cake To Slices > 1 Cake
+* You can Uncraft Netherwart blocks
+* Added Horse Armor recipes
 
 ## Effects
 * The server will make an random player ask RekNepZ_HBK what the room code is, at random times

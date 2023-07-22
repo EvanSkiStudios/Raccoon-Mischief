@@ -41,9 +41,8 @@ public class RecipeManager {
         Plugin P = RaccoonMischief.getPlugin();
         //ClassFileName.MethodName(namespace);
 
+        RecipeCakeSlices.CakeSlice(P); //Has to be above Recipe Cake from slices because that requires the item from this one
         RecipeCakeFromSlices.CakeFromSlice(P);
-
-        RecipeCakeSlices.CakeSlice(P);
 
         RecipeDirtToSeeds.DirtSeeds(P);
 
