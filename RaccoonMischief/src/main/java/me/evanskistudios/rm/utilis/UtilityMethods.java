@@ -4,6 +4,8 @@ import me.evanskistudios.rm.RaccoonMischief;
 
 import java.util.Random;
 
+import static java.lang.Math.round;
+
 public class UtilityMethods {
     private static final Random random = new Random();
     public static Object Choose(Object[] args){
@@ -14,15 +16,23 @@ public class UtilityMethods {
         Object test_return = UtilChoose.Choose(Var);*/
     }
 
-    public static double MCHearts(double Hearts){
-        return (Hearts / 0.5);
-        //Returns the amount of hearts (20.0 is 10 hearts)
-    }
-
     public static Object RandomPlayer(){
         Object[] PlayersOnline = RaccoonMischief.getPlugin().getServer().getOnlinePlayers().toArray();
 
         return ( Choose(PlayersOnline) ) ;
     }
+
+    public static double MCHearts(double Hearts){
+        return (Hearts / 0.5);
+        //Returns the amount of hearts (20.0 is 10 hearts)
+    }
+
+    public static int SecondsToTicks(double Seconds){
+        return (int) round(Seconds * 20);
+        //Returns the amount of ticks 20 Ticks = 1 Second
+    }
+
+
+
 
 }

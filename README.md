@@ -49,6 +49,8 @@ Things That change vanilla features
 * [Squids can be milked again like in beta 1.2](https://youtu.be/6MsVOvMp-E8)
 * If you sneak right click a saddled Pif or Strider, it will un-saddle them
 * You can cook Red mushrooms in a furnace to make Red Dye
+* Skeletons no longer burn during the day
+* Endermen no longer take fire damage
 
 ## Recipes
 * Cake from Slices > 7 Cake Slices

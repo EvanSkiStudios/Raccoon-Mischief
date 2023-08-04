@@ -25,8 +25,10 @@ import java.util.Arrays;
 import java.util.List;
 
 public class ComRMShowCraft implements TabExecutor, Listener {
+
+    //Creates guis to show player
     public static class InventoryGUIs {
-        private static Plugin namespace = RaccoonMischief.getPlugin();
+        public static final Plugin namespace = RaccoonMischief.getPlugin();
         // Default Variables
         private static final ItemStack[] CraftingMatrix = new ItemStack[10];
         private static final ItemStack N = new ItemStack(Material.AIR, 1);
@@ -384,6 +386,7 @@ public class ComRMShowCraft implements TabExecutor, Listener {
         }
     }
 
+    //prevents player from taking items as well as custom actions
     @EventHandler
     public void onMenu(InventoryClickEvent event) {
         if (event.isCancelled()) return;
@@ -397,6 +400,7 @@ public class ComRMShowCraft implements TabExecutor, Listener {
         event.setCancelled(true);
     }
 
+    //Actual command that player runs
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         Plugin namespace = RaccoonMischief.getPlugin();
@@ -408,13 +412,7 @@ public class ComRMShowCraft implements TabExecutor, Listener {
 
         Player player = (Player) sender;
 
-        if (args == null) {
-            player.sendMessage(ChatColor.RED + "Incorrect amount of arguments!");
-            player.sendMessage("Example: /RMShowCraft <RM Recipe>");
-            return true;
-        }
-
-        if (args.length != 1) {
+        if ( (args == null) || (args.length != 1) ){
             player.sendMessage(ChatColor.RED + "Incorrect amount of arguments!");
             player.sendMessage("Example: /RMShowCraft <RM Recipe>");
             return true;
