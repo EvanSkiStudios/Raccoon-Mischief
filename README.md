@@ -51,12 +51,17 @@ Things That change vanilla features
 * You can cook Red mushrooms in a furnace to make Red Dye
 * Skeletons no longer burn during the day
 * Endermen no longer take fire damage
+* Changed the Recipes for Crafting Tables, Furnaces, Chests, and Trapped Chests
 
 ## Recipes
 * Cake from Slices > 7 Cake Slices
 * Cake To Slices > 1 Cake
 * You can Uncraft Netherwart blocks
 * Added Horse Armor recipes
+* Crafting tables are now crafted like vanilla chests
+* Chests are now crafted like vanilla crafting tables
+* Furnaces are crafted like vanilla crafting tabeles but with cobblestone
+* Trapped chests are crafted like the new chest recipe but with a tripwire hook, or just a chest with a hook
 
 ## Effects
 * The server will make an random player ask RekNepZ_HBK what the room code is, at random times

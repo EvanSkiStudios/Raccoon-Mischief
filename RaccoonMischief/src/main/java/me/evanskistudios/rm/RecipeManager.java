@@ -29,7 +29,7 @@ public class RecipeManager {
                     case IRON_HELMET, IRON_CHESTPLATE, IRON_LEGGINGS, IRON_BOOTS,
                             GOLDEN_HELMET, GOLDEN_CHESTPLATE, GOLDEN_LEGGINGS, GOLDEN_BOOTS,
                             DIAMOND_HELMET, DIAMOND_CHESTPLATE, DIAMOND_LEGGINGS, DIAMOND_BOOTS,
-                            LIGHT_WEIGHTED_PRESSURE_PLATE, CLOCK, POWERED_RAIL, CAKE
+                            LIGHT_WEIGHTED_PRESSURE_PLATE, CLOCK, POWERED_RAIL, CAKE, CRAFTING_TABLE, FURNACE, CHEST, TRAPPED_CHEST
                             -> it.remove();
 
                 }
@@ -61,6 +61,8 @@ public class RecipeManager {
         RecipeNewCake.Cake(P);
 
         RecipeNewCopperRedstone.NewCopperRedstoneItems(P);
+
+        RecipeNewWorkbenches.HarderWorkBenches(P);
 
         RecipeRedMushroomDye.MushroomDye(P);
 
