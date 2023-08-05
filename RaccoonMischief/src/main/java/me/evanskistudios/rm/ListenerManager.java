@@ -36,6 +36,7 @@ public class ListenerManager {
         registerEvent( new ListenerGoatHorn() ); //GoatHorn
         registerEvent( new ListenerPlayerInteractBlock() ); //Right click block
         registerEvent( new ListenerItemDespawn() ); //Item despawn
+        registerEvent( new ListenerPlayerMove() ); //Player move
         registerEvent( new ListenerPlayerPlaceSweetBerries() ); //Placing
         registerEvent( new ListenerPlayerBreakBlock() ); //Cake
         registerEvent( new ListenerPlayerRespawn() ); //PlayerRespawnPotionEffects

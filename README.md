@@ -70,6 +70,7 @@ Things That change vanilla features
 * Respawn effect, plugin will kick you from the game
 * Respawn effect, plugin will place a chicken on your head
 * Respawn effect, plguin will teleport you to another player
+* When you walk on an anvil you have a 1/20 chance to have more anvils fall on you
 
 ## Enchantments
 * Nothing Changed since last version
