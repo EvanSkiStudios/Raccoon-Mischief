@@ -16,10 +16,10 @@ public class RecipeManager {
     }
 
     public static void RemoveRecipes() {
-        Iterator<Recipe> it = getServer().recipeIterator();
+        Iterator<Recipe> RegisteredRecipes = getServer().recipeIterator();
 
-        while (it.hasNext()) {
-            Recipe recipe = it.next();
+        while (RegisteredRecipes.hasNext()) {
+            Recipe recipe = RegisteredRecipes.next();
             if (recipe != null) {
                 //check what it makes, not what it uses, then remove it
                 Material RecipeResult = recipe.getResult().getType();
@@ -29,9 +29,8 @@ public class RecipeManager {
                     case IRON_HELMET, IRON_CHESTPLATE, IRON_LEGGINGS, IRON_BOOTS,
                             GOLDEN_HELMET, GOLDEN_CHESTPLATE, GOLDEN_LEGGINGS, GOLDEN_BOOTS,
                             DIAMOND_HELMET, DIAMOND_CHESTPLATE, DIAMOND_LEGGINGS, DIAMOND_BOOTS,
-                            LIGHT_WEIGHTED_PRESSURE_PLATE, CLOCK, POWERED_RAIL, CAKE, CRAFTING_TABLE, FURNACE, CHEST, TRAPPED_CHEST
-                            -> it.remove();
-
+                            LIGHT_WEIGHTED_PRESSURE_PLATE, CLOCK, POWERED_RAIL, CAKE, CRAFTING_TABLE, FURNACE
+                            -> RegisteredRecipes.remove();
                 }
             }
         }

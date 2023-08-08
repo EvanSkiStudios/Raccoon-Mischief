@@ -18,11 +18,9 @@ public class RecipeNewWorkbenches {
         NamespacedKey CraftingTableKey = new NamespacedKey(namespace, "CraftingTable");
         ShapedRecipe CraftingTableRecipe = new ShapedRecipe(CraftingTableKey, CraftingBench);
         CraftingTableRecipe.shape(
-                "WWW",
-                "WAW",
-                "WWW");
-        CraftingTableRecipe.setIngredient('A', Material.AIR);
-        CraftingTableRecipe.setIngredient('W', MaterialChoiceWOOD);
+                "CC",
+                "CC");
+        CraftingTableRecipe.setIngredient('C', Material.COBBLESTONE);
         Bukkit.addRecipe(CraftingTableRecipe);
 
 
@@ -30,37 +28,9 @@ public class RecipeNewWorkbenches {
         NamespacedKey FurnaceKey = new NamespacedKey(namespace, "Furnace");
         ShapedRecipe FurnaceRecipe = new ShapedRecipe(FurnaceKey, Furnace);
         FurnaceRecipe.shape(
-                "CC",
-                "CC");
-        FurnaceRecipe.setIngredient('C', Material.COBBLESTONE);
+                "WW",
+                "WW");
+        FurnaceRecipe.setIngredient('W', MaterialChoiceWOOD);
         Bukkit.addRecipe(FurnaceRecipe);
-
-        ItemStack Chest = new ItemStack(Material.CHEST, 1);
-        NamespacedKey ChestKey = new NamespacedKey(namespace, "Chest");
-        ShapedRecipe ChestRecipe = new ShapedRecipe(ChestKey, Chest);
-        ChestRecipe.shape(
-                "WW",
-                "WW");
-        ChestRecipe.setIngredient('W', MaterialChoiceWOOD);
-        Bukkit.addRecipe(ChestRecipe);
-
-        ItemStack TrappedChest = new ItemStack(Material.TRAPPED_CHEST, 1);
-        NamespacedKey TrappedChestKey = new NamespacedKey(namespace, "TrappedChest");
-        ShapedRecipe TrappedChestRecipe = new ShapedRecipe(TrappedChestKey, TrappedChest);
-        TrappedChestRecipe.shape(
-                "TA",
-                "WW",
-                "WW");
-        TrappedChestRecipe.setIngredient('A', Material.AIR);
-        TrappedChestRecipe.setIngredient('T', Material.TRIPWIRE_HOOK);
-        TrappedChestRecipe.setIngredient('W', MaterialChoiceWOOD);
-        Bukkit.addRecipe(TrappedChestRecipe);
-
-        ItemStack TrappedChestWithChest = new ItemStack(Material.TRAPPED_CHEST, 1);
-        NamespacedKey TrappedChestWithChestKey = new NamespacedKey(namespace, "TrappedChestWithChest");
-        ShapelessRecipe TrappedChestWithChestRecipe = new ShapelessRecipe(TrappedChestWithChestKey, TrappedChestWithChest);
-        TrappedChestWithChestRecipe.addIngredient(1, Material.TRIPWIRE_HOOK);
-        TrappedChestWithChestRecipe.addIngredient(1, Material.CHEST);
-        Bukkit.addRecipe(TrappedChestWithChestRecipe);
     }
 }

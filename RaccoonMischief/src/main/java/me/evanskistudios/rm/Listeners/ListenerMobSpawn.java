@@ -3,6 +3,7 @@ package me.evanskistudios.rm.Listeners;
 import me.evanskistudios.rm.RaccoonMischief;
 import org.bukkit.Effect;
 import org.bukkit.entity.Creeper;
+import org.bukkit.entity.Enderman;
 import org.bukkit.entity.Entity;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -12,9 +13,13 @@ import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
 import org.bukkit.potion.PotionType;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collection;
+import java.util.List;
 
 import static me.evanskistudios.rm.Utilis.UtilityMethods.Choose;
+import static org.bukkit.entity.EntityType.ENDERMAN;
 
 public class ListenerMobSpawn implements Listener {
     RaccoonMischief plugin;
@@ -22,6 +27,7 @@ public class ListenerMobSpawn implements Listener {
         this.plugin = plugin;
     }
     public static final PotionEffectType[] PotionEffects = PotionEffectType.values();
+    public static final List<PotionEffect> EnderMenEffectList = Arrays.asList( new PotionEffect(PotionEffectType.INCREASE_DAMAGE , -1, 2, false, false), new PotionEffect(PotionEffectType.REGENERATION , -1, 3, false, false), new PotionEffect(PotionEffectType.HEALTH_BOOST , -1, 2, false, false), new PotionEffect(PotionEffectType.SPEED , -1, 2, false, false) );
 
     @EventHandler
     public void onMobSpawn(CreatureSpawnEvent event) {
@@ -34,6 +40,10 @@ public class ListenerMobSpawn implements Listener {
                 Crep.setPowered(true);
                 //Crep.getWorld().strikeLightning(Crep.getLocation());
             //}
+        }
+
+        if (SpawnedEntity instanceof Enderman Ender){
+            Ender.addPotionEffects(EnderMenEffectList);
         }
     }
 

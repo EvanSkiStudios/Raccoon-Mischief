@@ -4,7 +4,7 @@ import me.evanskistudios.rm.RaccoonMischief;
 
 import java.util.Random;
 
-import static java.lang.Math.round;
+import static java.lang.Math.floor;
 
 public class UtilityMethods {
     private static final Random random = new Random();
@@ -28,7 +28,7 @@ public class UtilityMethods {
     }
 
     public static int SecondsToTicks(double Seconds){
-        return (int) round(Seconds * 20);
+        return (int) floor(Seconds * 20);
         //Returns the amount of ticks 20 Ticks = 1 Second
     }
 

@@ -47,10 +47,11 @@ Things That change vanilla features
 * Creepers will now explode if they take any damage at all
 * If a player dies by fire all the food in their inventory becomes cooked
 * [Squids can be milked again like in beta 1.2](https://youtu.be/6MsVOvMp-E8)
-* If you sneak right click a saddled Pif or Strider, it will un-saddle them
+* If you sneak right click a saddled Pig or Strider, it will un-saddle them
 * You can cook Red mushrooms in a furnace to make Red Dye
 * Skeletons no longer burn during the day
-* Endermen no longer take fire damage
+* Endermen no longer take fire or water damage
+* Endermen now spawn with permant potion effects of Strength 2, Regeneration 3, Health Boost 2, Speed 2
 * Changed the Recipes for Crafting Tables, Furnaces, Chests, and Trapped Chests
 
 ## Recipes
@@ -58,10 +59,8 @@ Things That change vanilla features
 * Cake To Slices > 1 Cake
 * You can Uncraft Netherwart blocks
 * Added Horse Armor recipes
-* Crafting tables are now crafted like vanilla chests
-* Chests are now crafted like vanilla crafting tables
-* Furnaces are crafted like vanilla crafting tabeles but with cobblestone
-* Trapped chests are crafted like the new chest recipe but with a tripwire hook, or just a chest with a hook
+* Crafting tables are now crafted with cobblestone
+* Furnaces are crafted like vanilla crafting tabeles
 
 ## Effects
 * The server will make an random player ask RekNepZ_HBK what the room code is, at random times
@@ -69,7 +68,7 @@ Things That change vanilla features
 * Respawn effect, plugin will show you the demo screen
 * Respawn effect, plugin will kick you from the game
 * Respawn effect, plugin will place a chicken on your head
-* Respawn effect, plguin will teleport you to another player
+* Respawn effect, plugin will teleport you to another player
 * When you walk on an anvil you have a 1/20 chance to have more anvils fall on you
 
 ## Enchantments

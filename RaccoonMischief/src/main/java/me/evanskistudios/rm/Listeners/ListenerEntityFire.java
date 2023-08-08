@@ -1,5 +1,6 @@
 package me.evanskistudios.rm.Listeners;
 
+import net.minecraft.world.entity.monster.EnderMan;
 import org.bukkit.entity.*;
 import org.bukkit.entity.Entity;
 import org.bukkit.event.EventHandler;
@@ -13,7 +14,8 @@ import java.util.List;
 import static org.bukkit.entity.EntityType.*;
 
 public class ListenerEntityFire implements Listener {
-    private static final List<EntityType> FlameableEntities = Arrays.asList(PHANTOM, CREEPER, SKELETON);
+    private static final List<EntityType> FlameableEntities = Arrays.asList(PHANTOM, CREEPER, SKELETON, ENDERMAN);
+    private static final List<EntityType> MoistEntities = Arrays.asList(ENDERMAN);
 
     @EventHandler
     public void onFire(EntityCombustEvent event){
@@ -35,6 +37,12 @@ public class ListenerEntityFire implements Listener {
 
         if (DamageCause == EntityDamageEvent.DamageCause.FIRE) {
             if (FlameableEntities.contains(DamagedEntity.getType())){
+                event.setCancelled(true);
+            }
+        }
+
+        if (DamageCause == EntityDamageEvent.DamageCause.DROWNING){
+            if (MoistEntities.contains(DamagedEntity.getType())){
                 event.setCancelled(true);
             }
         }
