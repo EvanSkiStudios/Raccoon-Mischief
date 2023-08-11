@@ -53,6 +53,7 @@ Things That change vanilla features
 * Endermen no longer take fire or water damage
 * Endermen now spawn with permant potion effects of Strength 2, Regeneration 3, Health Boost 2, Speed 2
 * Changed the Recipes for Crafting Tables, Furnaces, Chests, and Trapped Chests
+* The server will now tell Mercerenies that its on fire
 
 ## Recipes
 * Cake from Slices > 7 Cake Slices

@@ -26,8 +26,8 @@ public class ListenerMobSpawn implements Listener {
     public ListenerMobSpawn(RaccoonMischief plugin) {
         this.plugin = plugin;
     }
-    public static final PotionEffectType[] PotionEffects = PotionEffectType.values();
-    public static final List<PotionEffect> EnderMenEffectList = Arrays.asList( new PotionEffect(PotionEffectType.INCREASE_DAMAGE , -1, 2, false, false), new PotionEffect(PotionEffectType.REGENERATION , -1, 3, false, false), new PotionEffect(PotionEffectType.HEALTH_BOOST , -1, 2, false, false), new PotionEffect(PotionEffectType.SPEED , -1, 2, false, false) );
+    private static final PotionEffectType[] PotionEffects = PotionEffectType.values();
+    private static final List<PotionEffect> EnderMenEffectList = Arrays.asList( new PotionEffect(PotionEffectType.INCREASE_DAMAGE , -1, 2, false, false), new PotionEffect(PotionEffectType.REGENERATION , -1, 3, false, false), new PotionEffect(PotionEffectType.HEALTH_BOOST , -1, 2, false, false), new PotionEffect(PotionEffectType.SPEED , -1, 2, false, false) );
 
     @EventHandler
     public void onMobSpawn(CreatureSpawnEvent event) {

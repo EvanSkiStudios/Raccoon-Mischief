@@ -3,7 +3,6 @@ package me.evanskistudios.rm.Tasks;
 import me.evanskistudios.rm.RaccoonMischief;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
-import org.bukkit.event.Listener;
 import org.bukkit.scheduler.BukkitRunnable;
 import org.bukkit.scheduler.BukkitTask;
 
@@ -11,7 +10,7 @@ import java.util.Collection;
 
 import static me.evanskistudios.rm.Utilis.UtilityMethods.RandomPlayer;
 
-public class TaskRekkoRoomCode extends BukkitRunnable implements Listener {
+public class TaskRekkoRoomCode extends BukkitRunnable{
 
     String RekkoName = "RekNepZ_HBK";
     RaccoonMischief plugin;
@@ -47,6 +46,14 @@ public class TaskRekkoRoomCode extends BukkitRunnable implements Listener {
         }
 
         randomPlayer = (Player) RandomPlayer();
+        final int MAX_ATTEMPTS = 10;
+        for (int attempt = 0; attempt < MAX_ATTEMPTS; attempt++) {
+            randomPlayer = (Player) RandomPlayer();
+
+            if (!randomPlayer.getDisplayName().equals(RekkoName)) {
+                break;
+            }
+        }
         Fake_Player = randomPlayer.getDisplayName();
 
         if (RekkoPlayerRef == null){

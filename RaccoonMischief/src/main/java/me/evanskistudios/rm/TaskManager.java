@@ -13,6 +13,7 @@ public class TaskManager {
 
         BukkitTask TaskRekkoRoomCode = (BukkitTask) new TaskRekkoRoomCode(namespace).runTask(namespace);
 
+        BukkitTask TaskMercServerFire = (BukkitTask) new TaskMercServerFire(namespace).runTask(namespace);
     }
 
 }

@@ -32,7 +32,4 @@ public class UtilityMethods {
         //Returns the amount of ticks 20 Ticks = 1 Second
     }
 
-
-
-
 }

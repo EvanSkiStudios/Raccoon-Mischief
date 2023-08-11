@@ -17,7 +17,6 @@ public class ListenerManager {
     }
 
     public static void Events() {
-        registerEvent( new TaskRekkoRoomCode(RaccoonMischief.getPlugin()) ); //Rekko
         registerEvent( new ListenerPlayerDeath(RaccoonMischief.getPlugin())  ); //Player Death Event
         registerEvent( new ListenerMobSpawn(RaccoonMischief.getPlugin()) );  //Mob Spawning
 
