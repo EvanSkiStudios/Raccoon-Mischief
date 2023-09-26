@@ -1,5 +1,6 @@
 package me.evanskistudios.rm.Recipes;
 
+import me.evanskistudios.rm.MaterialManager;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.NamespacedKey;
@@ -12,8 +13,8 @@ import java.util.Arrays;
 import java.util.List;
 
 public class RecipeHorseArmor {
-    private static final List<Material> WoolTypes = Arrays.asList(Material.BLACK_WOOL, Material.BLUE_WOOL, Material.BROWN_WOOL, Material.CYAN_WOOL, Material.GRAY_WOOL, Material.GREEN_WOOL, Material.LIGHT_BLUE_WOOL, Material.LIGHT_GRAY_WOOL, Material.LIME_WOOL, Material.MAGENTA_WOOL, Material.ORANGE_WOOL, Material.PINK_WOOL, Material.PURPLE_WOOL, Material.RED_WOOL, Material.WHITE_WOOL, Material.YELLOW_WOOL);
-    private static final RecipeChoice MaterialChoiceWOOL = new RecipeChoice.MaterialChoice(WoolTypes);
+    //private static final List<Material> WoolTypes = Arrays.asList(Material.BLACK_WOOL, Material.BLUE_WOOL, Material.BROWN_WOOL, Material.CYAN_WOOL, Material.GRAY_WOOL, Material.GREEN_WOOL, Material.LIGHT_BLUE_WOOL, Material.LIGHT_GRAY_WOOL, Material.LIME_WOOL, Material.MAGENTA_WOOL, Material.ORANGE_WOOL, Material.PINK_WOOL, Material.PURPLE_WOOL, Material.RED_WOOL, Material.WHITE_WOOL, Material.YELLOW_WOOL);
+    private static final RecipeChoice MaterialChoiceWOOL = new RecipeChoice.MaterialChoice(MaterialManager.WoolTypes);
     public static void HorseArmor(Plugin namespace) {
         //Leather
         {

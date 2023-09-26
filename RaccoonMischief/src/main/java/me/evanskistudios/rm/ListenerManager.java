@@ -17,30 +17,37 @@ public class ListenerManager {
     }
 
     public static void Events() {
+        registerEvent( new ComRMShowCraft() ); //CraftingRecipeInventoryListener
+        registerEvent( new EnchantListenerTelekinesis() ); //Telekinesis Enchant
+
         registerEvent( new ListenerPlayerDeath(RaccoonMischief.getPlugin())  ); //Player Death Event
         registerEvent( new ListenerMobSpawn(RaccoonMischief.getPlugin()) );  //Mob Spawning
 
-        registerEvent( new ComRMShowCraft() ); //CraftingRecipeInventoryListener
-        registerEvent( new ListenerLightning() ); //Lightning
-        registerEvent( new ListenerPlayerConnect() ); //PLayer Join
-        registerEvent( new ListenerMilkPotion()  ); //Milk potion
-        registerEvent( new ListenerPlayerInteractEntity()  ); //Player Right click
-        registerEvent( new ListenerPlayerCraft() ); //Crafting
-        registerEvent( new ListenerXPCrystal() ); //Xp Crystal
-        registerEvent( new ListenerPlayerEnterVoid() ); //teleport void
+        registerEvent( new ListenerEntityDeath() ); //Entity Death
         registerEvent( new ListenerEntityFire() ); //Entity fire
-        registerEvent( new ListenerPlayerInventory() ); //Player Inventory
-        registerEvent( new ListenerSnowballBrickProjectileLand() ); //Projectile Land
-        registerEvent( new EnchantListenerTelekinesis() ); //Telekinesis Enchant
+        registerEvent( new ListenerEntitySpawn() ); //Entity spawn
         registerEvent( new ListenerGoatHorn() ); //GoatHorn
-        registerEvent( new ListenerPlayerInteractBlock() ); //Right click block
         registerEvent( new ListenerItemDespawn() ); //Item despawn
+        registerEvent( new ListenerLightning() ); //Lightning
+        registerEvent( new ListenerMilkPotion()  ); //Milk potion
+        //Mob spawn
+        registerEvent( new ListenerPlayerBreakBlock() ); //Cake
+        registerEvent( new ListenerPlayerConnect() ); //PLayer Join
+        registerEvent( new ListenerPlayerCraft() ); //Crafting
+        //Player Death
+        registerEvent( new ListenerPlayerEnterBed() ); //bed event
+        registerEvent( new ListenerPlayerEnterVoid() ); //teleport void
+        registerEvent( new ListenerPlayerInteractBlock() ); //Right click block
+        registerEvent( new ListenerPlayerInteractEntity()  ); //Player Right click
+        registerEvent( new ListenerPlayerInventory() ); //Player Inventory
+        //Item consume
         registerEvent( new ListenerPlayerMove() ); //Player move
         registerEvent( new ListenerPlayerPlaceSweetBerries() ); //Placing
-        registerEvent( new ListenerPlayerBreakBlock() ); //Cake
         registerEvent( new ListenerPlayerRespawn() ); //PlayerRespawnPotionEffects
-        registerEvent( new ListenerEntitySpawn() ); //Entity spawn
         registerEvent( new ListenerPlayerSneak() ); //player sneak
+        registerEvent( new ListenerSnowballBrickProjectileLand() ); //Projectile Land
+        registerEvent( new ListenerXPCrystal() ); //Xp Crystal
+
     }
 }
 
