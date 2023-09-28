@@ -25,6 +25,7 @@ public class ListenerManager {
 
         registerEvent( new ListenerEntityDeath() ); //Entity Death
         registerEvent( new ListenerEntityFire() ); //Entity fire
+        registerEvent( new ListenerEntityItemPickup() ); //Pickup item
         registerEvent( new ListenerEntitySpawn() ); //Entity spawn
         registerEvent( new ListenerGoatHorn() ); //GoatHorn
         registerEvent( new ListenerItemDespawn() ); //Item despawn

@@ -12,17 +12,15 @@ public class ListenerPlayerEnterBed implements Listener {
     public void onEnterBed(PlayerBedEnterEvent event) {
         Player player = event.getPlayer();
 
-        if ( (player.getWorld().getEnvironment() != World.Environment.THE_END) && (player.getWorld().getEnvironment() != World.Environment.NETHER) ) {
+        boolean PlayerIsInEnd = (player.getWorld().getEnvironment() == World.Environment.THE_END);
+        boolean PlayerIsInNeather = (player.getWorld().getEnvironment() == World.Environment.NETHER);
+
+        if ( !PlayerIsInEnd && !PlayerIsInNeather ) {
             return;
         }
-        /*
-        if ( (player.getWorld().getEnvironment() == World.Environment.THE_END) || (player.getWorld().getEnvironment() == World.Environment.NETHER)) {
 
-            event.setUseBed(Event.Result.ALLOW);
-        }
-        */
+        //override the bed event
         event.setCancelled(true);
-
         switch (event.getBedEnterResult()){
             case NOT_POSSIBLE_HERE -> {
                 event.setUseBed(Event.Result.ALLOW);
