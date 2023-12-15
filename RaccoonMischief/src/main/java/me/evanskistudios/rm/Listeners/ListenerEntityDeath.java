@@ -2,13 +2,18 @@ package me.evanskistudios.rm.Listeners;
 
 import org.bukkit.Material;
 import org.bukkit.entity.LivingEntity;
+import org.bukkit.entity.Parrot;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityDeathEvent;
 import org.bukkit.inventory.EntityEquipment;
+import org.bukkit.inventory.ItemStack;
 
 public class ListenerEntityDeath implements Listener {
+
+    private static final ItemStack Chicken = new ItemStack(Material.CHICKEN, 1);
+    private static final ItemStack CookedChicken = new ItemStack(Material.COOKED_CHICKEN, 1);
 
     @EventHandler
     public void onMobDeath(EntityDeathEvent event) {
@@ -24,6 +29,10 @@ public class ListenerEntityDeath implements Listener {
             if (EntityEquip.getChestplate() != null) EntityEquip.setChestplateDropChance(1.0f);
             if (EntityEquip.getLeggings() != null) EntityEquip.setLeggingsDropChance(1.0f);
             if (EntityEquip.getBoots() != null) EntityEquip.setBootsDropChance(1.0f);
+        }
+
+        if (Entity instanceof Parrot) {
+            event.getDrops().add(Chicken);
         }
     }
 }
