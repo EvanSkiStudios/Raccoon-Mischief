@@ -1,6 +1,7 @@
 package me.evanskistudios.rm.Listeners;
 
 import org.bukkit.Material;
+import org.bukkit.entity.ArmorStand;
 import org.bukkit.entity.LivingEntity;
 import org.bukkit.entity.Parrot;
 import org.bukkit.entity.Player;
@@ -19,6 +20,12 @@ public class ListenerEntityDeath implements Listener {
     public void onMobDeath(EntityDeathEvent event) {
         LivingEntity Entity = event.getEntity();
         if (Entity instanceof Player) return;
+/*
+        if (Entity instanceof Parrot) {
+            event.getDrops().add(Chicken);
+        }
+ */
+        if (Entity instanceof ArmorStand) return;
 
         EntityEquipment EntityEquip = Entity.getEquipment();
         if (EntityEquip != null) {
@@ -29,10 +36,6 @@ public class ListenerEntityDeath implements Listener {
             if (EntityEquip.getChestplate() != null) EntityEquip.setChestplateDropChance(1.0f);
             if (EntityEquip.getLeggings() != null) EntityEquip.setLeggingsDropChance(1.0f);
             if (EntityEquip.getBoots() != null) EntityEquip.setBootsDropChance(1.0f);
-        }
-
-        if (Entity instanceof Parrot) {
-            event.getDrops().add(Chicken);
         }
     }
 }
