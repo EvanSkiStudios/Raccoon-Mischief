@@ -43,6 +43,7 @@ public class ComRMShowCraft implements TabExecutor, Listener {
             String InventoryTitle = "Cake";
             InventoryType InventoryGUIType = InventoryType.WORKBENCH;
 
+
             ItemStack Cake = new ItemStack(Material.CAKE, 1);
             ItemStack Wheat = new ItemStack(Material.WHEAT, 1);
             ItemStack Egg = new ItemStack(Material.EGG, 1);

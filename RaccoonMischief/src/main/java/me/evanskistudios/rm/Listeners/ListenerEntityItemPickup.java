@@ -16,7 +16,7 @@ public class ListenerEntityItemPickup implements Listener {
         if (!(event.getEntity() instanceof Player)) return;
 
         Random random = new Random();
-        int randomNumber = random.nextInt(10);
+        int randomNumber = random.nextInt(100);
         if (randomNumber != 0) return;
 
         Player player = (Player) event.getEntity();

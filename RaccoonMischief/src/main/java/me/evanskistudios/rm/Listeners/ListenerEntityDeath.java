@@ -1,41 +1,46 @@
 package me.evanskistudios.rm.Listeners;
 
 import org.bukkit.Material;
-import org.bukkit.entity.ArmorStand;
-import org.bukkit.entity.LivingEntity;
-import org.bukkit.entity.Parrot;
-import org.bukkit.entity.Player;
+import org.bukkit.entity.*;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityDeathEvent;
 import org.bukkit.inventory.EntityEquipment;
-import org.bukkit.inventory.ItemStack;
 
 public class ListenerEntityDeath implements Listener {
-
-    private static final ItemStack Chicken = new ItemStack(Material.CHICKEN, 1);
-    private static final ItemStack CookedChicken = new ItemStack(Material.COOKED_CHICKEN, 1);
 
     @EventHandler
     public void onMobDeath(EntityDeathEvent event) {
         LivingEntity Entity = event.getEntity();
-        if (Entity instanceof Player) return;
-/*
-        if (Entity instanceof Parrot) {
-            event.getDrops().add(Chicken);
+        if (Entity instanceof Player){
+            return;
         }
- */
-        if (Entity instanceof ArmorStand) return;
+
+        if (!(Entity instanceof Monster)){
+            return;
+        }
 
         EntityEquipment EntityEquip = Entity.getEquipment();
         if (EntityEquip != null) {
-            if (EntityEquip.getItemInMainHand().getType() != Material.AIR) EntityEquip.setItemInMainHandDropChance(1.0f);
-            if (EntityEquip.getItemInOffHand().getType() != Material.AIR) EntityEquip.setItemInOffHandDropChance(1.0f);
+            if (EntityEquip.getItemInMainHand().getType() != Material.AIR){
+                EntityEquip.setItemInMainHandDropChance(1.0f);
+            }
+            if (EntityEquip.getItemInOffHand().getType() != Material.AIR){
+                EntityEquip.setItemInOffHandDropChance(1.0f);
+            }
 
-            if (EntityEquip.getHelmet() != null) EntityEquip.setHelmetDropChance(1.0f);
-            if (EntityEquip.getChestplate() != null) EntityEquip.setChestplateDropChance(1.0f);
-            if (EntityEquip.getLeggings() != null) EntityEquip.setLeggingsDropChance(1.0f);
-            if (EntityEquip.getBoots() != null) EntityEquip.setBootsDropChance(1.0f);
+            if (EntityEquip.getHelmet() != null){
+                EntityEquip.setHelmetDropChance(1.0f);
+            }
+            if (EntityEquip.getChestplate() != null){
+                EntityEquip.setChestplateDropChance(1.0f);
+            }
+            if (EntityEquip.getLeggings() != null){
+                EntityEquip.setLeggingsDropChance(1.0f);
+            }
+            if (EntityEquip.getBoots() != null){
+                EntityEquip.setBootsDropChance(1.0f);
+            }
         }
     }
 }
