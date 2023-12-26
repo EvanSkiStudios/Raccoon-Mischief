@@ -15,6 +15,7 @@ import static java.lang.Math.floor;
 public class ListenerPlayerMove implements Listener{
     @EventHandler
     public void onMove(PlayerMoveEvent event) {
+        /*
         Player player = event.getPlayer();
 
         Location loc = player.getLocation();
@@ -43,5 +44,7 @@ public class ListenerPlayerMove implements Listener{
                 }
             }
         }
+
+         */
     }
 }

@@ -37,13 +37,14 @@ See [Latest Features](https://github.com/EvanSkiStudios/Raccoon-Mischief/blob/ma
 
 ## Vanilla Changes
 Things That change vanilla features
-* Nothing Changed since last version
+* You can now always sleep in a bed no matter where you are
 
 ## Recipes
 * Nothing Changed since last version
 
 ## Effects
-* Nothing Changed since last version
+* Respawn Effect -> swaps the locations of the respawned player and a random player
+* Generated Loot is now random between structure generated loot
 
 ## Enchantments
 * Nothing Changed since last version

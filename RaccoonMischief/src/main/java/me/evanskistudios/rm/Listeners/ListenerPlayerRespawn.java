@@ -18,17 +18,14 @@ import static me.evanskistudios.rm.Utilis.UtilityMethods.Choose;
 
 public class ListenerPlayerRespawn  implements Listener {
 
-    public static final String[] KickMessages = {"Kicked by Plugin","Forgor huw 2 respiwn", "Oops! Try again", "A Boot to the Head!"};
+    private static final String[] KickMessages = {"Kicked by Plugin","Forgor huw 2 respiwn", "Oops! Try again", "A Boot to the Head!"};
 
-    @EventHandler
-    public void onRespawn(PlayerRespawnEvent event) {
-        Player player = event.getPlayer();
-
+    public void RespawnEffect(Player player){
         Random random = new Random();
         int randomNumber = random.nextInt(5);
 
         if (randomNumber == 0) {
-            int randomEffect = random.nextInt(5);
+            int randomEffect = random.nextInt(6);
             switch (randomEffect) {
                 default -> {}
 
@@ -66,7 +63,28 @@ public class ListenerPlayerRespawn  implements Listener {
 
                     player.kickPlayer(kickMessage);
                 }
+
+                case 5 ->{
+                    for (Player otherPlayer : RaccoonMischief.getPlugin().getServer().getOnlinePlayers()) {
+                        if (otherPlayer != player) {
+                            Location player_location = player.getLocation();
+                            player.teleport(otherPlayer.getLocation());
+                            otherPlayer.teleport(player_location);
+
+                            player.sendMessage("You have switched places with " + otherPlayer.getDisplayName());
+                            otherPlayer.sendMessage("You have switched places with " + player.getDisplayName());
+                        }
+                    }
+                }
             }
         }
+    }
+
+    @EventHandler
+    public void onRespawn(PlayerRespawnEvent event) {
+        Player player = event.getPlayer();
+
+        RespawnEffect(player);
+
     }
 }

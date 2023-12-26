@@ -42,7 +42,7 @@ public class ListenerManager {
         registerEvent( new ListenerPlayerInventory() ); //Player Inventory
         //Item consume
         registerEvent( new ListenerPlayerMove() ); //Player move
-        registerEvent( new ListenerPlayerPlaceSweetBerries() ); //Placing
+        registerEvent( new ListenerPlayerCakeSlicesPlaceBlocker() ); //Placing
         registerEvent( new ListenerPlayerRespawn() ); //PlayerRespawnPotionEffects
         registerEvent( new ListenerPlayerSneak() ); //player sneak
         registerEvent( new ListenerSnowballBrickProjectileLand() ); //Projectile Land

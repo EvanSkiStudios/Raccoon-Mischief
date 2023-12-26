@@ -5,7 +5,6 @@ import org.bukkit.*;
 import org.bukkit.block.Block;
 import org.bukkit.block.data.Ageable;
 import org.bukkit.block.data.BlockData;
-import org.bukkit.block.data.type.RespawnAnchor;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -38,33 +37,6 @@ public class ListenerPlayerInteractBlock implements Listener {
         switch (blockType) {
             default -> {
                 return;
-            }
-
-            case RESPAWN_ANCHOR -> {
-                if (player.getWorld().getEnvironment() == World.Environment.NETHER) {
-                    return;
-                }
-
-                RespawnAnchor Anchor = ((RespawnAnchor) interactedBlock.getBlockData());
-
-                if ( (player.getInventory().getItemInMainHand().getType() != Material.GLOWSTONE) &&
-                     (player.getInventory().getItemInOffHand().getType() != Material.GLOWSTONE)
-                ) {
-                    event.setCancelled(true);
-
-                    int AnchorCharges = Anchor.getCharges();
-
-                    if (AnchorCharges >= 1) {
-                        double coord_x = interactedBlock.getLocation().getX();
-                        double coord_y = interactedBlock.getLocation().getY() + 1.0;
-                        double coord_z = interactedBlock.getLocation().getZ();
-
-                        player.setBedSpawnLocation(new Location(player.getWorld(), coord_x, coord_y, coord_z), true);
-                        String Format = (ChatColor.GRAY+""+ChatColor.ITALIC+"");
-                        player.sendMessage(Format+" Spawn set");
-                        Anchor.setCharges((AnchorCharges - 1));
-                    }
-                }
             }
 
             case WHEAT,BEETROOTS,POTATOES,CARROTS -> {
