@@ -3,7 +3,6 @@ import me.evanskistudios.rm.Commands.ComRMShowCraft;
 import me.evanskistudios.rm.EnchantListeners.*;
 import me.evanskistudios.rm.Listeners.*;
 
-import me.evanskistudios.rm.Tasks.TaskRekkoRoomCode;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.PluginManager;
 
@@ -24,7 +23,7 @@ public class ListenerManager {
         registerEvent( new ListenerMobSpawn(RaccoonMischief.getPlugin()) );  //Mob Spawning
 
         registerEvent( new ListenerEntityDeath() ); //Entity Death
-        registerEvent( new ListenerEntityFire() ); //Entity fire
+        registerEvent( new ListenerEntityDamage() ); //Entity fire
         registerEvent( new ListenerEntityItemPickup() ); //Pickup item
         registerEvent( new ListenerEntitySpawn() ); //Entity spawn
         registerEvent( new ListenerGoatHorn() ); //GoatHorn
@@ -34,7 +33,7 @@ public class ListenerManager {
         //Mob spawn
         registerEvent( new ListenerPlayerBreakBlock() ); //Cake
         registerEvent( new ListenerPlayerConnect() ); //PLayer Join
-        registerEvent( new ListenerPlayerCraft() ); //Crafting
+        registerEvent( new ListenerPlayerCustomItemCraft() ); //Crafting
         //Player Death
         registerEvent( new ListenerPlayerEnterBed() ); //bed event
         registerEvent( new ListenerPlayerEnterVoid() ); //teleport void

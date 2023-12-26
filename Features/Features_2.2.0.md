@@ -1,6 +1,15 @@
 # Features
 
-## Version 2.2.0
+## [Version 2.2.0](https://github.com/EvanSkiStudios/Raccoon-Mischief/releases/tag/Release_2_2)
+* Converted Project from Gradle to Maven
+
+## Bug Fixes for 2.0
+* Fixed the RekNepZ_HBK message
+* Fixed an issue with lightning not damaging things
+* Fixed an issue with creepers not taking damage
+* Fixed an issue with interacting with certian entites
+* - Removed version 2.1.0
+* - Forgot some things
 
 ## Config.yml
 * Info > provides a string with info about the config file, is unused by pluin so this key can be deleted/changed/ect
@@ -12,7 +21,6 @@
 * B_CustomPlayerJoinLeaveMessages > Toggles if the server should give the Custom join and leave messages
 * B_ForgivingVoid > Toggles if players that fall into the void should teleport to the overworld
 
-
 ## Commands
 * RMVer > Returns the current Version of the installed plugin
 * RMTestDeath > (OP only) A testing command that sets the players health to 1 to test Death effects
@@ -20,7 +28,7 @@
 * RMReloadCFG > (OP only) Reloads the config.yml file
 * RMGive > (OP only) Gives an selected RM item, much like the vanilla give command but for RM items only
 * RMShowCraft > Shows the crafting recipe of an RM recipe
-* RMEnchant > Enchants an item in the players hand with an custom enchantment
+* RMEnchant > (OP only) Enchants an item in the players hand with an custom enchantment
 
 ## Vanilla Changes
 Things That change vanilla features
@@ -30,7 +38,7 @@ Things That change vanilla features
 * Iron armor can be upgraded into Golden at smithing table
 * You can now put any item on your head
 * Snowballs thrown by non-player entities do 1 hearts of damage
-* Using a bucket on a Snow Golem filsl the bucket with powered snow
+* Using a bucket on a Snow Golem fills the bucket with powered snow
 * Removed the word "up" from {PlayerName} was blown up by a Creeper
 * Goat Horns now have no cooldown
 * Added the modpack feature of right clicking crops to auto harvest and replace them
@@ -55,8 +63,8 @@ Things That change vanilla features
 * Rotten Flesh to Leather > can be cooked on furnace, smoker or campfire
 * Milk Potion > A potion that removes potion effects
 * UnMetaDataCookies > Removes Meta Data from cookies (A-Turtles-Troll adds meta to the cookies to prevent stacking)
-* Throwable Brick, A brick you can throw and break glass with, they do 1.5 hearts of damage
-* Cake recipe is now changed to require a sweet berry
+* Throwable Brick > A brick you can throw and break glass with, they do 1.5 hearts of damage
+* Cake > recipe is now changed to require a sweet berry
 * Cake from Slices > 7 Cake Slices
 * Cake To Slices > 1 Cake
 * You can Uncraft Netherwart blocks

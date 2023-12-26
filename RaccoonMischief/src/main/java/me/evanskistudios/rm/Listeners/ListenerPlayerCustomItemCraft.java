@@ -16,7 +16,7 @@ import org.bukkit.plugin.Plugin;
 
 import static me.evanskistudios.rm.Utilis.UtilityMethods.Choose;
 
-public class ListenerPlayerCraft  implements Listener {
+public class ListenerPlayerCustomItemCraft implements Listener {
     RaccoonMischief plugin;
     public int AmountCrafted(CraftItemEvent event, Player player){
         int amount;

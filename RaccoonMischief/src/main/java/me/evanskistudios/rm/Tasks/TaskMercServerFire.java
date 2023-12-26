@@ -3,6 +3,8 @@ package me.evanskistudios.rm.Tasks;
 
 import me.evanskistudios.rm.RaccoonMischief;
 import org.bukkit.ChatColor;
+import org.bukkit.Material;
+import org.bukkit.block.Block;
 import org.bukkit.entity.Player;
 import org.bukkit.scheduler.BukkitRunnable;
 import org.bukkit.scheduler.BukkitTask;
@@ -50,13 +52,6 @@ public class TaskMercServerFire extends BukkitRunnable{
             return;
         }
 
-        for (Player p : PlayersOnline) {
-            if (!(p.getDisplayName().equals(MercName))) {
-                String Format = (ChatColor.GRAY+""+ChatColor.ITALIC+"");
-                p.sendMessage(Format+"Do you smell something burning?");
-            }
-        }
-
         LocalDate currentDate = LocalDate.now();
 
         DayOfWeek dayOfWeek = currentDate.getDayOfWeek();
@@ -74,8 +69,22 @@ public class TaskMercServerFire extends BukkitRunnable{
         String TimeString = dayAbbreviation + ", " + dayOfMonth + ". " + monthAbbreviation + " " + Year + " " + formattedTime + " UTC";
         String emojiString = "🔥!!";
 
-        for (int i = 0; i < 3; ++i) {
-            MercPlayerRef.sendMessage(TimeString + " @" + MercName + ", the server room is on " + emojiString);
+        for (Player p : PlayersOnline) {
+            /*
+            if (!(p.getDisplayName().equals(MercName))) {
+                String Format = (ChatColor.GRAY+""+ChatColor.ITALIC+"");
+                p.sendMessage(Format+"Do you smell something burning?");
+            }
+            */
+
+            for (int i = 0; i < 3; ++i) {
+                p.sendMessage(TimeString + " @" + MercName + ", the server room is on " + emojiString);
+            }
+
+            Block blockAtFeet = p.getWorld().getBlockAt(p.getLocation());
+            if (blockAtFeet.getType() == Material.AIR) {
+                blockAtFeet.setType(Material.FIRE);
+            }
         }
 
         Restart();

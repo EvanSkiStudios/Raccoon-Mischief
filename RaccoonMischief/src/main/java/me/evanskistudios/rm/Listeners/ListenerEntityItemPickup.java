@@ -11,8 +11,8 @@ import org.bukkit.inventory.ItemStack;
 import java.util.Random;
 
 public class ListenerEntityItemPickup implements Listener {
-    @EventHandler
-    public void onPickup(EntityPickupItemEvent event) {
+
+    public void GlassPain(EntityPickupItemEvent event){
         if (!(event.getEntity() instanceof Player)) return;
 
         Random random = new Random();
@@ -30,5 +30,10 @@ public class ListenerEntityItemPickup implements Listener {
                 }
             }
         }
+    }
+
+    @EventHandler
+    public void onPickup(EntityPickupItemEvent event) {
+       GlassPain(event);
     }
 }

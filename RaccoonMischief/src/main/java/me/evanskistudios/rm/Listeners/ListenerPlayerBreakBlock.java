@@ -18,7 +18,9 @@ public class ListenerPlayerBreakBlock  implements Listener {
         GameMode PlayerGameMode = player.getGameMode();
 
         //Player is in wrong GameMode
-        if (PlayerGameMode == GameMode.CREATIVE || PlayerGameMode == GameMode.SPECTATOR) return;
+        if (PlayerGameMode == GameMode.CREATIVE || PlayerGameMode == GameMode.SPECTATOR){
+            return;
+        }
 
         Block BrokenBlock = event.getBlock();
         Material BrokenBlockMaterial = BrokenBlock.getType();

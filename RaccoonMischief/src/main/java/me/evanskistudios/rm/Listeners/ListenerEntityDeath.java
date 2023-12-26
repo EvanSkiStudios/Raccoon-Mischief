@@ -9,18 +9,16 @@ import org.bukkit.inventory.EntityEquipment;
 
 public class ListenerEntityDeath implements Listener {
 
-    @EventHandler
-    public void onMobDeath(EntityDeathEvent event) {
-        LivingEntity Entity = event.getEntity();
-        if (Entity instanceof Player){
+    public void ModifyDropChance(LivingEntity entity){
+        if (entity instanceof Player){
             return;
         }
 
-        if (!(Entity instanceof Monster)){
+        if (!(entity instanceof Monster)){
             return;
         }
 
-        EntityEquipment EntityEquip = Entity.getEquipment();
+        EntityEquipment EntityEquip = entity.getEquipment();
         if (EntityEquip != null) {
             if (EntityEquip.getItemInMainHand().getType() != Material.AIR){
                 EntityEquip.setItemInMainHandDropChance(1.0f);
@@ -42,5 +40,12 @@ public class ListenerEntityDeath implements Listener {
                 EntityEquip.setBootsDropChance(1.0f);
             }
         }
+    }
+
+    @EventHandler
+    public void onMobDeath(EntityDeathEvent event) {
+        LivingEntity Entity = event.getEntity();
+
+        ModifyDropChance(Entity);
     }
 }

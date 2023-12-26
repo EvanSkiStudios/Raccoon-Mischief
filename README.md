@@ -27,11 +27,7 @@ See [Latest Features](https://github.com/EvanSkiStudios/Raccoon-Mischief/blob/ma
 ## Version 2.2.0
 
 ## Bug Fixes
-* Fixed the RekNepZ_HBK message
-* Fixed an issue with lightning not damaging things
-* Fixed an issue with creepers not taking damage
-* Fixed an issue with interacting with certian entites
-* - Removed version 2.1.0
+* Fixed an issue with Armor stands and drop chances
 
 ## Config.yml
 * Nothing Changed since last version
@@ -41,36 +37,13 @@ See [Latest Features](https://github.com/EvanSkiStudios/Raccoon-Mischief/blob/ma
 
 ## Vanilla Changes
 Things That change vanilla features
-* Added the modpack feature of right clicking crops to auto harvest and replace them
-* Cake can be broken or crafted into slices, and the slices can be crafted back into cake
-* Creepers now spawn charged and with random potion effects
-* Creepers will now explode if they take any damage at all
-* If a player dies by fire all the food in their inventory becomes cooked
-* [Squids can be milked again like in beta 1.2](https://youtu.be/6MsVOvMp-E8)
-* If you sneak right click a saddled Pig or Strider, it will un-saddle them
-* You can cook Red mushrooms in a furnace to make Red Dye
-* Skeletons no longer burn during the day
-* Endermen no longer take fire or water damage
-* Endermen now spawn with permant potion effects of Strength 2, Regeneration 3, Health Boost 2, Speed 2
-* Changed the Recipes for Crafting Tables, Furnaces, Chests, and Trapped Chests
-* The server will now tell Mercerenies that its on fire
+* Nothing Changed since last version
 
 ## Recipes
-* Cake from Slices > 7 Cake Slices
-* Cake To Slices > 1 Cake
-* You can Uncraft Netherwart blocks
-* Added Horse Armor recipes
-* Crafting tables are now crafted with cobblestone
-* Furnaces are crafted like vanilla crafting tabeles
+* Nothing Changed since last version
 
 ## Effects
-* The server will make an random player ask RekNepZ_HBK what the room code is, at random times
-* When you respawn you have an 1/5 chance to trigger a random effect
-* Respawn effect, plugin will show you the demo screen
-* Respawn effect, plugin will kick you from the game
-* Respawn effect, plugin will place a chicken on your head
-* Respawn effect, plugin will teleport you to another player
-* When you walk on an anvil you have a 1/20 chance to have more anvils fall on you
+* Nothing Changed since last version
 
 ## Enchantments
 * Nothing Changed since last version

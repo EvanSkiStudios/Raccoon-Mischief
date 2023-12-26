@@ -1,6 +1,5 @@
 package me.evanskistudios.rm.Listeners;
 
-import net.minecraft.world.entity.monster.EnderMan;
 import org.bukkit.entity.*;
 import org.bukkit.entity.Entity;
 import org.bukkit.event.EventHandler;
@@ -13,7 +12,7 @@ import java.util.List;
 
 import static org.bukkit.entity.EntityType.*;
 
-public class ListenerEntityFire implements Listener {
+public class ListenerEntityDamage implements Listener {
     private static final List<EntityType> FlameableEntities = Arrays.asList(PHANTOM, CREEPER, SKELETON, ENDERMAN);
     private static final List<EntityType> MoistEntities = Arrays.asList(ENDERMAN);
 
@@ -24,7 +23,6 @@ public class ListenerEntityFire implements Listener {
         Entity BurningEntity = event.getEntity();
 
         if (FlameableEntities.contains(BurningEntity.getType())){
-       // if ( (BurningEntity instanceof Phantom) || (BurningEntity instanceof Creeper)  || (BurningEntity instanceof Skeleton) ){
             event.setCancelled(true);
             BurningEntity.setFireTicks(0);
         }

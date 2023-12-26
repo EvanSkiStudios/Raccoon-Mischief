@@ -19,12 +19,7 @@ import org.bukkit.plugin.Plugin;
 import java.util.ArrayList;
 
 enum DeathType {
-    Normal,
-    Llama,
-    Creeper,
-    Phantom,
-    Warden,
-    Fire
+    Normal, Llama, Creeper, Phantom, Warden, Fire
 }
 
 public class ListenerPlayerDeath implements Listener{
