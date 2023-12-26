@@ -24,7 +24,7 @@ Place RaccoonMischief.jar into your plugin folder of your Paper-mc server.
 # Changelog
 See [Latest Features](https://github.com/EvanSkiStudios/Raccoon-Mischief/blob/master/Features/Features_Latest_.md) for full list of features
 
-## Version 2.2.0
+## Version 2.4.0
 
 ## Bug Fixes
 * Fixed an issue with Armor stands and drop chances
