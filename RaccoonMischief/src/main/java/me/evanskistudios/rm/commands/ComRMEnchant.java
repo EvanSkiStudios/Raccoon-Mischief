@@ -28,6 +28,7 @@ public class ComRMEnchant implements TabExecutor {
             return true;
         }
 
+        // Only through players
         if (!(sender instanceof Player)){
             sender.sendMessage(ChatColor.RED+"This command is only for players!");
             sender.sendMessage("Example: /RMEnchant <RM Enchant> <(Optional) Int: Level>");
@@ -37,6 +38,7 @@ public class ComRMEnchant implements TabExecutor {
 
         int arguments_length = args.length;
 
+        // no enchantment in command
         if (arguments_length == 0){
             player.sendMessage(ChatColor.RED+"No Enchantment Supplied!");
             player.sendMessage("Example: /RMEnchant <RM Enchant>");
@@ -45,6 +47,7 @@ public class ComRMEnchant implements TabExecutor {
 
         ItemStack MainHandItem = player.getInventory().getItemInMainHand();
 
+        // No item
         if (MainHandItem.getType() == Material.AIR){
             player.sendMessage(ChatColor.RED+"No Item in Hand!");
             player.sendMessage("Example: /RMEnchant <RM Enchant> <(Optional) Int: Level>");
@@ -68,12 +71,14 @@ public class ComRMEnchant implements TabExecutor {
             }
         }
 
+        // Enchant does not exist or is not a rm enchant
         if (Enchant == null) {
             player.sendMessage(ChatColor.RED+"Enchant does not exist or is not RM Enchant!");
             player.sendMessage("Example: /RMEnchant <RM Enchant>");
             return true;
         }
 
+        // Item already has enchantment
         if (MainHandItem.containsEnchantment(Enchant)){
             player.sendMessage(ChatColor.RED+"Item already has Enchantment "+Enchantment+"!");
             player.sendMessage("Example: /RMEnchant <RM Enchant> <(Optional) Int: Level>");
@@ -87,6 +92,7 @@ public class ComRMEnchant implements TabExecutor {
 
             int level = 1;
 
+            // Level of enchant error checking
             if (args.length == 2) {
                 try {
                     level = Integer.parseInt(args[1]);
@@ -115,6 +121,7 @@ public class ComRMEnchant implements TabExecutor {
                 Lore.add(ChatColor.GRAY + "" + EnchantName + " " + level);
             }
 
+            // MEta edge case
             if (MainHandItem_meta == null){
                 //I doubt this will ever trigger but on the edge case that it does
                 player.sendMessage(ChatColor.RED + "Error: Item Meta is Null???");
@@ -145,7 +152,8 @@ public class ComRMEnchant implements TabExecutor {
             List<String> ListOEnchants = Arrays.asList(
                     "TELEKINESIS",
                     "HEAVYSTEP",
-                    "SOULBOUND"
+                    "SOULBOUND",
+                    "EXPLOSIVE"
             );
             EnchantList = ListOEnchants;
 

@@ -20,15 +20,18 @@ public final class RaccoonMischief extends JavaPlugin{
 
         //Config
         {
-            String current_ver = "" + Version;
-            Object cfg_ver = getConfig().get("version");
-            if (cfg_ver == null || !current_ver.equalsIgnoreCase("" + cfg_ver)) {
-                getLogger().log(Level.WARNING,
-                        "\n" + "######################### RACCOON MISCHIEF #########################" + "\n" +
-                                " Config.yml version is out of date with RM." + current_ver + "\n" +
-                                " It is recommended to delete the file for the plugin to regenerate it." + "\n" +
-                                "####################################################################"
-                );
+            Object cfg_ver_ignore = getConfig().get("B_IgnoreConfigVersionMisMatch");
+            if ("False".equalsIgnoreCase("" + cfg_ver_ignore)) {
+                String current_ver = "" + Version;
+                Object cfg_ver = getConfig().get("version");
+                if (cfg_ver == null || !current_ver.equalsIgnoreCase("" + cfg_ver)) {
+                    getLogger().log(Level.WARNING,
+                            "\n" + "######################### RACCOON MISCHIEF #########################" + "\n" +
+                                    " Config.yml version is out of date with RM." + current_ver + "\n" +
+                                    " It is recommended to delete the file for the plugin to regenerate it." + "\n" +
+                                    "####################################################################"
+                    );
+                }
             }
             getConfig().options().copyDefaults();
             saveDefaultConfig();

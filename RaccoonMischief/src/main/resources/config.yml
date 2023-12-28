@@ -11,6 +11,7 @@ The first letter explains what data type the option is
 "
 version: "2.4.0"
 
+B_IgnoreConfigVersionMisMatch: "False"
 B_IgnorePluginGetInstalledFlag: "False"
 B_TurtlesTrollFeatures: "True"
 B_PlayersDropSkulls: "True"

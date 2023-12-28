@@ -15,8 +15,7 @@ public class EnchantManager {
 
     public static String getEnchantName(String Enchant) {
         //Logic to convert ALL caps Enchant name to Lowercase first letter upper string
-        String Name = Enchant;
-        Name = Name.toLowerCase();
+        String Name = Enchant.toLowerCase();
         String FirstLetter = String.valueOf(Name.charAt(0)).toUpperCase();
         Name = Name.replace(Name.charAt(0), FirstLetter.charAt(0));
 
@@ -26,9 +25,10 @@ public class EnchantManager {
     public static final Enchantment TELEKINESIS = new EnchantmentWrapper("enchanttelekinesis", "Telekinesis", 1);
     public static final Enchantment HEAVYSTEP = new EnchantmentWrapper("enchantheavystep", "Heavy Step", 1);
     public static final Enchantment SOULBOUND = new EnchantmentWrapper("enchantsoulbound", "Soul Bound", 1);
+    public static final Enchantment EXPLOSIVE = new EnchantmentWrapper("enchantexplosive", "Explosive", 1);
 
     public static void Register(){
-        Enchantment[] Enchantments = {TELEKINESIS, HEAVYSTEP, SOULBOUND};
+        Enchantment[] Enchantments = {TELEKINESIS, HEAVYSTEP, SOULBOUND, EXPLOSIVE};
         EnchantTypes = Enchantments;
 
         for (Enchantment Enchant : Enchantments) {

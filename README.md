@@ -30,7 +30,7 @@ See [Latest Features](https://github.com/EvanSkiStudios/Raccoon-Mischief/blob/ma
 * Fixed an issue with Armor stands and drop chances
 
 ## Config.yml
-* Nothing Changed since last version
+* B_IgnoreConfigVersionMisMatch -> Disables the warning message about the config file being out of date
 
 ## Commands
 * Nothing Changed since last version
@@ -47,4 +47,4 @@ Things That change vanilla features
 * Generated Loot is now random between structure generated loot
 
 ## Enchantments
-* Nothing Changed since last version
+* Explosive -> makes things explosive!!
