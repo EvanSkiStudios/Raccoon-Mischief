@@ -25,7 +25,8 @@ enum DeathType {
 public class ListenerPlayerDeath implements Listener{
     RaccoonMischief plugin;
     public ListenerPlayerDeath(RaccoonMischief plugin) {this.plugin = plugin;}
-    public DeathType DeathCause = DeathType.Normal;
+    private DeathType DeathCause = DeathType.Normal;
+
     @EventHandler
     public void onDamage(EntityDamageByEntityEvent event) {
         //zombie, creeper, skeleton

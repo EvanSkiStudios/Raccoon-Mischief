@@ -13,7 +13,7 @@ public class ComRMQuickTest implements CommandExecutor {
         public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
             String no_permission = (ChatColor.RED+"You lack sufficient permission to execute this command");
 
-            if (!sender.hasPermission("RaccoonMischief.RMtestDeath")){
+            if (!sender.hasPermission("RaccoonMischief.RMQuickTest")){
                 sender.sendMessage(no_permission);
                 return true;
             }
