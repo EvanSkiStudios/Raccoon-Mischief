@@ -8,10 +8,10 @@ import org.bukkit.inventory.*;
 import org.bukkit.plugin.Plugin;
 
 public class RecipeHarderArmor {
-    public static void HardArmor(Plugin namespace) {
+        public static void HardArmor(Plugin namespace) {
+                RecipeChoice AIR = new RecipeChoice.MaterialChoice.ExactChoice(new ItemStack(Material.AIR, 1));
 
-        //IRON
-        {
+                //IRON
                 ItemStack IH = new ItemStack(Material.IRON_HELMET, 1);
                 ItemStack IC = new ItemStack(Material.IRON_CHESTPLATE, 1);
                 ItemStack IL = new ItemStack(Material.IRON_LEGGINGS, 1);
@@ -49,9 +49,8 @@ public class RecipeHarderArmor {
                 B_I_H_Recipe.setIngredient('I', Material.IRON_INGOT);
                 B_I_H_Recipe.setIngredient('O', Material.LEATHER_BOOTS);
                 Bukkit.addRecipe(B_I_H_Recipe);
-        }
-        //GOLD
-        {
+
+                //GOLD
                 ItemStack GH = new ItemStack(Material.GOLDEN_HELMET, 1);
                 ItemStack GC = new ItemStack(Material.GOLDEN_CHESTPLATE, 1);
                 ItemStack GL = new ItemStack(Material.GOLDEN_LEGGINGS, 1);
@@ -89,9 +88,8 @@ public class RecipeHarderArmor {
                 B_G_H_Recipe.setIngredient('I', Material.GOLD_INGOT);
                 B_G_H_Recipe.setIngredient('O', Material.IRON_BOOTS);
                 Bukkit.addRecipe(B_G_H_Recipe);
-        }
-        //DIAMOND
-        {
+
+                //DIAMOND
                 ItemStack DH = new ItemStack(Material.DIAMOND_HELMET, 1);
                 ItemStack DC = new ItemStack(Material.DIAMOND_CHESTPLATE, 1);
                 ItemStack DL = new ItemStack(Material.DIAMOND_LEGGINGS, 1);
@@ -130,9 +128,7 @@ public class RecipeHarderArmor {
                 B_D_H_Recipe.setIngredient('O', Material.GOLDEN_BOOTS);
                 Bukkit.addRecipe(B_D_H_Recipe);
 
-        //Smiting
-        {
-                //All broken until they update to the new trim system thing
+                //Smiting
                 NamespacedKey G_H_S_key = new NamespacedKey(namespace, "S_G_Helmet");
                 NamespacedKey G_C_S_key = new NamespacedKey(namespace, "S_G_ChestPlate");
                 NamespacedKey G_L_S_key = new NamespacedKey(namespace, "S_G_Leggings");
@@ -148,43 +144,46 @@ public class RecipeHarderArmor {
                 ItemStack GLegg = new ItemStack(Material.GOLDEN_LEGGINGS, 1);
                 ItemStack GBoots = new ItemStack(Material.GOLDEN_BOOTS, 1);
 
-                ItemStack GoldIngot = new ItemStack(Material.GOLD_INGOT,1);
+                ItemStack GoldIngot = new ItemStack(Material.GOLD_INGOT, 1);
 
                 RecipeChoice RC = new RecipeChoice.MaterialChoice.ExactChoice(GoldIngot);
 
-                SmithingRecipe H_G_H_S_Recipe = new SmithingRecipe(
+                SmithingRecipe H_G_H_S_Recipe = new SmithingTransformRecipe(
                         G_H_S_key,
-                        IHelmet,
-                        new RecipeChoice.MaterialChoice.ExactChoice(GHelmet),
+                        GHelmet,
+                        AIR,
+                        new RecipeChoice.MaterialChoice.ExactChoice(IHelmet),
                         RC
                 );
                 Bukkit.addRecipe(H_G_H_S_Recipe);
 
-                SmithingRecipe H_G_C_S_Recipe = new SmithingRecipe(
+                SmithingRecipe H_G_C_S_Recipe = new SmithingTransformRecipe(
                         G_C_S_key,
-                        IChest,
-                        new RecipeChoice.MaterialChoice.ExactChoice(GChest),
+                        GChest,
+                        AIR,
+                        new RecipeChoice.MaterialChoice.ExactChoice(IChest),
                         RC
                 );
                 Bukkit.addRecipe(H_G_C_S_Recipe);
 
-                SmithingRecipe H_G_L_S_Recipe = new SmithingRecipe(
+                SmithingRecipe H_G_L_S_Recipe = new SmithingTransformRecipe(
                         G_L_S_key,
-                        ILegg,
-                        new RecipeChoice.MaterialChoice.ExactChoice(GLegg),
+                        GLegg,
+                        AIR,
+                        new RecipeChoice.MaterialChoice.ExactChoice(ILegg),
                         RC
                 );
                 Bukkit.addRecipe(H_G_L_S_Recipe);
 
-                SmithingRecipe H_G_B_S_Recipe = new SmithingRecipe(
+                SmithingRecipe H_G_B_S_Recipe = new SmithingTransformRecipe(
                         G_B_S_key,
-                        IBoots,
-                        new RecipeChoice.MaterialChoice.ExactChoice(GBoots),
+                        GBoots,
+                        AIR,
+                        new RecipeChoice.MaterialChoice.ExactChoice(IBoots),
                         RC
                 );
                 Bukkit.addRecipe(H_G_B_S_Recipe);
         }
-
-        }
-    }
 }
+
+

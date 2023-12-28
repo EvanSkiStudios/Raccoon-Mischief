@@ -33,7 +33,6 @@ public class EnchantListenerBow implements Listener {
         if (BowMeta.hasEnchant(EnchantManager.EXPLOSIVE)){
             Entity Projectile = event.getProjectile();
             if (Projectile instanceof Arrow) {
-                System.out.println("Arrow given metadata");
                 Projectile.setMetadata("Explosive_Arrow", new MyMetadata(plugin, "Explosive_Arrow"));
             }
         }
