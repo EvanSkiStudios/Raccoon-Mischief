@@ -17,10 +17,12 @@ public class ComRMQuickTest implements CommandExecutor {
                 sender.sendMessage(no_permission);
                 return true;
             }
+
             if (!(sender instanceof Player)) {
                 sender.sendMessage(ChatColor.RED+""+sender+" is not a player!");
                 return true;
             }
+
             //DO command things below
 
             Player player = (Player) sender;

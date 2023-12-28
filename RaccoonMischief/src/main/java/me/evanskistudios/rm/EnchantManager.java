@@ -14,12 +14,14 @@ public class EnchantManager {
     }
 
     public static String getEnchantName(String Enchant) {
-        //Logic to convert ALL caps Enchant name to Lowercase first letter upper string
-        String Name = Enchant.toLowerCase();
-        String FirstLetter = String.valueOf(Name.charAt(0)).toUpperCase();
-        Name = Name.replace(Name.charAt(0), FirstLetter.charAt(0));
-
-        return Name;
+        Enchant = Enchant.toUpperCase();
+        for (Enchantment enchantType : EnchantTypes) {
+            String EnchantName = enchantType.getName();
+            if (Enchant.equalsIgnoreCase(EnchantName)) {
+                return EnchantName;
+            }
+        }
+        return null;
     }
 
     public static final Enchantment TELEKINESIS = new EnchantmentWrapper("enchanttelekinesis", "Telekinesis", 1);

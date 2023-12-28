@@ -1,4 +1,4 @@
-package me.evanskistudios.rm.Listeners;
+package me.evanskistudios.rm.EnchantListeners;
 
 import me.evanskistudios.rm.EnchantManager;
 import me.evanskistudios.rm.RaccoonMischief;
@@ -17,9 +17,7 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.plugin.Plugin;
 
-import java.util.logging.Level;
-
-public class ListenerBowEnchantments  implements Listener {
+public class EnchantListenerBow implements Listener {
 
     private final Plugin plugin = RaccoonMischief.getPlugin();
 

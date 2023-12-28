@@ -18,11 +18,11 @@ public class ListenerManager {
     public static void Events() {
         registerEvent(new ComRMShowCraft()); //CraftingRecipeInventoryListener
         registerEvent(new EnchantListenerTelekinesis()); //Telekinesis Enchant
+        registerEvent(new EnchantListenerBow()); //bow rm-enchantments stuff
 
         registerEvent(new ListenerPlayerDeath(RaccoonMischief.getPlugin())); //Player Death Event
         registerEvent(new ListenerMobSpawn(RaccoonMischief.getPlugin()));  //Mob Spawning
 
-        registerEvent(new ListenerBowEnchantments()); //bow rm-enchantments stuff
         registerEvent(new ListenerEntityDamage()); //Entity fire
         registerEvent(new ListenerEntityDeath()); //Entity Death
         registerEvent(new ListenerEntityItemPickup()); //Pickup item

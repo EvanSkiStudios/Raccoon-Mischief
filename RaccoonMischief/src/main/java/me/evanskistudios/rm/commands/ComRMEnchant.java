@@ -16,9 +16,11 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import static me.evanskistudios.rm.EnchantManager.EnchantTypes;
+
 public class ComRMEnchant implements TabExecutor {
 
-    public static List<String> EnchantList;
+    private static List<String> EnchantList;
 
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
@@ -149,12 +151,11 @@ public class ComRMEnchant implements TabExecutor {
     @Override
     public List<String> onTabComplete(CommandSender sender, Command command, String label, String[] args) {
         if (args.length == 1){
-            List<String> ListOEnchants = Arrays.asList(
-                    "TELEKINESIS",
-                    "HEAVYSTEP",
-                    "SOULBOUND",
-                    "EXPLOSIVE"
-            );
+
+            List<String> ListOEnchants = new ArrayList<>(List.of());
+            for (Enchantment enchantType : EnchantTypes) {
+                ListOEnchants.add(enchantType.getName());
+            }
             EnchantList = ListOEnchants;
 
             return ListOEnchants;
