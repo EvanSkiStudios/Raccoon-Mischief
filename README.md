@@ -38,6 +38,7 @@ See [Latest Features](https://github.com/EvanSkiStudios/Raccoon-Mischief/blob/ma
 ## Vanilla Changes
 Things That change vanilla features
 * You can now always sleep in a bed no matter where you are
+* Parrots drop chicken
 
 ## Recipes
 * Nothing Changed since last version

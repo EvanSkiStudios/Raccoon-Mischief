@@ -72,7 +72,6 @@ public class ListenerEntityDeath implements Listener {
                 switch(killer){
                     case FIRE, FIRE_TICK -> ParrotDeathCause = DeathType.Fire;
                 }
-
             }
         }
     }

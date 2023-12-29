@@ -26,7 +26,7 @@ public class ListenerManager {
         registerEvent(new ListenerEntityDamage()); //Entity fire
         registerEvent(new ListenerEntityDeath()); //Entity Death
         registerEvent(new ListenerEntityItemPickup()); //Pickup item
-        registerEvent(new ListenerEntitySpawn()); //Entity spawn
+        registerEvent(new ListenerCreatureSpawn()); //Entity spawn
         registerEvent(new ListenerGoatHorn()); //GoatHorn
         registerEvent(new ListenerItemDespawn()); //Item despawn
         registerEvent(new ListenerLightning()); //Lightning
