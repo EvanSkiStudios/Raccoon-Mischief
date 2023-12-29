@@ -4,10 +4,16 @@ import org.bukkit.Material;
 import org.bukkit.entity.*;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
+import org.bukkit.event.entity.EntityDamageByEntityEvent;
+import org.bukkit.event.entity.EntityDamageEvent;
 import org.bukkit.event.entity.EntityDeathEvent;
 import org.bukkit.inventory.EntityEquipment;
+import org.bukkit.inventory.ItemStack;
+
+import java.util.List;
 
 public class ListenerEntityDeath implements Listener {
+    private DeathType ParrotDeathCause = DeathType.Normal;
 
     public void ModifyDropChance(LivingEntity entity){
         if (entity instanceof Player){
@@ -42,11 +48,51 @@ public class ListenerEntityDeath implements Listener {
         }
     }
 
+    public void ParrotChicken(LivingEntity entity, List<ItemStack> drops){
+        if (entity instanceof  Parrot parrot){
+            if (ParrotDeathCause == DeathType.Fire){
+                drops.add( new ItemStack(Material.COOKED_CHICKEN, 1) );
 
+                /* Boi what the hell you thinking?
+                for (ItemStack drop : drops) {
+                    if (drop.getType() == Material.CHICKEN) {
+                        int chickenAmount = drop.getAmount();
+                        drops.remove(drop);
+                        drops.add( new ItemStack(Material.COOKED_CHICKEN, chickenAmount) );
+                        break;
+                    }
+                }
+                */
+            }else{
+                drops.add( new ItemStack(Material.CHICKEN, 1) );
+            }
+        }
+        ParrotDeathCause = DeathType.Normal;
+    }
+
+    @EventHandler
+    public void onHurt(EntityDamageEvent event) {
+        //Fire Drowning Freezing
+        if (event.isCancelled()) return;
+
+        Entity entity = event.getEntity();
+        if (entity instanceof Parrot parrot) {
+            if (event.getFinalDamage() >= parrot.getHealth()) {
+                EntityDamageEvent.DamageCause killer = event.getCause();
+
+                switch(killer){
+                    case FIRE, FIRE_TICK -> ParrotDeathCause = DeathType.Fire;
+                }
+
+            }
+        }
+    }
 
     @EventHandler
     public void onMobDeath(EntityDeathEvent event) {
         LivingEntity Entity = event.getEntity();
+
+        ParrotChicken(Entity, event.getDrops());
 
         ModifyDropChance(Entity);
     }
