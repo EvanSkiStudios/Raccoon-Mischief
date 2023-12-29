@@ -52,17 +52,6 @@ public class ListenerEntityDeath implements Listener {
         if (entity instanceof  Parrot parrot){
             if (ParrotDeathCause == DeathType.Fire){
                 drops.add( new ItemStack(Material.COOKED_CHICKEN, 1) );
-
-                /* Boi what the hell you thinking?
-                for (ItemStack drop : drops) {
-                    if (drop.getType() == Material.CHICKEN) {
-                        int chickenAmount = drop.getAmount();
-                        drops.remove(drop);
-                        drops.add( new ItemStack(Material.COOKED_CHICKEN, chickenAmount) );
-                        break;
-                    }
-                }
-                */
             }else{
                 drops.add( new ItemStack(Material.CHICKEN, 1) );
             }
