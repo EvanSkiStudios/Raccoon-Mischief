@@ -25,11 +25,10 @@ public class RecipeTacticalDirt {
             NamespacedKey key = new NamespacedKey(namespace, "ndirt_eat");
             TaticalDirtMeta.getPersistentDataContainer().set(key, PersistentDataType.DOUBLE, 1.0);
             TaticalDirt.setItemMeta(TaticalDirtMeta);
+
             ShapelessRecipe TaticalDirtRecipe = new ShapelessRecipe(new NamespacedKey(namespace, "TacticalDirt"), TaticalDirt);
             TaticalDirtRecipe.addIngredient(1, Material.DIRT);
             TaticalDirtRecipe.addIngredient(1, Material.WHEAT_SEEDS);
-
-
             Bukkit.addRecipe(TaticalDirtRecipe);
 
             Item = TaticalDirt;

@@ -1,5 +1,6 @@
 package me.evanskistudios.rm.Commands;
 
+import me.evanskistudios.rm.FoodManager;
 import me.evanskistudios.rm.Items.ItemUpgradeShard;
 import me.evanskistudios.rm.Recipes.*;
 import org.bukkit.ChatColor;
@@ -64,8 +65,8 @@ public class ComRMGive implements TabExecutor {
         boolean FoundItem = false;
         ItemStack RequestedItem = new ItemStack(Material.AIR,1);
 
-        if (Item_arg.equalsIgnoreCase("Throwable_Brick")){
-            RequestedItem = RecipeThrowableBrick.getItem();
+        if (Item_arg.equalsIgnoreCase("Debug_Chicken")){
+            RequestedItem = FoodManager.DebugChicken;
             FoundItem = true;
         }
 
@@ -92,6 +93,11 @@ public class ComRMGive implements TabExecutor {
 
         if (Item_arg.equalsIgnoreCase("Tactical_Dirt")){
             RequestedItem = RecipeTacticalDirt.getItem();
+            FoundItem = true;
+        }
+
+        if (Item_arg.equalsIgnoreCase("Throwable_Brick")){
+            RequestedItem = RecipeThrowableBrick.getItem();
             FoundItem = true;
         }
 
@@ -122,6 +128,7 @@ public class ComRMGive implements TabExecutor {
 
         if (args.length == 1){
             List<String> ListOItems = Arrays.asList(
+                    "Debug_Chicken",
                     "JTE_Apple",
                     "Milk_Potion",
                     "Strange_Meat",

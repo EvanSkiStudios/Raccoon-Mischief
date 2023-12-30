@@ -67,6 +67,6 @@ public final class RaccoonMischief extends JavaPlugin{
     @Override
     public void onDisable() {
         // Plugin shutdown logic
-        //getLogger().info("RaccoonMischief UNLOADED!");
+        getLogger().info("RaccoonMischief UNLOADED!  --So long Gay Bowser!");
     }
 }

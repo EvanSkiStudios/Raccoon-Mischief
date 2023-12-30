@@ -6,7 +6,9 @@ import org.bukkit.event.player.PlayerItemConsumeEvent;
 
 public class ListenerPlayerItemConsume implements Listener {
     @EventHandler
-    public void onEat(PlayerItemConsumeEvent event) {
+    public void onConsume(PlayerItemConsumeEvent event) {
         if (event.isCancelled()) return;
+
+
     }
 }
