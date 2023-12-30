@@ -46,6 +46,7 @@ Things That change vanilla features
 ## Effects
 * Respawn Effect -> swaps the locations of the respawned player and a random player
 * Generated Loot is now random between structure generated loot
+* Monsters now have a 25% chance to get enchanted loot and a 1/100 chance for teh bow they are holding to be have the explosive enchant
 
 ## Enchantments
 * Explosive -> makes things explosive!!

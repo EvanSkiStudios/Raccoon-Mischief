@@ -9,10 +9,10 @@ public class EnchantmentWrapper extends Enchantment{
     private final String Name;
     private final int MaxLevel;
 
-    public EnchantmentWrapper(String Namespace, String name, int level) {
+    public EnchantmentWrapper(String Namespace, String name, int Maxlevel) {
         super(NamespacedKey.minecraft(Namespace));
         this.Name = name;
-        this.MaxLevel = level;
+        this.MaxLevel = Maxlevel;
     }
 
     @Override
@@ -27,7 +27,7 @@ public class EnchantmentWrapper extends Enchantment{
 
     @Override
     public int getStartLevel() {
-        return 0;
+        return 1;
     }
 
     @Override

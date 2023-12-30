@@ -21,7 +21,7 @@ import java.util.Random;
 
 public class ListenerCreatureSpawn implements Listener {
 
-    public static ItemStack CraftANewBow(ItemStack OldBow){
+    public static ItemStack CraftExplosiveBow(ItemStack OldBow){
         Plugin plugin = RaccoonMischief.getPlugin(RaccoonMischief.class);
 
         ItemStack NewBowBecauseItWontDuckingAddItTOTheSpawnedOne = new ItemStack(Material.BOW, 1);
@@ -31,7 +31,6 @@ public class ListenerCreatureSpawn implements Listener {
         // NBT
         NamespacedKey key = new NamespacedKey(plugin, "Explosive_Bow");
         BowMeta.getPersistentDataContainer().set(key, PersistentDataType.DOUBLE, 1.0);
-        BowMeta.setCustomModelData(4558);
 
         // Create lore
         List<String> Lore = new ArrayList<String>();
@@ -64,13 +63,17 @@ public class ListenerCreatureSpawn implements Listener {
 
             if (MainHandItem.getType() != Material.AIR){
                 if (MainHandItem.getType() == Material.BOW){
-                    ItemStack newBow = CraftANewBow(MainHandItem);
-                    EntityEquip.setItemInMainHand(newBow);
+                    if (random.nextInt(100) == 1) {
+                        ItemStack newBow = CraftExplosiveBow(MainHandItem);
+                        EntityEquip.setItemInMainHand(newBow);
+                    }
                 }
             }
             if (OffHandItem.getType() != Material.AIR){
-                ItemStack newBow = CraftANewBow(OffHandItem);
-                EntityEquip.setItemInOffHand(newBow);
+                if (random.nextInt(100) == 1) {
+                    ItemStack newBow = CraftExplosiveBow(OffHandItem);
+                    EntityEquip.setItemInOffHand(newBow);
+                }
             }
 
             if (EntityEquip.getHelmet() != null){
@@ -85,16 +88,12 @@ public class ListenerCreatureSpawn implements Listener {
             if (EntityEquip.getBoots() != null){
 
             }
-        }else{
-            System.out.println("EQUIP NULL");
         }
-
     }
 
     @EventHandler
     public void onSpawn(CreatureSpawnEvent event){
         LivingEntity SpawnedEntity = event.getEntity();
-        System.out.println(SpawnedEntity);
 
         RPGEquipmentLoot(SpawnedEntity);
     }
