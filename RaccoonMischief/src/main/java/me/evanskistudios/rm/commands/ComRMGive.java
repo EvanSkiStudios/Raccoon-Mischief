@@ -66,6 +66,10 @@ public class ComRMGive implements TabExecutor {
         ItemStack RequestedItem = new ItemStack(Material.AIR,1);
 
         if (Item_arg.equalsIgnoreCase("Debug_Chicken")){
+            player.getInventory().addItem(FoodManager.BottleOLava);
+            player.getInventory().addItem(FoodManager.BottleOMilk);
+            player.getInventory().addItem(FoodManager.FruitSalad);
+
             RequestedItem = FoodManager.DebugChicken;
             FoundItem = true;
         }

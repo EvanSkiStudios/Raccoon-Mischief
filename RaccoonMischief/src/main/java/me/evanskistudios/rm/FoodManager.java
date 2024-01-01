@@ -51,6 +51,6 @@ public class FoodManager {
 
     public static ItemStack DebugChicken = FoodItem(Material.CHICKEN, ChatColor.GREEN +""+ ChatColor.ITALIC + "DEBUG CHICKEN", "", 69, NSKEY_DEBUG_CHICKEN, false);
     public static ItemStack BottleOLava = FoodItem(Material.HONEY_BOTTLE, "Bottle o' Lava", "", 1, NSKEY_BOTTLEOLAVA, false);
-    public static ItemStack BottleOMilk = FoodItem(Material.HONEY_BOTTLE, "Bottle o' Milk", ChatColor.BLUE +"Removes all potion effects", 1, NSKEY_BOTTLEOMILK, true);
+    public static ItemStack BottleOMilk = FoodItem(Material.HONEY_BOTTLE, "Bottle o' Milk", ChatColor.ITALIC +""+ChatColor.BLUE  +"Removes all potion effects", 2, NSKEY_BOTTLEOMILK, true);
     public static ItemStack FruitSalad = FoodItem(Material.RABBIT_STEW, "Fruit Salad", ChatColor.ITALIC +"Very Yummy", 7083, NSKEY_FRUITSALAD, false);
 }
