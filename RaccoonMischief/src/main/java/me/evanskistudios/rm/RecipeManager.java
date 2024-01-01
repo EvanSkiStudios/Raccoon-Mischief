@@ -65,7 +65,7 @@ public class RecipeManager {
 
         RecipeNewWorkbenches.HarderWorkBenches(P);
 
-        RecipePlayerHeads.PlayerHeadFurnace(P);
+        RecipePlayerHeads.PlayerHeadCooking(P);
 
         RecipeRedMushroomDye.MushroomDye(P);
 
