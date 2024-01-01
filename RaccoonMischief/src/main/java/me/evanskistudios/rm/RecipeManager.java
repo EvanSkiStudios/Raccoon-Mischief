@@ -40,6 +40,8 @@ public class RecipeManager {
         Plugin P = RaccoonMischief.getPlugin();
         //ClassFileName.MethodName(namespace);
 
+        FoodManager.AddRecipes(); //Adds the recipes from the food manager
+
         RecipeCakeSlices.CakeSlice(P); //Has to be above Recipe Cake from slices because that requires the item from this one
         RecipeCakeFromSlices.CakeFromSlice(P);
 
@@ -62,6 +64,8 @@ public class RecipeManager {
         RecipeNewCopperRedstone.NewCopperRedstoneItems(P);
 
         RecipeNewWorkbenches.HarderWorkBenches(P);
+
+        RecipePlayerHeads.PlayerHeadFurnace(P);
 
         RecipeRedMushroomDye.MushroomDye(P);
 

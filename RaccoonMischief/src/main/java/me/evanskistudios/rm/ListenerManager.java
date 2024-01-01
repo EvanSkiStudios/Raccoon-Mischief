@@ -1,6 +1,7 @@
 package me.evanskistudios.rm;
 import me.evanskistudios.rm.Commands.ComRMShowCraft;
 import me.evanskistudios.rm.EnchantListeners.*;
+import me.evanskistudios.rm.FoodListeners.FoodListenerDebugChicken;
 import me.evanskistudios.rm.Listeners.*;
 
 import org.bukkit.plugin.Plugin;
@@ -19,6 +20,8 @@ public class ListenerManager {
         registerEvent(new ComRMShowCraft()); //CraftingRecipeInventoryListener
         registerEvent(new EnchantListenerTelekinesis()); //Telekinesis Enchant
         registerEvent(new EnchantListenerBow()); //bow rm-enchantments stuff
+
+        registerEvent(new FoodListenerDebugChicken()); // Food listener
 
         registerEvent(new ListenerPlayerDeath(RaccoonMischief.getPlugin())); //Player Death Event
         registerEvent(new ListenerMobSpawn(RaccoonMischief.getPlugin()));  //Mob Spawning

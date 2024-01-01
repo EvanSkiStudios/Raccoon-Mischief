@@ -14,10 +14,16 @@ public class RecipeRedMushroomDye {
         float xp = 1.0f;
         int Furnace_time = 200;
 
-        FurnaceRecipe RottenLeather_furnace_recipe = new FurnaceRecipe(
+        FurnaceRecipe MushroomDye_furnace_recipe = new FurnaceRecipe(
                 new NamespacedKey(namespace,"RedMushroomDye"),
+                new ItemStack(Material.RED_DYE, 1), Material.RED_MUSHROOM, xp, Furnace_time
+        );
+        Bukkit.addRecipe(MushroomDye_furnace_recipe);
+
+        FurnaceRecipe DyeToMushroom_furnace_recipe = new FurnaceRecipe(
+                new NamespacedKey(namespace,"DyeToMushroomRecipe"),
                 RedMushroom, RedDye, xp, Furnace_time
         );
-        Bukkit.addRecipe(RottenLeather_furnace_recipe);
+        Bukkit.addRecipe(DyeToMushroom_furnace_recipe);
     }
 }

@@ -28,6 +28,7 @@ See [Latest Features](https://github.com/EvanSkiStudios/Raccoon-Mischief/blob/ma
 
 ## Bug Fixes
 * Fixed an issue with Armor stands and drop chances
+* Fixed an issue with the Red mushroom to Red Dye recipe
 
 ## Config.yml
 * B_IgnoreConfigVersionMisMatch -> Disables the warning message about the config file being out of date
@@ -41,7 +42,9 @@ Things That change vanilla features
 * Parrots drop chicken
 
 ## Recipes
-* Nothing Changed since last version
+* RedDye can be smelted in a Furnace to make a Red Mushroom
+* Red mushrooms can be smelted in a Furnace to make RedDye
+* Player Heads can be cooked into Strange Meat
 
 ## Effects
 * Respawn Effect -> swaps the locations of the respawned player and a random player

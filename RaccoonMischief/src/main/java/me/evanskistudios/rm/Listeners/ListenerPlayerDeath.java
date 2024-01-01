@@ -122,6 +122,7 @@ public class ListenerPlayerDeath implements Listener{
         }
         ItemMeta Strange_meat_meta = Strange_meat.getItemMeta();
         Strange_meat_meta.setDisplayName(StrangeMeatName);
+        Strange_meat_meta.setCustomModelData(999);
         Strange_meat.setItemMeta(Strange_meat_meta);
         player.getWorld().dropItem(player.getLocation().add(0,1,0), Strange_meat);
 
