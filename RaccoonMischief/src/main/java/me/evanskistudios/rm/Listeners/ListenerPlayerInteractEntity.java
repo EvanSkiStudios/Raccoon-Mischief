@@ -1,5 +1,6 @@
 package me.evanskistudios.rm.Listeners;
 
+import me.evanskistudios.rm.FoodManager;
 import org.bukkit.Material;
 import org.bukkit.entity.*;
 import org.bukkit.event.EventHandler;
@@ -17,13 +18,15 @@ import static org.bukkit.entity.EntityType.*;
 enum RC_EVENT{
     NORMAL,
     MILK,
+    BOTTLE_MILK,
     SADDLE,
     SNOW
 }
 
 public class ListenerPlayerInteractEntity implements Listener {
 
-    private static final List<EntityType> MilkableEntity = Arrays.asList(PLAYER, LLAMA, SQUID);
+    private static final List<EntityType> DontOverRideEntityEvent = Arrays.asList(COW, GOAT);
+    private static final List<EntityType> MilkableEntity = Arrays.asList(COW, GOAT, PLAYER, LLAMA, SQUID);
     private static final List<EntityType> RideableEntity = Arrays.asList(PIG, STRIDER);
 
     @EventHandler
@@ -46,7 +49,17 @@ public class ListenerPlayerInteractEntity implements Listener {
         }
 
         if (MilkableEntity.contains(RightClickedEntityType)){
-            ENTITY_EVENT = RC_EVENT.MILK;
+
+            ItemStack HeldItem = player.getInventory().getItemInMainHand();
+            Material HeldItemType = HeldItem.getType();
+
+            if (HeldItemType == Material.BUCKET) {
+                if (DontOverRideEntityEvent.contains(RightClickedEntityType)){ return; }
+                ENTITY_EVENT = RC_EVENT.MILK;
+            }
+            if (HeldItemType == Material.GLASS_BOTTLE) {
+                ENTITY_EVENT = RC_EVENT.BOTTLE_MILK;
+            }
         }
 
 //SNEAKING
@@ -100,6 +113,17 @@ public class ListenerPlayerInteractEntity implements Listener {
                     player.playSound(player.getLocation(), "minecraft:entity.cow.milk", 1.0f, 1.0f);
                     //If in creative, you will only get 1 milk-bucket, and after it won't give you a new one, this is not a bug, it's a feature of vanilla minecraft
                 }
+            }
+
+            case BOTTLE_MILK -> {
+                ItemStack MainHandItem = player.getInventory().getItemInMainHand();
+                if (MainHandItem.getAmount() > 1){
+                    MainHandItem.setAmount(MainHandItem.getAmount() - 1);
+                    player.getInventory().addItem(FoodManager.BottleOMilk);
+                }else{
+                    player.getInventory().setItemInMainHand(FoodManager.BottleOMilk);
+                }
+                player.playSound(player.getLocation(), "item.bottle.fill", 1.0f, 1.0f);
             }
 
             case SADDLE -> {

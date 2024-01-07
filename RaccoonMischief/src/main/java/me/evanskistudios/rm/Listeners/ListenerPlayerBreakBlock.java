@@ -10,6 +10,7 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.BlockBreakEvent;
 import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.PlayerInventory;
 
 public class ListenerPlayerBreakBlock  implements Listener {
     @EventHandler
@@ -35,6 +36,15 @@ public class ListenerPlayerBreakBlock  implements Listener {
             CakeSlice.setAmount(Slices);
 
             player.getWorld().dropItem(BrokenBlock.getLocation(), CakeSlice);
+            return;
         }
+
+        // Cobble stone
+        if ( (BrokenBlock.getType() == Material.COBBLESTONE) || (BrokenBlock.getType() == Material.STONE) ){
+            if (event.getPlayer().getInventory().getItemInMainHand().getType() == Material.AIR){
+                player.getWorld().dropItem(player.getLocation().add(0, 1, 0), new ItemStack(Material.COBBLESTONE));
+            }
+        }
+
     }
 }

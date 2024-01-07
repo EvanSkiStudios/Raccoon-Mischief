@@ -1,5 +1,6 @@
 package me.evanskistudios.rm.Listeners;
 
+import me.evanskistudios.rm.FoodManager;
 import me.evanskistudios.rm.RaccoonMischief;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
@@ -114,17 +115,11 @@ public class ListenerPlayerDeath implements Listener{
         // namespace.getLogger().log(Level.INFO, "" + DeathCause);
 
         //players Drop Strange meat
-        ItemStack Strange_meat = new ItemStack(Material.BEEF);
-        String StrangeMeatName = (ChatColor.RESET+"Strange Meat");
         if (DeathCause == DeathType.Fire) {
-            Strange_meat = new ItemStack(Material.COOKED_BEEF);
-            StrangeMeatName = (ChatColor.RESET+"Cooked Strange Meat");
+            player.getWorld().dropItem(player.getLocation().add(0,1,0), FoodManager.CookedStrangeMeat);
+        }else {
+            player.getWorld().dropItem(player.getLocation().add(0, 1, 0), FoodManager.StrangeMeat);
         }
-        ItemMeta Strange_meat_meta = Strange_meat.getItemMeta();
-        Strange_meat_meta.setDisplayName(StrangeMeatName);
-        Strange_meat_meta.setCustomModelData(999);
-        Strange_meat.setItemMeta(Strange_meat_meta);
-        player.getWorld().dropItem(player.getLocation().add(0,1,0), Strange_meat);
 
         Plugin plugin = RaccoonMischief.getPlugin(RaccoonMischief.class);
         String DropSkulls = "" + plugin.getConfig().get("B_PlayersDropSkulls");
@@ -139,8 +134,16 @@ public class ListenerPlayerDeath implements Listener{
 
         //Custom death sounds/effects
         switch (DeathCause) {
-            default -> //regular death
-                    player.playSound(player.getLocation(), "custom.player.no", 1.0f, 1.0f);
+            default -> { //regular death
+                String DeathMessage = event.getDeathMessage();
+                if (DeathMessage != null) {
+                    if (DeathMessage.equalsIgnoreCase("Baz100 drowned")) {
+                        event.setDeathMessage("Ben drowned");
+                    }
+                }
+
+                player.playSound(player.getLocation(), "custom.player.no", 1.0f, 1.0f);
+            }
             case Llama -> //death by llama
                     player.playSound(player.getLocation(), "custom.player.llama", 1.0f, 1.0f);
 

@@ -38,6 +38,8 @@ public class ListenerPlayerRespawn  implements Listener {
                 }
 
                 case 3 -> {
+                    // CHANGE THIS ITS ANNOYING
+
                     Collection<? extends Player> OnlinePlayers = RaccoonMischief.getPlugin().getServer().getOnlinePlayers();
 
                     if (OnlinePlayers.size() > 2) {
@@ -65,6 +67,8 @@ public class ListenerPlayerRespawn  implements Listener {
                 }
 
                 case 5 ->{
+                    // MAKE THIS LESS OFTEN OR CHANGE HOW IT IS DONE
+
                     for (Player otherPlayer : RaccoonMischief.getPlugin().getServer().getOnlinePlayers()) {
                         if (otherPlayer != player) {
                             Location player_location = player.getLocation();
