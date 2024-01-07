@@ -29,6 +29,7 @@ See [Latest Features](https://github.com/EvanSkiStudios/Raccoon-Mischief/blob/ma
 ## Bug Fixes
 * Fixed an issue with Armor stands and drop chances
 * Fixed an issue with the Red mushroom to Red Dye recipe
+* Fixed an issue with Strange Meat Item desync 
 
 ## Config.yml
 * B_IgnoreConfigVersionMisMatch -> Disables the warning message about the config file being out of date
@@ -40,6 +41,7 @@ See [Latest Features](https://github.com/EvanSkiStudios/Raccoon-Mischief/blob/ma
 Things That change vanilla features
 * You can now always sleep in a bed no matter where you are
 * Parrots drop chicken
+* You can break stone and cobblestone with empty hands to get cobblestone
 
 ## Recipes
 * RedDye can be smelted in a Furnace to make a Red Mushroom
