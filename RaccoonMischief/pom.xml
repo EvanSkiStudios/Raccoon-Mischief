@@ -106,6 +106,17 @@
               <id>sonatype</id>
               <url>https://oss.sonatype.org/content/groups/public/</url>
           </repository>
+
+          <!-- Discord Implementation -->
+          <repository>
+              <id>dv8tion</id>
+              <name>m2-dv8tion</name>
+              <url>https://m2.dv8tion.net/releases</url>
+          </repository>
+          <repository>
+              <id>Scarsz-Nexus</id>
+              <url>https://nexus.scarsz.me/content/groups/public/</url>
+          </repository>
       </repositories>
 
       <dependencies>
@@ -114,6 +125,14 @@
               <artifactId>spigot</artifactId>
               <version>1.20.1-R0.1-SNAPSHOT</version>
               <classifier>remapped-mojang</classifier>
+              <scope>provided</scope>
+          </dependency>
+
+          <!-- Discord Implementation -->
+          <dependency>
+              <groupId>com.discordsrv</groupId>
+              <artifactId>discordsrv</artifactId>
+              <version>1.26.2</version>
               <scope>provided</scope>
           </dependency>
       </dependencies>

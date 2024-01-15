@@ -25,6 +25,7 @@ Place RaccoonMischief.jar into your plugin folder of your Paper-mc server.
 See [Latest Features](https://github.com/EvanSkiStudios/Raccoon-Mischief/blob/master/Features/Features_Latest_.md) for full list of features
 
 ## Version 2.4.0
+* Added [DiscordSRV](https://www.spigotmc.org/resources/discordsrv.18494/) integration
 
 ## Bug Fixes
 * Fixed an issue with Armor stands and drop chances
@@ -42,6 +43,7 @@ Things That change vanilla features
 * You can now always sleep in a bed no matter where you are
 * Parrots drop chicken
 * You can break stone and cobblestone with empty hands to get cobblestone
+* You can fill a glass bottle with milk from a milkable entity
 
 ## Recipes
 * RedDye can be smelted in a Furnace to make a Red Mushroom
@@ -49,9 +51,9 @@ Things That change vanilla features
 * Player Heads can be cooked into Strange Meat
 
 ## Effects
-* Respawn Effect -> swaps the locations of the respawned player and a random player
+* The Merc server room fire now only catches Merc on fire, also brodcasts a message to discord
 * Generated Loot is now random between structure generated loot
-* Monsters now have a 25% chance to get enchanted loot and a 1/100 chance for teh bow they are holding to be have the explosive enchant
+* Monsters now have a 25% chance to get enchanted loot and a 1/100 chance for the bow they are holding to be have the explosive enchant
 
 ## Enchantments
 * Explosive -> makes things explosive!!

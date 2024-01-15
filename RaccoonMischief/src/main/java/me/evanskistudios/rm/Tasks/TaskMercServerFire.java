@@ -2,6 +2,7 @@ package me.evanskistudios.rm.Tasks;
 
 
 import me.evanskistudios.rm.RaccoonMischief;
+import me.evanskistudios.rm.Utilis.DiscordSRVManager;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.block.Block;
@@ -69,6 +70,9 @@ public class TaskMercServerFire extends BukkitRunnable{
         String TimeString = dayAbbreviation + ", " + dayOfMonth + ". " + monthAbbreviation + " " + Year + " " + formattedTime + " UTC";
         String emojiString = "🔥!!";
 
+        long unixTime = System.currentTimeMillis() / 1000L;
+        String DiscordTimeString = "<t:"+ unixTime +":F>";
+
         for (Player p : PlayersOnline) {
             /*
             if (!(p.getDisplayName().equals(MercName))) {
@@ -76,14 +80,18 @@ public class TaskMercServerFire extends BukkitRunnable{
                 p.sendMessage(Format+"Do you smell something burning?");
             }
             */
+            if ((p.getDisplayName().equals(MercName))) {
+                for (int i = 0; i < 3; ++i) {
+                    p.sendMessage(TimeString + " @" + MercName + ", the server room is on " + emojiString);
+                    DiscordSRVManager.discordBroadcast(DiscordTimeString + "@mercerenies , the server room is on " + emojiString);
+                }
 
-            for (int i = 0; i < 3; ++i) {
+                Block blockAtFeet = p.getWorld().getBlockAt(p.getLocation());
+                if (blockAtFeet.getType() == Material.AIR) {
+                    blockAtFeet.setType(Material.FIRE);
+                }
+            }else{
                 p.sendMessage(TimeString + " @" + MercName + ", the server room is on " + emojiString);
-            }
-
-            Block blockAtFeet = p.getWorld().getBlockAt(p.getLocation());
-            if (blockAtFeet.getType() == Material.AIR) {
-                blockAtFeet.setType(Material.FIRE);
             }
         }
 

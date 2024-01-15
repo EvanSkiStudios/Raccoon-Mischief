@@ -14,6 +14,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Random;
 
+import static me.evanskistudios.rm.Utilis.DiscordSRVManager.discordBroadcast;
 import static me.evanskistudios.rm.Utilis.UtilityMethods.Choose;
 
 public class ListenerPlayerRespawn  implements Listener {
@@ -38,22 +39,6 @@ public class ListenerPlayerRespawn  implements Listener {
                 }
 
                 case 3 -> {
-                    // CHANGE THIS ITS ANNOYING
-
-                    Collection<? extends Player> OnlinePlayers = RaccoonMischief.getPlugin().getServer().getOnlinePlayers();
-
-                    if (OnlinePlayers.size() > 2) {
-                        ArrayList<Player> playersArray = new ArrayList<>();
-                        for (Player p : OnlinePlayers) {
-                            if (p != player) {
-                                playersArray.add(p);
-                            }
-                        }
-                        int max = (playersArray.size() - 1), min = 0;
-                        int index = random.nextInt(max - min + 1) + min;
-                        Player randomPlayer = playersArray.get(index);
-                        player.teleport(randomPlayer.getLocation());
-                    }
                 }
 
                 case 4 -> {
@@ -64,21 +49,12 @@ public class ListenerPlayerRespawn  implements Listener {
                     }
 
                     player.kickPlayer(kickMessage);
+
+                    String discordKickMessage = player.getDisplayName() + " was kicked from the server > " + kickMessage;
+                    discordBroadcast(discordKickMessage);
                 }
 
                 case 5 ->{
-                    // MAKE THIS LESS OFTEN OR CHANGE HOW IT IS DONE
-
-                    for (Player otherPlayer : RaccoonMischief.getPlugin().getServer().getOnlinePlayers()) {
-                        if (otherPlayer != player) {
-                            Location player_location = player.getLocation();
-                            player.teleport(otherPlayer.getLocation());
-                            otherPlayer.teleport(player_location);
-
-                            player.sendMessage("You have switched places with " + otherPlayer.getDisplayName());
-                            otherPlayer.sendMessage("You have switched places with " + player.getDisplayName());
-                        }
-                    }
                 }
             }
         }
