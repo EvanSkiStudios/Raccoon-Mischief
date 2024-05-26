@@ -22,7 +22,7 @@ public final class RaccoonMischief extends JavaPlugin{
         {
             Object cfg_ver_ignore = getConfig().get("B_IgnoreConfigVersionMisMatch");
             if ("False".equalsIgnoreCase("" + cfg_ver_ignore)) {
-                String current_ver = "" + Version;
+                String current_ver = Version;
                 Object cfg_ver = getConfig().get("version");
                 if (cfg_ver == null || !current_ver.equalsIgnoreCase("" + cfg_ver)) {
                     getLogger().log(Level.WARNING,

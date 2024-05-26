@@ -80,7 +80,7 @@
                              <srgIn>org.spigotmc:minecraft-server:1.20.1-R0.1-SNAPSHOT:csrg:maps-spigot</srgIn>
                              <remappedDependencies>org.spigotmc:spigot:1.20.1-R0.1-SNAPSHOT:jar:remapped-obf</remappedDependencies>
 
-                             <outputDirectory>D:\Minecraft\_Paper_server\plugins</outputDirectory>
+                             <outputDirectory>D:\Minecraft\ModdingTools\Plugin Development\Plugin Output</outputDirectory>
 
                              <finalName>RaccoonMischief-${project.version}</finalName>
 
